@@ -141,7 +141,7 @@ git push -u origin main
 
 🚨 No momento não temos um [**CHANGELOG.md**](CHANGELOG.md) gerado.
 
-### Para obter mais informações como é o processo de controle de versionamento nesse projeto, acesse [RELEASE.md](RELEASE.md), lá temos todos os requisitos e especificações do que deve ser feito para a geração de uma release, tag e changelog.
+#### Para obter mais informações como é o processo de controle de versionamento nesse projeto, acesse [RELEASE.md](RELEASE.md), lá temos todos os requisitos e especificações do que deve ser feito para a geração de uma release, tag e changelog.
 
 ## ➤ Autor
 
