@@ -139,7 +139,7 @@ git push -u origin main
 
 ## ➤ Versionamento
 
-🚨 No momento não temos um [**CHANGELOG.md**](CHANGELOG.md) gerado.
+🚨 No momento não temos um [**CHANGELOG.md**](CHANGELOG.md) gerado 🚨
 
 **Para obter mais informações como é o processo de controle de versionamento nesse projeto, acesse [RELEASE.md](RELEASE.md), lá temos todos os requisitos e especificações do que deve ser feito para a geração de uma release, tag e changelog.**
 
@@ -159,15 +159,15 @@ Ei!! Se você gostou deste projeto ou se encontrou alguns bugs, sinta-se à vont
 
 ## ➤ Troubleshooting
 
-🚨 Esse repositório é um projeto pessoal criado para fins de estudo/demonstração e para simplificar minha vida profissional, podendo ou não ser adequado para o seu projeto!
-
-## ➤ Licença
-
-🔖 Aplicação distribuída sobre **Apache License**. Olhe em [LICENSE](LICENSE) para mais informações.
+Esse repositório possui fins estudantis/demonstrativos e para simplificar minha vida profissional, podendo ou não ser adequado para o seu projeto!
 
 ## ➤ Contribuindo
 
-🔖 Para saber mais sobre o processo de contribuição acesse [CONTRIBUTING.md](CONTRIBUTING.md).
+Issues e pull requests são bem vindos! Para obter detalhes de desenvolvimento, consulte o arquivo de [contribuição](CONTRIBUTING.md).Para mudanças importantes, abra uma issue primeiro para discutir o que você gostaria de mudar.
+
+## ➤ Licença
+
+O código e os documentos são lançados sob o [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)
 
 ## ➤ Mostre seu suporte!
 
