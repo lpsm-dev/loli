@@ -5,6 +5,9 @@
 # Welcome to Loli repository
 
 <p align="center">
+  <a href="https://spdx.org/licenses/Apache-2.0.html" target="_blank">
+    <img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache 2.0-yellow.svg" />
+  </a>
   <a href="https://github.com/semantic-release/semantic-release">
     <img alt="semantic-release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg">
   </a>
@@ -29,14 +32,22 @@
 If you want use this repo first you need to make a **git clone**:
 
 >
-> 1. git clone --depth 1 <https://github.com/lpmatos/loli.git> -b master
+> 1. git clone --depth 1 <https://github.com/lpmatos/loli.git> -b main
 >
 
 This will give you access to the code on your **local machine**.
 
 ## ➤ Description
 
-Some description were.
+This CLI was made as a codelab for learning the basic of creating a Go CLI tool.
+
+### [🗲 Start the codelab](https://nlepage.github.io/catption/codelab)
+
+## ➤ Install
+
+```bash
+go get github.com/lpmatos/loli
+```
 
 ## ➤ Development with Docker
 
@@ -83,16 +94,6 @@ winpty docker.exe container run -it --rm <IMAGE_NAME> <COMMAND>
   - [Commitlint](https://github.com/conventional-changelog/commitlint) using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
   - Git Hooks with [Husky](https://github.com/typicode/husky).
 
-### Semantic Release Plugins
-
-This shareable configuration use the following plugins:
-
-- [`@semantic-release/git`](https://github.com/semantic-release/git)
-- [`@semantic-release/gitlab`](https://github.com/semantic-release/gitlab)
-- [`@semantic-release/changelog`](https://github.com/semantic-release/changelog)
-- [`@semantic-release/commit-analyzer`](https://github.com/semantic-release/commit-analyzer)
-- [`@semantic-release/release-notes-generator`](https://github.com/semantic-release/release-notes-generator)
-
 ## ➤ How to contribute
 
 >
@@ -113,7 +114,7 @@ This shareable configuration use the following plugins:
 ```bash
 git add -f .
 git commit -m "chore(initial): include config files"
-git push -u origin master
+git push -u origin main
 ```
 
 ## ➤ Versioning
@@ -138,9 +139,25 @@ Hey!! If you like this project or if you find some bugs feel free to contact me 
 
 🔖 Distributed under the **Apache License**. See [LICENSE](LICENSE) for more information.
 
+## ➤ Learning
+
+My purpose with this project was to write a CLI tool in Go using some good practices. In this practice I got experiences in the following topics:
+
+- ✔️ Descobrir os pacotes internos do Go, como: `os`, `string` e `fmt`.
+- ✔️ Descobrir a biblioteca CLI `github.com/spf13/cobra`.
+- ✔️ Criar comandos e subcomandos para seu CLI.
+- ✔️ Ler flags e argumentos a partir dos seus comandos e subcomandos.
+- ✔️ Descobrir a biblioteca de configuração `github.com/spf13/viper`.
+- ✔️ Ler e escrever um arquivo de configuração.
+- ✔️ Colocaro `cobra` e o `viper` para trabalharem juntos.
+- ✔️ Ler variáveis de ambiente.
+- ✔️ Descobrir a biblioteca de log `github.com/sirupsen/logrus`.
+- ✔️ Usar injeção de variável em tempo de build.
+- ✔️ Usar condicional na compilação e build tags.
+
 ## ➤ Troubleshooting
 
-🚨 This is just a personal project created for study/demonstration purposes and to simplify my working life, it may or may not be a good fit for your project!
+🚨 This is just a personal project created for study/demonstration purposes and to simplify my working life, it may or may not be a good fit for your project! 🚨
 
 ## ➤ Show your support
 
@@ -148,4 +165,4 @@ Give a ⭐️ if this project helped you!
 
 ---
 
-This README was generated with ❤️ by me
+This [README](README.md) was generated with ❤️ by [me](https://github.com/lpmatos) and inspired by 🎉 [readme-md-generator](https://github.com/kefranabg/readme-md-generator) 🎉.

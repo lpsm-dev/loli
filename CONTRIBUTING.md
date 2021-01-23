@@ -1,8 +1,14 @@
-# Contributing
+# Contributing Guide
 
-We're happy to receive feature requests and PRs. If your change is nontrivial,
-please open an [issue](https://github.com/lpmatos/loli/issues/new) to discuss the
-idea and implementation strategy before submitting a PR.
+First, thank you! :tada:
+
+We're happy to receive feature requests and PRs. If your change is nontrivial, please open an [issue](https://github.com/lpmatos/loli/issues/new) to discuss the idea and implementation strategy before submitting a PR.
+
+## ➤ Dependencies
+
+You'll need Go version 1.13 or higher. Follow the directions on http://golang.org/doc/install
+
+## ➤ Steps
 
 1. Fork the repository.
 2. Create an `upstream` remote.
