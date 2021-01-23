@@ -167,7 +167,7 @@ Ei!! Se você gostou deste projeto ou se encontrou alguns bugs, sinta-se à vont
 
 ## ➤ Contribuindo
 
-🔖 Para saber mais sobre o processo de contribuição acesse [CONTRIBUTING.md](.CONTRIBUTING.md).
+🔖 Para saber mais sobre o processo de contribuição acesse [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## ➤ Mostre seu suporte!
 
