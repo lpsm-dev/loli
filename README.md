@@ -2,7 +2,7 @@
   <img alt="logo" src="https://i.pinimg.com/280x280_RS/d0/13/35/d01335f147c586e56829415e611f0ae7.jpg" width="350px" float="center"/>
 </p>
 
-# Welcome to Loli repository
+# Loli Hunter CLI
 
 <p align="center">
   <a href="https://spdx.org/licenses/Apache-2.0.html" target="_blank">
@@ -17,7 +17,7 @@
 </p>
 
 >
-> Loli is a GoLang CLI tool find a anime by images
+> Loli é um CLI feito em Go para descobrir animes com base em imagens passadas como parâmetro
 >
 
 ## ➤ Menu
@@ -27,31 +27,50 @@
   <a href="#-how-to-contribute">How to contribute</a>
 </p>
 
-## ➤ Getting Started
+## ➤ Começando
 
-If you want use this repo first you need to make a **git clone**:
+Se você quiser contribuir, primeiro você precisa fazer um **git clone** do repo:
 
 >
 > 1. git clone --depth 1 <https://github.com/lpmatos/loli.git> -b main
 >
 
-This will give you access to the code on your **local machine**.
+Isso lhe dará acesso ao código em sua **máquina local**.
 
-## ➤ Description
+## ➤ Objetivo
 
-This CLI was made as a codelab for learning the basic of creating a Go CLI tool.
+Esse **CLI** tem como objetivo ser um laboratório de código e boas práticas para criação de um projeto pronto para receber contruições da comunidade, enquanto introduz o básico para criação de uma ferramenta **CLI** em **Go** e a padronização de convenções para o workflow de desenvolvimento.
+
+Nesta processo, obtive experiências nos seguintes tópicos no que tange a linguagem Go:
+
+- ✔️ Descobrir os pacotes internos do Go, como: `os`, `string` e `fmt`.
+- ✔️ Descobrir a biblioteca CLI `github.com/spf13/cobra`.
+- ✔️ Criar comandos e subcomandos para seu CLI.
+- ✔️ Ler flags e argumentos a partir dos seus comandos e subcomandos.
+- ✔️ Descobrir a biblioteca de configuração `github.com/spf13/viper`.
+- ✔️ Ler e escrever um arquivo de configuração.
+- ✔️ Colocar o `cobra` e o `viper` para trabalharem juntos.
+- ✔️ Ler variáveis de ambiente.
+- ✔️ Descobrir a biblioteca de log `github.com/sirupsen/logrus`.
+- ✔️ Usar injeção de variável em tempo de build.
+- ✔️ Usar condicional na compilação e build tags.
+
+## ➤ Descrição
+
+Uma simples descrição a ser definida.
 
 ### [🗲 Start the codelab](https://nlepage.github.io/catption/codelab)
 
-## ➤ Install
+## ➤ Instalação
 
 ```bash
 go get github.com/lpmatos/loli
 ```
 
-## ➤ Development with Docker
+## ➤ Desenvolvimento com Docker
 
-Steps to build the Docker Image.
+
+Estágios para buidar a imagem Docker:
 
 <details><summary>🐋 Build</summary>
 <p>
@@ -67,7 +86,8 @@ docker image build -t <IMAGE_NAME> . (This context)
 
 <details><summary>🐋 Run</summary>
 <p>
-Docker commands to run a container with yout image:
+
+Docker commands to run a container with your image:
 
 * **Linux** running:
 
@@ -117,15 +137,17 @@ git commit -m "chore(initial): include config files"
 git push -u origin main
 ```
 
-## ➤ Versioning
+## ➤ Versionamento
 
-🚨 We currently do not have a [**CHANGELOG.md**](CHANGELOG.md) generated 🚨
+🚨 No momento não temos um [**CHANGELOG.md**](CHANGELOG.md) gerado.
 
-## ➤ Author
+### Para obter mais informações como é o processo de controle de versionamento nesse projeto, acesse [RELEASE.md](RELEASE.md), lá temos todos os requisitos e especificações do que deve ser feito para a geração de uma release, tag e changelog.
+
+## ➤ Autor
 
 👤 **Lucca Pessoa**
 
-Hey!! If you like this project or if you find some bugs feel free to contact me in my channels:
+Ei!! Se você gostou deste projeto ou se encontrou alguns bugs, sinta-se à vontade para me contatar nos meus canais:
 
 >
 > * Email: luccapsm@gmail.com
@@ -135,34 +157,22 @@ Hey!! If you like this project or if you find some bugs feel free to contact me 
 > * LinkedIn: [@luccapessoa](https://www.linkedin.com/in/luccapessoa/)
 >
 
-## ➤ License
-
-🔖 Distributed under the **Apache License**. See [LICENSE](LICENSE) for more information.
-
-## ➤ Learning
-
-My purpose with this project was to write a CLI tool in Go using some good practices. In this practice I got experiences in the following topics:
-
-- ✔️ Descobrir os pacotes internos do Go, como: `os`, `string` e `fmt`.
-- ✔️ Descobrir a biblioteca CLI `github.com/spf13/cobra`.
-- ✔️ Criar comandos e subcomandos para seu CLI.
-- ✔️ Ler flags e argumentos a partir dos seus comandos e subcomandos.
-- ✔️ Descobrir a biblioteca de configuração `github.com/spf13/viper`.
-- ✔️ Ler e escrever um arquivo de configuração.
-- ✔️ Colocaro `cobra` e o `viper` para trabalharem juntos.
-- ✔️ Ler variáveis de ambiente.
-- ✔️ Descobrir a biblioteca de log `github.com/sirupsen/logrus`.
-- ✔️ Usar injeção de variável em tempo de build.
-- ✔️ Usar condicional na compilação e build tags.
-
 ## ➤ Troubleshooting
 
-🚨 This is just a personal project created for study/demonstration purposes and to simplify my working life, it may or may not be a good fit for your project! 🚨
+🚨 Esse repositório é um projeto pessoal criado para fins de estudo/demonstração e para simplificar minha vida profissional, podendo ou não ser adequado para o seu projeto!
 
-## ➤ Show your support
+## ➤ Licença
 
-Give a ⭐️ if this project helped you!
+🔖 Aplicação distribuída sobre **Apache License**. Olhe em [LICENSE](LICENSE) para mais informações.
+
+## ➤ Contribuindo
+
+As regras de contribuição foram definidas no arquivo [CONTRIBUTING.md](./CONTRIBUTING.md). Espero que se divirta contribuindo para esse projeto 👽.
+
+## ➤ Mostre seu suporte!
+
+Dê uma ⭐️ se esse projeto te ajudou de alguma forma!
 
 ---
 
-This [README](README.md) was generated with ❤️ by [me](https://github.com/lpmatos) and inspired by 🎉 [readme-md-generator](https://github.com/kefranabg/readme-md-generator) 🎉.
+Esse [README](README.md) foi gerado com ❤️ por [mim](https://github.com/lpmatos) e é inspirado no 🎉 [readme-md-generator](https://github.com/kefranabg/readme-md-generator).
