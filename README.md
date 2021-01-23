@@ -141,7 +141,7 @@ git push -u origin main
 
 🚨 No momento não temos um [**CHANGELOG.md**](CHANGELOG.md) gerado.
 
-#### Para obter mais informações como é o processo de controle de versionamento nesse projeto, acesse [RELEASE.md](RELEASE.md), lá temos todos os requisitos e especificações do que deve ser feito para a geração de uma release, tag e changelog.
+**Para obter mais informações como é o processo de controle de versionamento nesse projeto, acesse [RELEASE.md](RELEASE.md), lá temos todos os requisitos e especificações do que deve ser feito para a geração de uma release, tag e changelog.**
 
 ## ➤ Autor
 
@@ -167,7 +167,7 @@ Ei!! Se você gostou deste projeto ou se encontrou alguns bugs, sinta-se à vont
 
 ## ➤ Contribuindo
 
-As regras de contribuição foram definidas no arquivo [CONTRIBUTING.md](./CONTRIBUTING.md). Espero que se divirta contribuindo para esse projeto 👽.
+🔖 Para saber mais sobre o processo de contribuição acesse [CONTRIBUTING.md](.CONTRIBUTING.md).
 
 ## ➤ Mostre seu suporte!
 
