@@ -1,6 +1,6 @@
 MAKEFLAGS += --warn-undefined-variables
 
-# Copyright 2020 The loli authors
+# Copyright 2021 The loli authors
 #
 #
 #    Licensed under the Apache License, Version 2.0 (the "License");
@@ -79,7 +79,7 @@ setup:
 .PHONY: build
 build:
 	@echo "==> Building..."
-	$(GOBUILD) -o $(BINDIR)/$(BINNAME) -ldflags '$(LDFLAGS)' main.go
+	$(GOBUILD) -o $(BINDIR)/$(BINNAME) -ldflags '$(LDFLAGS)' $(MAIN)
 	@echo ""
 
 .PHONY: install

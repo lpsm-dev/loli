@@ -1,3 +1,67 @@
+# Copyright 2021 The loli authors
+#
+#
+#    Licensed under the Apache License, Version 2.0 (the "License");
+#    you may not use this file except in compliance with the License.
+#    You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+#    Unless required by applicable law or agreed to in writing, software
+#    distributed under the License is distributed on an "AS IS" BASIS,
+#    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#    See the License for the specific language governing permissions and
+#    limitations under the License.
+
+# ================================================
+# GENERIC VARIABLES
+# ================================================
+
+BINDIR      		:= $(CURDIR)/bin
+BINNAME     		?= loli
+CLIENT_VERSION 	:= $(shell cat $(CURDIR)/VERSION)
+BUILD_DATE 			:= $(shell date -u +'%Y-%m-%dT%H:%M:%SZ')
+MAIN            ?= $(CURDIR)/cmd/loli/main.go
+
+# ================================================
+# GIT VARIABLES
+# ================================================
+
+GIT_BRANCH				:= $(shell git rev-parse --abbrev-ref HEAD)
+GIT_COMMIT				:= $(shell git rev-parse HEAD)
+GIT_SHORT_COMMIT	:= $(shell git rev-parse --short HEAD)
+GIT_TAG						:= $(shell if [ -z "`git status --porcelain`" ]; then git describe --exact-match --tags HEAD 2>/dev/null; fi)
+GIT_TREE_STATE		:= $(shell if [ -z "`git status --porcelain`" ]; then echo "clean" ; else echo "dirty"; fi)
+
+# ================================================
+# GO VARIABLES
+# ================================================
+
+GO_VERSION 	:= $(shell go version)
+GOPATH			?= $(shell go env GOPATH)
+
+# Ensure GOPATH is set before running build process.
+ifeq "$(GOPATH)" ""
+  $(error Please set the environment variable GOPATH before running `make`)
+endif
+
+GO 			:= go
+GOOS   	:= $(shell go env GOOS)
+GOARCH 	:= $(shell go env GOARCH)
+
+# NOTE: '-race' requires cgo; enable cgo by setting CGO_ENABLED=1
+BUILD_FLAG	:= -race
+GOBUILD    	:= CGO_ENABLED=1 GOOS=$(GOOS) GOARCH=$(GOARCH) $(GO) build $(BUILD_FLAG)
+
+LDFLAGS := -w -s
+LDFLAGS += -X "github.com/lpmatos/gen/internal/version.cliVersion=$(CLIENT_VERSION)"
+LDFLAGS += -X "github.com/lpmatos/gen/internal/version.builtDate=$(BUILD_DATE)"
+LDFLAGS += -X "github.com/lpmatos/gen/internal/version.builtBy=makefile"
+LDFLAGS += -X "github.com/lpmatos/gen/internal/version.commit=$(GIT_COMMIT)"
+LDFLAGS += -X "github.com/lpmatos/gen/internal/version.commitShort=$(GIT_SHORT_COMMIT)"
+LDFLAGS += -X "github.com/lpmatos/gen/internal/version.commitBranch=$(GIT_BRANCH)"
+LDFLAGS += -X "github.com/lpmatos/gen/internal/version.goVersion=$(GO_VERSION)"
+
 # ================================================
 # DOCKER VARIABLES
 # ================================================
