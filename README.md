@@ -36,6 +36,8 @@ This will give you access to the code on your **local machine**.
 
 ## ➤ Description
 
+Some description were.
+
 ## ➤ Development with Docker
 
 Steps to build the Docker Image.
