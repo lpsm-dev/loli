@@ -1,0 +1,11 @@
+##################################################
+# Docker variables
+##################################################
+
+DOCKER_BUILD_DATE = $(shell date -u +'%Y%m%d%H%M%S')
+
+ifeq ($(OS), Windows_NT)
+	DOCKER_CONTAINER_LIST = $(shell docker ps -aq)
+else
+	DOCKER_CONTAINER_LIST = $(shell docker ps -aq)
+endif
