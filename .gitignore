@@ -30,6 +30,7 @@ lerna-debug.log*
 
 # Optional npm cache directory
 .npm
+package-lock.json
 
 # Dependency directories
 node_modules/
