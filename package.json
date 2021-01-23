@@ -3,7 +3,7 @@
   "main": ".releaserc.json",
   "scripts": {
     "cm": "git cz",
-    "secrets": "gitleaks --verbose --path=. --config-path=.gitleaks.toml",
+    "secrets": "gitleaks --verbose",
     "release": "npx semantic-release --no-ci",
     "release-debug": "npx semantic-release --dry-run --no-ci --debug"
   },
@@ -17,6 +17,11 @@
       "@commitlint/config-conventional"
     ]
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
@@ -28,10 +33,5 @@
     "commitizen": "^4.2.3",
     "husky": "^4.3.8",
     "semantic-release": "^17.3.7"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
