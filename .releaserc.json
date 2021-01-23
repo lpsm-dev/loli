@@ -1,0 +1,64 @@
+{
+  "branches": [
+    "+([0-9])?(.{+([0-9]),x}).x",
+    "master", "main",
+    { "name": "develop", "prerelease": "alpha" },
+    { "name": "release", "prerelease": "beta" },
+    { "name": "stage", "prerelease": "rc" }
+  ],
+  "tagFormat": "v${version}",
+  "plugins": [
+    ["@semantic-release/commit-analyzer", {
+      "preset": "conventionalcommits",
+      "releaseRules": [
+        { "type": "build",    "release": "patch" },
+        { "type": "docs",     "release": "patch"},
+        { "type": "ci",       "release": "patch" },
+        { "type": "feat",     "release": "minor" },
+        { "type": "fix",      "release": "patch" },
+        { "type": "perf",     "release": "patch" },
+        { "type": "refactor", "release": "patch" },
+        { "type": "style",    "release": "patch"},
+        { "type": "test",     "release": "patch" },
+        { "type": "chore",    "release": "patch", "scope": "deps" },
+        { "type": "chore",    "release": "patch", "scope": "deps-dev" },
+        { "revert": true,     "release": "patch" },
+        { "breaking": true,   "release": "major" }
+      ],
+      "parserOpts": {
+        "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
+      }
+    }],
+    ["@semantic-release/release-notes-generator", {
+      "preset": "conventionalcommits",
+      "presetConfig": {
+        "types": [
+          { "type": "build",    "section": ":nut_and_bolt: Construção", "hidden": false },
+          { "type": "chore",    "section": ":package: Atualizações",    "hidden": false },
+          { "type": "ci",       "section": ":repeat: CI",               "hidden": false },
+          { "type": "docs",     "section": ":memo: Documentação",       "hidden": false },
+          { "type": "feat",     "section": ":sparkles: Novidades",      "hidden": false },
+          { "type": "fix",      "section": ":bug: Correções",           "hidden": false },
+          { "type": "perf",     "section": ":fast_forward: Desempenho", "hidden": false },
+          { "type": "refactor", "section": ":zap: Refatoração",         "hidden": false },
+          { "type": "revert",   "section": ":flashlight: Reverter",     "hidden": false },
+          { "type": "style",    "section": ":barber: Estilização",      "hidden": false },
+          { "type": "test",     "section": ":white_check_mark: Testes", "hidden": false }
+      ]}
+    }],
+    ["@semantic-release/exec", {
+      "verifyReleaseCmd": "echo ${nextRelease.version} > VERSION.txt"
+    }],
+    ["@semantic-release/github", {
+      "addReleases": "top"
+    }],
+    ["@semantic-release/changelog", {
+      "changelogFile": "CHANGELOG.md",
+      "changelogTitle": "# Semantic Versioning Changelog"
+    }],
+    ["@semantic-release/git", {
+      "assets": ["CHANGELOG.md", "README.md"],
+      "message": "chore(release): version <%= nextRelease.version %> - <%= new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' }) %>"
+    }]
+  ]
+}
