@@ -21,7 +21,7 @@
     <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/lpmatos/loli/Linter">
   </a>
   <a href="https://github.com/lpmatos/loli/actions">
-    <img alt="Latest Release" src="https://img.shields.io/github/v/release/lpmatos/loli">
+    <img alt="Latest Release" src="https://img.shields.io/github/v/release/lpmatos/Loli">
   </a>
 </p>
 
