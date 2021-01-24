@@ -20,6 +20,12 @@
   <a href="https://www.codacy.com/gh/lpmatos/loli/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=lpmatos/loli&amp;utm_campaign=Badge_Grade">
     <img alt="Codacy Badge" src="https://app.codacy.com/project/badge/Grade/7d69caff8e2646a783681cc765948187">
   </a>
+  <a href="https://github.com/lpmatos/loli/actions">
+    <img alt="CI" src="https://github.com/kubedb/cli/workflows/CI/badge.svg">
+  </a>
+  <a href="https://github.com/lpmatos/loli/releases">
+    <img src="https://img.shields.io/github/release/lpmatos/loli.svg" alt="Latest Release">
+  </a>
 </p>
 
 >
@@ -124,7 +130,7 @@ winpty docker.exe container run -it --rm <IMAGE_NAME> <COMMAND>
 
 [**CHANGELOG.md**](CHANGELOG.md).
 
-**Para obter mais informações como é o processo de controle de versionamento nesse projeto, acesse [RELEASE.md](RELEASE.md), lá temos todos os requisitos e especificações do que deve ser feito para a geração de uma release, tag e changelog.**
+**Para obter mais informações como é o processo de controle de versionamento nesse projeto, acesse [RELEASING.md](RELEASING.md), lá temos todos os requisitos e especificações do que deve ser feito para a geração de uma release, tag e changelog.**
 
 ## ➤ Autor
 

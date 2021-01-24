@@ -1,4 +1,4 @@
-# Releasing
+# Release process
 
 O [Loli CLI](https://github.com/lpmatos/loli) usa o projeto [Semantic Release](https://github.com/semantic-release/semantic-release), um pacote de gerenciamento de versão e publicação, em conjunto com alguns plugins do seu ecossistema, para acelear e automatizar o processo de versionamento e release do código. Por ser bastante [configurável](.releaserc.json), conseguimos torná-lo parte do workflow de desenvolvimento, sendo totalmente plugável em diversos tipos de projeto, independente da linguagem de programação ou propósito.
 
