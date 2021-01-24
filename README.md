@@ -17,6 +17,9 @@
   <a href="https://www.codacy.com/gh/lpmatos/loli/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=lpmatos/loli&amp;utm_campaign=Badge_Grade">
     <img alt="Codacy Badge" src="https://app.codacy.com/project/badge/Grade/7d69caff8e2646a783681cc765948187">
   </a>
+  <a href="https://github.com/lpmatos/loli/actions?query=workflow%3ALinter">
+    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/lpmatos/loli/Linter">
+  </a>
   <a href="https://github.com/lpmatos/loli/actions">
     <img alt="Latest Release" src="https://img.shields.io/github/v/release/lpmatos/loli">
   </a>
