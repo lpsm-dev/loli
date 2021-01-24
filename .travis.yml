@@ -3,7 +3,7 @@ language: go
 go_import_path: github.com/lpmatos/loli
 
 go:
-  - master
+  - main
 
 before_install:
   - go get -v golang.org/x/lint/golint
@@ -18,7 +18,7 @@ script:
 
 branches:
   only:
-  - master
+  - main
 
 notifications:
   email: luccapsm@gmail.com
