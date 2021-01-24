@@ -13,6 +13,8 @@ env:
   global:
   - TRAVIS_GO_VERSION="$(cat .go-version)"
 
+sudo: false
+
 install:
   - make install
 

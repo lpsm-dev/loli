@@ -3,11 +3,11 @@ name: Go Release
 on:
   push:
     tags:
-      - '*'
+      - "*"
 
 jobs:
   goreleaser:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       -
         name: Checkout

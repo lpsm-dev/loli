@@ -101,17 +101,24 @@ misspell:
 	find . -name '*.go' -not -path './vendor/*' -not -path './_repos/*' | xargs misspell -error
 	@echo ""
 
-.PHONY: snapshot
-snapshot:
-	goreleaser --snapshot --rm-dist
-
-.PHONY: release
-release:
-	goreleaser release
-
 .PHONY: clean
 clean:
 	@echo "==> Cleaning..."
 	$(GO) clean -x -i $(MAIN)
 	rm -rf ./bin/* ./vendor ./dist *.tar.gz
 	@echo ""
+
+.PHONY: verify-goreleaser
+verify-goreleaser:
+ifeq (, $(shell which goreleaser))
+	$(error "No goreleaser in $(PATH), consider installing it from https://goreleaser.com/install")
+endif
+	goreleaser --version
+
+.PHONY: snapshot
+snapshot: verify-goreleaser
+	goreleaser --snapshot --skip-publish  --rm-dist
+
+.PHONY: release
+release: verify-goreleaser
+	goreleaser release --rm-dist

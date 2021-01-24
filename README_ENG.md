@@ -146,7 +146,7 @@ Hey!! If you like this project or if you find some bugs feel free to contact me 
 > * LinkedIn: [@luccapessoa](https://www.linkedin.com/in/luccapessoa/)
 >
 
-## ➤ License
+## ➤ License 📑
 
 🔖 Distributed under the **Apache License**. See [LICENSE](LICENSE) for more information.
 
@@ -160,4 +160,4 @@ Give a ⭐️ if this project helped you!
 
 ---
 
-This README was generated with ❤️ by me
+This [README.md]() was generated with ❤️ by [me]()

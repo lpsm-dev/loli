@@ -1,0 +1,29 @@
+* text=auto eol=lf
+*.go text
+*.xml text
+*.yml text
+*.md text
+*.sh text
+*.css text
+*.txt text
+
+*.bat binary
+*.png binary
+*.jpg binary
+*.bmp binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mov binary
+*.mp4 binary
+*.mp3 binary
+*.flv binary
+*.fla binary
+*.swf binary
+*.gz binary
+*.zip binary
+*.7z binary
+*.ttf binary
+*.eot binary
+*.woff binary
+*.pdf binary

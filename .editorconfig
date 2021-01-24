@@ -6,8 +6,18 @@ root = true
 # Unix-style newlines with a newline ending every file
 [*]
 indent_size = 2
+tab_width = 2
 indent_style = space
 end_of_line = lf
 trim_trailing_whitespace = true
 insert_final_newline = true
 charset = utf-8
+
+[*.{go,tmpl,html}]
+indent_style = tab
+
+[Makefile]
+indent_style = tab
+
+[*.md]
+trim_trailing_whitespace = false

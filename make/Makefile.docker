@@ -13,6 +13,13 @@
 #    See the License for the specific language governing permissions and
 #    limitations under the License.
 
+.PHONY: verify-docker
+verify-docker:
+ifeq (, $(shell which docker))
+	$(error "No docker in $(PATH), consider installing it from https://docs.docker.com/install")
+endif
+	docker --version
+
 # ================================================
 # DOCKER SHORTCUTS
 # ================================================
@@ -38,13 +45,13 @@ docker-system-prune:
 	@-docker system prune -af
 
 .PHONY: docker-clean
-docker-clean: docker-stop docker-remove docker-volume-prune docker-network-prune
+docker-clean: verify-docker docker-stop docker-remove docker-volume-prune docker-network-prune
 	@echo "# --------------------------------------"
 	@echo "# Cleaning Docker Environment"
 	@echo "# --------------------------------------"
 
 .PHONY: docker-deep-clean
-docker-deep-clean: docker-stop docker-remove docker-volume-prune docker-network-prune docker-system-prune
+docker-deep-clean: verify-docker docker-stop docker-remove docker-volume-prune docker-network-prune docker-system-prune
 	@echo "# --------------------------------------"
 	@echo "# Deep cleaning Docker Environment"
 	@echo "# --------------------------------------"
