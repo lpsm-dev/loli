@@ -122,7 +122,7 @@ winpty docker.exe container run -it --rm <IMAGE_NAME> <COMMAND>
 
 ## ➤ Versionamento
 
-🚨 No momento não temos um [**CHANGELOG.md**](CHANGELOG.md) gerado 🚨
+[**CHANGELOG.md**](CHANGELOG.md).
 
 **Para obter mais informações como é o processo de controle de versionamento nesse projeto, acesse [RELEASE.md](RELEASE.md), lá temos todos os requisitos e especificações do que deve ser feito para a geração de uma release, tag e changelog.**
 
