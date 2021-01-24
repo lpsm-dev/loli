@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.2.0](https://github.com/lpmatos/loli/compare/v1.1.0...v1.2.0) (2021-01-24)
+
+
+### :sparkles: Novidades
+
+* include more badges ([84bfc4a](https://github.com/lpmatos/loli/commit/84bfc4a0e0b24b9855323fd3375c46eb869eaf92))
+
 ## [1.1.0](https://github.com/lpmatos/loli/compare/v1.0.0...v1.1.0) (2021-01-24)
 
 
