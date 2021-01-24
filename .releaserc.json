@@ -47,7 +47,7 @@
       ]}
     }],
     ["@semantic-release/exec", {
-      "verifyReleaseCmd": "echo ${nextRelease.version} > VERSION.txt"
+      "verifyReleaseCmd": "echo ${nextRelease.version} > VERSION"
     }],
     ["@semantic-release/github", {
       "addReleases": "top"
