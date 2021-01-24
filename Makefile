@@ -105,6 +105,10 @@ misspell:
 snapshot:
 	goreleaser --snapshot --rm-dist
 
+.PHONY: release
+release:
+	goreleaser release
+
 .PHONY: clean
 clean:
 	@echo "==> Cleaning..."
