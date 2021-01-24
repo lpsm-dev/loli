@@ -149,7 +149,7 @@ Esse repositório possui fins estudantis/demonstrativos e para simplificar minha
 
 ## ➤ Contribuindo
 
-Issues e pull requests são bem vindos! Para obter detalhes de desenvolvimento, consulte o arquivo de [contribuição](CONTRIBUTING.md).Para mudanças importantes, abra uma issue primeiro para discutir o que você gostaria de mudar.
+Issues e pull requests são bem vindos! Para obter detalhes de desenvolvimento, consulte o arquivo de [contribuição](CONTRIBUTING.md). Para mudanças importantes, abra uma issue primeiro para discutir o que você gostaria de mudar.
 
 ## ➤ Licença
 
