@@ -4,6 +4,8 @@
 
 # Loli Hunter CLI
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9deb5995cc3042aba47d6a0062b87ea0)](https://app.codacy.com/gh/lpmatos/loli?utm_source=github.com&utm_medium=referral&utm_content=lpmatos/loli&utm_campaign=Badge_Grade)
+
 <p align="center">
   <a href="https://spdx.org/licenses/Apache-2.0.html" target="_blank">
     <img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache 2.0-yellow.svg" />
