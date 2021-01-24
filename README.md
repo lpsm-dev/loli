@@ -21,10 +21,7 @@
     <img alt="Codacy Badge" src="https://app.codacy.com/project/badge/Grade/7d69caff8e2646a783681cc765948187">
   </a>
   <a href="https://github.com/lpmatos/loli/actions">
-    <img alt="CI" src="https://github.com/kubedb/cli/workflows/CI/badge.svg">
-  </a>
-  <a href="https://github.com/lpmatos/loli/releases">
-    <img src="https://img.shields.io/github/release/lpmatos/loli.svg" alt="Latest Release">
+    <img alt="Latest Release" src="https://img.shields.io/github/v/release/lpmatos/loli?style=social">
   </a>
 </p>
 
