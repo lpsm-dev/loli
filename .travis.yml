@@ -9,6 +9,10 @@ before_install:
   - go get -v golang.org/x/lint/golint
   - go get -v github.com/client9/misspell/cmd/misspell
 
+env:
+  global:
+  - TRAVIS_GO_VERSION="$(cat .go-version)"
+
 install:
   - make install
 
