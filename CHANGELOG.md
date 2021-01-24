@@ -1,5 +1,27 @@
 # Semantic Versioning Changelog
 
+## [1.1.0](https://github.com/lpmatos/loli/compare/v1.0.0...v1.1.0) (2021-01-24)
+
+
+### :sparkles: Novidades
+
+* include release command to make ([9d752b4](https://github.com/lpmatos/loli/commit/9d752b460a7b2b96928c7e67e3d6ef6733eccbb9))
+
+
+### :memo: Documentação
+
+* **readme:** mapping changelog ([bd9c6e9](https://github.com/lpmatos/loli/commit/bd9c6e90e289ee5548244bd32602265deb49248d))
+
+
+### :repeat: CI
+
+* **github:** include release ([e4a5e56](https://github.com/lpmatos/loli/commit/e4a5e568da817b1c37bb4ef2ce4986d127d2ad6c))
+
+
+### :bug: Correções
+
+* gorelease config ([b93425a](https://github.com/lpmatos/loli/commit/b93425a1e00057ba98fa5f4da993dc63beed173e))
+
 ## 1.0.0 (2021-01-24)
 
 
