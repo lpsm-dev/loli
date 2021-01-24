@@ -3,11 +3,13 @@ name: Go Release
 on:
   push:
     tags:
-      - "*"
+    - 'v*'
 
 jobs:
   goreleaser:
+    name: "Create Go Release"
     runs-on: ubuntu-20.04
+
     steps:
       -
         name: Checkout

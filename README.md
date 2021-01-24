@@ -66,14 +66,16 @@ Nesta processo, obtive experiências nos seguintes tópicos no que tange a lingu
 
 ## ➤ Descrição
 
-Uma simples descrição a ser definida.
-
-### [🗲 Start the codelab](https://nlepage.github.io/catption/codelab)
+🗲 Uma simples descrição a ser definida.
 
 ## ➤ Instalação
 
 ```bash
-go get github.com/lpmatos/loli
+go install github.com/lpmatos/Loli/cmd/loli
+
+# if you cannot install directly, try following command,
+# then input install command again
+go get -u github.com/lpmatos/Loli
 ```
 
 ## ➤ Desenvolvimento com Docker
