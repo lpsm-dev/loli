@@ -54,13 +54,13 @@ BUILD_FLAG	:= -race
 GOBUILD    	:= CGO_ENABLED=1 GOOS=$(GOOS) GOARCH=$(GOARCH) $(GO) build $(BUILD_FLAG)
 
 LDFLAGS := -w -s
-LDFLAGS += -X "github.com/lpmatos/gen/internal/version.cliVersion=$(CLIENT_VERSION)"
-LDFLAGS += -X "github.com/lpmatos/gen/internal/version.builtDate=$(BUILD_DATE)"
-LDFLAGS += -X "github.com/lpmatos/gen/internal/version.builtBy=makefile"
-LDFLAGS += -X "github.com/lpmatos/gen/internal/version.commit=$(GIT_COMMIT)"
-LDFLAGS += -X "github.com/lpmatos/gen/internal/version.commitShort=$(GIT_SHORT_COMMIT)"
-LDFLAGS += -X "github.com/lpmatos/gen/internal/version.commitBranch=$(GIT_BRANCH)"
-LDFLAGS += -X "github.com/lpmatos/gen/internal/version.goVersion=$(GO_VERSION)"
+LDFLAGS += -X "github.com/lpmatos/loli/internal/version.cliVersion=$(CLIENT_VERSION)"
+LDFLAGS += -X "github.com/lpmatos/loli/internal/version.builtDate=$(BUILD_DATE)"
+LDFLAGS += -X "github.com/lpmatos/loli/internal/version.builtBy=makefile"
+LDFLAGS += -X "github.com/lpmatos/loli/internal/version.commit=$(GIT_COMMIT)"
+LDFLAGS += -X "github.com/lpmatos/loli/internal/version.commitShort=$(GIT_SHORT_COMMIT)"
+LDFLAGS += -X "github.com/lpmatos/loli/internal/version.commitBranch=$(GIT_BRANCH)"
+LDFLAGS += -X "github.com/lpmatos/loli/internal/version.goVersion=$(GO_VERSION)"
 
 # ================================================
 # DOCKER VARIABLES

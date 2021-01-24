@@ -85,7 +85,7 @@ build:
 .PHONY: install
 install:
 	@echo "==> Installing..."
-	$(GO) install -x ${SRC}
+	$(GO) install -x $(MAIN)
 	@echo ""
 
 .PHONY: lint
@@ -108,6 +108,6 @@ snapshot:
 .PHONY: clean
 clean:
 	@echo "==> Cleaning..."
-	$(GO) clean -x -i ${SRC}
+	$(GO) clean -x -i $(MAIN)
 	rm -rf ./bin/* ./vendor ./dist *.tar.gz
 	@echo ""
