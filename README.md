@@ -114,29 +114,6 @@ winpty docker.exe container run -it --rm <IMAGE_NAME> <COMMAND>
   - [Commitlint](https://github.com/conventional-changelog/commitlint) using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
   - Git Hooks with [Husky](https://github.com/typicode/husky).
 
-## ➤ How to contribute
-
->
-> 1. Make a **Fork** or Create a **Feature Branch**.
-> 2. Follow the project organization.
-> 3. Add the file to the appropriate level folder - If the folder does not exist, create according to the standard.
-> 4. Make the **Commit**.
-> 5. Open a **Merge Request**.
-> 6. Wait for your merge request to be accepted.. 🚀
->
-
-**Remember**: There is no bad code, there are different views/versions of solving the same problem. 😊
-
-## ➤ Add to git and push
-
-📝 You must send your work to [**GitHub**](https://github.com/lpmatos/loli) repo after your changes:
-
-```bash
-git add -f .
-git commit -m "chore(initial): include config files"
-git push -u origin main
-```
-
 ## ➤ Versionamento
 
 🚨 No momento não temos um [**CHANGELOG.md**](CHANGELOG.md) gerado 🚨
@@ -175,4 +152,4 @@ Dê uma ⭐️ se esse projeto te ajudou de alguma forma!
 
 ---
 
-Esse [README](README.md) foi gerado com ❤️ por [mim](https://github.com/lpmatos) e é inspirado no 🎉 [readme-md-generator](https://github.com/kefranabg/readme-md-generator).
+Esse [README](README.md) foi gerado com ❤️ por [mim](https://github.com/lpmatos) com inspiração no [readme-md-generator](https://github.com/kefranabg/readme-md-generator).

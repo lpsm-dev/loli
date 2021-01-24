@@ -1,0 +1,103 @@
+project_name: loli
+env:
+- GO111MODULE=on
+release:
+  github:
+    owner: lpmatos
+    name: loli
+  name_template: '{{.ProjectName}}-v{{.Version}}'
+milestones:
+- repo:
+    owner: lpmatos
+    name: loli
+  name_template: '{{ .Tag }}'
+scoop:
+  name: loli
+  commit_author:
+    name: goreleaserbot
+    email: goreleaser@carlosbecker.com
+  commit_msg_template: Scoop update for {{ .ProjectName }} version {{ .Tag }}
+builds:
+- id: loli
+  goos:
+  - linux
+  - darwin
+  - windows
+  goarch:
+  - "386"
+  - amd64
+  - arm
+  - arm64
+  goarm:
+  - "6"
+  targets:
+  - linux_386
+  - linux_amd64
+  - linux_arm_6
+  - linux_arm64
+  - darwin_amd64
+  - windows_386
+  - windows_amd64
+  ignore:
+  - goos: darwin
+    goarch: "386"
+    goarm: ""
+    gomips: ""
+  dir: .
+  main: ./cmd/loli/main.go
+  ldflags:
+  - -s -w -X "github.com/lpmatos/loli/pkg/cmd/version.cliVersion={{.Env.CLIENT_VERSION}}"
+    -X "github.com/lpmatos/loli/pkg/cmd/version.builtDate={{.CommitDate}}" -X "github.com/lpmatos/loli/pkg/cmd/version.builtBy=goreleaser"
+    -X "github.com/lpmatos/loli/pkg/cmd/version.commit={{.Commit}}" -X "github.com/lpmatos/loli/pkg/cmd/version.commitShort={{.ShortCommit}}"
+    -X "github.com/lpmatos/loli/pkg/cmd/version.commitBranch={{.Env.GIT_BRANCH}}"
+    -X "github.com/lpmatos/loli/pkg/cmd/version.goVersion={{.Env.GO_VERSION}}"
+  flags:
+  - -trimpath
+  binary: loli
+  env:
+  - CGO_ENABLED=0
+  lang: go
+  mod_timestamp: '{{.CommitTimestamp}}'
+  gobinary: go
+archives:
+- id: loli
+  builds:
+  - loli
+  name_template: '{{.ProjectName}}_v{{.Version}}_{{.Os}}-{{.Arch}}'
+  replacements:
+    "386": i386
+    amd64: x86_64
+    darwin: Darwin
+    linux: Linux
+    windows: Windows
+  format: binary
+  format_overrides:
+  - goos: windows
+    format: zip
+  files:
+  - LICENSE
+  - README.md
+  allow_different_binary_count: false
+snapshot:
+  name_template: SNAPSHOT-{{ .Commit }}
+checksum:
+  name_template: '{{ .ProjectName }}_{{ .Version }}_SHA256SUMS'
+  algorithm: sha256
+changelog:
+  skip: true
+dist: dist
+env_files:
+  github_token: ~/.config/goreleaser/github_token
+  gitlab_token: ~/.config/goreleaser/gitlab_token
+  gitea_token: ~/.config/goreleaser/gitea_token
+before:
+  hooks:
+  - go mod download
+  - go generate ./...
+source:
+  name_template: '{{ .ProjectName }}-{{ .Version }}'
+  format: tar.gz
+github_urls:
+  download: https://github.com
+gitlab_urls:
+  download: https://gitlab.com

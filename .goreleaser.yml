@@ -1,26 +1,20 @@
 # This is an example goreleaser.yaml file with some sane defaults.
 # Make sure to check the documentation at http://goreleaser.com
+---
 project_name: loli
-
+env:
+  - GO111MODULE=on
 release:
   github:
     owner: lpmatos
     name: loli
   name_template: "{{.ProjectName}}-v{{.Version}}"
-
-env:
-  - GO111MODULE=on
-
-before:
-  hooks:
-    - go mod download
-    - go generate ./...
-
 builds:
-  - binary: loli
-    id: loli
+  - id: loli
+    binary: loli
     env:
       - CGO_ENABLED=0
+    main: ./cmd/loli/main.go
     goos:
       - linux
       - darwin
@@ -30,22 +24,19 @@ builds:
       - amd64
       - arm
       - arm64
-    mod_timestamp: '{{.CommitTimestamp}}'
+    ignore:
+      - goos: darwin
+        goarch: 386
+    mod_timestamp: "{{.CommitTimestamp}}"
     flags:
       - -trimpath
     ldflags:
-     - -s -w -X "github.com/lpmatos/gen/internal/version.cliVersion={{.Env.CLIENT_VERSION}}" -X "github.com/lpmatos/gen/internal/version.builtDate={{.CommitDate}}" -X "github.com/lpmatos/gen/internal/version.builtBy=goreleaser" -X "github.com/lpmatos/gen/internal/version.commit={{.Commit}}" -X "github.com/lpmatos/gen/internal/version.commitShort={{.ShortCommit}}" -X "github.com/lpmatos/gen/internal/version.commitBranch={{.Env.GIT_BRANCH}}" -X "github.com/lpmatos/gen/internal/version.goVersion={{.Env.GO_VERSION}}"
-
-checksum:
-  name_template: '{{ .ProjectName }}_checksums.txt'
-
-changelog:
-  skip: true
-
+     - -s -w -X "github.com/lpmatos/loli/pkg/cmd/version.cliVersion={{.Env.CLIENT_VERSION}}" -X "github.com/lpmatos/loli/pkg/cmd/version.builtDate={{.CommitDate}}" -X "github.com/lpmatos/loli/pkg/cmd/version.builtBy=goreleaser" -X "github.com/lpmatos/loli/pkg/cmd/version.commit={{.Commit}}" -X "github.com/lpmatos/loli/pkg/cmd/version.commitShort={{.ShortCommit}}" -X "github.com/lpmatos/loli/pkg/cmd/version.commitBranch={{.Env.GIT_BRANCH}}" -X "github.com/lpmatos/loli/pkg/cmd/version.goVersion={{.Env.GO_VERSION}}"
 archives:
   - id: "loli"
     name_template: "{{.ProjectName}}_v{{.Version}}_{{.Os}}-{{.Arch}}"
     builds: [ "loli" ]
+    format: binary
     format_overrides:
       - goos: windows
         format: zip
@@ -53,8 +44,22 @@ archives:
       darwin: Darwin
       linux: Linux
       windows: Windows
-      386: i386
+      "386": i386
       amd64: x86_64
-
+    files:
+      - LICENSE
+      - README.md
 snapshot:
-  name_template: "{{ .Tag }}-next"
+  name_template: "SNAPSHOT-{{ .Commit }}"
+checksum:
+  name_template: "{{ .ProjectName }}_{{ .Version }}_SHA256SUMS"
+  algorithm: sha256
+changelog:
+  skip: true
+dist: dist
+before:
+  hooks:
+    - go mod download
+    - go generate ./...
+github_urls:
+  download: https://github.com

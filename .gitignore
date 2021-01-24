@@ -71,3 +71,4 @@ node_modules/
 ### Go Patch ###
 /vendor/
 /Godeps/
+/bin
