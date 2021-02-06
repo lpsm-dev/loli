@@ -1,6 +1,6 @@
 package types
 
-// Anime struct - information about the anime passed in the request to trace.moe API
+// Anime struct - information about the anime passed in the request to trace.moe API.
 type Anime struct {
 	Season       string  `json:"season"`
 	Anime        string  `json:"anime"`
@@ -14,7 +14,7 @@ type Anime struct {
 	IsAdult      bool    `json:"is_adult"`
 }
 
-// Response struct - content of trace.moe API request result
+// Response struct - content of trace.moe API request result.
 type Response struct {
 	Docs []*Anime `json:"docs"`
 }
