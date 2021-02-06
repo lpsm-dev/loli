@@ -2,9 +2,9 @@ package config
 
 import "os"
 
-// GetEnv function - return the value of and environmant variable if exist and if not return a fallback
-func GetEnv(enviroment, fallback string) string {
-	if value, okay := os.LookupEnv(enviroment); okay {
+// GetEnv function - return the value of and environment variable if exist and if not return a fallback
+func GetEnv(environment, fallback string) string {
+	if value, okay := os.LookupEnv(environment); okay {
 		return value
 	}
 	return fallback
