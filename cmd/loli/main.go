@@ -17,8 +17,10 @@ limitations under the License.
 */
 package main
 
-import "fmt"
+import (
+	cmd "github.com/lpmatos/loli/cmd/commands"
+)
 
 func main() {
-	fmt.Println("Hello World!")
+	cmd.Execute()
 }

@@ -1,1 +1,1 @@
-package commands
+package cmd
