@@ -1,12 +1,12 @@
 # [＜](README.md) Contribuindo
 
-Primeiramente, obrigado 🎉! Estamos muito felizes em saber que podemos contar com novas features e pull-requests da comunidade! Caso sua mudança não seja trivial, abra uma **issue** nesse projeto para podermos discutir a sua ideia e estratégia de implementação. Será incrível poder interagir e se conectar com novos contribuidores!
+Antes de tudo, muito obrigado 🎉! É extremamente contagiante saber que podemos contar com novas features e pull-requests da comunidade! Caso sua mudança não seja algo trivial, abra uma [issue](https://github.com/lpmatos/loli/issues) podermos discutir a sua ideia e sua estratégia de implementação. Será incrível poder interagir e se conectar com novos contribuidores!
 
 ## ➤ Overview
 
-Nosso objetivo aqui é gerar valor para o processo de desenvolvimento de projetos com múltiplas participações, independente de um time core específico. Pensando nisso, implementamos um arquivo de contribuição para abordarmos as melhores práticas a serem seguidas durante o desenvolvimento nesse projeto. O modelo é apenas uma recomendação e ainda está em processo de construção, esperamos que todos possam contribuir para essa evolução 🤗!
+Nosso principal objetivo aqui é gerar valor para o processo de desenvolvimento. Pensando nisso implementamos um arquivo de contribuição para abordarmos as melhores práticas a serem seguidas durante o desenvolvimento nosso desenvolvimento. O modelo é uma recomendação importante e ainda está em processo de construção. Esperamos que você possa contribuir para essa evolução 🤗!
 
-## ➤ Menus
+## ➤ Menu
 
 1. [Código de conduta](#-código-de-conduta)
 1. [Regras de codificação](#-regras-de-codificação)
@@ -15,7 +15,7 @@ Nosso objetivo aqui é gerar valor para o processo de desenvolvimento de projeto
 
 ## ➤ Código de conduta
 
-Nesse documento definimos o passo a passo de contribução. Aqui estão todas as diretrizes que gostaríamos que você seguisse 😄!
+Aqui estão todas as diretrizes que gostaríamos que você seguisse caso queira nos ajudar de alguma forma 😄!
 
 ## ➤ Regras de codificação
 
@@ -23,38 +23,38 @@ Nesse documento definimos o passo a passo de contribução. Aqui estão todas as
 Para garantir a consistência do nosso código fonte, lembre-se de seguir essas regras enquanto trabalhar:
 
 - Todos as **features** ou **fixs** (correções de bugs) **devem ser testados**!
-- A pipeline deve possui um status de sucesso antes de qualquer **merge-request** ser aprovado. Caso contrário, o código não é mesclado em seu branch alvo.
-- Todas as **features** são criadas a partir da branch **develop**, possuindo curta duração e sendo mescladas novamente em **develop** assim que o **merge-request** for aprovado.
-- Certifique-se de dar um `git rebase` antes de mesclar sua **feature** em **develop**, isso vai evitar possíveis conflitos, além de gerar um histórico linear das modificações.
+- A **pipeline** deve possui um status de sucesso antes de qualquer **pull-request** ser aprovado, caso contrário, o código não é mesclado em seu branch alvo.
+- Todas as **features** e **fixs** são criadas a partir da branch **main** e são mescladas novamente na banch **main** assim que o **pull-request** for aprovado.
+- Certifique-se de dar um `git rebase` antes de mesclar sua **feature** ou **fix** na branch **main**, isso vai evitar possíveis conflitos, além de gerar um histórico linear das modificações.
+- Sempre que o código vai para a branch **main** uma nova stable tag deve ser criada.
 - Nesse projeto utilizamos a convenção do [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) como boa prática de criação de mensagens de commit, que é totalmente ligado a convenção [SemVer](https://semver.org/), que é responsável por ditar as regras de versionamentodo/release do código. A partir dessas convenções conseguimos utilizar plugins **npm** para automatizar nosso processo de geração de **tag/release**, tudo de forma automática e com base em regras pré-configuradas, podendo ser customizáveis de acordo com o cenário.
+- Utilize a estratégia de commits atômicos onde a cada pequena alteração você cria um commit. Evite criar commits com muitas alterações.
 
 ## ➤ Teste suas mudanças
 
-Se você criar um merge-request, nosso CI executará a pipeline para validar suas mudanças. Nenhuma alteração será aprovada caso a pipeline não seja bem sucedida. É vital que a branch `master` e qualquer outra branch de entrega, passe nos testes o tempo todo, caso contrário nada será aprovado.
-
-Sempre que possível, adicione testes adicionais para garantir que seu código fique o melhor possível.
+Assim que você criar um **pull-request** da sua **features** ou **fix** para a branch **main**, uma **pipeline** será criada para validar as mudanças. Nenhum **pull-request** será aprovada caso a **pipeline** não seja bem sucedida. É de vital importância que a branch `main` passe nos testes o tempo todo, caso contrário nada irá para produção. Sempre que possível, adicione novos testes para garantir que seu código fique o melhor possível.
 
 ## ➤ Submission Guidelines
 
 >
-> 1. Faça um **fork** ou crie uma **feature branch**. 
-> 1. Leia as regras de contribução.
-> 1. Siga a organização do repositório sempre que você for alterar ou adicionar coisas.
-> 1. Faça um **commit** com suas alterações.
-> 1. Abra um **merge-request** assim que perceber que suas alterações estão prontas para serem promovidas.
-> 1. Espere até que seu **merge-request** seja aprovada... 🚀
+> 1. Faça um **fork** ou crie uma **branch** **feature** ou **fix**. 
+> 1. Leia as [regras de contribução](CONTRIBUTING.md).
+> 1. Siga a organização do repositório sempre que você for alterar ou adicionar arquivos ou diretórios.
+> 1. Faça o **commit** com suas alterações.
+> 1. Abra um **pull-request** assim que perceber que suas alterações estão prontas para serem promovidas.
+> 1. Espere até que seu **pull-request** seja aprovado... 🚀
 >
 
 **Lembre-se**: Não existe código ruim, temos diferentes formas de resolver um mesmo problema. 😊
 
 ### Add to git and push
 
-📝 Você precisa mandar suas modificações para o servidor do Git assim que terminá-las. Para isso, faça o seguinte:
+📝 Você precisa mandar suas modificações para o servidor do **Git** assim que terminá-las. Para isso, faça o seguinte:
 
 ```bash
 git add -f .
 git commit -m "chore(initial): include config files"
-git push -u origin main
+git push -u origin <branch>
 ```
 
 ### Submitting a Merge Request (MR)
