@@ -12,6 +12,7 @@ require (
 	github.com/mattn/go-runewidth v0.0.10 // indirect
 	github.com/mitchellh/mapstructure v1.4.1 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
+	github.com/sirupsen/logrus v1.4.2
 	github.com/spf13/cobra v1.1.1
 	go.mongodb.org/mongo-driver v1.4.6 // indirect
 	golang.org/x/sys v0.0.0-20210124154548-22da62e12c0c // indirect
