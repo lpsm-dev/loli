@@ -10,6 +10,6 @@ var RootCmd = &cobra.Command{
 	Short: "Find the anime scene by image using your terminal",
 	Long: `Description:
 
-👉😳👈 This is a pretty CLI that can find animes passing scene images.
+👉😳👈 This is a pretty CLI that can find animes passing scene images
 `,
 }

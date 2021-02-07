@@ -29,6 +29,5 @@ var versionCmd = &cobra.Command{
 func init() {
 	versionCmd.PersistentFlags().BoolVarP(&short, "short", "s", false, "Print just the version number of Gen CLI")
 	versionCmd.PersistentFlags().BoolVarP(&pretty, "pretty", "p", false, "Show more details about the current version of Gen CLI")
-	versionCmd.PersistentFlags().BoolVarP(&checkLatest, "latest", "l", false, "Check latest available version")
 	RootCmd.AddCommand(versionCmd)
 }

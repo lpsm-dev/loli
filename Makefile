@@ -23,8 +23,8 @@ export GIT_BRANCH			= $(GIT_BRANCH)
 # INCLUDES
 ##################################################
 
-include make/Makefile.variables
-include make/Makefile.docker
+include Makefile.variables
+include Makefile.docker
 
 ##################################################
 # HELPER

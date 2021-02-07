@@ -31,7 +31,7 @@ builds:
     flags:
       - -trimpath
     ldflags:
-     - -s -w -X "github.com/lpmatos/loli/pkg/cmd/version.builtDate={{.CommitDate}}" -X "github.com/lpmatos/loli/pkg/cmd/version.builtBy=goreleaser" -X "github.com/lpmatos/loli/pkg/cmd/version.commit={{.Commit}}" -X "github.com/lpmatos/loli/pkg/cmd/version.commitShort={{.ShortCommit}}"
+      - -s -w -X "github.com/lpmatos/loli/internal/version.builtDate={{.CommitDate}}" -X "github.com/lpmatos/loli/internal/version.builtBy=goreleaser" -X "github.com/lpmatos/loli/internal/version.commit={{.Commit}}" -X "github.com/lpmatos/loli/internal/version.commitShort={{.ShortCommit}}"
 archives:
   - id: "loli"
     name_template: "{{.ProjectName}}_v{{.Version}}_{{.Os}}-{{.Arch}}"
