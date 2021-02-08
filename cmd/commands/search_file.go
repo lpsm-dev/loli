@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/lpmatos/loli/internal/trace"
 	"github.com/spf13/cobra"
 )
 
@@ -13,6 +14,7 @@ var SearchFileCmd = &cobra.Command{
 	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("Search anime by file")
+		trace.SearchAnime(false)
 	},
 }
 
