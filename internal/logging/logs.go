@@ -1,4 +1,4 @@
-package utils
+package logging
 
 import (
 	"strings"
@@ -6,7 +6,7 @@ import (
 	logrus "github.com/sirupsen/logrus"
 )
 
-// logger variable - Local variable logrus logger.
+// logger variable - local variable logrus logger.
 var logger *logrus.Logger
 
 // Setup function - configure logrus logger.

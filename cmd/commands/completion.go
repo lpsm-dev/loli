@@ -11,7 +11,7 @@ import (
 // completionCmd represents the completion command.
 var completionCmd = &cobra.Command{
 	Use:                   "completion <shell>",
-	Short:                 "output shell completion code for the specified shell",
+	Short:                 "Generate shell completion scripts",
 	Long:                  constants.CompletionHelpMessage,
 	Hidden:                false,
 	DisableFlagsInUseLine: true,
@@ -26,18 +26,17 @@ var completionCmd = &cobra.Command{
 }
 
 func completioRunE(cmd *cobra.Command, args []string) error {
-	var err error
-	switch args[0] {
+	var shellType string = args[0]
+	switch shellType {
 	case "bash":
-		err = cmd.Root().GenBashCompletion(os.Stdout)
+		return cmd.Root().GenBashCompletion(os.Stdout)
 	case "zsh":
-		err = cmd.Root().GenZshCompletion(os.Stdout)
+		return cmd.Root().GenZshCompletion(os.Stdout)
 	case "fish":
-		err = cmd.Root().GenFishCompletion(os.Stdout, true)
+		return cmd.Root().GenFishCompletion(os.Stdout, true)
 	default:
-		err = cmd.Root().GenBashCompletion(os.Stdout)
+		return fmt.Errorf("unsupported shell type %q", shellType)
 	}
-	return err
 }
 
 func init() {
