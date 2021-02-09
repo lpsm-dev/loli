@@ -60,6 +60,7 @@ func NewClient(baseURL string) (*Client, error) {
 }
 
 // NewRequest returns an http.Request with information for the trace.moe API.
+// For moe information: https://golang.org/pkg/net/http/
 func (c *Client) NewRequest(method, url string, body io.Reader) (*http.Request, error) {
 	if c.Client == nil {
 		c.Client = HTTPClient
