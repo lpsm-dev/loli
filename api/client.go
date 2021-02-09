@@ -1,33 +1,57 @@
 package api
 
 import (
+	"crypto/tls"
 	"io"
+	"net"
 	"net/http"
 	"time"
 )
 
 var (
-	// UserAgent lets the API know where the call is being made from.
-	// It's overridden from the root command so that we can set the version.
+	// UserAgent variable - lets the API know where the call is being made from.
+	// For more information: https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/User-Agent
 	UserAgent = "github.com/lpmatos/loli"
 
 	// TimeoutInSeconds variable - is the timeout the default HTTP client will use.
+	// For more information: https://stackoverflow.com/questions/16895294/how-to-set-timeout-for-http-get-requests-in-golang
 	TimeoutInSeconds = 60
 
+	// InsecureSkipVerify controls whether a client verifies the server's certificate chain and host name.
+	// For more information: https://golang.org/pkg/crypto/tls/
+	InsecureSkipVerify = false
+
 	// HTTPClient variable - is the client used to make HTTP calls in loli cli.
+	// For more information: https://medium.com/@nate510/don-t-use-go-s-default-http-client-4804cb19f779
 	HTTPClient = &http.Client{
 		Timeout: time.Duration(TimeoutInSeconds) * time.Second,
+		Transport: &http.Transport{
+			Proxy: http.ProxyFromEnvironment,
+			DialContext: (&net.Dialer{
+				Timeout:   30 * time.Second,
+				KeepAlive: 30 * time.Second,
+				DualStack: true,
+			}).DialContext,
+			ForceAttemptHTTP2:     true,
+			MaxIdleConns:          100,
+			IdleConnTimeout:       90 * time.Second,
+			TLSHandshakeTimeout:   10 * time.Second,
+			ExpectContinueTimeout: 1 * time.Second,
+			TLSClientConfig: &tls.Config{
+				InsecureSkipVerify: false,
+			},
+		},
 	}
 )
 
-// Client struct - is an http client that is configured for trace.
+// Client struct - is an http client that is configured for trace.moe API.
 type Client struct {
-	*http.Client
-	BaseURL     string
-	ContentType string
+	*http.Client        // HTTP Client pointer
+	BaseURL      string // HTTP Request URL
+	ContentType  string // HTTP Request Content Type
 }
 
-// NewClient returns an trace API client.
+// NewClient returns a trace.moe API client.
 func NewClient(baseURL string) (*Client, error) {
 	return &Client{
 		Client:  HTTPClient,
@@ -35,7 +59,7 @@ func NewClient(baseURL string) (*Client, error) {
 	}, nil
 }
 
-// NewRequest returns an http.Request with information for the trace API.
+// NewRequest returns an http.Request with information for the trace.moe API.
 func (c *Client) NewRequest(method, url string, body io.Reader) (*http.Request, error) {
 	if c.Client == nil {
 		c.Client = HTTPClient
@@ -46,7 +70,7 @@ func (c *Client) NewRequest(method, url string, body io.Reader) (*http.Request, 
 		return nil, error
 	}
 
-	request.Header.Set("Content-Type", UserAgent)
+	request.Header.Set("User-Agent", UserAgent)
 
 	if c.ContentType == "" {
 		request.Header.Set("Content-Type", "application/json")
