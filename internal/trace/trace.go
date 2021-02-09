@@ -3,45 +3,20 @@ package trace
 import (
 	"bufio"
 	"bytes"
-	"crypto/tls"
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"net"
 	"net/http"
 	"os"
-	"time"
 
+	"github.com/lpmatos/loli/api"
 	"github.com/lpmatos/loli/internal/types"
 	log "github.com/sirupsen/logrus"
 )
 
-const (
-	fileSearchURL = "https://trace.moe/api/search"
-)
-
 // SearchAnime function
 func SearchAnime(allowInsecure bool) {
-	httpClient := &http.Client{
-		Transport: &http.Transport{
-			Proxy: http.ProxyFromEnvironment,
-			DialContext: (&net.Dialer{
-				Timeout:   30 * time.Second,
-				KeepAlive: 30 * time.Second,
-				DualStack: true,
-			}).DialContext,
-			ForceAttemptHTTP2:     true,
-			MaxIdleConns:          100,
-			IdleConnTimeout:       90 * time.Second,
-			TLSHandshakeTimeout:   10 * time.Second,
-			ExpectContinueTimeout: 1 * time.Second,
-			TLSClientConfig: &tls.Config{
-				InsecureSkipVerify: allowInsecure,
-			},
-		},
-	}
-
 	imageFile, error := os.Open("/root/git/github/loli/docs/exemples/naruto.jpg")
 	if error != nil {
 		log.Fatal(error)
@@ -59,14 +34,20 @@ func SearchAnime(allowInsecure bool) {
 		log.Fatal(error)
 	}
 
-	req, error := http.NewRequest(http.MethodPost, fileSearchURL, bytes.NewBuffer(reqBody))
+	// Stable
+	client, error := api.NewClient("https://trace.moe/api/search")
 	if error != nil {
 		log.Fatal(error)
 	}
 
-	req.Header.Set("Content-Type", "application/json")
+	// Stable
+	req, error := client.NewRequest(http.MethodPost, "https://trace.moe/api/search", bytes.NewBuffer(reqBody))
+	if error != nil {
+		log.Fatal(error)
+	}
 
-	resp, error := httpClient.Do(req)
+	// Stable
+	resp, error := client.Do(req)
 	if resp.Body != nil {
 		defer resp.Body.Close()
 	}
@@ -75,10 +56,10 @@ func SearchAnime(allowInsecure bool) {
 	}
 
 	if resp.StatusCode != http.StatusOK {
-		log.Fatal("Bad status code...")
+		log.Fatal("🤬 Bad status code...")
 	}
-
 	log.Info("✅ Success requests. Read body json content")
+
 	content, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		log.Fatal(err)
