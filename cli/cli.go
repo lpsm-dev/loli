@@ -30,9 +30,7 @@ var (
 var (
 	osMap = map[string]string{
 		"darwin":  "darwin",
-		"freebsd": "freebsd",
 		"linux":   "linux",
-		"openbsd": "openbsd",
 		"windows": "windows",
 	}
 
@@ -40,7 +38,6 @@ var (
 		"386":   "i386",
 		"amd64": "x86_64",
 		"arm":   "arm",
-		"ppc64": "ppc64",
 	}
 )
 
@@ -52,18 +49,6 @@ var (
 	// ReleaseURL is the endpoint that provides information about cli releases.
 	ReleaseURL = "https://api.github.com/repos/lpmatos/loli/releases"
 )
-
-// Updater is a simple upgradable file interface.
-type Updater interface {
-	IsUpToDate() (bool, error)
-	Upgrade() error
-}
-
-// CLI is information about the CLI itself.
-type CLI struct {
-	Version       string
-	LatestRelease *Release
-}
 
 // New creates a CLI, setting it to a particular version.
 func New(version string) *CLI {
@@ -137,10 +122,12 @@ func (c *CLI) Upgrade() error {
 
 func (c *CLI) fetchLatestRelease() error {
 	latestReleaseURL := fmt.Sprintf("%s/%s", ReleaseURL, "latest")
+
 	resp, err := HTTPClient.Get(latestReleaseURL)
 	if err != nil {
 		return err
 	}
+
 	defer resp.Body.Close()
 
 	if resp.StatusCode > 399 {
@@ -152,10 +139,13 @@ func (c *CLI) fetchLatestRelease() error {
 	}
 
 	var rel Release
+
 	if err := json.NewDecoder(resp.Body).Decode(&rel); err != nil {
 		return err
 	}
+
 	c.LatestRelease = &rel
+
 	return nil
 }
 

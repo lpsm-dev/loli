@@ -25,6 +25,11 @@ func GetDisplay() string {
 	return fmt.Sprintf("CLI Version - %s", cliVersion)
 }
 
+// GetVersion function
+func GetVersion() string {
+	return cliVersion
+}
+
 // GetPrettyDetails function - create a pretty table and parse this table with current version details.
 func GetPrettyDetails() {
 	versionTable := table.NewWriter()
