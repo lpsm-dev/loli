@@ -1,5 +1,60 @@
 # Semantic Versioning Changelog
 
+## [1.1.0](https://github.com/lpmatos/loli/compare/v1.0.0...v1.1.0) (2021-02-10)
+
+
+### :memo: Documentação
+
+* fix Latest Release badge ([150dc0f](https://github.com/lpmatos/loli/commit/150dc0f4fa009d4146687abf5cc2a7fcd0249917))
+* fix readme ([34ae538](https://github.com/lpmatos/loli/commit/34ae538dd1ad7a111b87b3fa72569a709d5659f2))
+
+
+### :repeat: CI
+
+* **github:** include code analysis ([fab7669](https://github.com/lpmatos/loli/commit/fab7669daec32e52826bf6be1222a7b8da69e77c))
+* **github:** include more setup ([8175dc9](https://github.com/lpmatos/loli/commit/8175dc955b95bd61cb169c8d8658875b6ff815bd))
+* **travis:** fix email notifications ([5543ea6](https://github.com/lpmatos/loli/commit/5543ea60678c25421362d2dae4e26cb8b64e264c))
+
+
+### :package: Atualizações
+
+* **deps:** bump actions/stale from v3.0.12 to v3.0.15 ([964d892](https://github.com/lpmatos/loli/commit/964d8926a503c62ca1ad3a172cc31ea7bf89e0b3))
+
+
+### :bug: Correções
+
+* api client comments and HTTPClient ([d836f2d](https://github.com/lpmatos/loli/commit/d836f2df0eb4944a92f3900230b7b077fbcd0646))
+* assets function ([d54d475](https://github.com/lpmatos/loli/commit/d54d475050976a1bd3755442703a96f310be846c))
+* configurations ([34866f6](https://github.com/lpmatos/loli/commit/34866f622f4a5301679ee357e49887f530a14c8d))
+* documentation and config files ([6346b90](https://github.com/lpmatos/loli/commit/6346b9078416d4b961d80bb84fe9e5c73f4b046e))
+* go release config ldflags and variables script ([f47f903](https://github.com/lpmatos/loli/commit/f47f9037833c20d0e4f8cc3af9dc3902fcef6014))
+* go sum ([d849ba9](https://github.com/lpmatos/loli/commit/d849ba924e1ae66b992729422ded845fba64e01d))
+* misspell environment name ([71065e9](https://github.com/lpmatos/loli/commit/71065e9b4d99417879326d9278131cc085d8e0d9))
+* project specifications ([f37360d](https://github.com/lpmatos/loli/commit/f37360d967bb3b613f7f36e57d6562460663d33e))
+* remove .gitlab ([d28c034](https://github.com/lpmatos/loli/commit/d28c034ffd52c28f529d6dd92f06cb34ecb180a0))
+* remove some files ([28c5e5f](https://github.com/lpmatos/loli/commit/28c5e5fd2b1d316f8b8ed9375850d3ac9fb35fe2))
+* subcommands organization ([262dd53](https://github.com/lpmatos/loli/commit/262dd53cf25c19af495d6e0b1c8f9d0969bf166c))
+
+
+### :sparkles: Novidades
+
+* add trace API response docs and config get env function ([21f0a80](https://github.com/lpmatos/loli/commit/21f0a803b3442022273eb42143f0ed5ad4c513e3))
+* ci stale ([796fc8b](https://github.com/lpmatos/loli/commit/796fc8bdae9ed6c9588e67b47121e4b97e266e0b))
+* cli and upgrade ([040ee44](https://github.com/lpmatos/loli/commit/040ee449be618c47af9c3bc3ebfe1582d03f9dd5))
+* cmd execute ([120d3e5](https://github.com/lpmatos/loli/commit/120d3e5e2f776cc30d2c4ef418e18769be2148cf))
+* completion command ([706ad97](https://github.com/lpmatos/loli/commit/706ad977ac5deb93f03e34fdd92be1e2bdafd9ab))
+* include api definition ([ae1da3a](https://github.com/lpmatos/loli/commit/ae1da3a58c91316bc9a963053baf32d8a5d2acd4))
+* include CLI ([9581c1f](https://github.com/lpmatos/loli/commit/9581c1f4809c1f4efabec40a90465a0db0c810ef))
+* include search by file and by link ([d1e7d6d](https://github.com/lpmatos/loli/commit/d1e7d6db72b1abdcf3b15b37de275401698a9664))
+* include types methods ([b308c89](https://github.com/lpmatos/loli/commit/b308c89967ae3148574365f3fb36899d7fa7afc2))
+* include version file ([c4060b5](https://github.com/lpmatos/loli/commit/c4060b56ba760bca67185e3eebef85e6c041fd41))
+* pretty version show ([82d415e](https://github.com/lpmatos/loli/commit/82d415e9c9811fcc65642bd4ba6fdabcc11f1f38))
+* root CLI organization ([906d038](https://github.com/lpmatos/loli/commit/906d03874b191d37e85688d289f4d0994ece335e))
+* search file ([3d055fb](https://github.com/lpmatos/loli/commit/3d055fb566e146557351570cb91dee74cc4da84d))
+* setup log definition ([711ec93](https://github.com/lpmatos/loli/commit/711ec93c729edaa3bc601060097c9c21e6b82452))
+* support files ([2f57fad](https://github.com/lpmatos/loli/commit/2f57fad885f1b2911bde331f7c4907752e1d3004))
+* upgrade command ([03e6e51](https://github.com/lpmatos/loli/commit/03e6e51eb1596a5e02cfdfc0473014495a80130a))
+
 ## 1.0.0 (2021-01-24)
 
 
