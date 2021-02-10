@@ -121,4 +121,4 @@ snapshot: verify-goreleaser
 
 .PHONY: release
 release: verify-goreleaser
-	goreleaser release --rm-dist
+	goreleaser release --rm-dist --debug
