@@ -75,7 +75,7 @@ go install github.com/lpmatos/Loli/cmd/loli
 
 # if you cannot install directly, try following command,
 # then input install command again
-go get -u github.com/lpmatos/Loli
+go get -u github.com/lpmatos/loli
 ```
 
 ## ➤ Desenvolvimento com Docker
