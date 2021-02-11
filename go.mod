@@ -14,7 +14,7 @@ require (
 	github.com/mitchellh/mapstructure v1.4.1 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/sirupsen/logrus v1.4.2
-	github.com/spf13/cobra v1.1.1
+	github.com/spf13/cobra v1.1.3
 	go.mongodb.org/mongo-driver v1.4.6 // indirect
 	golang.org/x/sys v0.0.0-20210124154548-22da62e12c0c // indirect
 )
