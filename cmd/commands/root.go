@@ -5,8 +5,11 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// Local flag logLevel - global log level.
-var logLevel string
+var (
+	logLevel      string
+	logFormat     string
+	disableColors bool
+)
 
 // RootCmd represents the base command when called without any subcommands.
 var RootCmd = &cobra.Command{
@@ -16,12 +19,13 @@ var RootCmd = &cobra.Command{
 
 👉😳👈 This is a pretty CLI that can find animes passing scene images
 `,
+	PersistentPreRun: func(cmd *cobra.Command, args []string) {
+		logging.Setup(logFormat, logLevel, disableColors)
+	},
 }
 
 func init() {
-	logging.Setup()
-	RootCmd.PersistentFlags().StringVar(&logLevel, "log-level", "", "Set the logging level. One of: debug|info|warn|error")
-	RootCmd.PersistentFlags().StringVar(&logLevel, "log-format", "", "The formating of the logs. Available values: text, json, json-pretty")
-	RootCmd.PersistentFlags().StringVar(&logLevel, "log-file", "", `The file where all logs should be printed to. "-" means stdout`)
-	RootCmd.AddCommand(VersionCmd())
+	RootCmd.PersistentFlags().StringVar(&logLevel, "log-level", "debug", "Set the logging level. One of: debug|info|warn|error")
+	RootCmd.PersistentFlags().StringVar(&logFormat, "log-format", "json", "The formating of the logs. Available values: text|json|json-pretty|plain")
+	RootCmd.PersistentFlags().BoolVar(&disableColors, "disable-colors", false, `Set true if you want disable colors of log output`)
 }
