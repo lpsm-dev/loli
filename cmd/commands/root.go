@@ -8,6 +8,8 @@ import (
 var (
 	logLevel      string
 	logFormat     string
+	logTarget     string
+	logFile       string
 	disableColors bool
 )
 
@@ -20,12 +22,14 @@ var RootCmd = &cobra.Command{
 👉😳👈 This is a pretty CLI that can find animes passing scene images
 `,
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
-		logging.Setup(logFormat, logLevel, disableColors)
+		logging.Setup(logTarget, logFile, logFormat, logLevel, disableColors)
 	},
 }
 
 func init() {
 	RootCmd.PersistentFlags().StringVar(&logLevel, "log-level", "debug", "Set the logging level. One of: debug|info|warn|error")
-	RootCmd.PersistentFlags().StringVar(&logFormat, "log-format", "json", "The formating of the logs. Available values: text|json|json-pretty|plain")
+	RootCmd.PersistentFlags().StringVar(&logFormat, "log-format", "text", "The formating of the logs. Available values: text|json|json-pretty|plain")
+	RootCmd.PersistentFlags().StringVar(&logTarget, "log-target", "stdout", "Defaulting to Stdout. Available values: stdout|stderr|file")
+	RootCmd.PersistentFlags().StringVar(&logFile, "log-file", "output.log", "Defaulting to log file")
 	RootCmd.PersistentFlags().BoolVar(&disableColors, "disable-colors", false, `Set true if you want disable colors of log output`)
 }
