@@ -21,8 +21,12 @@ var RootCmd = &cobra.Command{
 👉😳👈 This is a pretty CLI that can find animes passing scene images
 `,
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
-		// init log options from command line params
-		err := logging.InitLog(logLevel, logFormat, logOutput)
+		closer, err := logging.Initialize(
+			logging.WithFormatter(logFormat),
+			logging.WithLogLevel(logLevel),
+			logging.WithOutputName(logOutput),
+		)
+		defer closer.Close()
 		if err != nil {
 			logrus.Warn("Error setting log level, using debug as default")
 		}
@@ -31,6 +35,6 @@ var RootCmd = &cobra.Command{
 
 func init() {
 	RootCmd.PersistentFlags().StringVar(&logLevel, "log-level", "debug", "Set the logging level. One of: debug|info|warn|error")
-	RootCmd.PersistentFlags().StringVar(&logFormat, "log-format", "text", "The formating of the logs. Available values: text|json|json-pretty|plain")
-	RootCmd.PersistentFlags().StringVar(&logOutput, "log-output", "stdout", "Defaulting to Stdout. Available values: stdout|stderr|file")
+	RootCmd.PersistentFlags().StringVar(&logFormat, "log-format", "color", "The formating of the logs. Available values: text|color|json|json-pretty|plain")
+	RootCmd.PersistentFlags().StringVar(&logOutput, "log-output", "stdout", "Defaulting to Stdout. Available values: stdout|stderr|file-path")
 }
