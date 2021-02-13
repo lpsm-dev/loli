@@ -75,7 +75,7 @@ func WithOutput(output, file string) LoggerOption {
 			conf.writer = os.Stdout
 		case "stderr":
 			conf.writer = os.Stderr
-		case "text":
+		case "file":
 			conf.writer = nil
 			conf.outputPath = file
 		default:
