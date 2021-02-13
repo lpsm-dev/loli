@@ -2,11 +2,15 @@ package commands
 
 import (
 	"github.com/lpmatos/loli/internal/logging"
+	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
 
-// Local flag logLevel - global log level.
-var logLevel string
+var (
+	logLevel  string
+	logFormat string
+	logOutput string
+)
 
 // RootCmd represents the base command when called without any subcommands.
 var RootCmd = &cobra.Command{
@@ -16,12 +20,21 @@ var RootCmd = &cobra.Command{
 
 👉😳👈 This is a pretty CLI that can find animes passing scene images
 `,
+	PersistentPreRun: func(cmd *cobra.Command, args []string) {
+		closer, err := logging.Initialize(
+			logging.WithFormatter(logFormat),
+			logging.WithLogLevel(logLevel),
+			logging.WithOutputName(logOutput),
+		)
+		defer closer.Close()
+		if err != nil {
+			logrus.Warn("Error setting log level, using debug as default")
+		}
+	},
 }
 
 func init() {
-	logging.Setup()
-	RootCmd.PersistentFlags().StringVar(&logLevel, "log-level", "", "Set the logging level. One of: debug|info|warn|error")
-	RootCmd.PersistentFlags().StringVar(&logLevel, "log-format", "", "The formating of the logs. Available values: text, json, json-pretty")
-	RootCmd.PersistentFlags().StringVar(&logLevel, "log-file", "", `The file where all logs should be printed to. "-" means stdout`)
-	RootCmd.AddCommand(VersionCmd())
+	RootCmd.PersistentFlags().StringVar(&logLevel, "log-level", "debug", "Set the logging level. One of: debug|info|warn|error")
+	RootCmd.PersistentFlags().StringVar(&logFormat, "log-format", "color", "The formating of the logs. Available values: text|color|json|json-pretty|plain")
+	RootCmd.PersistentFlags().StringVar(&logOutput, "log-output", "stdout", "Defaulting to Stdout. Available values: stdout|stderr|file-path")
 }
