@@ -1,4 +1,4 @@
-package logging
+package log
 
 import (
 	"fmt"
@@ -45,7 +45,7 @@ func WithFormatter(format string) LoggerOption {
 		case "plain":
 			plainFormatter := new(plainFormatter)
 			plainFormatter.TimestampFormat = timestampFormat
-			plainFormatter.LevelDesc = levels
+			plainFormatter.LevelDesc = customLevels
 			conf.formatter = plainFormatter
 		default:
 			conf.warnings = append(conf.warnings, fmt.Sprintf("Unknown logging format %s, ignoring option", format))
@@ -66,18 +66,20 @@ func WithLogLevel(level string) LoggerOption {
 	}
 }
 
-// WithOutputName allows customization of the sink of the logger. Output is either:
-// `stdout`, `stderr`, or a path to a file.
-func WithOutputName(outputName string) LoggerOption {
+// WithOutput allows customization of the sink of the logger. Output is either:
+// `stdout`, `stderr`, or `file`.
+func WithOutput(output, file string) LoggerOption {
 	return func(conf *loggerConfig) {
-		switch outputName {
+		switch strings.ToLower(output) {
 		case "stdout":
 			conf.writer = os.Stdout
 		case "stderr":
 			conf.writer = os.Stderr
-		default:
+		case "text":
 			conf.writer = nil
-			conf.outputPath = outputName
+			conf.outputPath = file
+		default:
+			conf.warnings = append(conf.warnings, fmt.Sprintf("Unknown log output, ignoring option: %v", output))
 		}
 	}
 }

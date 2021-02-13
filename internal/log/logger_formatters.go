@@ -1,4 +1,4 @@
-package logging
+package log
 
 import (
 	"fmt"
@@ -6,6 +6,18 @@ import (
 
 	"github.com/lpmatos/loli/internal/helpers"
 	"github.com/sirupsen/logrus"
+)
+
+var (
+	timestampFormat string   = "2006-01-02 15:04:05"
+	customLevels    []string = []string{
+		"😋 INFO",
+		"🥳 DEBUG",
+		"😠 WARN",
+		"😡 PANIC",
+		"🤬 FATAL",
+		"😡 ERROR",
+	}
 )
 
 func textFormatter() *logrus.TextFormatter {
@@ -35,13 +47,12 @@ func jsonFormatter(pretty bool) *logrus.JSONFormatter {
 	}
 }
 
-// plainFormatter struct.
 type plainFormatter struct {
 	TimestampFormat string
 	LevelDesc       []string
 }
 
-// Format function - return logrus Plain formatter.
+// Format function - return logrus custom Plain formatter.
 func (plain *plainFormatter) Format(entry *logrus.Entry) ([]byte, error) {
 	return []byte(fmt.Sprintf("%s %s %s\n",
 			plain.LevelDesc[entry.Level],
