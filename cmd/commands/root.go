@@ -2,7 +2,6 @@ package commands
 
 import (
 	"github.com/lpmatos/loli/internal/log"
-	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
 
@@ -29,7 +28,7 @@ var RootCmd = &cobra.Command{
 		)
 
 		if err != nil {
-			logrus.Warn("Error setting log level, using debug as default")
+			log.Warningf("Error setting log: %v", err)
 		}
 	},
 }

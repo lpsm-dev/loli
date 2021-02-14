@@ -43,9 +43,8 @@ func WithFormatter(format string) LoggerOption {
 		case "json-pretty":
 			conf.formatter = jsonFormatter(true)
 		case "plain":
-			plainFormatter := new(plainFormatter)
-			plainFormatter.TimestampFormat = timestampFormat
-			plainFormatter.LevelDesc = customLevels
+			plainFormatter := new(PlainFormatter)
+			plainFormatter.TimestampFormat = defaultTimestampFormat
 			conf.formatter = plainFormatter
 		default:
 			conf.warnings = append(conf.warnings, fmt.Sprintf("Unknown logging format %s, ignoring option", format))

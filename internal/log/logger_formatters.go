@@ -3,27 +3,23 @@ package log
 import (
 	"fmt"
 	"runtime"
+	"strconv"
+	"strings"
 
 	"github.com/lpmatos/loli/internal/helpers"
 	"github.com/sirupsen/logrus"
 )
 
 var (
-	timestampFormat string   = "2006-01-02 15:04:05"
-	customLevels    []string = []string{
-		"😋 INFO",
-		"🥳 DEBUG",
-		"😠 WARN",
-		"😡 PANIC",
-		"🤬 FATAL",
-		"😡 ERROR",
-	}
+	// Default log format will output [INFO]: 2006-01-02T15:04:05Z07:00 - Log message
+	defaultLogFormat              = "[%lvl%]: %time% - %msg%\n"
+	defaultTimestampFormat string = "2006-01-02 15:04:05"
 )
 
 func textFormatter() *logrus.TextFormatter {
 	return &logrus.TextFormatter{
 		DisableColors:          true,
-		TimestampFormat:        timestampFormat,
+		TimestampFormat:        defaultTimestampFormat,
 		DisableLevelTruncation: true,
 		CallerPrettyfier: func(f *runtime.Frame) (string, string) {
 			return "", fmt.Sprintf("%s:%d", helpers.FormatFilePath(f.File), f.Line)
@@ -35,28 +31,59 @@ func colorFormatter() *logrus.TextFormatter {
 	return &logrus.TextFormatter{
 		ForceColors:               true,
 		EnvironmentOverrideColors: true,
-		TimestampFormat:           timestampFormat,
+		TimestampFormat:           defaultTimestampFormat,
 	}
 }
 
 func jsonFormatter(pretty bool) *logrus.JSONFormatter {
 	return &logrus.JSONFormatter{
 		DisableTimestamp: false,
-		TimestampFormat:  timestampFormat,
+		TimestampFormat:  defaultTimestampFormat,
 		PrettyPrint:      pretty,
 	}
 }
 
-type plainFormatter struct {
+// PlainFormatter implements logrus.Formatter interface.
+type PlainFormatter struct {
+	// Timestamp format
 	TimestampFormat string
-	LevelDesc       []string
+	// Available standard keys: time, msg, lvl
+	// Also can include custom fields but limited to strings.
+	// All of fields need to be wrapped inside %% i.e %time% %msg%
+	LogFormat string
 }
 
 // Format function - return logrus custom Plain formatter.
-func (plain *plainFormatter) Format(entry *logrus.Entry) ([]byte, error) {
-	return []byte(fmt.Sprintf("%s %s %s\n",
-			plain.LevelDesc[entry.Level],
-			plain.TimestampFormat,
-			entry.Message)),
-		nil
+func (plain *PlainFormatter) Format(entry *logrus.Entry) ([]byte, error) {
+	output := plain.LogFormat
+	if output == "" {
+		output = defaultLogFormat
+	}
+
+	timestampFormat := plain.TimestampFormat
+	if timestampFormat == "" {
+		timestampFormat = defaultTimestampFormat
+	}
+
+	output = strings.Replace(output, "%time%", entry.Time.Format(timestampFormat), 1)
+
+	output = strings.Replace(output, "%msg%", entry.Message, 1)
+
+	level := strings.ToUpper(entry.Level.String())
+	output = strings.Replace(output, "%lvl%", level, 1)
+
+	for k, val := range entry.Data {
+		switch v := val.(type) {
+		case string:
+			output = strings.Replace(output, "%"+k+"%", v, 1)
+		case int:
+			s := strconv.Itoa(v)
+			output = strings.Replace(output, "%"+k+"%", s, 1)
+		case bool:
+			s := strconv.FormatBool(v)
+			output = strings.Replace(output, "%"+k+"%", s, 1)
+		}
+	}
+
+	return []byte(output), nil
 }

@@ -20,30 +20,14 @@ var (
 	goVersion    = "unknown-go-version"    // output from `go version`
 )
 
-// GetDisplay function - parse current version and return a formatted string.
-func GetDisplay() string {
-	return fmt.Sprintf("🍺 CLI Version - %s", cliVersion)
-}
-
 // GetVersion function
 func GetVersion() string {
 	return cliVersion
 }
 
-// GetPrettyDetails function - create a pretty table and parse this table with current version details.
-func GetPrettyDetails() {
-	versionTable := table.NewWriter()
-	versionTable.SetOutputMirror(os.Stdout)
-	versionTable.AppendHeader(table.Row{"Info", "Content"})
-	versionTable.AppendRows([]table.Row{
-		{"Build Date", builtDate},
-		{"Build by", builtBy},
-		{"Commit Short", commitShort},
-		{"Commit Branch", commitBranch},
-		{"Go Version", goVersion},
-	})
-	versionTable.SetStyle(table.StyleColoredBright)
-	versionTable.Render()
+// GetDisplay function - parse current version and return a formatted string.
+func GetDisplay() string {
+	return fmt.Sprintf("CLI Version - %s", cliVersion)
 }
 
 // GetShortDetails function - create a pretty table and parse this table with current version details.
@@ -60,10 +44,27 @@ func GetShortDetails() {
 	versionTable.Render()
 }
 
+// GetPrettyDetails function - create a pretty table and parse this table with current version details.
+func GetPrettyDetails() {
+	versionTable := table.NewWriter()
+	versionTable.SetOutputMirror(os.Stdout)
+	versionTable.AppendHeader(table.Row{"Info", "Content"})
+	versionTable.AppendRows([]table.Row{
+		{"Loli Version", cliVersion},
+		{"Build Date", builtDate},
+		{"Build by", builtBy},
+		{"Commit", commit},
+		{"Commit Short", commitShort},
+		{"Commit Branch", commitBranch},
+		{"Go Version", goVersion},
+	})
+	versionTable.SetStyle(table.StyleColoredBright)
+	versionTable.Render()
+}
+
 // ShowVersion function - check detail flag and show the pretty details if enabled (`true`).
-func ShowVersion(detail bool) {
-	if detail {
-		fmt.Printf("%s\n\n", GetDisplay())
+func ShowVersion(pretty bool) {
+	if pretty {
 		GetPrettyDetails()
 	} else {
 		fmt.Printf("%s\n", GetDisplay())

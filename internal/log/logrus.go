@@ -1,39 +1,147 @@
 package log
 
 import (
+	"fmt"
+
 	"github.com/kyokomi/emoji/v2"
-	"github.com/logrusorgru/aurora"
+	au "github.com/logrusorgru/aurora"
 )
 
-// Create a new instance of the logger.
-var logger = NewLogger()
+// Info show a formatted log info message.
+func Info(args ...interface{}) {
+	logger.Info(
+		au.Green(
+			emoji.Sprintf("✅  " + fmt.Sprintf("%v", args...)),
+		).BgBlack().Bold().Underline(),
+	)
+}
 
-// Infof logs a formatted info message.
+// Infof show a formatted log info message.
 func Infof(format string, args ...interface{}) {
-	logger.Info(aurora.Cyan(emoji.Sprintf(":beer: "+format, args...)))
+	logger.Infof(
+		format,
+		au.Green(
+			emoji.Sprintf("✅  "+format, args...),
+		).BgBlack().Bold().Underline(),
+	)
 }
 
-// Debugf logs a formatted debug message.
+// Infoln show a formatted log info message.
+func Infoln(args ...interface{}) {
+	logger.Infoln(
+		au.Green(
+			emoji.Sprintf("✅  " + fmt.Sprintf("%v", args...)),
+		).BgBlack().Bold().Underline(),
+	)
+}
+
+// Debug show a formatted log debug message.
+func Debug(args ...interface{}) {
+	logger.Debug(
+		au.Cyan(
+			emoji.Sprintf("🆗  " + fmt.Sprintf("%v", args...)),
+		).BgBlack().Bold().Underline(),
+	)
+}
+
+// Debugf show a formatted log debug message.
 func Debugf(format string, args ...interface{}) {
-	logger.Debug(aurora.Green(emoji.Sprintf(":pizza:"+format, args...)))
+	logger.Debugf(
+		format,
+		au.Cyan(
+			emoji.Sprintf("🆗  "+format, args...),
+		).BgBlack().Bold().Underline(),
+	)
 }
 
-// Successf logs a formatted success message.
-func Successf(format string, a ...interface{}) {
-	logger.Info(aurora.Green(emoji.Sprintf(":white_check_mark: "+format, a...)))
+// Debugln show a formatted log debug message.
+func Debugln(args ...interface{}) {
+	logger.Debugln(
+		au.Cyan(
+			emoji.Sprintf("🆗  " + fmt.Sprintf("%v", args...)),
+		).BgBlack().Bold().Underline(),
+	)
 }
 
-// Warnf logs a formatted warn message.
+// Warn show a formatted log warn message.
+func Warn(args ...interface{}) {
+	logger.Warn(
+		au.Yellow(
+			emoji.Sprintf(":warning:  " + fmt.Sprintf("%v", args...)),
+		).BgBlack().Bold().Underline(),
+	)
+}
+
+// Warnf show a formatted log warn message.
 func Warnf(format string, args ...interface{}) {
-	logger.Warn(aurora.Yellow(emoji.Sprintf(":exclamation: "+format, args...)))
+	logger.Warnf(
+		format,
+		au.Yellow(
+			emoji.Sprintf(":warning:  "+format, args...),
+		).BgBlack().Bold().Underline(),
+	)
 }
 
-// Errorf logs a formatted error message.
+// Warnln show a formatted log warn message.
+func Warnln(args ...interface{}) {
+	logger.Warnln(
+		au.Yellow(
+			emoji.Sprintf(":warning:  " + fmt.Sprintf("%v", args...)),
+		).BgBlack().Bold().Underline(),
+	)
+}
+
+// Warning show a formatted log warning message.
+func Warning(args ...interface{}) {
+	logger.Warning(
+		au.BrightYellow(
+			emoji.Sprintf(":warning:  " + fmt.Sprintf("%v", args...)),
+		).BgBlack().Bold().Underline(),
+	)
+}
+
+// Warningf show a formatted log warning message.
+func Warningf(format string, args ...interface{}) {
+	logger.Warningf(
+		format,
+		au.BrightYellow(
+			emoji.Sprintf(":warning:  "+format, args...),
+		).BgBlack().Bold().Underline(),
+	)
+}
+
+// Warningln show a formatted log warning message.
+func Warningln(args ...interface{}) {
+	logger.Warningln(
+		au.BrightYellow(
+			emoji.Sprintf(":warning:  " + fmt.Sprintf("%v", args...)),
+		).BgBlack().Bold().Underline(),
+	)
+}
+
+// Error show a formatted log error message.
+func Error(args ...interface{}) {
+	logger.Error(
+		au.BrightRed(
+			emoji.Sprintf("😡  " + fmt.Sprintf("%v", args...)),
+		))
+}
+
+// Errorf show a formatted log error message.
 func Errorf(format string, args ...interface{}) {
-	logger.Error(aurora.Red(emoji.Sprintf(":exclamation: "+format, args...)))
+	logger.Errorf(
+		format,
+		au.BrightRed(
+			emoji.Sprintf("😡  "+format, args...),
+		).BgBlack().Bold().Underline(),
+	)
 }
 
-// Fatalln logs a formatted fatal message.
-func Fatalln(format string, args ...interface{}) {
-	logger.Fatalln(aurora.Red(emoji.Sprintf(":exclamation: "+format, args...)))
+// Errorln show a formatted log error message.
+func Errorln(args ...interface{}) {
+	logger.Errorln(
+		au.BrightRed(
+			emoji.Sprintf("😡  " + fmt.Sprintf("%v", args...)),
+		).BgBlack().Bold().Underline(),
+	)
 }

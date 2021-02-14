@@ -24,3 +24,12 @@ func FormatFilePath(path string) string {
 	arr := strings.Split(path, "/")
 	return arr[len(arr)-1]
 }
+
+// IsDirExists function
+func IsDirExists(path string) bool {
+	fi, err := os.Stat(path)
+	if err != nil {
+		return os.IsExist(err)
+	}
+	return fi.IsDir()
+}
