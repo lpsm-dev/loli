@@ -1,7 +1,7 @@
 package commands
 
 import (
-	log "github.com/lpmatos/loli/internal/logs"
+	log "github.com/lpmatos/loli/internal/log"
 	"github.com/spf13/cobra"
 )
 
