@@ -10,8 +10,8 @@ var defaultTimestampFormat string = "2006-01-02 15:04:05"
 func textFormatter() *logrus.TextFormatter {
 	return &logrus.TextFormatter{
 		DisableColors:             true,
-		ForceColors:               false,
-		EnvironmentOverrideColors: false,
+		ForceColors:               true,
+		EnvironmentOverrideColors: true,
 		FullTimestamp:             true,
 		TimestampFormat:           defaultTimestampFormat,
 		DisableLevelTruncation:    true,
