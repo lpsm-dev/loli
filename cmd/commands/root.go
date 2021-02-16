@@ -30,6 +30,6 @@ func init() {
 	RootCmd.PersistentFlags().StringVar(&config.Level, "log-level", "debug", "Set the logging level. One of: debug|info|warn|error")
 	RootCmd.PersistentFlags().StringVar(&config.Format, "log-format", "color", "The formating of the logs. Available values: text|color|json|json-pretty")
 	RootCmd.PersistentFlags().StringVar(&config.Output, "log-output", "file", "Defaulting to Stdout. Available values: stdout|stderr|file")
-	RootCmd.PersistentFlags().StringVar(&config.File, "log-file", "/var/loli/file.log", "Defaulting Loli output log file")
+	RootCmd.PersistentFlags().StringVar(&config.File, "log-file", "/var/log/loli/file.log", "Defaulting Loli output log file")
 	RootCmd.PersistentFlags().BoolVar(&config.Silence, "silence", false, "Silence Log outputs")
 }

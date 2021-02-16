@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"io"
 	"os"
-	"path/filepath"
 	"runtime"
 	"strings"
 
+	"github.com/lpmatos/loli/internal/helpers"
 	"github.com/sirupsen/logrus"
 )
 
@@ -91,10 +91,7 @@ func WithOutputStr(output, file string) Option {
 	case "stderr":
 		opt = WithOutput(os.Stdout)
 	case "file":
-		dirPath, _ := filepath.Abs(filepath.Dir(file))
-		if _, err := os.Stat(dirPath); os.IsNotExist(err) {
-			os.Mkdir(dirPath, 0775)
-		}
+		helpers.MakeDirIfNotExist(file)
 
 		f, err := os.OpenFile(file, os.O_APPEND|os.O_CREATE|os.O_RDWR, 0666)
 		if err != nil {
@@ -109,10 +106,7 @@ func WithOutputStr(output, file string) Option {
 			_ = ff.Close()
 		})
 	default:
-		dirPath, _ := filepath.Abs(filepath.Dir(file))
-		if _, err := os.Stat(dirPath); os.IsNotExist(err) {
-			os.Mkdir(dirPath, 0775)
-		}
+		helpers.MakeDirIfNotExist(file)
 
 		f, err := os.OpenFile(file, os.O_APPEND|os.O_CREATE|os.O_RDWR, 0666)
 		if err != nil {
