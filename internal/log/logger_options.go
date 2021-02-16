@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"path/filepath"
 	"runtime"
 	"strings"
 
@@ -90,7 +91,12 @@ func WithOutputStr(output, file string) Option {
 	case "stderr":
 		opt = WithOutput(os.Stdout)
 	case "file":
-		f, err := os.OpenFile(file, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, os.ModePerm)
+		dirPath, _ := filepath.Abs(filepath.Dir(file))
+		if _, err := os.Stat(dirPath); os.IsNotExist(err) {
+			os.Mkdir(dirPath, 0775)
+		}
+
+		f, err := os.OpenFile(file, os.O_APPEND|os.O_CREATE|os.O_RDWR, 0666)
 		if err != nil {
 			return func(c *options) error {
 				return fmt.Errorf("unable to open/create file %q: %w", output, err)
@@ -103,7 +109,12 @@ func WithOutputStr(output, file string) Option {
 			_ = ff.Close()
 		})
 	default:
-		f, err := os.OpenFile(output, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, os.ModePerm)
+		dirPath, _ := filepath.Abs(filepath.Dir(file))
+		if _, err := os.Stat(dirPath); os.IsNotExist(err) {
+			os.Mkdir(dirPath, 0775)
+		}
+
+		f, err := os.OpenFile(file, os.O_APPEND|os.O_CREATE|os.O_RDWR, 0666)
 		if err != nil {
 			return func(c *options) error {
 				return fmt.Errorf("unable to open/create file %q: %w", output, err)
