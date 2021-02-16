@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/lpmatos/loli/cli"
+	"github.com/lpmatos/loli/internal/log"
 	"github.com/lpmatos/loli/internal/version"
 	"github.com/spf13/cobra"
 )
@@ -47,7 +48,7 @@ func updateCLI(c cli.Updater) error {
 	}
 
 	if ok {
-		fmt.Println("Your CLI version is up to date.")
+		log.Info("Your CLI is up to date.")
 		return nil
 	}
 

@@ -19,5 +19,5 @@ func Setup(opts ...Option) error {
 
 func init() {
 	logger = newLogger()
-	logger.SetReportCaller(true)
+	logger.SetReportCaller(false)
 }

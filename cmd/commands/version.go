@@ -1,7 +1,6 @@
 package commands
 
 import (
-	log "github.com/lpmatos/loli/internal/log"
 	"github.com/lpmatos/loli/internal/version"
 	"github.com/spf13/cobra"
 )
@@ -19,7 +18,6 @@ var VersionCmd = &cobra.Command{
 	Short:   "Version outputs the version of CLI",
 	Long:    `Version outputs the version of the loli binary that is in use.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		log.Info("Calling Version")
 		if short {
 			version.GetShortDetails()
 		} else {

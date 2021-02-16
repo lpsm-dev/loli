@@ -11,39 +11,39 @@ import (
 	"os"
 
 	"github.com/lpmatos/loli/api"
+	log "github.com/lpmatos/loli/internal/log"
 	"github.com/lpmatos/loli/internal/types"
-	log "github.com/sirupsen/logrus"
 )
 
 // SearchAnime function
 func SearchAnime(allowInsecure bool) {
 	imageFile, error := os.Open("/root/git/github/loli/docs/exemples/naruto.jpg")
 	if error != nil {
-		log.Fatal(error)
+		log.Errorln(error)
 	}
 
 	reader := bufio.NewReader(imageFile)
 	content, error := ioutil.ReadAll(reader)
 	if error != nil {
-		log.Fatal(error)
+		log.Errorln(error)
 	}
 
 	encodedImage := base64.StdEncoding.EncodeToString(content)
 	reqBody, error := json.Marshal(map[string]string{"image": encodedImage})
 	if error != nil {
-		log.Fatal(error)
+		log.Errorln(error)
 	}
 
 	// Stable
 	client, error := api.NewClient("https://trace.moe/api/search")
 	if error != nil {
-		log.Fatal(error)
+		log.Errorln(error)
 	}
 
 	// Stable
 	req, error := client.NewRequest(http.MethodPost, "https://trace.moe/api/search", bytes.NewBuffer(reqBody))
 	if error != nil {
-		log.Fatal(error)
+		log.Errorln(error)
 	}
 
 	// Stable
@@ -52,17 +52,18 @@ func SearchAnime(allowInsecure bool) {
 		defer resp.Body.Close()
 	}
 	if error != nil {
-		log.Fatal(error)
+		log.Errorln(error)
 	}
 
 	if resp.StatusCode != http.StatusOK {
-		log.Fatal("🤬 Bad status code...")
+		log.Errorln("🤬 Bad status code...")
 	}
+
 	log.Info("✅ Success requests. Read body json content")
 
 	content, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		log.Fatal(err)
+		log.Errorln(err)
 	}
 
 	var animeResp types.Response
