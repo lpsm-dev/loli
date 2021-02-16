@@ -4,6 +4,7 @@ go 1.15
 
 require (
 	github.com/blang/semver v3.5.1+incompatible
+	github.com/charmbracelet/glamour v0.2.0
 	github.com/common-nighthawk/go-figure v0.0.0-20200609044655-c4b36f998cf2
 	github.com/fatih/color v1.10.0
 	github.com/go-openapi/errors v0.19.9 // indirect

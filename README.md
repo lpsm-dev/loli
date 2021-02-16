@@ -115,6 +115,12 @@ winpty docker.exe container run -it --rm <IMAGE_NAME> <COMMAND>
 </p>
 </details>
 
+## ➤ Commands
+
+<p align="center">
+  <img alt="logo" src="./docs/assets/menu.jpeg" float="center"/>
+</p>
+
 ## ➤ Project organization features
 
 - Default gitignore and editorconfig.
