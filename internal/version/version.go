@@ -43,7 +43,6 @@ func GetShortDetails() {
 		{"Project URL", projectURL},
 		{"Build Date", builtDate},
 		{"Commit Short", commitShort},
-		{"Go Version", goVersion},
 	})
 	versionTable.SetStyle(table.StyleColoredBright)
 	versionTable.Render()
