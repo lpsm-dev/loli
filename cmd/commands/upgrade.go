@@ -9,8 +9,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// upgradeCmd downloads and installs the most recent version of the CLI.
-var upgradeCmd = &cobra.Command{
+// UpgradeCmd downloads and installs the most recent version of the CLI.
+var UpgradeCmd = &cobra.Command{
 	Use:     "upgrade",
 	Aliases: []string{"u"},
 	Short:   "Upgrade to the latest version of the CLI.",
@@ -32,9 +32,7 @@ You can always delete this file.
 We were not able to upgrade the cli because we encountered an error:
 %s
 
-Please check the FAQ for solutions to common upgrading issues.
-
-https://exercism.io/faqs`, err)
+Please check the FAQ for solutions to common upgrading issues.`, err)
 		}
 		return nil
 	},
@@ -56,5 +54,5 @@ func updateCLI(c cli.Updater) error {
 }
 
 func init() {
-	RootCmd.AddCommand(upgradeCmd)
+	RootCmd.AddCommand(UpgradeCmd)
 }
