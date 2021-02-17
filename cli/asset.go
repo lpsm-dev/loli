@@ -27,7 +27,6 @@ func (a *Asset) download() (*bytes.Reader, error) {
 		log.Errorf("%s", error)
 		return nil, error
 	}
-
 	defer res.Body.Close()
 
 	content, error := ioutil.ReadAll(res.Body)

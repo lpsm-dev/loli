@@ -67,12 +67,17 @@ func (c *CLI) IsUpToDate() (bool, error) {
 		}
 	}
 
+	log.Debugf("Latest Version %s", c.LatestRelease.Version())
 	rv, err := semver.Make(c.LatestRelease.Version())
 	if err != nil {
+		log.Error("unable to parse latest version")
 		return false, fmt.Errorf("unable to parse latest version (%s): %s", c.LatestRelease.Version(), err)
 	}
+
+	log.Debugf("Current Version %s", c.Version)
 	cv, err := semver.Make(c.Version)
 	if err != nil {
+		log.Error("unable to parse current version")
 		return false, fmt.Errorf("unable to parse current version (%s): %s", c.Version, err)
 	}
 
@@ -87,12 +92,14 @@ func (c *CLI) Upgrade() error {
 	)
 
 	if OS == "" || ARCH == "" {
+		log.Error("unable to upgrade: OS")
 		return fmt.Errorf("unable to upgrade: OS %s ARCH %s", OS, ARCH)
 	}
 
 	buildName := fmt.Sprintf("%s-%s", OS, ARCH)
 	if BuildARCH == "arm" {
 		if BuildARM == "" {
+			log.Error("unable to upgrade: arm version not found")
 			return fmt.Errorf("unable to upgrade: arm version not found")
 		}
 		buildName = fmt.Sprintf("%s-v%s", buildName, BuildARM)
@@ -104,12 +111,14 @@ func (c *CLI) Upgrade() error {
 			var err error
 			downloadRC, err = a.download()
 			if err != nil {
+				log.Error("error downloading executable")
 				return fmt.Errorf("error downloading executable: %s", err)
 			}
 			break
 		}
 	}
 	if downloadRC == nil {
+		log.Error("no executable found for")
 		return fmt.Errorf("no executable found for %s/%s%s", BuildOS, BuildARCH, BuildARM)
 	}
 
@@ -181,7 +190,7 @@ func extractBinary(source *bytes.Reader, os string) (binary io.ReadCloser, err e
 			if err != nil {
 				return nil, err
 			}
-			tmpfile, err := ioutil.TempFile("", "temp-exercism")
+			tmpfile, err := ioutil.TempFile("", "temp-loli")
 			if err != nil {
 				return nil, err
 			}
