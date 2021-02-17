@@ -1,5 +1,22 @@
 # Semantic Versioning Changelog
 
+## [1.3.0](https://github.com/lpmatos/loli/compare/v1.2.1...v1.3.0) (2021-02-17)
+
+
+### :package: Atualizações
+
+* bump version file ([cba5292](https://github.com/lpmatos/loli/commit/cba5292ded9cbef3b4cc0e0f184692de38264aa6))
+
+
+### :sparkles: Novidades
+
+* tests ([e6014f3](https://github.com/lpmatos/loli/commit/e6014f3042b60efd7261ab2e1fec2774673ede57))
+
+
+### :bug: Correções
+
+* version file ([e5b4c42](https://github.com/lpmatos/loli/commit/e5b4c427a63c87dc41384f1bb1a6cc5947ec342a))
+
 ### [1.2.1](https://github.com/lpmatos/loli/compare/v1.2.0...v1.2.1) (2021-02-17)
 
 
