@@ -16,6 +16,7 @@ import (
 
 	"github.com/blang/semver"
 	update "github.com/inconshreveable/go-update"
+	"github.com/lpmatos/loli/internal/log"
 )
 
 var (
@@ -59,6 +60,7 @@ func New(version string) *CLI {
 
 // IsUpToDate compares the current version to that of the latest release.
 func (c *CLI) IsUpToDate() (bool, error) {
+	log.Debug("Compares the current version to that of the latest release")
 	if c.LatestRelease == nil {
 		if err := c.fetchLatestRelease(); err != nil {
 			return false, err

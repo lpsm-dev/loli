@@ -7,13 +7,15 @@ type Config struct {
 	Output  string
 	File    string
 	Silence bool
+	Details bool
 }
 
 // SetDefault set default values for logrus logger configurable options.
-func (config *Config) SetDefault(level, formater, output, file string, silence bool) {
+func (config *Config) SetDefault(level, formater, output, file string, silence, details bool) {
 	config.Level = level
 	config.Format = formater
 	config.Output = output
 	config.File = file
 	config.Silence = silence
+	config.Details = details
 }

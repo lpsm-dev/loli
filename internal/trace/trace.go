@@ -10,14 +10,16 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/jedib0t/go-pretty/table"
 	"github.com/lpmatos/loli/api"
+	"github.com/lpmatos/loli/internal/helpers"
 	log "github.com/lpmatos/loli/internal/log"
 	"github.com/lpmatos/loli/internal/types"
 )
 
 // SearchAnime function
-func SearchAnime(allowInsecure bool) {
-	imageFile, error := os.Open("/root/git/github/loli/docs/exemples/naruto.jpg")
+func SearchAnime(file string, allowInsecure, pretty bool) {
+	imageFile, error := os.Open(file)
 	if error != nil {
 		log.Errorln(error)
 	}
@@ -56,10 +58,10 @@ func SearchAnime(allowInsecure bool) {
 	}
 
 	if resp.StatusCode != http.StatusOK {
-		log.Errorln("🤬 Bad status code...")
+		log.Errorln("Bad status code...")
 	}
 
-	log.Info("✅ Success requests. Read body json content")
+	log.Infoln("Success requests. Read body json content")
 
 	content, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
@@ -69,5 +71,21 @@ func SearchAnime(allowInsecure bool) {
 	var animeResp types.Response
 	json.Unmarshal(content, &animeResp)
 
-	fmt.Println("Title English: " + animeResp.Docs[0].TitleEnglish)
+	if pretty {
+		versionTable := table.NewWriter()
+		versionTable.SetOutputMirror(os.Stdout)
+		versionTable.AppendHeader(table.Row{"Info", "Content"})
+		versionTable.AppendRows([]table.Row{
+			{"📊 Similarity", helpers.AnimeSimilarity(fmt.Sprintf("%f", animeResp.Docs[0].Similarity))},
+			{"🌸 Title Native", animeResp.Docs[0].TitleNative},
+			{"🐉 Title Chinese", animeResp.Docs[0].TitleChinese},
+			{"🗽 Title English", animeResp.Docs[0].TitleEnglish},
+			{"🗻 Title Romaji", animeResp.Docs[0].TitleRomanji},
+			{"📺 Episode Numberi", animeResp.Docs[0].Episode},
+		})
+		versionTable.SetStyle(table.StyleColoredBlueWhiteOnBlack)
+		versionTable.Render()
+	} else {
+		fmt.Println("Title English: " + animeResp.Docs[0].TitleEnglish)
+	}
 }

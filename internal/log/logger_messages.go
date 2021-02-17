@@ -12,7 +12,7 @@ func Info(args ...interface{}) {
 	logger.Info(
 		au.Green(
 			emoji.Sprintf("✅  " + fmt.Sprintf("%v", args...)),
-		).BgBlack().Bold().Underline(),
+		).Bold().Underline(),
 	)
 }
 
@@ -22,7 +22,7 @@ func Infof(format string, args ...interface{}) {
 		format,
 		au.Green(
 			emoji.Sprintf("✅  "+format, args...),
-		).BgBlack().Bold().Underline(),
+		).Bold().Underline(),
 	)
 }
 
@@ -30,8 +30,8 @@ func Infof(format string, args ...interface{}) {
 func Infoln(args ...interface{}) {
 	logger.Infoln(
 		au.Green(
-			emoji.Sprintf("✅  " + fmt.Sprintf("%v", args...)),
-		).BgBlack().Bold().Underline(),
+			emoji.Sprintf("✅  " + fmt.Sprintf("%v\n", args...)),
+		).Bold().Underline(),
 	)
 }
 
@@ -40,7 +40,7 @@ func Debug(args ...interface{}) {
 	logger.Debug(
 		au.Cyan(
 			emoji.Sprintf("🆗  " + fmt.Sprintf("%v", args...)),
-		).BgBlack().Bold().Underline(),
+		).Bold().Underline(),
 	)
 }
 
@@ -50,7 +50,7 @@ func Debugf(format string, args ...interface{}) {
 		format,
 		au.Cyan(
 			emoji.Sprintf("🆗  "+format, args...),
-		).BgBlack().Bold().Underline(),
+		).Bold().Underline(),
 	)
 }
 
@@ -58,8 +58,8 @@ func Debugf(format string, args ...interface{}) {
 func Debugln(args ...interface{}) {
 	logger.Debugln(
 		au.Cyan(
-			emoji.Sprintf("🆗  " + fmt.Sprintf("%v", args...)),
-		).BgBlack().Bold().Underline(),
+			emoji.Sprintf("🆗  " + fmt.Sprintf("%v\n", args...)),
+		).Bold().Underline(),
 	)
 }
 
@@ -68,7 +68,7 @@ func Warn(args ...interface{}) {
 	logger.Warn(
 		au.Yellow(
 			emoji.Sprintf("😲  " + fmt.Sprintf("%v", args...)),
-		).BgBlack().Bold().Underline(),
+		).Bold().Underline(),
 	)
 }
 
@@ -78,7 +78,7 @@ func Warnf(format string, args ...interface{}) {
 		format,
 		au.Yellow(
 			emoji.Sprintf("😲  "+format, args...),
-		).BgBlack().Bold().Underline(),
+		).Bold().Underline(),
 	)
 }
 
@@ -86,8 +86,8 @@ func Warnf(format string, args ...interface{}) {
 func Warnln(args ...interface{}) {
 	logger.Warnln(
 		au.Yellow(
-			emoji.Sprintf("😲  " + fmt.Sprintf("%v", args...)),
-		).BgBlack().Bold().Underline(),
+			emoji.Sprintf("😲  " + fmt.Sprintf("%v\n", args...)),
+		).Bold().Underline(),
 	)
 }
 
@@ -105,7 +105,7 @@ func Errorf(format string, args ...interface{}) {
 		format,
 		au.BrightRed(
 			emoji.Sprintf("😡  "+format, args...),
-		).BgBlack().Bold().Underline(),
+		).Bold().Underline(),
 	)
 }
 
@@ -113,7 +113,7 @@ func Errorf(format string, args ...interface{}) {
 func Errorln(args ...interface{}) {
 	logger.Errorln(
 		au.BrightRed(
-			emoji.Sprintf("😡  " + fmt.Sprintf("%v", args...)),
-		).BgBlack().Bold().Underline(),
+			emoji.Sprintf("😡  " + fmt.Sprintf("%v\n", args...)),
+		).Bold().Underline(),
 	)
 }

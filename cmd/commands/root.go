@@ -17,7 +17,7 @@ var RootCmd = &cobra.Command{
 👉😳👈 This is a pretty CLI that can find animes passing scene images
 `,
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
-		config.SetDefault(config.Level, config.Format, config.Output, config.File, config.Silence)
+		config.SetDefault(config.Level, config.Format, config.Output, config.File, config.Silence, config.Details)
 		err := log.Setup(
 			log.WithConfig(config),
 		)
@@ -32,5 +32,6 @@ func init() {
 	RootCmd.PersistentFlags().StringVar(&config.Format, "log-format", "color", "The formating of the logs. Available values: text|color|json|json-pretty")
 	RootCmd.PersistentFlags().StringVar(&config.Output, "log-output", "stdout", "Default log output. Available values: stdout|stderr|file")
 	RootCmd.PersistentFlags().StringVar(&config.File, "log-file", helpers.CreateLogFile("/var/log/loli", "file"), "Defaulting Loli CLI log file")
+	RootCmd.PersistentFlags().BoolVar(&config.Details, "details", false, "Enable log SetReportCaller details")
 	RootCmd.PersistentFlags().BoolVar(&config.Silence, "silence", false, "Silence Log outputs")
 }

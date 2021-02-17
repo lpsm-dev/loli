@@ -22,9 +22,10 @@ type Option func(*options) error
 func WithConfig(cfg Config) Option {
 	var opts []Option
 
-	opts = append(opts, WithLogLevel(cfg.Level))
+	opts = append(opts, WithLogLevel(cfg.Level, cfg.Silence))
 	opts = append(opts, WithFormatter(cfg.Format))
 	opts = append(opts, WithOutputStr(cfg.Output, cfg.File))
+	opts = append(opts, WithSetReportCaller(cfg.Details))
 
 	// return all options
 	return func(c *options) error {
@@ -65,13 +66,17 @@ func WithFormatter(format string) Option {
 
 // WithLogLevel is used to set the log level when defaulting to `info` is not
 // wanted. Other options are: `debug`, `warn`, `error`, `fatal`, and `panic`.
-func WithLogLevel(level string) Option {
+func WithLogLevel(level string, silence bool) Option {
 	return func(opt *options) error {
 		logrusLevel, err := logrus.ParseLevel(level)
 		if err != nil {
 			return fmt.Errorf("failed to convert level: %w", err)
 		}
-		opt.logger.Level = logrusLevel
+		if silence {
+			opt.logger.Level = logrus.ErrorLevel
+		} else {
+			opt.logger.Level = logrusLevel
+		}
 		return nil
 	}
 }
@@ -129,6 +134,14 @@ func WithOutputStr(output, file string) Option {
 func WithOutput(writer io.Writer) Option {
 	return func(opt *options) error {
 		opt.logger.Out = writer
+		return nil
+	}
+}
+
+// WithSetReportCaller configures the logrus logger SetReportCaller.
+func WithSetReportCaller(enable bool) Option {
+	return func(opt *options) error {
+		opt.logger.SetReportCaller(enable)
 		return nil
 	}
 }

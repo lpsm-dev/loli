@@ -1,18 +1,22 @@
 package helpers
 
 import (
+	"fmt"
 	"os"
 	"path/filepath"
 	"strconv"
 	"strings"
 	"time"
 
+	"github.com/fatih/color"
+	"github.com/kyokomi/emoji/v2"
+	au "github.com/logrusorgru/aurora"
 	"github.com/sirupsen/logrus"
 )
 
 var (
 	file       *os.File
-	timeFormat = "2006-01-02_15.04.05"
+	timeFormat = "2006-01-02_15:04:05"
 )
 
 // IsEmpty function - check if a string is empty.
@@ -52,4 +56,30 @@ func CreateLogFile(logdir, logfile string) string {
 			time.Now().Format(timeFormat)+
 			".log",
 	)
+}
+
+// AnimeSimilarity is for colorful output
+func AnimeSimilarity(similarity string) string {
+	if similarity > "0.89" {
+		return fmt.Sprintf("😃 "+"%s", au.Green(
+			emoji.Sprintf(similarity),
+		).Bold())
+	} else if similarity > "0.80" {
+		return fmt.Sprintf("😞 "+"%s", au.Yellow(
+			emoji.Sprintf(similarity),
+		).Bold())
+	} else {
+		return fmt.Sprintf("😡 "+"%s", au.Red(
+			emoji.Sprintf(similarity),
+		).Bold())
+	}
+}
+
+// AnimeIsAdult is for colorful output
+func AnimeIsAdult(isAdult bool) {
+	if isAdult == true {
+		fmt.Println(color.GreenString("true"))
+	} else {
+		fmt.Println(color.RedString("false"))
+	}
 }

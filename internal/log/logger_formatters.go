@@ -4,7 +4,7 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-var defaultTimestampFormat string = "2006-01-02 15:04:05"
+var defaultTimestampFormat string = "2006-01-02_15:04:05"
 
 // Configure the logrus format to use "text" formatter.
 func textFormatter() *logrus.TextFormatter {

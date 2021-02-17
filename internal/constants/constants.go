@@ -22,3 +22,9 @@ $ loli completion fish | source
 # To load completions for each session, execute once:
 $ loli completion fish > ~/.config/fish/completions/loli.fish
 `
+
+// Welcome - return a markdown welcome message.
+const Welcome = `# Hello there, fellow coders 🤖!
+
+If you want access this repository, copy this [link](https://github.com/lpmatos/loli). Bye!
+`
