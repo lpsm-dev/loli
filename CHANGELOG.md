@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+### [1.2.1](https://github.com/lpmatos/loli/compare/v1.2.0...v1.2.1) (2021-02-17)
+
+
+### :bug: Correções
+
+* go release file ([75f7dc2](https://github.com/lpmatos/loli/commit/75f7dc22fb051f5629629f881076fb02257db6ad))
+* hooks go release ([fbb5387](https://github.com/lpmatos/loli/commit/fbb538727bb616343e676dbb780d384f09a99254))
+
 ## [1.2.0](https://github.com/lpmatos/loli/compare/v1.1.0...v1.2.0) (2021-02-17)
 
 
