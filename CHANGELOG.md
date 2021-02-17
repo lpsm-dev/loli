@@ -1,5 +1,51 @@
 # Semantic Versioning Changelog
 
+## [1.2.0](https://github.com/lpmatos/loli/compare/v1.1.0...v1.2.0) (2021-02-17)
+
+
+### :memo: Documentação
+
+* change readme ([746c7ac](https://github.com/lpmatos/loli/commit/746c7ac03dabea9f2ce6b6fad9ebc2cb9e6ce1b9))
+
+
+### :package: Atualizações
+
+* **deps:** bump github.com/fatih/color from 1.7.0 to 1.10.0 ([e77ce45](https://github.com/lpmatos/loli/commit/e77ce45e3f1eeaec9a5a14980590d8a5a8ff74e7))
+* **deps:** bump github.com/spf13/cobra from 1.1.1 to 1.1.3 ([3ed99f3](https://github.com/lpmatos/loli/commit/3ed99f3abc69333c593711f5011060d31ffa0e7f))
+* include version ([5cb67bb](https://github.com/lpmatos/loli/commit/5cb67bb7af2d2ec4e901b0b8a805419762c8fbeb))
+* **deps:** bump actions/stale from v3.0.15 to v3.0.16 ([71d1bbb](https://github.com/lpmatos/loli/commit/71d1bbb1ba38b9a0e2e6b544a926816defcd3718))
+* **deps:** bump github.com/sirupsen/logrus from 1.4.2 to 1.7.0 ([317bb01](https://github.com/lpmatos/loli/commit/317bb0166fb5d1036f5ac6027b675957b5ceacbf))
+
+
+### :bug: Correções
+
+* call logs ([020ab88](https://github.com/lpmatos/loli/commit/020ab88b8dcadadbb57992b4a85449d4979c57ad))
+* dockerfile install loli, yml comment and internal version short function ([e2bef17](https://github.com/lpmatos/loli/commit/e2bef17d9f896c7027ca231df0a10fe041ad5933))
+* emoji in loggers ([d7065a6](https://github.com/lpmatos/loli/commit/d7065a6d70f11a3d2545cc77c80331c61728268d))
+* files support ([e90b550](https://github.com/lpmatos/loli/commit/e90b550520e8c396de448fbc19409cedd5bc6cfa))
+* go files ([92fb556](https://github.com/lpmatos/loli/commit/92fb5568ccb215483c26e1ebd32dc28ceadcad1d))
+* go sum ([9f3ccfb](https://github.com/lpmatos/loli/commit/9f3ccfbb7da8a720d026a549218cc918f5ccd1c6))
+* helpers functions ([ae7cbbd](https://github.com/lpmatos/loli/commit/ae7cbbdbd0e03416205705679d1365e7bd1344ce))
+* logger ([9055cc7](https://github.com/lpmatos/loli/commit/9055cc7989f7f1f5c44a115bc675f0e2bfc1ce14))
+* logger ([4c6beb0](https://github.com/lpmatos/loli/commit/4c6beb03ad1f7680ed23d5b5a6ce9f8276fb620a))
+* logger create path function ([ac2742b](https://github.com/lpmatos/loli/commit/ac2742b351c88b8cfb7fb0141cf794ac074ebec7))
+* logger logrus ([86e60fd](https://github.com/lpmatos/loli/commit/86e60fd065b6ebfb7b29fd58dccc14e3a0ec7923))
+* minior functions and logger go file name ([2638be1](https://github.com/lpmatos/loli/commit/2638be17de6b521509858312ae0e0fe5a3398a8b))
+* organization code, flows and output messages ([f3b6aa4](https://github.com/lpmatos/loli/commit/f3b6aa497e36e4e768b5aa15eb856fe9a701a55f))
+* refact log setup ([38eec9e](https://github.com/lpmatos/loli/commit/38eec9ed42dd30d992d4e880e6b7a00951156c97))
+* setup logrus logger ([2bc4845](https://github.com/lpmatos/loli/commit/2bc484570600ebbd7afae8242ac6c8827e9d4a60))
+
+
+### :sparkles: Novidades
+
+* log definitions ([93f35f4](https://github.com/lpmatos/loli/commit/93f35f45728dcb5e309f49e5290aa112ad9a1526))
+* log file output ([ae148c2](https://github.com/lpmatos/loli/commit/ae148c26de601130df22d26044498724a4b4201a))
+* logrus custom setup levels with emoji ([61f3ad6](https://github.com/lpmatos/loli/commit/61f3ad64846b820c0827ca2bd42594b301864cdb))
+* menu pretty show ([8d2588d](https://github.com/lpmatos/loli/commit/8d2588d5876dd255622348889c3843552bde0890))
+* new global params and trace ([ae50aab](https://github.com/lpmatos/loli/commit/ae50aabb0c0e7a8a311f43af3bf66878ca0ac7d2))
+* organize logrus ([d96d845](https://github.com/lpmatos/loli/commit/d96d845298cde54d15f278412cbe617db62bee2b))
+* organize logrus ([52dce6b](https://github.com/lpmatos/loli/commit/52dce6b062671bc1b00f9bf4822970131f9d144b))
+
 ## [1.1.0](https://github.com/lpmatos/loli/compare/v1.0.0...v1.1.0) (2021-02-10)
 
 
