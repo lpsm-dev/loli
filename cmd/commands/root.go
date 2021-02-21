@@ -1,6 +1,9 @@
 package commands
 
 import (
+	"github.com/lpmatos/loli/api"
+	"github.com/lpmatos/loli/cli"
+	"github.com/lpmatos/loli/debug"
 	"github.com/lpmatos/loli/internal/helpers"
 	log "github.com/lpmatos/loli/internal/log"
 	"github.com/spf13/cobra"
@@ -24,6 +27,13 @@ var RootCmd = &cobra.Command{
 		if err != nil {
 			log.Warn("Error setting log: %v", err)
 		}
+		if verbose, _ := cmd.Flags().GetBool("verbose"); verbose {
+			debug.Verbose = verbose
+		}
+		if timeout, _ := cmd.Flags().GetInt("timeout"); timeout > 0 {
+			cli.TimeoutInSeconds = timeout
+			api.TimeoutInSeconds = timeout
+		}
 	},
 }
 
@@ -34,4 +44,6 @@ func init() {
 	RootCmd.PersistentFlags().StringVar(&config.File, "log-file", helpers.CreateLogFile("/var/log/loli", "file"), "Defaulting Loli CLI log file")
 	RootCmd.PersistentFlags().BoolVar(&config.Details, "details", false, "Enable log SetReportCaller details")
 	RootCmd.PersistentFlags().BoolVar(&config.Silence, "silence", false, "Silence Log outputs")
+	RootCmd.PersistentFlags().BoolP("verbose", "v", false, "verbose output")
+	RootCmd.PersistentFlags().IntP("timeout", "", 0, "override the default HTTP timeout (seconds)")
 }

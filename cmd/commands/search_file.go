@@ -5,9 +5,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var (
-	animeFile string = "/root/git/github/loli/docs/exemples/naruto.jpg"
-)
+var animeFile string
 
 // SearchFileCmd represents the search command
 var SearchFileCmd = &cobra.Command{

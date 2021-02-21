@@ -16,7 +16,7 @@ func TestNewRequestSetsDefaultHeaders(t *testing.T) {
 	}))
 	defer ts.Close()
 
-	UserAgent = "BogusAgent"
+	UserAgent = "ABCAgent"
 
 	testCases := []struct {
 		desc        string
@@ -32,9 +32,9 @@ func TestNewRequestSetsDefaultHeaders(t *testing.T) {
 			desc: "Override defaults",
 			client: &Client{
 				BaseURL:     "http://example.com",
-				ContentType: "bogus",
+				ContentType: "abc",
 			},
-			contentType: "bogus",
+			contentType: "abc",
 		},
 	}
 
@@ -42,7 +42,7 @@ func TestNewRequestSetsDefaultHeaders(t *testing.T) {
 		t.Run(tc.desc, func(t *testing.T) {
 			req, err := tc.client.NewRequest("GET", ts.URL, nil)
 			assert.NoError(t, err)
-			assert.Equal(t, "BogusAgent", req.Header.Get("User-Agent"))
+			assert.Equal(t, "ABCAgent", req.Header.Get("User-Agent"))
 			assert.Equal(t, tc.contentType, req.Header.Get("Content-Type"))
 		})
 	}
