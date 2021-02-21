@@ -6,6 +6,8 @@ import (
 	"net"
 	"net/http"
 	"time"
+
+	"github.com/lpmatos/loli/debug"
 )
 
 var (
@@ -38,18 +40,11 @@ var (
 			TLSHandshakeTimeout:   10 * time.Second,
 			ExpectContinueTimeout: 1 * time.Second,
 			TLSClientConfig: &tls.Config{
-				InsecureSkipVerify: false,
+				InsecureSkipVerify: InsecureSkipVerify,
 			},
 		},
 	}
 )
-
-// Client struct - is an http client that is configured for trace.moe API.
-type Client struct {
-	*http.Client        // HTTP Client pointer
-	BaseURL      string // HTTP Request URL
-	ContentType  string // HTTP Request Content Type
-}
 
 // NewClient returns a trace.moe API client.
 func NewClient(baseURL string) (*Client, error) {
@@ -60,7 +55,7 @@ func NewClient(baseURL string) (*Client, error) {
 }
 
 // NewRequest returns an http.Request with information for the trace.moe API.
-// For moe information: https://golang.org/pkg/net/http/
+// For more information: https://golang.org/pkg/net/http/
 func (c *Client) NewRequest(method, url string, body io.Reader) (*http.Request, error) {
 	if c.Client == nil {
 		c.Client = HTTPClient
@@ -80,4 +75,17 @@ func (c *Client) NewRequest(method, url string, body io.Reader) (*http.Request, 
 	}
 
 	return request, nil
+}
+
+// Do performs an http.Request and optionally parses the response body into the given interface.
+func (c *Client) Do(req *http.Request) (*http.Response, error) {
+	debug.DumpRequest(req)
+
+	res, err := c.Client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+
+	debug.DumpResponse(res)
+	return res, nil
 }

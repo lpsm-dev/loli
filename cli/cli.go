@@ -60,66 +60,76 @@ func New(version string) *CLI {
 
 // IsUpToDate compares the current version to that of the latest release.
 func (c *CLI) IsUpToDate() (bool, error) {
-	log.Debug("Compares the current version to that of the latest release")
+	log.Debug("Comparing the current version with the latest version")
 	if c.LatestRelease == nil {
 		if err := c.fetchLatestRelease(); err != nil {
 			return false, err
 		}
 	}
 
-	log.Debugf("Latest Version %s", c.LatestRelease.Version())
-	rv, err := semver.Make(c.LatestRelease.Version())
+	last := c.LatestRelease.Version()
+	log.Debugf("Latest Version - %s", last)
+
+	rv, err := semver.Make(last)
 	if err != nil {
-		log.Error("unable to parse latest version")
-		return false, fmt.Errorf("unable to parse latest version (%s): %s", c.LatestRelease.Version(), err)
+		log.Error("Unable to parse latest version")
+		return false, fmt.Errorf("Unable to parse latest version (%s): %s", last, err)
 	}
 
-	log.Debugf("Current Version %s", c.Version)
-	cv, err := semver.Make(c.Version)
+	current := c.Version
+	log.Debugf("Current Version - %s", current)
+
+	cv, err := semver.Make(current)
 	if err != nil {
-		log.Error("unable to parse current version")
-		return false, fmt.Errorf("unable to parse current version (%s): %s", c.Version, err)
+		log.Error("Unable to parse current version")
+		return false, fmt.Errorf("Unable to parse current version (%s): %s", current, err)
 	}
 
+	// GTE checks if v is greater than or equal to o.
 	return cv.GTE(rv), nil
 }
 
 // Upgrade allows the user to upgrade to the latest version of the CLI.
 func (c *CLI) Upgrade() error {
+	log.Info("Call upgrade latest version of CLI")
+
 	var (
 		OS   = osMap[runtime.GOOS]
 		ARCH = archMap[runtime.GOARCH]
 	)
 
 	if OS == "" || ARCH == "" {
-		log.Error("unable to upgrade: OS")
-		return fmt.Errorf("unable to upgrade: OS %s ARCH %s", OS, ARCH)
+		log.Errorf("Unable to upgrade: OS %s ARCH %s", OS, ARCH)
+		return fmt.Errorf("Unable to upgrade: OS %s ARCH %s", OS, ARCH)
 	}
 
 	buildName := fmt.Sprintf("%s-%s", OS, ARCH)
 	if BuildARCH == "arm" {
 		if BuildARM == "" {
-			log.Error("unable to upgrade: arm version not found")
-			return fmt.Errorf("unable to upgrade: arm version not found")
+			log.Error("Unable to upgrade - ARM version not found")
+			return fmt.Errorf("Unable to upgrade - ARM version not found")
 		}
+		log.Debugf("Build ARCH version: %s - Build ARM version: %s", BuildARCH, BuildARM)
 		buildName = fmt.Sprintf("%s-v%s", buildName, BuildARM)
 	}
 
 	var downloadRC *bytes.Reader
+	log.Debug("Download latest release asset")
 	for _, a := range c.LatestRelease.Assets {
 		if strings.Contains(a.Name, buildName) {
 			var err error
 			downloadRC, err = a.download()
 			if err != nil {
-				log.Error("error downloading executable")
-				return fmt.Errorf("error downloading executable: %s", err)
+				log.Errorf("Error downloading executable: %s", err)
+				return fmt.Errorf("Error downloading executable: %s", err)
 			}
 			break
 		}
 	}
+
 	if downloadRC == nil {
-		log.Error("no executable found for")
-		return fmt.Errorf("no executable found for %s/%s%s", BuildOS, BuildARCH, BuildARM)
+		log.Error("No executable found for")
+		return fmt.Errorf("No executable found for %s/%s%s", BuildOS, BuildARCH, BuildARM)
 	}
 
 	bin, err := extractBinary(downloadRC, OS)
@@ -132,8 +142,9 @@ func (c *CLI) Upgrade() error {
 }
 
 func (c *CLI) fetchLatestRelease() error {
-	latestReleaseURL := fmt.Sprintf("%s/%s", ReleaseURL, "latest")
+	log.Debug("Fetch latest release")
 
+	latestReleaseURL := fmt.Sprintf("%s/%s", ReleaseURL, "latest")
 	resp, err := HTTPClient.Get(latestReleaseURL)
 	if err != nil {
 		return err
@@ -161,6 +172,8 @@ func (c *CLI) fetchLatestRelease() error {
 }
 
 func extractBinary(source *bytes.Reader, os string) (binary io.ReadCloser, err error) {
+	log.Info("Extract binary content")
+
 	if os == "windows" {
 		zr, err := zip.NewReader(source, int64(source.Len()))
 		if err != nil {

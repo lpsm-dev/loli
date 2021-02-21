@@ -24,7 +24,7 @@ The next time you upgrade, the hidden file will be overwritten.
 You can always delete this file.
 	`,
 	RunE: func(cmd *cobra.Command, args []string) error {
-		c := cli.New(version.GetVersion())
+		c := cli.New(version.GetVersionFormatted())
 		err := updateCLI(c)
 		if err != nil {
 			return fmt.Errorf("We were not able to upgrade the cli because we encountered an error: %s", err)

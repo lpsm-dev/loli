@@ -15,7 +15,7 @@ func (a *Asset) download() (*bytes.Reader, error) {
 
 	request, error := http.NewRequest("GET", downloadURL, nil)
 	if error != nil {
-		log.Errorf("%s", error)
+		log.Error(error)
 		return nil, error
 	}
 
@@ -24,7 +24,7 @@ func (a *Asset) download() (*bytes.Reader, error) {
 	log.Info("Doing the request")
 	res, error := http.DefaultClient.Do(request)
 	if error != nil {
-		log.Errorf("%s", error)
+		log.Error(error)
 		return nil, error
 	}
 	defer res.Body.Close()

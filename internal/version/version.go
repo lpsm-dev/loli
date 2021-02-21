@@ -27,6 +27,11 @@ func GetVersion() string {
 	return fmt.Sprintf("v%s", cliVersion)
 }
 
+// GetVersionFormatted function
+func GetVersionFormatted() string {
+	return fmt.Sprintf("%s", cliVersion)
+}
+
 // GetDisplay function - parse current version and return a formatted string.
 func GetDisplay() string {
 	return fmt.Sprintf("CLI Version - %s", cliVersion)

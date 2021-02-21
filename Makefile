@@ -42,6 +42,7 @@ help:
 	@echo "make build"
 	@echo "make install"
 	@echo "make lint"
+	@echo "make test"
 	@echo "make misspell"
 	@echo "make clean"
 	@echo ""
@@ -92,6 +93,11 @@ install:
 lint:
 	@echo "==> Running lint..."
 	golint -set_exit_status ./...
+
+.PHONY: test
+test:
+	@echo "==> Running test..."
+	go test -v ./...
 
 .PHONY: misspell
 misspell:
