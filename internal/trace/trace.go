@@ -9,17 +9,38 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+	"time"
 
+	"github.com/briandowns/spinner"
+	"github.com/fatih/color"
 	"github.com/jedib0t/go-pretty/table"
 	"github.com/lpmatos/loli/api"
 	"github.com/lpmatos/loli/internal/constants"
 	"github.com/lpmatos/loli/internal/helpers"
 	log "github.com/lpmatos/loli/internal/log"
 	"github.com/lpmatos/loli/internal/types"
+	"github.com/muesli/termenv"
 )
 
 // SearchAnime function
 func SearchAnime(file string, allowInsecure, pretty bool) {
+	if _, err := os.Stat(file); os.IsNotExist(err) {
+		if err != nil {
+			log.Error("Invalid file path")
+		}
+	}
+
+	termenv.HideCursor()
+	defer termenv.ShowCursor()
+
+	s := spinner.New(spinner.CharSets[33], 100*time.Millisecond)
+	s.Prefix = "🔎 Searching for the anime: "
+	s.FinalMSG = color.GreenString("✔️  Found!\n\n")
+
+	go catchInterrupt(s)
+
+	s.Start()
+
 	imageFile, error := os.Open(file)
 	if error != nil {
 		log.Errorln(error)
@@ -62,8 +83,6 @@ func SearchAnime(file string, allowInsecure, pretty bool) {
 		log.Errorln("Bad status code...")
 	}
 
-	log.Infoln("Success requests. Read body json content")
-
 	content, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		log.Errorln(err)
@@ -71,6 +90,8 @@ func SearchAnime(file string, allowInsecure, pretty bool) {
 
 	var animeResp types.Response
 	json.Unmarshal(content, &animeResp)
+
+	s.Stop()
 
 	if pretty {
 		versionTable := table.NewWriter()

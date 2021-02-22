@@ -4,6 +4,7 @@ go 1.15
 
 require (
 	github.com/blang/semver v3.5.1+incompatible
+	github.com/briandowns/spinner v1.12.0
 	github.com/charmbracelet/glamour v0.2.0
 	github.com/common-nighthawk/go-figure v0.0.0-20200609044655-c4b36f998cf2
 	github.com/fatih/color v1.10.0
@@ -15,6 +16,7 @@ require (
 	github.com/logrusorgru/aurora v2.0.3+incompatible
 	github.com/mattn/go-runewidth v0.0.10 // indirect
 	github.com/mitchellh/mapstructure v1.4.1 // indirect
+	github.com/muesli/termenv v0.6.0
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/sirupsen/logrus v1.8.0
 	github.com/spf13/cobra v1.1.3
