@@ -22,8 +22,8 @@ import (
 	"github.com/muesli/termenv"
 )
 
-// SearchAnime function
-func SearchAnime(file string, allowInsecure, pretty bool) {
+// SearchAnimeByFile function
+func SearchAnimeByFile(file string, allowInsecure, pretty bool) {
 	if _, err := os.Stat(file); os.IsNotExist(err) {
 		if err != nil {
 			log.Error("Invalid file path")

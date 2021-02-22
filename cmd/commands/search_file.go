@@ -13,12 +13,12 @@ var SearchFileCmd = &cobra.Command{
 	Short: "Search for the anime scene by existing image file",
 	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
-		trace.SearchAnime(animeFile, false, searchPretty)
+		trace.SearchAnimeByFile(animeFile, false, searchPretty)
 	},
 }
 
 func init() {
-	SearchFileCmd.PersistentFlags().StringVarP(&animeFile, "file", "f", animeFile, "A anime image file")
+	SearchFileCmd.PersistentFlags().StringVarP(&animeFile, "file", "f", animeFile, "An anime image file")
 	SearchFileCmd.MarkFlagRequired("file")
 	SearchCmd.AddCommand(SearchFileCmd)
 }
