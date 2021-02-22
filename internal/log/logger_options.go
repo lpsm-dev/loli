@@ -65,7 +65,7 @@ func WithFormatter(format string) Option {
 }
 
 // WithLogLevel is used to set the log level when defaulting to `info` is not
-// wanted. Other options are: `debug`, `warn`, `error`, `fatal`, and `panic`.
+// wanted. Other options are: `debug`, `info`, `warn` and `error`.
 func WithLogLevel(level string, silence bool) Option {
 	return func(opt *options) error {
 		logrusLevel, err := logrus.ParseLevel(level)

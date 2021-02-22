@@ -31,6 +31,16 @@ func IsDirExists(path string) bool {
 	return result.IsDir()
 }
 
+// IsFileExists function - check fi a file exist in te system.
+func IsFileExists(name string) bool {
+	if _, err := os.Stat(name); err != nil {
+		if os.IsNotExist(err) {
+			return false
+		}
+	}
+	return true
+}
+
 // MakeDirIfNotExist create a new directory if they not exist.
 func MakeDirIfNotExist(dir string) {
 	fullDir, _ := filepath.Abs(filepath.Dir(dir))

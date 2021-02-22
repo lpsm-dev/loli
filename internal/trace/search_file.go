@@ -9,6 +9,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+	"strconv"
 	"time"
 
 	"github.com/briandowns/spinner"
@@ -23,17 +24,17 @@ import (
 )
 
 // SearchAnimeByFile function
-func SearchAnimeByFile(file string, allowInsecure, pretty bool) {
-	if _, err := os.Stat(file); os.IsNotExist(err) {
-		if err != nil {
-			log.Error("Invalid file path")
-		}
+func SearchAnimeByFile(animeFile string, allowInsecure, pretty bool) {
+	if !helpers.IsFileExists(animeFile) {
+		log.Error("Invalid file path")
 	}
+
+	fmt.Println()
 
 	termenv.HideCursor()
 	defer termenv.ShowCursor()
 
-	s := spinner.New(spinner.CharSets[33], 100*time.Millisecond)
+	s := spinner.New(spinner.CharSets[39], 100*time.Millisecond)
 	s.Prefix = "🔎 Searching for the anime: "
 	s.FinalMSG = color.GreenString("✔️  Found!\n\n")
 
@@ -41,7 +42,7 @@ func SearchAnimeByFile(file string, allowInsecure, pretty bool) {
 
 	s.Start()
 
-	imageFile, error := os.Open(file)
+	imageFile, error := os.Open(animeFile)
 	if error != nil {
 		log.Errorln(error)
 	}
@@ -103,11 +104,17 @@ func SearchAnimeByFile(file string, allowInsecure, pretty bool) {
 			{"🐉 Title Chinese", animeResp.Docs[0].TitleChinese},
 			{"🗽 Title English", animeResp.Docs[0].TitleEnglish},
 			{"🗻 Title Romaji", animeResp.Docs[0].TitleRomanji},
-			{"📺 Episode Numberi", animeResp.Docs[0].Episode},
+			{"📺 Episode Number", color.MagentaString(strconv.Itoa(animeResp.Docs[0].Episode))},
 		})
 		versionTable.SetStyle(table.StyleColoredBlueWhiteOnBlack)
 		versionTable.Render()
 	} else {
-		fmt.Println("Title English: " + animeResp.Docs[0].TitleEnglish)
+		fmt.Println("📊 Similarity: " + helpers.AnimeSimilarity(fmt.Sprintf("%f", animeResp.Docs[0].Similarity)))
+		fmt.Println("🌸 Title Native: " + animeResp.Docs[0].TitleNative)
+		fmt.Println("🐉 Title Chinese: " + animeResp.Docs[0].TitleChinese)
+		fmt.Println("🗽 Title English: " + animeResp.Docs[0].TitleEnglish)
+		fmt.Println("🗻 Title Romaji: " + animeResp.Docs[0].TitleRomanji)
+		fmt.Println("📺 Episode Number: " + color.MagentaString(strconv.Itoa(animeResp.Docs[0].Episode)))
 	}
+	fmt.Println()
 }

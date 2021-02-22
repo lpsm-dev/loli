@@ -6,6 +6,7 @@ import (
 
 	"github.com/common-nighthawk/go-figure"
 	"github.com/lpmatos/loli/internal/constants"
+	log "github.com/lpmatos/loli/internal/log"
 	"github.com/lpmatos/loli/internal/utils"
 )
 
@@ -25,11 +26,11 @@ func Execute() {
 
 	out, error := utils.RenderMarkdown(constants.Welcome)
 	if error != nil {
-		panic("Render glamour markdown")
+		log.Error("Render glamour markdown")
 	}
 	fmt.Print(out)
 
 	if err := RootCmd.Execute(); err != nil {
-		panic("Error while executing RootCmd")
+		log.Error("Error while executing RootCmd")
 	}
 }
