@@ -3,6 +3,39 @@
 ## [1.4.0](https://github.com/lpmatos/loli/compare/v1.3.0...v1.4.0) (2021-02-22)
 
 
+### :sparkles: Novidades
+
+* include helpers directory ([d6ed8fa](https://github.com/lpmatos/loli/commit/d6ed8fa481058bfac126935453e2ef290fd13b71))
+* progress bar request ([93afde3](https://github.com/lpmatos/loli/commit/93afde33db76489ee4a65f6c78389c55bb0a8abd))
+* render markdown function ([e913aaf](https://github.com/lpmatos/loli/commit/e913aaf72c1661e8fbfade38ef02ca8c3c955a53))
+* search by link ([a319ebd](https://github.com/lpmatos/loli/commit/a319ebd47e3f1ad9b5a176df2b1a6f62d6284f86))
+
+
+### :bug: Correções
+
+* constant trace moe url comment ([eb0d3ec](https://github.com/lpmatos/loli/commit/eb0d3ecb1c1350f025599de2921c64c05d6d203c))
+* golang lint ([4d692e1](https://github.com/lpmatos/loli/commit/4d692e15ba637254a47944154a7cad3004ab121a))
+* log messages format ([29d15f8](https://github.com/lpmatos/loli/commit/29d15f8e638ec6f2949a8ddf376eedd62daf5def))
+* search link anime ([e4369c0](https://github.com/lpmatos/loli/commit/e4369c00c58a026423f092da64d6a7c064a97925))
+* upgrade command ([3dfcb6a](https://github.com/lpmatos/loli/commit/3dfcb6a2f1ee5346a1edd3e002828adc9b8566b2))
+
+
+### :memo: Documentação
+
+* fix images position ([8b656fe](https://github.com/lpmatos/loli/commit/8b656fe1f1c45113ffe2f62e91c653da128892d6))
+* show results ([a67f716](https://github.com/lpmatos/loli/commit/a67f71620fc180fb840c1c7817992a85a4e3d275))
+
+
+### :package: Atualizações
+
+* bump verion ([ae0005f](https://github.com/lpmatos/loli/commit/ae0005f6b9a66a5596329469b06eeb6090960ba6))
+* **deps:** bump actions/stale from v3.0.16 to v3.0.17 ([3815cb8](https://github.com/lpmatos/loli/commit/3815cb8c5cb01b49ce3a4ffd1252e00153819c94))
+* **deps:** bump github.com/sirupsen/logrus from 1.7.0 to 1.8.0 ([46469a7](https://github.com/lpmatos/loli/commit/46469a7a3e990c103e34eafff5bebdd22b747058))
+* **release:** version 1.4.0 - Feb 22, 2021, 8:05 AM ([3850fd6](https://github.com/lpmatos/loli/commit/3850fd6025ed399a6b62d45149ff79214d654297))
+
+## [1.4.0](https://github.com/lpmatos/loli/compare/v1.3.0...v1.4.0) (2021-02-22)
+
+
 ### :package: Atualizações
 
 * **deps:** bump actions/stale from v3.0.16 to v3.0.17 ([3815cb8](https://github.com/lpmatos/loli/commit/3815cb8c5cb01b49ce3a4ffd1252e00153819c94))
