@@ -47,9 +47,9 @@ func Debug(args ...interface{}) {
 // Debugf function to print a pretty formatted log debug message.
 func Debugf(format string, args ...interface{}) {
 	logger.Debugf(
-		format,
+		fmt.Sprintf("🆗 %s", format),
 		au.Cyan(
-			emoji.Sprintf("🆗  "+format, args...),
+			emoji.Sprintf(fmt.Sprintf("%v", args...)),
 		).Bold().Underline(),
 	)
 }
@@ -75,9 +75,9 @@ func Warn(args ...interface{}) {
 // Warnf function to print a pretty formatted log warn message.
 func Warnf(format string, args ...interface{}) {
 	logger.Warnf(
-		format,
+		fmt.Sprintf("😲 %s", format),
 		au.Yellow(
-			emoji.Sprintf("😲  "+format, args...),
+			emoji.Sprintf(fmt.Sprintf("%v", args...)),
 		).Bold().Underline(),
 	)
 }
@@ -102,9 +102,9 @@ func Error(args ...interface{}) {
 // Errorf function to print a pretty formatted log error message.
 func Errorf(format string, args ...interface{}) {
 	logger.Errorf(
-		format,
+		fmt.Sprintf("😡 %s", format),
 		au.BrightRed(
-			emoji.Sprintf("😡  "+format, args...),
+			emoji.Sprintf(fmt.Sprintf("%v", args...)),
 		).Bold().Underline(),
 	)
 }

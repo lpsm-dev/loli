@@ -43,7 +43,6 @@ func init() {
 	RootCmd.PersistentFlags().StringVar(&config.Output, "log-output", "stdout", "Default log output. Available values: stdout|stderr|file")
 	RootCmd.PersistentFlags().StringVar(&config.File, "log-file", helpers.CreateLogFile("/var/log/loli", "file"), "Defaulting Loli CLI log file")
 	RootCmd.PersistentFlags().BoolVar(&config.Details, "details", false, "Enable log SetReportCaller details")
-	RootCmd.PersistentFlags().BoolVar(&config.Silence, "silence", false, "Silence Log outputs")
 	RootCmd.PersistentFlags().BoolP("verbose", "v", false, "verbose output")
 	RootCmd.PersistentFlags().IntP("timeout", "", 0, "override the default HTTP timeout (seconds)")
 }

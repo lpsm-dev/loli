@@ -1,10 +1,9 @@
 package log
 
 import (
+	"github.com/lpmatos/loli/internal/constants"
 	"github.com/sirupsen/logrus"
 )
-
-var defaultTimestampFormat string = "2006-01-02_15:04:05"
 
 // Configure the logrus format to use "text" formatter.
 func textFormatter() *logrus.TextFormatter {
@@ -13,7 +12,7 @@ func textFormatter() *logrus.TextFormatter {
 		ForceColors:               true,
 		EnvironmentOverrideColors: true,
 		FullTimestamp:             true,
-		TimestampFormat:           defaultTimestampFormat,
+		TimestampFormat:           constants.DefaultTimestampFormat,
 		DisableLevelTruncation:    true,
 	}
 }
@@ -25,7 +24,7 @@ func colorFormatter() *logrus.TextFormatter {
 		ForceColors:               true,
 		EnvironmentOverrideColors: true,
 		FullTimestamp:             true,
-		TimestampFormat:           defaultTimestampFormat,
+		TimestampFormat:           constants.DefaultTimestampFormat,
 		DisableLevelTruncation:    true,
 	}
 }
@@ -33,7 +32,7 @@ func colorFormatter() *logrus.TextFormatter {
 // Configure the logrus format to use "json" formatter.
 func jsonFormatter(pretty bool) *logrus.JSONFormatter {
 	return &logrus.JSONFormatter{
-		TimestampFormat:  defaultTimestampFormat,
+		TimestampFormat:  constants.DefaultTimestampFormat,
 		DisableTimestamp: false,
 		PrettyPrint:      pretty,
 	}

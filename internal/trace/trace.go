@@ -12,6 +12,7 @@ import (
 
 	"github.com/jedib0t/go-pretty/table"
 	"github.com/lpmatos/loli/api"
+	"github.com/lpmatos/loli/internal/constants"
 	"github.com/lpmatos/loli/internal/helpers"
 	log "github.com/lpmatos/loli/internal/log"
 	"github.com/lpmatos/loli/internal/types"
@@ -37,13 +38,13 @@ func SearchAnime(file string, allowInsecure, pretty bool) {
 	}
 
 	// Stable
-	client, error := api.NewClient("https://trace.moe/api/search")
+	client, error := api.NewClient(constants.TraceMoeSearchURL)
 	if error != nil {
 		log.Errorln(error)
 	}
 
 	// Stable
-	req, error := client.NewRequest(http.MethodPost, "https://trace.moe/api/search", bytes.NewBuffer(reqBody))
+	req, error := client.NewRequest(http.MethodPost, constants.TraceMoeSearchURL, bytes.NewBuffer(reqBody))
 	if error != nil {
 		log.Errorln(error)
 	}

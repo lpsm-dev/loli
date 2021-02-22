@@ -11,13 +11,11 @@ import (
 	"github.com/fatih/color"
 	"github.com/kyokomi/emoji/v2"
 	au "github.com/logrusorgru/aurora"
+	"github.com/lpmatos/loli/internal/constants"
 	"github.com/sirupsen/logrus"
 )
 
-var (
-	file       *os.File
-	timeFormat = "2006-01-02_15:04:05"
-)
+var file *os.File
 
 // IsEmpty function - check if a string is empty.
 func IsEmpty(value string) bool {
@@ -53,7 +51,7 @@ func CreateLogFile(logdir, logfile string) string {
 			".pid"+
 			pid+
 			"."+
-			time.Now().Format(timeFormat)+
+			time.Now().Format(constants.DefaultTimestampFormat)+
 			".log",
 	)
 }

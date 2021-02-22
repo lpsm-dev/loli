@@ -51,6 +51,7 @@ func GetShortDetails() {
 	})
 	versionTable.SetStyle(table.StyleColoredBright)
 	versionTable.Render()
+	fmt.Println()
 }
 
 // GetPrettyDetails function - create a pretty table and parse this table with current version details.
@@ -71,6 +72,7 @@ func GetPrettyDetails() {
 	})
 	versionTable.SetStyle(table.StyleColoredBright)
 	versionTable.Render()
+	fmt.Println()
 }
 
 // ShowVersion function - check detail flag and show the pretty details if enabled (`true`).
