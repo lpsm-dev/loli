@@ -118,7 +118,29 @@ winpty docker.exe container run -it --rm <IMAGE_NAME> <COMMAND>
 ## ➤ Commands
 
 <p align="center">
-  <img alt="logo" src="./docs/assets/menu.jpeg" float="center"/>
+  <img alt="logo" src="./docs/assets/menu.PNG" float="center"/>
+</p>
+
+## ➤ Results
+
+### Search by File
+
+<p align="center">
+  <img alt="logo" src="./docs/assets/find_by_file.PNG" float="center"/>
+</p>
+
+<p align="center">
+  <img alt="logo" src="./docs/assets/find_by_file_pretty.PNG" float="center"/>
+</p>
+
+### Search by Link
+
+<p align="center">
+  <img alt="logo" src="./docs/assets/find_by_link.PNG" float="center"/>
+</p>
+
+<p align="center">
+  <img alt="logo" src="./docs/assets/find_by_link_pretty.PNG" float="center"/>
 </p>
 
 ## ➤ Project organization features

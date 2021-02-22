@@ -35,7 +35,7 @@ func SearchAnimeByFile(animeFile string, allowInsecure, pretty bool) {
 	defer termenv.ShowCursor()
 
 	s := spinner.New(spinner.CharSets[39], 100*time.Millisecond)
-	s.Prefix = "🔎 Searching for the anime: "
+	s.Prefix = "🔎 Searching for the anime by file: "
 	s.FinalMSG = color.GreenString("✔️  Found!\n\n")
 
 	go catchInterrupt(s)
