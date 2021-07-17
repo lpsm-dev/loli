@@ -15,8 +15,7 @@ require (
 	github.com/kyokomi/emoji/v2 v2.2.8
 	github.com/logrusorgru/aurora v2.0.3+incompatible
 	github.com/mitchellh/mapstructure v1.4.1 // indirect
-	github.com/muesli/termenv v0.8.1
-	github.com/rivo/uniseg v0.2.0 // indirect
+	github.com/muesli/termenv v0.9.0
 	github.com/sirupsen/logrus v1.8.1
 	github.com/spf13/cobra v1.1.3
 	github.com/stretchr/testify v1.7.0
