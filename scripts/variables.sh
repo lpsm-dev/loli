@@ -1,5 +1,8 @@
 #!/bin/bash
 
-export CLIENT_VERSION="$(cat VERSION)"
-export GIT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
-export GO_VERSION="$(go version)"
+CLIENT_VERSION="$(cat VERSION)"
+GIT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+GO_VERSION="$(go version)"
+export CLIENT_VERSION
+export GIT_BRANCH
+export GO_VERSION

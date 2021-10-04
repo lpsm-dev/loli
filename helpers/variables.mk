@@ -29,23 +29,23 @@ MAIN            ?= $(CURDIR)/cmd/loli/main.go
 
 GIT_BRANCH				:= $(shell git rev-parse --abbrev-ref HEAD)
 GIT_COMMIT				:= $(shell git rev-parse HEAD)
-GIT_SHORT_COMMIT	:= $(shell git rev-parse --short HEAD)
-GIT_TAG						:= $(shell if [ -z "`git status --porcelain`" ]; then git describe --exact-match --tags HEAD 2>/dev/null; fi)
-GIT_TREE_STATE		:= $(shell if [ -z "`git status --porcelain`" ]; then echo "clean" ; else echo "dirty"; fi)
+GIT_SHORT_COMMIT		:= $(shell git rev-parse --short HEAD)
+GIT_TAG					:= $(shell if [ -z "`git status --porcelain`" ]; then git describe --exact-match --tags HEAD 2>/dev/null; fi)
+GIT_TREE_STATE			:= $(shell if [ -z "`git status --porcelain`" ]; then echo "clean" ; else echo "dirty"; fi)
 
 # ================================================
 # GO VARIABLES
 # ================================================
 
 GO_VERSION 	:= $(shell go version)
-GOPATH			?= $(shell go env GOPATH)
+GOPATH		?= $(shell go env GOPATH)
 
 # Ensure GOPATH is set before running build process.
 ifeq "$(GOPATH)" ""
   $(error Please set the environment variable GOPATH before running `make`)
 endif
 
-GO 			:= go
+GO 		:= go
 GOOS   	:= $(shell go env GOOS)
 GOARCH 	:= $(shell go env GOARCH)
 

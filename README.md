@@ -54,15 +54,15 @@ Nesta processo, obtive experiências nos seguintes tópicos no que tange a lingu
 
 - ✔️ Descobrir os pacotes internos do Go, como: `os`, `string` e `fmt`.
 - ✔️ Descobrir a biblioteca CLI `github.com/spf13/cobra`.
-- ✔️ Criar comandos e subcomandos para seu CLI.
-- ✔️ Ler flags e argumentos a partir dos seus comandos e subcomandos.
+- ✔️ Criar commandos e subcomandos para seu CLI.
+- ✔️ Ler flags e arguments a partir dos seus commandos e subcomandos.
 - ✔️ Descobrir a biblioteca de configuração `github.com/spf13/viper`.
 - ✔️ Ler e escrever um arquivo de configuração.
 - ✔️ Colocar o `cobra` e o `viper` para trabalharem juntos.
 - ✔️ Ler variáveis de ambiente.
 - ✔️ Descobrir a biblioteca de log `github.com/sirupsen/logrus`.
 - ✔️ Usar injeção de variável em tempo de build.
-- ✔️ Usar condicional na compilação e build tags.
+- ✔️ Usar conditional na compilação e build tags.
 
 ## ➤ Descrição
 
@@ -159,7 +159,7 @@ winpty docker.exe container run -it --rm <IMAGE_NAME> <COMMAND>
 
 **Para obter mais informações como é o processo de controle de versionamento nesse projeto, acesse [RELEASING.md](RELEASING.md), lá temos todos os requisitos e especificações do que deve ser feito para a geração de uma release, tag e changelog.**
 
-## ➤ Autor
+## ➤ Author
 
 👤 **Lucca Pessoa**
 
@@ -175,7 +175,7 @@ Ei!! Se você gostou deste projeto ou se encontrou alguns bugs, sinta-se à vont
 
 ## ➤ Troubleshooting
 
-Esse repositório possui fins estudantis/demonstrativos e para simplificar minha vida profissional, podendo ou não ser adequado para o seu projeto!
+Esse repositório possui fins estudantis/demonstrations e para simplificar minha vida professional, podendo ou não ser adequado para o seu projeto!
 
 ## ➤ Contribuindo
 
@@ -185,7 +185,7 @@ Issues e pull requests são bem vindos! Para obter detalhes de desenvolvimento, 
 
 O código e os documentos são lançados sob o [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)
 
-## ➤ Mostre seu suporte!
+## ➤ Mostre seu suporte
 
 Dê uma ⭐️ se esse projeto te ajudou de alguma forma!
 

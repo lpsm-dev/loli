@@ -2,9 +2,9 @@ name: Linter
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   linter:
@@ -12,13 +12,11 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-    -
-      name: Check out code into the Go module directory
-      uses: actions/checkout@v2.3.4
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v2.3.4
 
-    -
-      name: golangci-lint
-      uses: reviewdog/action-golangci-lint@v2
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        tool_name: golangci-lint
+      - name: golangci-lint
+        uses: reviewdog/action-golangci-lint@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tool_name: golangci-lint

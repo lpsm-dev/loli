@@ -1,5 +1,22 @@
 package constants
 
+const (
+	// DefaultTimestampFormat default time format.
+	DefaultTimestampFormat = "2006-01-02_15:04:05"
+
+	// TraceMoeSearchURL default trace.moe URL
+	TraceMoeSearchURL = "https://trace.moe/api/search"
+)
+
+// Welcome - return a markdown welcome message.
+const Welcome = `
+Hello there, fellow coders 🤖!
+
+If you want access this repository, copy this [link](https://github.com/lpmatos/loli).
+
+Bye! 👋👋👋
+`
+
 // CompletionHelpMessage - return the long description of completion command.
 const CompletionHelpMessage = `To load completion for:
 
@@ -21,10 +38,4 @@ $ loli completion fish | source
 
 # To load completions for each session, execute once:
 $ loli completion fish > ~/.config/fish/completions/loli.fish
-`
-
-// Welcome - return a markdown welcome message.
-const Welcome = `# Hello there, fellow coders 🤖!
-
-If you want access this repository, copy this [link](https://github.com/lpmatos/loli). Bye!
 `

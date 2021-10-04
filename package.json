@@ -1,16 +1,14 @@
 {
   "_comment": "this project is not a node.js one, package.json is just used to define some metadata",
-  "main": ".releaserc.json",
   "scripts": {
     "cm": "git cz",
-    "secrets": "gitleaks --verbose",
+    "lint": "mega-linter-runner -p . --fix",
+    "secrets": "gitleaks --verbose -c .gitleaks.toml -p .",
     "release": "npx semantic-release --no-ci",
-    "release-debug": "npx semantic-release --dry-run --no-ci --debug"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "release-debug": "npx semantic-release --dry-run --no-ci --debug",
+    "docker-lint": "docker run --rm -i ghcr.io/hadolint/hadolint < Dockerfile",
+    "docker-inspect": "docker image build -t teste:1.0.0 . && dive teste:1.0.0 --config .dive-ci.yml --ci",
+    "docker-scan": "docker image build -t teste:1.0.0 . && trivy image teste:1.0.0"
   },
   "commitlint": {
     "extends": [
@@ -23,16 +21,16 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "@semantic-release/changelog": "^5.0.1",
-    "@semantic-release/commit-analyzer": "^8.0.1",
-    "@semantic-release/exec": "^5.0.0",
-    "@semantic-release/git": "^9.0.0",
-    "@semantic-release/github": "^7.2.0",
-    "@semantic-release/release-notes-generator": "^9.0.1",
-    "commitizen": "^4.2.3",
-    "husky": "^4.3.8",
-    "semantic-release": "^17.3.7"
+    "@commitlint/cli": "13.1.0",
+    "@commitlint/config-conventional": "13.1.0",
+    "@semantic-release/changelog": "5.0.1",
+    "@semantic-release/commit-analyzer": "8.0.1",
+    "@semantic-release/exec": "5.0.0",
+    "@semantic-release/git": "9.0.0",
+    "@semantic-release/gitlab": "6.2.2",
+    "@semantic-release/release-notes-generator": "9.0.3",
+    "commitizen": "4.2.4",
+    "mega-linter-runner": "4.45.0",
+    "semantic-release": "17.4.5"
   }
 }

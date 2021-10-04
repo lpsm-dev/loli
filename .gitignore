@@ -1,9 +1,6 @@
 # ================================================
 # GENERAL
 # ================================================
-*.txt
-*.lock
-*.sublime-*
 
 # Ignore IDEs
 .idea
@@ -11,9 +8,20 @@
 # Ignore OS files
 .DS_Store
 
+# Packages
+*.tgz
+
+# Secrets path
+.secrets/
+
+# General reports
+/report
+/reports
+
 # ================================================
 # VSCODE
 # ================================================
+
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -21,20 +29,14 @@
 !.vscode/extensions.json
 *.code-workspace
 
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
 # ================================================
 # NODE
 # ================================================
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
 
-# Optional npm cache directory
-.npm
-package-lock.json
+npm-debug.log*
 
 # Dependency directories
 node_modules/
@@ -42,22 +44,17 @@ node_modules/
 # ================================================
 # YARN
 # ================================================
-.yarn/*
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
 
-# if you are NOT using Zero-installs, then:
-# comment the following lines
-!.yarn/cache
+yarn-debug.log*
+yarn-error.log*
 
-# and uncomment the following lines
-# .pnp.*
+/.pnp
+.pnp.js
 
 # ================================================
 # GOLANG
 # ================================================
+
 # Binaries for programs and plugins
 *.exe
 *.exe~

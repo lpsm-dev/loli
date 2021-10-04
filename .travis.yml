@@ -12,7 +12,7 @@ before_install:
 
 env:
   global:
-  - TRAVIS_GO_VERSION="$(cat .go-version)"
+    - TRAVIS_GO_VERSION="$(cat .go-version)"
 
 sudo: false
 
@@ -25,7 +25,7 @@ script:
 
 branches:
   only:
-  - main
+    - main
 
 notifications:
   email: luccapessoamatos@gmail.com

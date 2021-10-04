@@ -37,7 +37,7 @@ builds:
 archives:
   - id: "loli"
     name_template: "{{.ProjectName}}_v{{.Version}}_{{.Os}}-{{.Arch}}"
-    builds: [ "loli" ]
+    builds: ["loli"]
     format: binary
     format_overrides:
       - goos: windows

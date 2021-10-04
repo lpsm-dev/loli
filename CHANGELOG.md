@@ -184,7 +184,7 @@
 * api client comments and HTTPClient ([d836f2d](https://github.com/lpmatos/loli/commit/d836f2df0eb4944a92f3900230b7b077fbcd0646))
 * assets function ([d54d475](https://github.com/lpmatos/loli/commit/d54d475050976a1bd3755442703a96f310be846c))
 * configurations ([34866f6](https://github.com/lpmatos/loli/commit/34866f622f4a5301679ee357e49887f530a14c8d))
-* conflit files ([6e16210](https://github.com/lpmatos/loli/commit/6e162107f154e2905b979d7e4784bc648829f8a8))
+* conflict files ([6e16210](https://github.com/lpmatos/loli/commit/6e162107f154e2905b979d7e4784bc648829f8a8))
 * documentation and config files ([6346b90](https://github.com/lpmatos/loli/commit/6346b9078416d4b961d80bb84fe9e5c73f4b046e))
 * go release config ldflags and variables script ([f47f903](https://github.com/lpmatos/loli/commit/f47f9037833c20d0e4f8cc3af9dc3902fcef6014))
 * go sum ([d849ba9](https://github.com/lpmatos/loli/commit/d849ba924e1ae66b992729422ded845fba64e01d))
