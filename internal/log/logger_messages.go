@@ -125,3 +125,22 @@ func Fatal(args ...interface{}) {
 			emoji.Sprintf("🤬  " + fmt.Sprintf("%v", args...)),
 		))
 }
+
+// Fatalf function to print a pretty formatted log fatal message.
+func Fatalf(format string, args ...interface{}) {
+	logger.Fatalf(
+		fmt.Sprintf("🤬 %s", format),
+		au.BrightRed(
+			emoji.Sprintf(fmt.Sprintf("%v", args...)),
+		).Bold().Underline(),
+	)
+}
+
+// Fatalln function to print a pretty formatted log fatal message.
+func Fatalln(args ...interface{}) {
+	logger.Fatalln(
+		au.BrightRed(
+			emoji.Sprintf("🤬  " + fmt.Sprintf("%v\n", args...)),
+		).Bold().Underline(),
+	)
+}

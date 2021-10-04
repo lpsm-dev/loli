@@ -25,29 +25,26 @@ import (
 
 // SearchAnimeByFile function
 func SearchAnimeByFile(animeFile string, allowInsecure, pretty bool) {
-	if !helpers.IsFileExists(animeFile) {
-		log.Fatal("Invalid file path")
-	}
-
-	fmt.Println()
-
 	searchURL := constants.TraceMoeFileSearchURL
-	log.Debugf("Search URL: %s\n", searchURL)
 
 	termenv.HideCursor()
 	defer termenv.ShowCursor()
 
 	s := spinner.New(spinner.CharSets[39], 100*time.Millisecond)
-	s.Prefix = "🔎 Searching for the anime by file: "
+	s.Prefix = "🔎 Searching for the anime from an image: "
 	s.FinalMSG = color.GreenString("✔️  Found!\n\n")
 
 	go catchInterrupt(s)
 
 	s.Start()
 
+	if !helpers.IsFileExists(animeFile) {
+		log.Fatal("Invalid file path")
+	}
+
 	imageFile, error := os.Open(animeFile)
 	if error != nil {
-		log.Errorln(error)
+		log.Fatalln(error)
 	}
 
 	payload := &bytes.Buffer{}
@@ -56,27 +53,27 @@ func SearchAnimeByFile(animeFile string, allowInsecure, pretty bool) {
 
 	_, error = io.Copy(part, imageFile)
 	if error != nil {
-		log.Errorln(error)
+		log.Fatalln(error)
 	}
 
 	error = writer.Close()
 	if error != nil {
-		log.Errorln(error)
+		log.Fatalln(error)
 	}
 
 	resp, error := http.Post(searchURL, writer.FormDataContentType(), payload)
 	if error != nil {
-		log.Errorln(error)
+		log.Fatalln(error)
 	}
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		log.Errorln("Bad status code...")
+		log.Fatal("Bad status code...")
 	}
 
 	content, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		log.Errorln(err)
+		log.Fatalln(err)
 	}
 
 	var animeResp types.Response
@@ -94,7 +91,6 @@ func SearchAnimeByFile(animeFile string, allowInsecure, pretty bool) {
 			{"🗽 Title English", animeResp.Result[0].Anilist.Title.English},
 			{"🗻 Title Romaji", animeResp.Result[0].Anilist.Title.Romaji},
 			{"📺 Episode Number", color.MagentaString(strconv.Itoa(animeResp.Result[0].Episode))},
-			{"💻 Video", animeResp.Result[0].Video},
 		})
 		versionTable.SetStyle(table.StyleColoredBlueWhiteOnBlack)
 		versionTable.Render()
