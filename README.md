@@ -166,7 +166,7 @@ Contributions, issues and feature requests are welcome. Feel free to check issue
 Ei!! Se você gostou deste projeto ou se encontrou alguns bugs, sinta-se à vontade para me contatar nos meus canais:
 
 >
-> * Email: luccapsm@gmail.com
+> * Email: luccapsm@protonmail.com
 > * Website: [lpmatos](https://github.com/lpmatos)
 > * Github: [@lpmatos](https://github.com/lpmatos)
 > * GitLab: [@lpmatos](https://gitlab.com/lpmatos)
