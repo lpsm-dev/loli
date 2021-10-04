@@ -163,7 +163,7 @@ Contributions, issues and feature requests are welcome. Feel free to check issue
 
 👤 **Lucca Pessoa**
 
-Ei!! Se você gostou deste projeto ou se encontrou alguns bugs, sinta-se à vontade para me contatar nos meus canais:
+Hey!! If you liked this project or found some bugs, feel free to contact me on my channels:
 
 >
 > * Email: luccapsm@protonmail.com
