@@ -27,7 +27,7 @@ You can always delete this file.
 		c := cli.New(version.GetVersionFormatted())
 		err := updateCLI(c)
 		if err != nil {
-			return fmt.Errorf("We were not able to upgrade the cli because we encountered an error: %s", err)
+			return fmt.Errorf("we were not able to upgrade the cli because we encountered an error: %s", err)
 		}
 		return nil
 	},
