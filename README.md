@@ -115,13 +115,9 @@ winpty docker.exe container run -it --rm <IMAGE_NAME> <COMMAND>
 </p>
 </details>
 
-## ➤ Commands
+## ➤ Visuals <a name = "visuals"></a>
 
-<p align="center">
-  <img alt="logo" src="./docs/assets/menu.PNG" float="center"/>
-</p>
-
-## ➤ Results
+Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
 ### Search by File
 
@@ -143,21 +139,25 @@ winpty docker.exe container run -it --rm <IMAGE_NAME> <COMMAND>
   <img alt="logo" src="./docs/assets/find_by_link_pretty.PNG"/>
 </p>
 
-## ➤ Project organization features
+## ➤ Usage <a name = "usage"></a>
 
-- Default gitignore and editorconfig.
-- [Semantic Versioning](https://semver.org/)
-- [GitLeaks](https://github.com/zricethezav/gitleaks) file - Scan for secrets using regex and entropy.
-- [Semantic Release](https://github.com/semantic-release/semantic-release) + Plugins configuration
-- NPM modules automation.
-  - [Commitlint](https://github.com/conventional-changelog/commitlint) using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
-  - Git Hooks with [Husky](https://github.com/typicode/husky).
+Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
-## ➤ Versionamento
+<p align="center">
+  <img alt="logo" src="./docs/assets/menu.PNG" float="center"/>
+</p>
 
-[**CHANGELOG.md**](CHANGELOG.md).
+## ➤ Roadmap <a name = "roadmap"></a>
 
-**Para obter mais informações como é o processo de controle de versionamento nesse projeto, acesse [RELEASING.md](RELEASING.md), lá temos todos os requisitos e especificações do que deve ser feito para a geração de uma release, tag e changelog.**
+If you have ideas for releases in the future, it is a good idea to list them in the README.
+
+## ➤ Versioning <a name = "versioning"></a>
+
+To check the change history, please access the [**CHANGELOG.md**](CHANGELOG.md) file.
+
+## ➤ Contributing <a name = "contributing"></a>
+
+Contributions, issues and feature requests are welcome. Feel free to check issues page if you want to contribute. [Check the contributing guide](https://nuageit.atlassian.net/wiki/spaces/OPSNUAGE/pages/1995309068/Processo+de+contribui+o).
 
 ## ➤ Author
 
@@ -173,22 +173,22 @@ Ei!! Se você gostou deste projeto ou se encontrou alguns bugs, sinta-se à vont
 > * LinkedIn: [@luccapessoa](https://www.linkedin.com/in/luccapessoa/)
 >
 
-## ➤ Troubleshooting
+## ➤ Troubleshooting <a name = "troubleshooting"></a>
 
-Esse repositório possui fins estudantis/demonstrations e para simplificar minha vida professional, podendo ou não ser adequado para o seu projeto!
+If you have any problems, please contact **me**.
 
-## ➤ Contribuindo
+## ➤ Project status <a name = "project-status"></a>
 
-Issues e pull requests são bem vindos! Para obter detalhes de desenvolvimento, consulte o arquivo de [contribuição](CONTRIBUTING.md). Para mudanças importantes, abra uma issue primeiro para discutir o que você gostaria de mudar.
+If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
 
-## ➤ Licença
+## ➤ Show your support <a name = "show-your-support"></a>
 
-O código e os documentos são lançados sob o [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)
-
-## ➤ Mostre seu suporte
-
-Dê uma ⭐️ se esse projeto te ajudou de alguma forma!
+Give a ⭐️ if this project helped you!
 
 ---
 
-Esse [README](README.md) foi gerado com ❤️ por [mim](https://github.com/lpmatos) com inspiração no [readme-md-generator](https://github.com/kefranabg/readme-md-generator).
+<div align="center">
+
+Made with 💜 by **me** :wave: inspired on [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
+
+</div>
