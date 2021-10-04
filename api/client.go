@@ -8,25 +8,14 @@ import (
 	"time"
 
 	"github.com/lpmatos/loli/debug"
+	"github.com/lpmatos/loli/internal/constants"
 )
 
 var (
-	// UserAgent variable - lets the API know where the call is being made from.
-	// For more information: https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/User-Agent
-	UserAgent = "github.com/lpmatos/loli"
-
-	// TimeoutInSeconds variable - is the timeout the default HTTP client will use.
-	// For more information: https://stackoverflow.com/questions/16895294/how-to-set-timeout-for-http-get-requests-in-golang
-	TimeoutInSeconds = 60
-
-	// InsecureSkipVerify controls whether a client verifies the server's certificate chain and host name.
-	// For more information: https://golang.org/pkg/crypto/tls/
-	InsecureSkipVerify = false
-
 	// HTTPClient variable - is the client used to make HTTP calls in loli cli.
 	// For more information: https://medium.com/@nate510/don-t-use-go-s-default-http-client-4804cb19f779
 	HTTPClient = &http.Client{
-		Timeout: time.Duration(TimeoutInSeconds) * time.Second,
+		Timeout: time.Duration(constants.TimeoutInSeconds) * time.Second,
 		Transport: &http.Transport{
 			Proxy: http.ProxyFromEnvironment,
 			DialContext: (&net.Dialer{
@@ -40,7 +29,7 @@ var (
 			TLSHandshakeTimeout:   10 * time.Second,
 			ExpectContinueTimeout: 1 * time.Second,
 			TLSClientConfig: &tls.Config{
-				InsecureSkipVerify: InsecureSkipVerify,
+				InsecureSkipVerify: constants.InsecureSkipVerify,
 			},
 		},
 	}
@@ -66,7 +55,7 @@ func (c *Client) NewRequest(method, url string, body io.Reader) (*http.Request, 
 		return nil, error
 	}
 
-	request.Header.Set("User-Agent", UserAgent)
+	request.Header.Set("User-Agent", constants.UserAgent)
 
 	if c.ContentType == "" {
 		request.Header.Set("Content-Type", "application/json")

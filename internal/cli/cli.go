@@ -16,16 +16,14 @@ import (
 
 	"github.com/blang/semver"
 	update "github.com/inconshreveable/go-update"
+	"github.com/lpmatos/loli/internal/constants"
 	"github.com/lpmatos/loli/internal/log"
 )
 
 var (
-	// BuildOS is the operating system (GOOS) used during the build process.
-	BuildOS string
-	// BuildARM is the ARM version (GOARM) used during the build process.
-	BuildARM string
-	// BuildARCH is the architecture (GOARCH) used during the build process.
-	BuildARCH string
+	buildOS   string
+	buildARM  string
+	buildARCH string
 )
 
 var (
@@ -42,14 +40,8 @@ var (
 	}
 )
 
-var (
-	// TimeoutInSeconds is the timeout the default HTTP client will use.
-	TimeoutInSeconds = 60
-	// HTTPClient is the client used to make HTTP calls in the cli package.
-	HTTPClient = &http.Client{Timeout: time.Duration(TimeoutInSeconds) * time.Second}
-	// ReleaseURL is the endpoint that provides information about cli releases.
-	ReleaseURL = "https://api.github.com/repos/lpmatos/loli/releases"
-)
+// HTTPClient is the client used to make HTTP calls in the cli package.
+var HTTPClient = &http.Client{Timeout: time.Duration(constants.TimeoutInSeconds) * time.Second}
 
 // New creates a CLI, setting it to a particular version.
 func New(version string) *CLI {
@@ -73,7 +65,7 @@ func (c *CLI) IsUpToDate() (bool, error) {
 	rv, err := semver.Make(last)
 	if err != nil {
 		log.Error("Unable to parse latest version")
-		return false, fmt.Errorf("Unable to parse latest version (%s): %s", last, err)
+		return false, fmt.Errorf("unable to parse latest version (%s): %s", last, err)
 	}
 
 	current := c.Version
@@ -82,7 +74,7 @@ func (c *CLI) IsUpToDate() (bool, error) {
 	cv, err := semver.Make(current)
 	if err != nil {
 		log.Error("Unable to parse current version")
-		return false, fmt.Errorf("Unable to parse current version (%s): %s", current, err)
+		return false, fmt.Errorf("unable to parse current version (%s): %s", current, err)
 	}
 
 	// GTE checks if v is greater than or equal to o.
@@ -100,17 +92,17 @@ func (c *CLI) Upgrade() error {
 
 	if OS == "" || ARCH == "" {
 		log.Errorf("Unable to upgrade: OS %s ARCH %s", OS, ARCH)
-		return fmt.Errorf("Unable to upgrade: OS %s ARCH %s", OS, ARCH)
+		return fmt.Errorf("unable to upgrade: OS %s ARCH %s", OS, ARCH)
 	}
 
 	buildName := fmt.Sprintf("%s-%s", OS, ARCH)
-	if BuildARCH == "arm" {
-		if BuildARM == "" {
+	if buildARCH == "arm" {
+		if buildARM == "" {
 			log.Error("Unable to upgrade - ARM version not found")
-			return fmt.Errorf("Unable to upgrade - ARM version not found")
+			return fmt.Errorf("unable to upgrade - ARM version not found")
 		}
-		log.Debugf("Build ARCH version: %s - Build ARM version: %s", BuildARCH, BuildARM)
-		buildName = fmt.Sprintf("%s-v%s", buildName, BuildARM)
+		log.Debugf("Build ARCH version: %s - Build ARM version: %s", buildARCH, buildARM)
+		buildName = fmt.Sprintf("%s-v%s", buildName, buildARM)
 	}
 
 	var downloadRC *bytes.Reader
@@ -121,7 +113,7 @@ func (c *CLI) Upgrade() error {
 			downloadRC, err = a.download()
 			if err != nil {
 				log.Errorf("Error downloading executable: %s", err)
-				return fmt.Errorf("Error downloading executable: %s", err)
+				return fmt.Errorf("error downloading executable: %s", err)
 			}
 			break
 		}
@@ -129,7 +121,7 @@ func (c *CLI) Upgrade() error {
 
 	if downloadRC == nil {
 		log.Error("No executable found for")
-		return fmt.Errorf("No executable found for %s/%s%s", BuildOS, BuildARCH, BuildARM)
+		return fmt.Errorf("no executable found for %s/%s%s", buildOS, buildARCH, buildARM)
 	}
 
 	bin, err := extractBinary(downloadRC, OS)
@@ -144,7 +136,7 @@ func (c *CLI) Upgrade() error {
 func (c *CLI) fetchLatestRelease() error {
 	log.Debug("Fetch latest release")
 
-	latestReleaseURL := fmt.Sprintf("%s/%s", ReleaseURL, "latest")
+	latestReleaseURL := fmt.Sprintf("%s/%s", constants.ReleaseURL, "latest")
 	resp, err := HTTPClient.Get(latestReleaseURL)
 	if err != nil {
 		return err
@@ -203,7 +195,7 @@ func extractBinary(source *bytes.Reader, os string) (binary io.ReadCloser, err e
 			if err != nil {
 				return nil, err
 			}
-			tmpfile, err := ioutil.TempFile("", "temp-loli")
+			tmpfile, err := ioutil.TempFile("", "temp-grc")
 			if err != nil {
 				return nil, err
 			}

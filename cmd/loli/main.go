@@ -18,7 +18,7 @@ limitations under the License.
 package main
 
 import (
-	cmd "github.com/lpmatos/loli/cmd/commands"
+	cmd "github.com/lpmatos/loli/commands"
 )
 
 func main() {

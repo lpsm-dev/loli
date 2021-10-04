@@ -9,6 +9,23 @@ const (
 
 	// TraceMoeLinkSearchURL default trace.moe URL
 	TraceMoeLinkSearchURL = "https://api.trace.moe/search?anilistInfo&url="
+
+	// ReleaseURL default release URL.
+	ReleaseURL = "https://api.github.com/repos/lpmatos/loli/releases"
+
+	// UserAgent variable - lets the API know where the call is being made from.
+	// For more information: https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/User-Agent
+	UserAgent = "github.com/lpmatos/loli"
+)
+
+var (
+	// TimeoutInSeconds variable - is the timeout the default HTTP client will use.
+	// For more information: https://stackoverflow.com/questions/16895294/how-to-set-timeout-for-http-get-requests-in-golang
+	TimeoutInSeconds = 60
+
+	// InsecureSkipVerify controls whether a client verifies the server's certificate chain and host name.
+	// For more information: https://golang.org/pkg/crypto/tls/
+	InsecureSkipVerify = false
 )
 
 // Welcome - return a markdown welcome message.

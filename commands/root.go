@@ -1,9 +1,8 @@
 package commands
 
 import (
-	"github.com/lpmatos/loli/api"
-	"github.com/lpmatos/loli/cli"
 	"github.com/lpmatos/loli/debug"
+	"github.com/lpmatos/loli/internal/constants"
 	"github.com/lpmatos/loli/internal/helpers"
 	log "github.com/lpmatos/loli/internal/log"
 	"github.com/spf13/cobra"
@@ -31,8 +30,7 @@ var RootCmd = &cobra.Command{
 			debug.Verbose = verbose
 		}
 		if timeout, _ := cmd.Flags().GetInt("timeout"); timeout > 0 {
-			cli.TimeoutInSeconds = timeout
-			api.TimeoutInSeconds = timeout
+			constants.TimeoutInSeconds = timeout
 		}
 	},
 }
