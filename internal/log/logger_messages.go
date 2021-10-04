@@ -117,3 +117,11 @@ func Errorln(args ...interface{}) {
 		).Bold().Underline(),
 	)
 }
+
+// Fatal function to print a pretty formatted log fatal message.
+func Fatal(args ...interface{}) {
+	logger.Fatal(
+		au.BrightRed(
+			emoji.Sprintf("🤬  " + fmt.Sprintf("%v", args...)),
+		))
+}

@@ -4,8 +4,11 @@ const (
 	// DefaultTimestampFormat default time format.
 	DefaultTimestampFormat = "2006-01-02_15:04:05"
 
-	// TraceMoeSearchURL default trace.moe URL
-	TraceMoeSearchURL = "https://trace.moe/api/search"
+	// TraceMoeFileSearchURL default trace.moe URL
+	TraceMoeFileSearchURL = "https://api.trace.moe/search?anilistInfo"
+
+	// TraceMoeLinkSearchURL default trace.moe URL
+	TraceMoeLinkSearchURL = "https://api.trace.moe/search?anilistInfo&url="
 )
 
 // Welcome - return a markdown welcome message.
