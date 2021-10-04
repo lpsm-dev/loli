@@ -12,7 +12,7 @@ import (
 
 var (
 	// BinaryName is the name of the app.
-	BinaryName string = "loli"
+	BinaryName = "loli"
 	// Out is used to write to information.
 	Out io.Writer
 	// Err is used to write errors.
