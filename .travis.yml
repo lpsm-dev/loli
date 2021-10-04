@@ -21,7 +21,6 @@ install:
 
 script:
   - make lint
-  - make misspell
 
 branches:
   only:
