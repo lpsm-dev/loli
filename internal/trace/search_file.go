@@ -102,5 +102,4 @@ func SearchAnimeByFile(animeFile string, allowInsecure, pretty bool) {
 		fmt.Println("📺 Episode Number: " + color.MagentaString(strconv.Itoa(animeResp.Result[0].Episode)))
 		fmt.Println("💻 Video: " + animeResp.Result[0].Video)
 	}
-	fmt.Println()
 }
