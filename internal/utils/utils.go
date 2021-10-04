@@ -6,23 +6,30 @@ import (
 	"github.com/charmbracelet/glamour"
 )
 
-// RenderMarkdown pretty markdown output
+type markdownRenderOpts []glamour.TermRendererOption
+
+// RenderMarkdown function that return a pretty markdown in output.
 func RenderMarkdown(text string) (string, error) {
-	// Glamour rendering preserves carriage return characters in code blocks, but
-	// we need to ensure that no such characters are present in the output.
+	opts := markdownRenderOpts{
+		glamour.WithAutoStyle(),
+		glamour.WithWordWrap(45),
+		glamour.WithEmoji(),
+	}
+	return renderMarkdown(text, opts)
+}
+
+func renderMarkdown(text string, opts markdownRenderOpts) (string, error) {
 	text = strings.ReplaceAll(text, "\r\n", "\n")
 
-	renderStyle := glamour.WithAutoStyle()
-
-	r, err := glamour.NewTermRenderer(
-		// detect background color and pick either the default dark or light theme Light
-		renderStyle,
-		// wrap output at specific width
-		glamour.WithWordWrap(80),
-	)
+	tr, err := glamour.NewTermRenderer(opts...)
 	if err != nil {
 		return "", err
 	}
 
-	return r.Render(text)
+	out, err := tr.Render(text)
+	if err != nil {
+		return "", err
+	}
+
+	return out, nil
 }
