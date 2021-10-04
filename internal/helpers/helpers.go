@@ -15,8 +15,6 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-var file *os.File
-
 // IsEmpty function - check if a string is empty.
 func IsEmpty(value string) bool {
 	return len(strings.TrimSpace(value)) == 0
@@ -85,7 +83,7 @@ func AnimeSimilarity(similarity string) string {
 
 // AnimeIsAdult is for colorful output
 func AnimeIsAdult(isAdult bool) {
-	if isAdult == true {
+	if isAdult {
 		fmt.Println(color.GreenString("true"))
 	} else {
 		fmt.Println(color.RedString("false"))
