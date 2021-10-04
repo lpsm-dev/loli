@@ -100,6 +100,5 @@ func SearchAnimeByFile(animeFile string, allowInsecure, pretty bool) {
 		fmt.Println("🗽 Title English: " + animeResp.Result[0].Anilist.Title.English)
 		fmt.Println("🗻 Title Romaji: " + animeResp.Result[0].Anilist.Title.Romaji)
 		fmt.Println("📺 Episode Number: " + color.MagentaString(strconv.Itoa(animeResp.Result[0].Episode)))
-		fmt.Println("💻 Video: " + animeResp.Result[0].Video)
 	}
 }
