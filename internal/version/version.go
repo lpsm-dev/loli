@@ -5,11 +5,10 @@ import (
 	"os"
 
 	"github.com/jedib0t/go-pretty/table"
+	"github.com/pterm/pterm"
 )
 
-// Default build-time variable.
-// These variables are populated via the Go ldflags.
-// This will be filled in by the compiler.
+// Default build-time variable. These variables are populated via the Go ldflags. This will be filled in by the compiler.
 var (
 	cliName      = "loli"                            // default name for this CLI
 	cliVersion   = "0.0.0"                           // value from VERSION file
@@ -22,40 +21,28 @@ var (
 	goVersion    = "unknown-go-version"              // output from `go version`
 )
 
-// GetVersion function
-func GetVersion() string {
-	return fmt.Sprintf("v%s", cliVersion)
-}
-
 // GetVersionFormatted function
 func GetVersionFormatted() string {
-	return fmt.Sprintf("%s", cliVersion)
-}
-
-// GetDisplay function - parse current version and return a formatted string.
-func GetDisplay() string {
-	return fmt.Sprintf("CLI Version - %s", cliVersion)
+	return cliVersion
 }
 
 // GetShortDetails function - create a pretty table and parse this table with current version details.
 func GetShortDetails() {
-	versionTable := table.NewWriter()
-	versionTable.SetOutputMirror(os.Stdout)
-	versionTable.AppendHeader(table.Row{"Info", "Content"})
-	versionTable.AppendRows([]table.Row{
+	pterm.DefaultSection.Println("Version short details")
+	pterm.DefaultTable.WithHasHeader().WithData(pterm.TableData{
+		{"Info", "Content"},
 		{"CLI Name", cliName},
 		{"CLI Version", cliVersion},
 		{"Project URL", projectURL},
 		{"Build Date", builtDate},
 		{"Commit Short", commitShort},
-	})
-	versionTable.SetStyle(table.StyleColoredBright)
-	versionTable.Render()
+	}).Render()
 	fmt.Println()
 }
 
 // GetPrettyDetails function - create a pretty table and parse this table with current version details.
 func GetPrettyDetails() {
+	pterm.DefaultSection.Println("Version pretty details")
 	versionTable := table.NewWriter()
 	versionTable.SetOutputMirror(os.Stdout)
 	versionTable.AppendHeader(table.Row{"Info", "Content"})
@@ -80,6 +67,6 @@ func ShowVersion(pretty bool) {
 	if pretty {
 		GetPrettyDetails()
 	} else {
-		fmt.Printf("%s\n", GetDisplay())
+		fmt.Printf("gcr version %s (%s)\n", cliVersion, builtDate)
 	}
 }
