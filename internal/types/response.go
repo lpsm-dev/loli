@@ -2,8 +2,8 @@ package types
 
 // Anime struct - information about the anime passed in the request to trace.moe API.
 type Anime struct {
-	Id    int `json:"id"`
-	IdMal int `json:"idMal"`
+	ID    int `json:"id"`
+	IDMal int `json:"idMal"`
 	Title struct {
 		Native  string `json:"native"`
 		Romaji  string `json:"romaji"`
