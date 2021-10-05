@@ -1,47 +1,50 @@
-<p align="center">
-  <img alt="logo" src="https://i.pinimg.com/280x280_RS/d0/13/35/d01335f147c586e56829415e611f0ae7.jpg" width="350px" float="center"/>
-</p>
-
-# Loli Hunter CLI
+<div align="center">
 
 <p align="center">
-  <a href="https://spdx.org/licenses/Apache-2.0.html" target="_blank">
-    <img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache 2.0-yellow.svg" />
-  </a>
-  <a href="https://github.com/semantic-release/semantic-release">
-    <img alt="semantic-release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg">
-  </a>
-  <a href="http://commitizen.github.io/cz-cli/">
-    <img alt="Commitizen friendly" src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg">
-  </a>
-  <a href="https://www.codacy.com/gh/lpmatos/loli/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=lpmatos/loli&amp;utm_campaign=Badge_Grade">
-    <img alt="Codacy Badge" src="https://app.codacy.com/project/badge/Grade/7d69caff8e2646a783681cc765948187">
-  </a>
-  <a href="https://github.com/lpmatos/loli/actions">
-    <img alt="Latest Release" src="https://img.shields.io/github/v/release/lpmatos/Loli">
-  </a>
+  <img alt="azure" src="https://i.pinimg.com/280x280_RS/d0/13/35/d01335f147c586e56829415e611f0ae7.jpg" width="250px" float="center"/>
 </p>
 
->
-> Loli é um CLI feito em Go para descobrir animes com base em imagens passadas como parâmetro
->
 
-## ➤ Menu
+<h2 align="center">✨ Loli Hunter CLI ✨</h2>
 
-<p align="left">
-  <a href="#-description">Description</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-how-to-contribute">How to contribute</a>
+<div align="center">
+
+[![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://gitlab.com/nuageit/shared/auto-devops)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://gitlab.com/nuageit/shared/auto-devops)
+
+</div>
+
+---
+
+<p align="center">
+  <img alt="pipelines" src="https://images.ctfassets.net/em6l9zw4tzag/7j79Xx5NqeJlvGj6w98JUX/ecd7317698578b9efa1482154d0188f4/configuringpipeline.gif" width="450px" float="center"/>
 </p>
 
-## ➤ Começando
+<p align="center">
+  ✨ Loli é um CLI feito em Go para descobrir animes com base em imagens passadas como parâmetro ✨
+</p>
 
-Se você quiser contribuir, primeiro você precisa fazer um **git clone** do repo:
+<p align="center">
+  <a href="#getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#contributing">Contributing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#versioning">Versioning</a>
+</p>
+
+</div>
+
+---
+
+## ➤ Getting Started <a name = "getting-started"></a>
+
+To make it easy for you to get started with GitLab, here's a list of recommended next steps. Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+
+If you want contribute on this project, first you need to make a **git clone**:
 
 >
 > 1. git clone --depth 1 <https://github.com/lpmatos/loli.git> -b main
 >
 
-Isso lhe dará acesso ao código em sua **máquina local**.
+This will give you access to the code on your **local machine**.
 
 ## ➤ Objetivo
 
