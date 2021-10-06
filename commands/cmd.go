@@ -24,11 +24,11 @@ func Execute() {
 
 	outputRender, err := utils.RenderMarkdown(constants.Welcome)
 	if err != nil {
-		log.Error("Render glamour markdown")
+		log.Fatal("Render glamour markdown")
 	}
 	fmt.Print(outputRender)
 
 	if err := RootCmd.Execute(); err != nil {
-		log.Error("Error while executing RootCmd")
+		log.Fatal("Error while executing RootCmd")
 	}
 }
