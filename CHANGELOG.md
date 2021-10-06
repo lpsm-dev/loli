@@ -1,5 +1,17 @@
 # Semantic Versioning Changelog
 
+## [1.7.0](https://github.com/lpmatos/loli/compare/v1.6.6...v1.7.0) (2021-10-06)
+
+
+### :sparkles: Novidades
+
+* add message in startup if exist a new release ([3305612](https://github.com/lpmatos/loli/commit/330561204082646d475e4c46bea3d4bf0c695188))
+
+
+### :package: Atualizações
+
+* bump version ([e601a67](https://github.com/lpmatos/loli/commit/e601a67ce6a2da20bcc498830eca9bd5d4ddd9c1))
+
 ### [1.6.6](https://github.com/lpmatos/loli/compare/v1.6.5...v1.6.6) (2021-10-06)
 
 
