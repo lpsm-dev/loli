@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  ✨ Loli é um CLI feito em Go para descobrir animes com base em imagens passadas como parâmetro ✨
+  ✨ Loli is a pretty CLI that find animes passing scene images - inspiration in [what-anime-cli](https://github.com/irevenko/what-anime-cli) ✨
 </p>
 
 <p align="center">
