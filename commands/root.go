@@ -40,7 +40,7 @@ func init() {
 	RootCmd.PersistentFlags().StringVar(&config.Format, "log-format", "color", "The formating of the logs. Available values: text|color|json|json-pretty")
 	RootCmd.PersistentFlags().StringVar(&config.Output, "log-output", "stdout", "Default log output. Available values: stdout|stderr|file")
 	RootCmd.PersistentFlags().StringVar(&config.File, "log-file", helpers.CreateLogFile("/var/log/loli", "file"), "Defaulting Loli CLI log file")
-	RootCmd.PersistentFlags().BoolVar(&config.Silence, "silence", false, "Set logging silence")
+	RootCmd.PersistentFlags().BoolVarP(&config.Silence, "silence", "s", false, "Set logging silence")
 	RootCmd.PersistentFlags().BoolP("verbose", "v", false, "verbose output")
-	RootCmd.PersistentFlags().IntP("timeout", "", 0, "override the default HTTP timeout (seconds)")
+	RootCmd.PersistentFlags().IntP("timeout", "t", 0, "override the default HTTP timeout (seconds)")
 }

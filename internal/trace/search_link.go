@@ -4,12 +4,10 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"io"
 	"io/ioutil"
-	"mime/multipart"
 	"net/http"
+	"net/url"
 	"os"
-	"path/filepath"
 	"strconv"
 	"time"
 
@@ -23,48 +21,38 @@ import (
 	"github.com/muesli/termenv"
 )
 
-// SearchAnimeByFile function
-func SearchAnimeByFile(animeFile string, pretty bool) {
-	searchURL := constants.TraceMoeSearchAnimeByFile
+// SearchAnimeByLink function
+func SearchAnimeByLink(animeLink string, pretty bool) {
+	searchURL := constants.TraceMoeSearchAnimeByLink
 	log.Infoln(searchURL)
+
+	fullURL := searchURL + animeLink
+	log.Infoln(fullURL)
+
+	_, err := url.ParseRequestURI(searchURL)
+	if err != nil {
+		log.Error("Invalid url")
+	}
 
 	termenv.HideCursor()
 	defer termenv.ShowCursor()
 
 	s := spinner.New(spinner.CharSets[39], 100*time.Millisecond)
-	s.Prefix = "🔎 Searching for the anime from an image: "
+	s.Prefix = "🔎 Searching for the anime from a link: "
 	s.FinalMSG = color.GreenString("✔️  Found!\n\n")
 
 	go catchInterrupt(s)
 
 	s.Start()
 
-	if !helpers.IsFileExists(animeFile) {
-		log.Fatal("Invalid file path")
+	reqBody, err := json.Marshal(map[string]string{})
+	if err != nil {
+		log.Fatalln(err)
 	}
 
-	imageFile, error := os.Open(animeFile)
-	if error != nil {
-		log.Fatalln(error)
-	}
-
-	payload := &bytes.Buffer{}
-	writer := multipart.NewWriter(payload)
-	part, _ := writer.CreateFormFile("image", filepath.Base(animeFile))
-
-	_, error = io.Copy(part, imageFile)
-	if error != nil {
-		log.Fatalln(error)
-	}
-
-	error = writer.Close()
-	if error != nil {
-		log.Fatalln(error)
-	}
-
-	resp, error := http.Post(searchURL, writer.FormDataContentType(), payload)
-	if error != nil {
-		log.Fatalln(error)
+	resp, err := http.Post(fullURL, "application/json", bytes.NewBuffer(reqBody))
+	if err != nil {
+		log.Fatalln(err)
 	}
 	defer resp.Body.Close()
 

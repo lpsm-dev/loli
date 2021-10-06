@@ -4,11 +4,11 @@ const (
 	// DefaultTimestampFormat default time format.
 	DefaultTimestampFormat = "2006-01-02_15:04:05"
 
-	// TraceMoeFileSearchURL default trace.moe URL
-	TraceMoeFileSearchURL = "https://api.trace.moe/search?anilistInfo"
+	// TraceMoeSearchAnimeByFile default trace.moe URL
+	TraceMoeSearchAnimeByFile = "https://api.trace.moe/search?anilistInfo"
 
-	// TraceMoeLinkSearchURL default trace.moe URL
-	TraceMoeLinkSearchURL = "https://api.trace.moe/search?anilistInfo&url="
+	// TraceMoeSearchAnimeByLink default trace.moe URL
+	TraceMoeSearchAnimeByLink = "https://api.trace.moe/search?anilistInfo&url="
 
 	// ReleaseURL default release URL.
 	ReleaseURL = "https://api.github.com/repos/lpmatos/loli/releases"
