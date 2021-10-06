@@ -28,9 +28,9 @@ var (
 
 var (
 	osMap = map[string]string{
-		"darwin":  "darwin",
-		"linux":   "linux",
-		"windows": "windows",
+		"darwin":  "Darwin",
+		"linux":   "Linux",
+		"windows": "Windows",
 	}
 
 	archMap = map[string]string{
