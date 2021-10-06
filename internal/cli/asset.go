@@ -34,8 +34,6 @@ func (a *Asset) download() (*bytes.Reader, error) {
 		log.Fatalf("Bad status code - %d", resp.StatusCode)
 	}
 
-	log.Debug(resp.Body)
-
 	content, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		log.Errorf("%s", err)
