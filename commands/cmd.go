@@ -24,11 +24,11 @@ var (
 func Execute() {
 	figure.NewColorFigure(BinaryName, "smslant", "yellow", false).Print()
 
-	out, error := utils.RenderMarkdown(constants.Welcome)
-	if error != nil {
+	outputRender, err := utils.RenderMarkdown(constants.Welcome)
+	if err != nil {
 		log.Error("Render glamour markdown")
 	}
-	fmt.Print(out)
+	fmt.Print(outputRender)
 
 	if err := RootCmd.Execute(); err != nil {
 		log.Error("Error while executing RootCmd")
