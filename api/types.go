@@ -4,7 +4,7 @@ import (
 	"net/http"
 )
 
-// Client struct - is an http client that is configured for trace.moe API.
+// Client struct - is an http client that is configured for API.
 type Client struct {
 	*http.Client        // HTTP Client pointer
 	BaseURL      string // HTTP Request URL

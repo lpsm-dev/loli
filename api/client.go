@@ -35,7 +35,7 @@ var (
 	}
 )
 
-// NewClient returns a trace.moe API client.
+// NewClient returns a API client.
 func NewClient(baseURL string) (*Client, error) {
 	return &Client{
 		Client:  HTTPClient,
@@ -43,27 +43,26 @@ func NewClient(baseURL string) (*Client, error) {
 	}, nil
 }
 
-// NewRequest returns an http.Request with information for the trace.moe API.
-// For more information: https://golang.org/pkg/net/http/
+// NewRequest returns an http.Request with information for the API. For more information: https://golang.org/pkg/net/http/
 func (c *Client) NewRequest(method, url string, body io.Reader) (*http.Request, error) {
 	if c.Client == nil {
 		c.Client = HTTPClient
 	}
 
-	request, error := http.NewRequest(method, url, body)
+	req, error := http.NewRequest(method, url, body)
 	if error != nil {
 		return nil, error
 	}
 
-	request.Header.Set("User-Agent", constants.UserAgent)
+	req.Header.Set("User-Agent", constants.UserAgent)
 
 	if c.ContentType == "" {
-		request.Header.Set("Content-Type", "application/json")
+		req.Header.Set("Content-Type", "application/json")
 	} else {
-		request.Header.Set("Content-Type", c.ContentType)
+		req.Header.Set("Content-Type", c.ContentType)
 	}
 
-	return request, nil
+	return req, nil
 }
 
 // Do performs an http.Request and optionally parses the response body into the given interface.
