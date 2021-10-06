@@ -56,6 +56,8 @@ func (c *CLI) IsUpToDate() (bool, error) {
 	}
 
 	last := c.LatestRelease.Version()
+	last = strings.Replace(last, "v", "", -1)
+
 	log.Debugf("Latest Version - %s", last)
 
 	rv, err := semver.Make(last)
@@ -65,6 +67,7 @@ func (c *CLI) IsUpToDate() (bool, error) {
 	}
 
 	current := strings.Replace(c.Version, "refs/tags/", "", -1)
+	current = strings.Replace(current, "v", "", -1)
 	log.Debugf("Current Version - %s", current)
 
 	cv, err := semver.Make(current)
