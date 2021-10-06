@@ -46,15 +46,3 @@ LDFLAGS += -X "github.com/lpmatos/loli/internal/version.commit=$(GIT_COMMIT)"
 LDFLAGS += -X "github.com/lpmatos/loli/internal/version.commitShort=$(GIT_SHORT_COMMIT)"
 LDFLAGS += -X "github.com/lpmatos/loli/internal/version.commitBranch=$(GIT_BRANCH)"
 LDFLAGS += -X "github.com/lpmatos/loli/internal/version.goVersion=$(GO_VERSION)"
-
-# ================================================
-# DOCKER VARIABLES
-# ================================================
-
-DOCKER_BUILD_DATE = $(shell date -u +'%Y%m%d%H%M%S')
-
-ifeq ($(OS), Windows_NT)
-	DOCKER_CONTAINER_LIST = $(shell docker ps -aq)
-else
-	DOCKER_CONTAINER_LIST = $(shell docker ps -aq)
-endif

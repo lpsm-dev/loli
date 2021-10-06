@@ -24,7 +24,6 @@ export GIT_BRANCH			= $(GIT_BRANCH)
 ##################################################
 
 include helpers/variables.mk
-include helpers/docker.mk
 
 ##################################################
 # HELPER
