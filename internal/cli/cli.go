@@ -64,7 +64,7 @@ func (c *CLI) IsUpToDate() (bool, error) {
 		return false, fmt.Errorf("unable to parse latest version (%s): %s", last, err)
 	}
 
-	current := c.Version
+	current := strings.Replace(c.Version, "refs/tags/", "", -1)
 	log.Debugf("Current Version - %s", current)
 
 	cv, err := semver.Make(current)
