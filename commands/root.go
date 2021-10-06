@@ -36,11 +36,11 @@ var RootCmd = &cobra.Command{
 }
 
 func init() {
-	RootCmd.PersistentFlags().StringVar(&config.Level, "log-level", "debug", "Set the logging level. One of: debug|info|warn|error")
-	RootCmd.PersistentFlags().StringVar(&config.Format, "log-format", "color", "The formating of the logs. Available values: text|color|json|json-pretty")
-	RootCmd.PersistentFlags().StringVar(&config.Output, "log-output", "stdout", "Default log output. Available values: stdout|stderr|file")
-	RootCmd.PersistentFlags().StringVar(&config.File, "log-file", helpers.CreateLogFile("/var/log/loli", "file"), "Defaulting Loli CLI log file")
-	RootCmd.PersistentFlags().BoolVarP(&config.Silence, "silence", "s", false, "Set logging silence")
+	RootCmd.PersistentFlags().StringVar(&config.Level, "log-level", "debug", "set the logging level. One of: debug|info|warn|error")
+	RootCmd.PersistentFlags().StringVar(&config.Format, "log-format", "color", "the formating of the logs. Available values: text|color|json|json-pretty")
+	RootCmd.PersistentFlags().StringVar(&config.Output, "log-output", "stdout", "default log output. Available values: stdout|stderr|file")
+	RootCmd.PersistentFlags().StringVar(&config.File, "log-file", helpers.CreateLogFile("/var/log/loli", "file"), "defaulting Loli CLI log file")
+	RootCmd.PersistentFlags().BoolVarP(&config.Silence, "silence", "s", false, "set logging silence")
 	RootCmd.PersistentFlags().BoolP("verbose", "v", false, "verbose output")
 	RootCmd.PersistentFlags().IntP("timeout", "t", 0, "override the default HTTP timeout (seconds)")
 }
