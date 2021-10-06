@@ -1,5 +1,17 @@
 # Semantic Versioning Changelog
 
+### [1.6.3](https://github.com/lpmatos/loli/compare/v1.6.2...v1.6.3) (2021-10-06)
+
+
+### :bug: Correções
+
+* osmap cli ([bbf6a3b](https://github.com/lpmatos/loli/commit/bbf6a3bd426c7e78f7ba8a5d110f626dbad9432e))
+
+
+### :package: Atualizações
+
+* bump version ([4239234](https://github.com/lpmatos/loli/commit/4239234106cc2369dbcdfc4c27a344914428e8ee))
+
 ### [1.6.2](https://github.com/lpmatos/loli/compare/v1.6.1...v1.6.2) (2021-10-06)
 
 
