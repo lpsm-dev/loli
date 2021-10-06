@@ -1,5 +1,17 @@
 # Semantic Versioning Changelog
 
+### [1.6.1](https://github.com/lpmatos/loli/compare/v1.6.0...v1.6.1) (2021-10-06)
+
+
+### :bug: Correções
+
+* remove boolvarp silence ([377cec0](https://github.com/lpmatos/loli/commit/377cec0517e1c8fcd67623a8e2aa7d95e9d087b5))
+
+
+### :package: Atualizações
+
+* bump version ([f5564fd](https://github.com/lpmatos/loli/commit/f5564fddcf9363a01ad6f2a34ca51891cbd07da6))
+
 ## [1.6.0](https://github.com/lpmatos/loli/compare/v1.5.0...v1.6.0) (2021-10-06)
 
 
