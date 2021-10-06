@@ -9,13 +9,12 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
-	"net/http"
 	"runtime"
 	"strings"
-	"time"
 
 	"github.com/blang/semver"
 	update "github.com/inconshreveable/go-update"
+	"github.com/lpmatos/loli/api"
 	"github.com/lpmatos/loli/internal/constants"
 	"github.com/lpmatos/loli/internal/log"
 )
@@ -39,9 +38,6 @@ var (
 		"arm":   "arm",
 	}
 )
-
-// HTTPClient is the client used to make HTTP calls in the cli package.
-var HTTPClient = &http.Client{Timeout: time.Duration(constants.TimeoutInSeconds) * time.Second}
 
 // New creates a CLI, setting it to a particular version.
 func New(version string) *CLI {
@@ -83,8 +79,6 @@ func (c *CLI) IsUpToDate() (bool, error) {
 
 // Upgrade allows the user to upgrade to the latest version of the CLI.
 func (c *CLI) Upgrade() error {
-	log.Info("Call upgrade latest version of CLI")
-
 	var (
 		OS   = osMap[runtime.GOOS]
 		ARCH = archMap[runtime.GOARCH]
@@ -137,7 +131,7 @@ func (c *CLI) fetchLatestRelease() error {
 	log.Debug("Fetch latest release")
 
 	latestReleaseURL := fmt.Sprintf("%s/%s", constants.ReleaseURL, "latest")
-	resp, err := HTTPClient.Get(latestReleaseURL)
+	resp, err := api.HTTPClient.Get(latestReleaseURL)
 	if err != nil {
 		return err
 	}

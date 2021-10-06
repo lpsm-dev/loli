@@ -40,7 +40,7 @@ func updateCLI(c cli.Updater) error {
 	}
 
 	if ok {
-		fmt.Println("\nYour CLI is up to date.")
+		fmt.Println("\nYour CLI is update.")
 		return nil
 	}
 
