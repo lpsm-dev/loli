@@ -1,5 +1,17 @@
 # Semantic Versioning Changelog
 
+### [1.7.5](https://github.com/lpmatos/loli/compare/v1.7.4...v1.7.5) (2021-10-06)
+
+
+### :bug: Fix
+
+* version replace 'v' char ([eb34577](https://github.com/lpmatos/loli/commit/eb34577f854bef8696b863cf98ad6e620f225a31))
+
+
+### :package: Chore
+
+* bump version ([2992359](https://github.com/lpmatos/loli/commit/2992359277a3b40ff1c7ab558ce9082e20934af0))
+
 ### [1.7.4](https://github.com/lpmatos/loli/compare/v1.7.3...v1.7.4) (2021-10-06)
 
 
