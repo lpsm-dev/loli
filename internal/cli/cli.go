@@ -100,7 +100,7 @@ func (c *CLI) Upgrade() error {
 	}
 
 	var downloadRC *bytes.Reader
-	log.Debug("Download latest release asset")
+	log.Info("Download latest release asset")
 	for _, a := range c.LatestRelease.Assets {
 		if strings.Contains(a.Name, buildName) {
 			var err error

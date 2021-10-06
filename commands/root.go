@@ -19,16 +19,20 @@ var RootCmd = &cobra.Command{
 👉😳👈 This is a pretty CLI that can find animes passing image scenes
 `,
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
-		config.SetDefault(config.Level, config.Format, config.Output, config.File, config.Silence)
+		config.SetDefault(config.Level, config.Format, config.Output, config.File, config.Verbose)
+
 		err := log.Setup(
 			log.WithConfig(config),
 		)
+
 		if err != nil {
 			log.Warn("Error setting log: %v", err)
 		}
+
 		if verbose, _ := cmd.Flags().GetBool("verbose"); verbose {
 			debug.Verbose = verbose
 		}
+
 		if timeout, _ := cmd.Flags().GetInt("timeout"); timeout > 0 {
 			constants.TimeoutInSeconds = timeout
 		}
@@ -40,7 +44,6 @@ func init() {
 	RootCmd.PersistentFlags().StringVar(&config.Format, "log-format", "color", "the formating of the logs. Available values: text|color|json|json-pretty")
 	RootCmd.PersistentFlags().StringVar(&config.Output, "log-output", "stdout", "default log output. Available values: stdout|stderr|file")
 	RootCmd.PersistentFlags().StringVar(&config.File, "log-file", helpers.CreateLogFile("/var/log/loli", "file"), "defaulting Loli CLI log file")
-	RootCmd.PersistentFlags().BoolVar(&config.Silence, "silence", false, "set logging silence")
-	RootCmd.PersistentFlags().BoolP("verbose", "v", false, "verbose output")
+	RootCmd.PersistentFlags().BoolVarP(&config.Verbose, "verbose", "v", false, "verbose output")
 	RootCmd.PersistentFlags().IntP("timeout", "t", 0, "override the default HTTP timeout (seconds)")
 }

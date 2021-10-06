@@ -68,6 +68,6 @@ func ShowVersion(pretty bool) {
 	if pretty {
 		GetPrettyDetails()
 	} else {
-		fmt.Printf("gcr version %s (%s)\n", cliVersion, builtDate)
+		fmt.Printf("loli version %s (%s)\n\n", cliVersion, builtDate)
 	}
 }

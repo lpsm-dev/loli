@@ -22,7 +22,7 @@ type Option func(*options) error
 func WithConfig(cfg Config) Option {
 	var opts []Option
 
-	opts = append(opts, WithLogLevel(cfg.Level, cfg.Silence))
+	opts = append(opts, WithLogLevel(cfg.Level, cfg.Verbose))
 	opts = append(opts, WithFormatter(cfg.Format))
 	opts = append(opts, WithOutputStr(cfg.Output, cfg.File))
 
@@ -65,16 +65,16 @@ func WithFormatter(format string) Option {
 
 // WithLogLevel is used to set the log level when defaulting to `info` is not
 // wanted. Other options are: `debug`, `info`, `warn` and `error`.
-func WithLogLevel(level string, silence bool) Option {
+func WithLogLevel(level string, verbose bool) Option {
 	return func(opt *options) error {
 		logrusLevel, err := logrus.ParseLevel(level)
 		if err != nil {
 			return fmt.Errorf("failed to convert level: %w", err)
 		}
-		if silence {
-			opt.logger.Level = logrus.ErrorLevel
-		} else {
+		if verbose {
 			opt.logger.Level = logrusLevel
+		} else {
+			opt.logger.Level = logrus.ErrorLevel
 		}
 		return nil
 	}
