@@ -11,8 +11,6 @@ import (
 )
 
 var (
-	// BinaryName is the name of the app.
-	BinaryName = "loli"
 	// Out is used to write to information.
 	Out io.Writer
 	// Err is used to write errors.
@@ -22,7 +20,7 @@ var (
 // Execute adds all child commands to the root command and sets flags appropriately.
 // This is called by loli main(). It only needs to happen once to the rootCmd.
 func Execute() {
-	figure.NewColorFigure(BinaryName, "smslant", "yellow", false).Print()
+	figure.NewColorFigure(constants.BinaryName, "smslant", "yellow", false).Print()
 
 	outputRender, err := utils.RenderMarkdown(constants.Welcome)
 	if err != nil {

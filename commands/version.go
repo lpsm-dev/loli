@@ -54,7 +54,7 @@ func checkForUpdate(c *cli.CLI) (string, error) {
 	}
 
 	// Anything but ok is out of date.
-	msg := fmt.Sprintf("A new CLI version is available. Run `exercism upgrade` to update to %s", c.LatestRelease.Version())
+	msg := fmt.Sprintf("A new CLI version is available. Run `loli upgrade` to update to %s", c.LatestRelease.Version())
 	return msg, nil
 
 }

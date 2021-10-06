@@ -12,7 +12,7 @@ type markdownRenderOpts []glamour.TermRendererOption
 func RenderMarkdown(text string) (string, error) {
 	opts := markdownRenderOpts{
 		glamour.WithAutoStyle(),
-		glamour.WithWordWrap(45),
+		glamour.WithWordWrap(75),
 		glamour.WithEmoji(),
 	}
 	return renderMarkdown(text, opts)

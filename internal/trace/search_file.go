@@ -26,6 +26,7 @@ import (
 // SearchAnimeByFile function
 func SearchAnimeByFile(animeFile string, allowInsecure, pretty bool) {
 	searchURL := constants.TraceMoeFileSearchURL
+	log.Infoln(searchURL)
 
 	termenv.HideCursor()
 	defer termenv.ShowCursor()

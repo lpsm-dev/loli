@@ -5,12 +5,13 @@ import (
 	"os"
 
 	"github.com/jedib0t/go-pretty/table"
+	"github.com/lpmatos/loli/internal/constants"
 	"github.com/pterm/pterm"
 )
 
 // Default build-time variable. These variables are populated via the Go ldflags. This will be filled in by the compiler.
 var (
-	cliName      = "loli"                            // default name for this CLI
+	cliName      = constants.BinaryName              // default name for this CLI
 	cliVersion   = "0.0.0"                           // value from VERSION file
 	builtDate    = "1970-01-01T00:00:00Z"            // output from `date -u +'%Y-%m-%dT%H:%M:%SZ'`
 	builtBy      = "unknown-built-by"                // built agent (GoRelease, Makefile...)

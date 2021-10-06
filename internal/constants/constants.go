@@ -16,6 +16,9 @@ const (
 	// UserAgent variable - lets the API know where the call is being made from.
 	// For more information: https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/User-Agent
 	UserAgent = "github.com/lpmatos/loli"
+
+	// BinaryName is the name of the app.
+	BinaryName = "loli"
 )
 
 var (

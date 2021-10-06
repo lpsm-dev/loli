@@ -25,7 +25,6 @@ func WithConfig(cfg Config) Option {
 	opts = append(opts, WithLogLevel(cfg.Level, cfg.Silence))
 	opts = append(opts, WithFormatter(cfg.Format))
 	opts = append(opts, WithOutputStr(cfg.Output, cfg.File))
-	opts = append(opts, WithSetReportCaller(cfg.Details))
 
 	// return all options
 	return func(c *options) error {
