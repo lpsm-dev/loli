@@ -24,7 +24,7 @@ import (
 // SearchAnimeByLink function
 func SearchAnimeByLink(animeLink string, pretty bool) {
 	searchURL := constants.TraceMoeSearchAnimeByLink
-	log.Infoln(searchURL)
+	log.Info(searchURL)
 
 	fullURL := searchURL + animeLink
 	log.Infoln(fullURL)
