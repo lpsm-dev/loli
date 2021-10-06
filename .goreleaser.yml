@@ -51,7 +51,7 @@ archives:
 snapshot:
   name_template: "SNAPSHOT-{{ .Commit }}"
 checksum:
-  name_template: "{{ .ProjectName }}_{{ .Version }}_SHA256SUMS"
+  name_template: "{{ .ProjectName }}_v{{ .Version }}_SHA256SUMS"
   algorithm: sha256
 changelog:
   skip: true
