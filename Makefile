@@ -15,8 +15,8 @@ MAKEFLAGS += --warn-undefined-variables
 #    See the License for the specific language governing permissions and
 #    limitations under the License.
 
-export CLIENT_VERSION = $(CLIENT_VERSION)
-export GO_VERSION    	= $(GO_VERSION)
+export CLIENT_VERSION	 	= $(CLIENT_VERSION)
+export GO_VERSION    		= $(GO_VERSION)
 export GIT_BRANCH			= $(GIT_BRANCH)
 
 ##################################################

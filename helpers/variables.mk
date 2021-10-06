@@ -4,9 +4,9 @@
 
 BINDIR      		:= $(CURDIR)/bin
 BINNAME     		?= loli
-CLIENT_VERSION 	:= $(shell cat $(CURDIR)/VERSION)
+CLIENT_VERSION 		:= $(shell cat $(CURDIR)/VERSION)
 BUILD_DATE 			:= $(shell date -u +'%Y-%m-%dT%H:%M:%SZ')
-MAIN            ?= $(CURDIR)/cmd/loli/main.go
+MAIN            	?= $(CURDIR)/cmd/loli/main.go
 
 # ================================================
 # GIT VARIABLES
