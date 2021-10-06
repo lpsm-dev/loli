@@ -1,5 +1,17 @@
 # Semantic Versioning Changelog
 
+### [1.7.2](https://github.com/lpmatos/loli/compare/v1.7.1...v1.7.2) (2021-10-06)
+
+
+### :bug: Fix
+
+* go release client version ([b28ab85](https://github.com/lpmatos/loli/commit/b28ab85aba9ed97a66363ef19fd66048b8f1dbdf))
+
+
+### :package: Chore
+
+* bump version ([d64b5b8](https://github.com/lpmatos/loli/commit/d64b5b871bca3600d1a1b194e874953c98e426d0))
+
 ### [1.7.1](https://github.com/lpmatos/loli/compare/v1.7.0...v1.7.1) (2021-10-06)
 
 
