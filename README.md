@@ -46,39 +46,35 @@ If you want contribute on this project, first you need to make a **git clone**:
 
 This will give you access to the code on your **local machine**.
 
-## ➤ Objetivo
+## ➤ Goals
 
-Esse **CLI** tem como objetivo ser um laboratório de código e boas práticas para criação de um projeto pronto para receber contruições da comunidade, enquanto introduz o básico para criação de uma ferramenta **CLI** em **Go** e a padronização de convenções para o workflow de desenvolvimento.
+This **CLI** is intended to be a code lab and best practices for creating a project ready to receive community builds, while introducing the basics for creating a **CLI** tool in **Go** and the standardization of conventions for the development workflow.
 
-Nesta processo, obtive experiências nos seguintes tópicos no que tange a linguagem Go:
+In this process, I gained experiences in the following topics regarding the Go language:
 
-- ✔️ Descobrir os pacotes internos do Go, como: `os`, `string` e `fmt`.
-- ✔️ Descobrir a biblioteca CLI `github.com/spf13/cobra`.
-- ✔️ Criar commandos e subcomandos para seu CLI.
-- ✔️ Ler flags e arguments a partir dos seus commandos e subcomandos.
-- ✔️ Descobrir a biblioteca de configuração `github.com/spf13/viper`.
-- ✔️ Ler e escrever um arquivo de configuração.
-- ✔️ Colocar o `cobra` e o `viper` para trabalharem juntos.
-- ✔️ Ler variáveis de ambiente.
-- ✔️ Descobrir a biblioteca de log `github.com/sirupsen/logrus`.
-- ✔️ Usar injeção de variável em tempo de build.
-- ✔️ Usar conditional na compilação e build tags.
+- ✔️ Discover internal Go packages like: `os`, `string` and `fmt`.
+- ✔️ Discover the `github.com/spf13/cobra` CLI library.
+- ✔️ Create commands and subcommands for your CLI.
+- ✔️ Read flags and arguments from your commands and subcommands.
+- ✔️ Discover the `github.com/spf13/viper` configuration library.
+- ✔️ Read and write a configuration file.
+- ✔️ Put the `snake` and the `viper` to work together.
+- ✔️ Read environment variables.
+- ✔️ Discover the `github.com/sirupsen/logrus` log library.
+- ✔️ Use variable injection at build time.
+- ✔️ Use conditional in compilation and build tags.
 
-## ➤ Descrição
-
-🗲 Uma simples descrição a ser definida.
-
-## ➤ Instalação
+## ➤ Install
 
 ```bash
-go install github.com/lpmatos/Loli/cmd/loli
+go install github.com/lpmatos/loli/cmd/loli
 
 # if you cannot install directly, try following command,
 # then input install command again
 go get -u github.com/lpmatos/loli
 ```
 
-## ➤ Desenvolvimento com Docker
+## ➤ Development with Docker
 
 
 Estágios para buidar a imagem Docker:
@@ -163,15 +159,15 @@ To check the change history, please access the [**CHANGELOG.md**](CHANGELOG.md) 
 
 Contributions, issues and feature requests are welcome. Feel free to check issues page if you want to contribute. [Check the contributing guide](https://nuageit.atlassian.net/wiki/spaces/OPSNUAGE/pages/1995309068/Processo+de+contribui+o).
 
-## ➤ Author
+## ➤ Author <a name = "author"></a>
 
 👤 **Lucca Pessoa**
 
-Hey!! If you liked this project or found some bugs, feel free to contact me on my channels:
+Hey!! If you like this project or if you find some bugs feel free to contact me in my channels:
 
 >
 > * Email: luccapsm@protonmail.com
-> * Website: [lpmatos](https://github.com/lpmatos)
+> * Website: https://github.com/lpmatos
 > * Github: [@lpmatos](https://github.com/lpmatos)
 > * GitLab: [@lpmatos](https://gitlab.com/lpmatos)
 > * LinkedIn: [@luccapessoa](https://www.linkedin.com/in/luccapessoa/)
@@ -179,11 +175,15 @@ Hey!! If you liked this project or found some bugs, feel free to contact me on m
 
 ## ➤ Troubleshooting <a name = "troubleshooting"></a>
 
-If you have any problems, please contact **me**.
+If you have any problems, please open a issue in this project or contact [me](https://github.com/lpmatos).
 
 ## ➤ Project status <a name = "project-status"></a>
 
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+
+## ➤ License <a name = "license"></a>
+
+This repository is released under the [Apache license](https://www.apache.org/licenses/LICENSE-2.0). In short, this means you are free to use this software in any personal, open-source or commercial projects. Attribution is optional but appreciated.
 
 ## ➤ Show your support <a name = "show-your-support"></a>
 
@@ -193,6 +193,6 @@ Give a ⭐️ if this project helped you!
 
 <div align="center">
 
-Made with 💜 by **me** :wave: inspired on [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
+Made with 💜 by [me](https://github.com/lpmatos) :wave: inspired on [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
 
 </div>
