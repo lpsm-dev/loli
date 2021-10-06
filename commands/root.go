@@ -12,7 +12,7 @@ var config = log.Config{}
 
 // RootCmd represents the base command when called without any subcommands.
 var RootCmd = &cobra.Command{
-	Use:   "loli",
+	Use:   BinaryName,
 	Short: "Find the anime scene by image using your terminal",
 	Long: `Description:
 
