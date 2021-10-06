@@ -1,5 +1,23 @@
 # Semantic Versioning Changelog
 
+## [1.6.0](https://github.com/lpmatos/loli/compare/v1.5.0...v1.6.0) (2021-10-06)
+
+
+### :sparkles: Novidades
+
+* add release script ([aadcfd8](https://github.com/lpmatos/loli/commit/aadcfd8868673e67d54c4422cd33acedd6e9eeaa))
+
+
+### :bug: Correções
+
+* remove makefile docker ([400c969](https://github.com/lpmatos/loli/commit/400c9693c8b20dc7bc288ce956357d482886399f))
+* root silence flag ([ce1a2be](https://github.com/lpmatos/loli/commit/ce1a2be9eb750cd3c854c1b8312232dfc72c5e24))
+
+
+### :package: Atualizações
+
+* bump version ([7d0de18](https://github.com/lpmatos/loli/commit/7d0de18301f2257f8a41cd8f887367e8f818c6ec))
+
 ## [1.5.0](https://github.com/lpmatos/loli/compare/v1.4.0...v1.5.0) (2021-10-06)
 
 
