@@ -50,7 +50,7 @@ func checkForUpdate(c *cli.CLI) (string, error) {
 	}
 
 	if ok {
-		return "Your CLI version is up to date.", nil
+		return "Your CLI version is update.", nil
 	}
 
 	// Anything but ok is out of date.
