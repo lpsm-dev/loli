@@ -74,6 +74,8 @@ go install github.com/lpmatos/loli/cmd/loli
 go get -u github.com/lpmatos/loli
 ```
 
+Or use a binary from [releases](https://github.com/lpmatos/loli/releases/latest).
+
 ## ➤ Development with Docker
 
 
