@@ -1,5 +1,20 @@
 # Semantic Versioning Changelog
 
+### [1.7.1](https://github.com/lpmatos/loli/compare/v1.7.0...v1.7.1) (2021-10-06)
+
+
+### :bug: Fix
+
+* cli version get tags reference ([2065512](https://github.com/lpmatos/loli/commit/2065512cba211834fa1b4f3b9f3e9401a504a0b0))
+* command cmg check release ([c3e6541](https://github.com/lpmatos/loli/commit/c3e654164a158cec362cf86ead69665050c87fe1))
+* quebra de linha version ([43a4a7f](https://github.com/lpmatos/loli/commit/43a4a7f9a7a8d41e138995c1f03839cb4312eff1))
+* semantic release rules section ([33609ba](https://github.com/lpmatos/loli/commit/33609ba8c9bb0facc45cba3f223a47a8072dce8a))
+
+
+### :package: Chore
+
+* bump version ([ca926d2](https://github.com/lpmatos/loli/commit/ca926d25ee1f6a6ed8cd2491707070e3a68d1656))
+
 ## [1.7.0](https://github.com/lpmatos/loli/compare/v1.6.6...v1.7.0) (2021-10-06)
 
 
