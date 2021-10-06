@@ -1,85 +1,5 @@
 # Semantic Versioning Changelog
 
-## [1.5.0](https://github.com/lpmatos/loli/compare/v1.4.0...1.5.0) (2021-10-06)
-
-
-### :package: Atualizações
-
-* **deps:** bump github.com/fatih/color from 1.12.0 to 1.13.0 ([552de5d](https://github.com/lpmatos/loli/commit/552de5d2fc88c6d19e083778ee85bdb2b0a133fd))
-* remove trace file ([fe76810](https://github.com/lpmatos/loli/commit/fe7681096be4b033ff2bd58e877300aeab2de6f6))
-* **deps:** bump actions/checkout from 2 to 2.3.4 ([2e133ac](https://github.com/lpmatos/loli/commit/2e133ac56cf3e97aee5b8b8cb60430c1895ff1e4))
-* **deps:** bump actions/first-interaction from 1 to 1.1.0 ([a02b35c](https://github.com/lpmatos/loli/commit/a02b35cef981201f76f4083fd055233b0b7ae560))
-* **deps:** bump actions/stale from 3.0.18 to 4 ([c19f28f](https://github.com/lpmatos/loli/commit/c19f28fc63f6166c69395526d5890cc997b4fef9))
-* **deps:** bump actions/stale from v3.0.17 to v3.0.18 ([050f778](https://github.com/lpmatos/loli/commit/050f778d52428d8cf95e067c2b440c70fadf8012))
-* **deps:** bump codacy/codacy-analysis-cli-action from 1.1.0 to 2.0.1 ([1a22122](https://github.com/lpmatos/loli/commit/1a22122272237c2ee78a4ede2bbaac5608e58560))
-* **deps:** bump codacy/codacy-analysis-cli-action from 2.0.1 to 3.0.3 ([ab07ec9](https://github.com/lpmatos/loli/commit/ab07ec967abd32b9ad68204a6b5843467f942183))
-* **deps:** bump codacy/codacy-analysis-cli-action from 3.0.3 to 4.0.0 ([c4b27b1](https://github.com/lpmatos/loli/commit/c4b27b1f871affa3f86d98c8c8b2a8af7a0550a3))
-* **deps:** bump github.com/briandowns/spinner from 1.12.0 to 1.16.0 ([d6bf4dc](https://github.com/lpmatos/loli/commit/d6bf4dc0ed7f6caabe5953e9f0d02fd0b3c66118))
-* **deps:** bump github.com/charmbracelet/glamour from 0.2.0 to 0.3.0 ([0eba5ab](https://github.com/lpmatos/loli/commit/0eba5ab951c13478f4c4ea5ad7a0682241f5ff21))
-* **deps:** bump github.com/fatih/color from 1.10.0 to 1.12.0 ([bf64895](https://github.com/lpmatos/loli/commit/bf648959ca3ee88d00e1bad7e927b03ad4665a1a))
-* **deps:** bump github.com/muesli/termenv from 0.6.0 to 0.9.0 ([6c02849](https://github.com/lpmatos/loli/commit/6c0284995672861f3abd4a8999f23c0c082ec1e6))
-* **deps:** bump github.com/sirupsen/logrus from 1.8.0 to 1.8.1 ([cd5b647](https://github.com/lpmatos/loli/commit/cd5b6470aeafb4bb0ae1a96c22224d199406c01e))
-* **deps:** bump github.com/spf13/cobra from 1.1.3 to 1.2.1 ([294b640](https://github.com/lpmatos/loli/commit/294b640ce8dac3faef7e700bebf63339e62c0675))
-* **deps:** bump reviewdog/action-golangci-lint from 1 to 1.21 ([eb7d090](https://github.com/lpmatos/loli/commit/eb7d0904c6977d52713f5c02b67abbbff25a4059))
-* **deps:** bump reviewdog/action-golangci-lint from 1.21 to 2 ([a5fa1d4](https://github.com/lpmatos/loli/commit/a5fa1d47afdfc90a85b99a61cef3f87a09526e23))
-
-
-### :repeat: CI
-
-* add secret detection job ([a5152bf](https://github.com/lpmatos/loli/commit/a5152bf57033c28bc260fc9708c837762e7ed405))
-
-
-### :memo: Documentação
-
-* add links ([6ae0eec](https://github.com/lpmatos/loli/commit/6ae0eec18a00497734b8c8da32da2bc17b546ee0))
-* author contact message ([5f3de5b](https://github.com/lpmatos/loli/commit/5f3de5b00470442867ee102ab2eb6401dcfdc876))
-* change contributing ([2241780](https://github.com/lpmatos/loli/commit/2241780027e539e53edcac5f924aa6ce3f2481a0))
-* change email info ([7ebdb2a](https://github.com/lpmatos/loli/commit/7ebdb2a173700e7eefc698b17405775ab9859f10))
-* change getting started ([c1e9696](https://github.com/lpmatos/loli/commit/c1e96968ea3677aa69bb3d73e10e6e57bb28c9e4))
-* change titles ([d62ca93](https://github.com/lpmatos/loli/commit/d62ca93a7b2cfd3961dae62fbb42368b33975258))
-* more information ([2378310](https://github.com/lpmatos/loli/commit/237831035b6630abaecc3ae480c6d225f2a1ddf9))
-* project description ([13a954c](https://github.com/lpmatos/loli/commit/13a954ceab937ad13ea0a7bab612b4212e02aa25))
-* remove badge status ([dc5fd85](https://github.com/lpmatos/loli/commit/dc5fd85f430a885535166e68e140e8cf28335a8a))
-
-
-### :sparkles: Novidades
-
-* add dive ci file ([3a28d9f](https://github.com/lpmatos/loli/commit/3a28d9f7b00b0790a69e6aca42e42f2a40de6820))
-* add logger messages fatalf and fatalln ([8fd7a1c](https://github.com/lpmatos/loli/commit/8fd7a1c2db68e84e2e6c6b36b9b377f316c75722))
-* add package-lock.json in gitignore ([b8086ef](https://github.com/lpmatos/loli/commit/b8086efac10c4f74c34cbe6ce69ebcbbe06f3d1b))
-* addhadolint file ([a7b2bad](https://github.com/lpmatos/loli/commit/a7b2baddd1f08c16a199a1baf63692a977d13db1))
-
-
-### :bug: Correções
-
-* api comments and var request to req ([b436900](https://github.com/lpmatos/loli/commit/b43690058be2e4ea5cb2913d04b9d7a47bc94c54))
-* api trace api call results ([e48c0e9](https://github.com/lpmatos/loli/commit/e48c0e9b98c565c46c4e50c73bafb2d73de7b2ae))
-* binary name string declaration ([f15e497](https://github.com/lpmatos/loli/commit/f15e497a7986f35610bfba42558435fc79eaa7fc))
-* change bug report ([87d4db6](https://github.com/lpmatos/loli/commit/87d4db6f7025e33b5cbb0d1213ae9b8cd848e627))
-* cmd project structure, api folder and others ([9c14394](https://github.com/lpmatos/loli/commit/9c143944b7dc4b9a300411a8b1bbdac1fbf1db5e))
-* cmd.go envs output and err ([117bceb](https://github.com/lpmatos/loli/commit/117bcebcfdf3c2c4a915bbf1a1e5bd0a0704bc27))
-* commands, logger and global params ([91ca278](https://github.com/lpmatos/loli/commit/91ca2782dd5ab12c58ba82113731fb6e3d787dc1))
-* comments about license ([fda8dd1](https://github.com/lpmatos/loli/commit/fda8dd18cb171f8a4318ec0c3cccd22f7e6d3e07))
-* decription about root commands ([b6759f9](https://github.com/lpmatos/loli/commit/b6759f97659cf714849412b5996ca105449e6265))
-* error string should not be capitalized ([abb1c46](https://github.com/lpmatos/loli/commit/abb1c46f3c185a96a84f74a4667c481aff6e7278))
-* go mod dependencies ([53049f9](https://github.com/lpmatos/loli/commit/53049f98322e5a25579ec1314fe266c646efd722))
-* go mod dependencies ([3946a52](https://github.com/lpmatos/loli/commit/3946a522b5574ae3c887becde38b0765c4f96c25))
-* go mod tidy ([7441feb](https://github.com/lpmatos/loli/commit/7441feb70cff277f4b7bce89e7b56d285c973264))
-* helpers file var remove and logical if true isAdult ([048e786](https://github.com/lpmatos/loli/commit/048e78618d7735797ded2cef8076df0e69e060b9))
-* organization utils render markdown function ([8cc5e47](https://github.com/lpmatos/loli/commit/8cc5e474f1e22703e2d1ba640846a352191e2ac2))
-* print ln search file end ([c446bee](https://github.com/lpmatos/loli/commit/c446bee89761610abc50edfa5086f04cf0f8160a))
-* project configuration ([a3dabc8](https://github.com/lpmatos/loli/commit/a3dabc80df258c0e15131f422fe721ac87fa16fa))
-* remove issue template ([d6fff07](https://github.com/lpmatos/loli/commit/d6fff0727189e679307bb5f9732603bfcc1e65f9))
-* remove package lock ([ff1b581](https://github.com/lpmatos/loli/commit/ff1b58185548beeaac31f34325606994d697bbdb))
-* remove show anime video url ([e8838d3](https://github.com/lpmatos/loli/commit/e8838d39ab21e5a2e32894d6d6247f32e7ff4de4))
-* remove travis misspell ([4fb8a8c](https://github.com/lpmatos/loli/commit/4fb8a8c56238760d13ce08ca024a68715b8348c2))
-* response anime struct id and idmal ([aca5fd1](https://github.com/lpmatos/loli/commit/aca5fd1cca47aab8201a39b8e7d08bb3e20170fa))
-* root call BinaryName variable ([3e66bef](https://github.com/lpmatos/loli/commit/3e66beff45263a2fe779fcd099eb2688028132c1))
-* search anime by link ([5e313a6](https://github.com/lpmatos/loli/commit/5e313a6fdaa3b8055649888cb003477dce94a9a4))
-* security go mod ([18fe6ce](https://github.com/lpmatos/loli/commit/18fe6ceb2793e8af101a360adaf9203bd869e61b))
-* semantic release file ([e778387](https://github.com/lpmatos/loli/commit/e778387c832db595208ffe89b7cabd6b306e43fd))
-* version functions and short echo ([a83835a](https://github.com/lpmatos/loli/commit/a83835a50f5c3eaadb8c9d0d9784ec6eaedfb0ac))
-
 ## [1.4.0](https://github.com/lpmatos/loli/compare/v1.3.0...v1.4.0) (2021-02-22)
 
 
@@ -264,7 +184,7 @@
 * api client comments and HTTPClient ([d836f2d](https://github.com/lpmatos/loli/commit/d836f2df0eb4944a92f3900230b7b077fbcd0646))
 * assets function ([d54d475](https://github.com/lpmatos/loli/commit/d54d475050976a1bd3755442703a96f310be846c))
 * configurations ([34866f6](https://github.com/lpmatos/loli/commit/34866f622f4a5301679ee357e49887f530a14c8d))
-* conflict files ([6e16210](https://github.com/lpmatos/loli/commit/6e162107f154e2905b979d7e4784bc648829f8a8))
+* conflit files ([6e16210](https://github.com/lpmatos/loli/commit/6e162107f154e2905b979d7e4784bc648829f8a8))
 * documentation and config files ([6346b90](https://github.com/lpmatos/loli/commit/6346b9078416d4b961d80bb84fe9e5c73f4b046e))
 * go release config ldflags and variables script ([f47f903](https://github.com/lpmatos/loli/commit/f47f9037833c20d0e4f8cc3af9dc3902fcef6014))
 * go sum ([d849ba9](https://github.com/lpmatos/loli/commit/d849ba924e1ae66b992729422ded845fba64e01d))
