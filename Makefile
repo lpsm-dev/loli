@@ -31,7 +31,7 @@ include helpers/variables.mk
 
 .PHONY: help
 help:
-	@echo "Management commands for cicdtest:"
+	@echo "Management commands for loli:"
 	@echo ""
 	@echo "Usage:"
 	@echo ""
