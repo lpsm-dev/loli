@@ -137,7 +137,7 @@ loli link https://anime.com/image.png
 
 Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
-### Search by File
+### Get Anime By Image File
 
 <p align="center">
   <img alt="logo" src="./docs/assets/find_by_file.PNG"/>
@@ -147,7 +147,7 @@ Depending on what you are making, it can be a good idea to include screenshots o
   <img alt="logo" src="./docs/assets/find_by_file_pretty.PNG"/>
 </p>
 
-### Search by Link
+### Get Anime By Image Link
 
 <p align="center">
   <img alt="logo" src="./docs/assets/find_by_link.PNG"/>
