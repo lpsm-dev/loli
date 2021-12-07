@@ -94,7 +94,7 @@ go get -x -u github.com/lpmatos/loli/cmd/loli
 
 Or use a binary from [releases](https://github.com/lpmatos/loli/releases/latest).
 
-## ➤ Development with Docker
+## ➤ Development with docker
 
 
 Estágios para buidar a imagem Docker:
