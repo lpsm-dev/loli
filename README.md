@@ -8,8 +8,8 @@
 
 <div align="center">
 
-[![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://gitlab.com/nuageit/shared/auto-devops)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://gitlab.com/nuageit/shared/auto-devops)
+[![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/lpmatos/loli)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://github.com/lpmatos/loli)
 
 </div>
 
@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  ✨ Loli is a pretty CLI that find animes passing scene images - inspiration in [what-anime-cli](https://github.com/irevenko/what-anime-cli) ✨
+  ✨ Loli is a pretty CLI that find animes passing scene images - inspiration in (what-anime-cli)[https://github.com/irevenko/what-anime-cli] ✨
 </p>
 
 <p align="center">
