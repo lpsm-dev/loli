@@ -149,10 +149,6 @@ Depending on what you are making, it can be a good idea to include screenshots o
   <img alt="logo" src="./docs/assets/find_by_link_pretty.PNG"/>
 </p>
 
-## ➤ Contributing <a name = "contributing"></a>
-
-Contributions, issues and feature requests are welcome. Feel free to check issues page if you want to contribute. [Check the contributing guide](https://nuageit.atlassian.net/wiki/spaces/OPSNUAGE/pages/1995309068/Processo+de+contribui+o).
-
 ## ➤ Author <a name = "author"></a>
 
 👤 **Lucca Pessoa**
