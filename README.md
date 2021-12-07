@@ -4,7 +4,6 @@
   <img alt="azure" src="https://i.pinimg.com/280x280_RS/d0/13/35/d01335f147c586e56829415e611f0ae7.jpg" width="250px" float="center"/>
 </p>
 
-
 <h2 align="center">✨ Loli Hunter CLI ✨</h2>
 
 <div align="center">

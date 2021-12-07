@@ -13,6 +13,7 @@ require (
 	github.com/jedib0t/go-pretty v4.3.0+incompatible
 	github.com/kyokomi/emoji/v2 v2.2.8
 	github.com/logrusorgru/aurora v2.0.3+incompatible
+	github.com/microcosm-cc/bluemonday v1.0.16 // indirect
 	github.com/muesli/termenv v0.9.0
 	github.com/pterm/pterm v0.12.33
 	github.com/sirupsen/logrus v1.8.1
