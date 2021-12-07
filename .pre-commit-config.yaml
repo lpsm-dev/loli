@@ -5,7 +5,6 @@ repos:
       - id: check-added-large-files
       - id: check-case-conflict
       - id: check-merge-conflict
-      - id: detect-private-key
       - id: trailing-whitespace
   -   repo: https://github.com/zricethezav/gitleaks
       rev: v8.1.1
