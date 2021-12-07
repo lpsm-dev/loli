@@ -62,6 +62,7 @@ In this process, I gained experiences in the following topics regarding the Go l
 - ✔️ Discover the `github.com/sirupsen/logrus` log library.
 - ✔️ Use variable injection at build time.
 - ✔️ Use conditional in compilation and build tags.
+- ✔️ How to build CLI using Go
 
 ## ➤ Install
 
@@ -70,7 +71,7 @@ go install github.com/lpmatos/loli/cmd/loli
 
 # if you cannot install directly, try following command,
 # then input install command again
-go get -u github.com/lpmatos/loli
+go get -x -u github.com/lpmatos/loli/cmd/loli
 ```
 
 Or use a binary from [releases](https://github.com/lpmatos/loli/releases/latest).
@@ -148,14 +149,6 @@ Depending on what you are making, it can be a good idea to include screenshots o
   <img alt="logo" src="./docs/assets/find_by_link_pretty.PNG"/>
 </p>
 
-## ➤ Roadmap <a name = "roadmap"></a>
-
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## ➤ Versioning <a name = "versioning"></a>
-
-To check the change history, please access the [**CHANGELOG.md**](CHANGELOG.md) file.
-
 ## ➤ Contributing <a name = "contributing"></a>
 
 Contributions, issues and feature requests are welcome. Feel free to check issues page if you want to contribute. [Check the contributing guide](https://nuageit.atlassian.net/wiki/spaces/OPSNUAGE/pages/1995309068/Processo+de+contribui+o).
@@ -174,17 +167,21 @@ Hey!! If you like this project or if you find some bugs feel free to contact me 
 > * LinkedIn: [@luccapessoa](https://www.linkedin.com/in/luccapessoa/)
 >
 
-## ➤ Troubleshooting <a name = "troubleshooting"></a>
+## ➤ License <a name = "license"></a>
 
-If you have any problems, please open a issue in this project or contact [me](https://github.com/lpmatos).
+This repository is released under the [Apache license](https://www.apache.org/licenses/LICENSE-2.0). In short, this means you are free to use this software in any personal, open-source or commercial projects. Attribution is optional but appreciated.
+
+## ➤ Versioning <a name = "versioning"></a>
+
+To check the change history, please access the [**CHANGELOG.md**](CHANGELOG.md) file.
 
 ## ➤ Project status <a name = "project-status"></a>
 
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
 
-## ➤ License <a name = "license"></a>
+## ➤ Troubleshooting <a name = "troubleshooting"></a>
 
-This repository is released under the [Apache license](https://www.apache.org/licenses/LICENSE-2.0). In short, this means you are free to use this software in any personal, open-source or commercial projects. Attribution is optional but appreciated.
+If you have any problems, please open a issue in this project or contact [me](https://github.com/lpmatos).
 
 ## ➤ Show your support <a name = "show-your-support"></a>
 
