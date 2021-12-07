@@ -45,6 +45,26 @@ If you want contribute on this project, first you need to make a **git clone**:
 
 This will give you access to the code on your **local machine**.
 
+## ➤ Pre-requisites <a name = "pre-requisites"></a>
+
+Before you start developing on this project you need to install some tools on your **local machine**:
+
+### Git Hooks
+
+- **pre-commit**
+
+### SAST tools
+
+- **hadolint**
+
+### Security tools
+
+- **gitleaks**, **trivy**
+
+### Support tools
+
+- **npm**, **goreleaser**
+
 ## ➤ Goals
 
 This **CLI** is intended to be a code lab and best practices for creating a project ready to receive community builds, while introducing the basics for creating a **CLI** tool in **Go** and the standardization of conventions for the development workflow.
