@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  ✨ Loli is a pretty CLI that find animes passing scene images - inspiration in (what-anime-cli)[https://github.com/irevenko/what-anime-cli] ✨
+  ✨ Loli is a pretty CLI that find animes passing scene images - inspiration in <a href="https://github.com/irevenko/what-anime-cli">what-anime-cli</a> ✨
 </p>
 
 <p align="center">
