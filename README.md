@@ -35,8 +35,6 @@
 
 ## ➤ Getting Started <a name = "getting-started"></a>
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps. Already a pro? Just edit this README.md and make it your own.
-
 If you want contribute on this project, first you need to make a **git clone**:
 
 >
