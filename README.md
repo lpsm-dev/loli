@@ -121,9 +121,17 @@ winpty docker.exe container run -it --rm <IMAGE_NAME> <COMMAND>
 
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
-<p align="center">
-  <img alt="logo" src="./docs/assets/menu.PNG" float="center"/>
-</p>
+### Get Anime By Image File
+
+```bash
+loli file anime.jpg
+```
+
+### Get Anime By Image Link
+
+```bash
+loli link https://anime.com/image.png
+```
 
 ## ➤ Visuals <a name = "visuals"></a>
 
