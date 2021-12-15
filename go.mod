@@ -17,5 +17,5 @@ require (
 	github.com/muesli/termenv v0.9.0
 	github.com/pterm/pterm v0.12.33
 	github.com/sirupsen/logrus v1.8.1
-	github.com/spf13/cobra v1.2.1
+	github.com/spf13/cobra v1.3.0
 )
