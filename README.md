@@ -1,7 +1,7 @@
 <div align="center">
 
 <p align="center">
-  <img alt="azure" src="https://i.pinimg.com/280x280_RS/d0/13/35/d01335f147c586e56829415e611f0ae7.jpg" width="250px" float="center"/>
+  <img alt="gif-header" src="https://i.pinimg.com/280x280_RS/d0/13/35/d01335f147c586e56829415e611f0ae7.jpg" width="350px" float="center"/>
 </p>
 
 <h2 align="center">✨ Loli Hunter CLI ✨</h2>
@@ -20,12 +20,11 @@
 </p>
 
 <p align="center">
-  ✨ Loli is a pretty CLI that find animes passing scene images - inspiration in <a href="https://github.com/irevenko/what-anime-cli">what-anime-cli</a> ✨
+  ✨ Loli is a pretty CLI that find animes passing images - inspiration in <a href="https://github.com/irevenko/what-anime-cli">what-anime-cli</a> ✨
 </p>
 
 <p align="center">
   <a href="#getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#contributing">Contributing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#versioning">Versioning</a>
 </p>
 
@@ -43,27 +42,7 @@ If you want contribute on this project, first you need to make a **git clone**:
 
 This will give you access to the code on your **local machine**.
 
-## ➤ Pre-requisites <a name = "pre-requisites"></a>
-
-Before you start developing on this project you need to install some tools on your **local machine**:
-
-### Git Hooks
-
-- **pre-commit**
-
-### SAST tools
-
-- **hadolint**
-
-### Security tools
-
-- **gitleaks**, **trivy**
-
-### Support tools
-
-- **npm**, **goreleaser**
-
-## ➤ Goals
+## ➤ Description <a name = "description"></a>
 
 This **CLI** is intended to be a code lab and best practices for creating a project ready to receive community builds, while introducing the basics for creating a **CLI** tool in **Go** and the standardization of conventions for the development workflow.
 
@@ -82,7 +61,7 @@ In this process, I gained experiences in the following topics regarding the Go l
 - ✔️ Use conditional in compilation and build tags.
 - ✔️ How to build CLI using Go
 
-## ➤ Install
+## ➤ Installation <a name = "installation"></a>
 
 ```bash
 go install github.com/lpmatos/loli/cmd/loli

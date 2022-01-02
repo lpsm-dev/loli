@@ -3,7 +3,7 @@
   "scripts": {
     "cm": "git cz",
     "lint": "mega-linter-runner -p . --fix",
-    "secrets": "gitleaks --verbose -c .gitleaks.toml -p .",
+    "secrets": "gitleaks detect -s . -c .gitleaks.toml",
     "docker-lint": "docker run --rm -i ghcr.io/hadolint/hadolint < Dockerfile",
     "docker-inspect": "docker image build -t teste:1.0.0 . && dive teste:1.0.0 --config .dive-ci.yml --ci",
     "docker-scan": "docker image build -t teste:1.0.0 . && trivy image teste:1.0.0"
@@ -21,7 +21,14 @@
   "devDependencies": {
     "@commitlint/cli": "16.0.1",
     "@commitlint/config-conventional": "16.0.0",
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/commit-analyzer": "9.0.2",
+    "@semantic-release/exec": "6.0.3",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/gitlab": "7.0.4",
+    "@semantic-release/release-notes-generator": "10.0.3",
     "commitizen": "4.2.4",
-    "mega-linter-runner": "5.4.0"
+    "mega-linter-runner": "5.4.0",
+    "semantic-release": "18.0.1"
   }
 }
