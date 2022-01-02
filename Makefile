@@ -23,7 +23,7 @@ export GIT_BRANCH			= $(GIT_BRANCH)
 # INCLUDES
 ##################################################
 
-include helpers/variables.mk
+include .github/variables.mk
 
 ##################################################
 # HELPER
