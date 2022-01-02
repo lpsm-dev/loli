@@ -524,13 +524,6 @@ description = "Typeform API token"
 regex = '''(?i)(typeform[a-z0-9_ .\-,]{0,25})(=|>|:=|\|\|:|<=|=>|:).{0,5}(tfp_[a-z0-9\-_\.=]{59})'''
 secretGroup = 3
 
-[[rules]]
-id = "generic-api-key"
-description = "Generic API Key"
-regex = '''(?i)((key|api|token|secret|password)[a-z0-9_ .\-,]{0,25})(=|>|:=|\|\|:|<=|=>|:).{0,5}['\"]([0-9a-zA-Z\-_=]{8,64})['\"]'''
-entropy = 3.9
-secretGroup = 4
-
 [allowlist]
 description = "global allow lists"
 regexes = ['''219-09-9999''', '''078-05-1120''', '''(9[0-9]{2}|666)-\d{2}-\d{4}''']
