@@ -1,9 +1,12 @@
 name: GoLang Release
 
 on:
-  push:
-    tags:
-      - "v*"
+  workflow_dispatch:
+    inputs:
+      git-tag:
+        description: Git Tag (Optional)
+        default: v1.0.0
+        required: true
 
 jobs:
   goreleaser:
