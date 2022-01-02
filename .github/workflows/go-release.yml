@@ -1,4 +1,4 @@
-name: Go Release
+name: GoLang Release
 
 on:
   push:
