@@ -133,21 +133,21 @@ Depending on what you are making, it can be a good idea to include screenshots o
 ### Get Anime By Image File
 
 <p align="center">
-  <img alt="logo" src="./docs/assets/find_by_file.PNG"/>
+  <img alt="logo" src=".github/docs/assets/find_by_file.PNG"/>
 </p>
 
 <p align="center">
-  <img alt="logo" src="./docs/assets/find_by_file_pretty.PNG"/>
+  <img alt="logo" src=".github/docs/assets/find_by_file_pretty.PNG"/>
 </p>
 
 ### Get Anime By Image Link
 
 <p align="center">
-  <img alt="logo" src="./docs/assets/find_by_link.PNG"/>
+  <img alt="logo" src=".github/docs/assets/find_by_link.PNG"/>
 </p>
 
 <p align="center">
-  <img alt="logo" src="./docs/assets/find_by_link_pretty.PNG"/>
+  <img alt="logo" src=".github/docs/assets/find_by_link_pretty.PNG"/>
 </p>
 
 ## ➤ Links <a name = "links"></a>
