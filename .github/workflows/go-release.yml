@@ -38,6 +38,6 @@ jobs:
           args: release --rm-dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CLIENT_VERSION: ${{ steps.get_details.outputs.SOURCE_TAG }}
+          CLIENT_VERSION: ${{ github.event.inputs.git-tag }}
           GIT_BRANCH: ${{ steps.get_details.outputs.SOURCE_BRANCH }}
           GO_VERSION: 1.16.5
