@@ -1,4 +1,4 @@
-name: GoLang Release
+name: Go Release
 
 on:
   workflow_dispatch:
