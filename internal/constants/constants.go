@@ -20,8 +20,8 @@ const (
 	// BinaryName is the name of the app.
 	BinaryName = "loli"
 
-	// ProjectUrl is the project url of the app.
-	ProjectUrl = "loli"
+	// ProjectURL is the project url of the app.
+	ProjectURL = "loli"
 )
 
 var (

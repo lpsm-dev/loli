@@ -18,7 +18,7 @@ var (
 	commit       = "unknown-commit"        // output from `git rev-parse HEAD`
 	commitShort  = "unknown-short-commit"  // output from `git rev-parse --short HEAD`
 	commitBranch = "unknown-commit-branch" // output from `git rev-parse --abbrev-ref HEAD`
-	projectURL   = constants.ProjectUrl    // github project url
+	projectURL   = constants.ProjectURL    // github project url
 	goVersion    = "unknown-go-version"    // output from `go version`
 )
 
