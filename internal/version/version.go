@@ -11,15 +11,15 @@ import (
 
 // Default build-time variable. These variables are populated via the Go ldflags. This will be filled in by the compiler.
 var (
-	cliName      = constants.BinaryName              // default name for this CLI
-	cliVersion   = "0.0.0"                           // value from VERSION file
-	builtDate    = "1970-01-01T00:00:00Z"            // output from `date -u +'%Y-%m-%dT%H:%M:%SZ'`
-	builtBy      = "unknown-built-by"                // built agent (GoRelease, Makefile...)
-	commit       = "unknown-commit"                  // output from `git rev-parse HEAD`
-	commitShort  = "unknown-short-commit"            // output from `git rev-parse --short HEAD`
-	commitBranch = "unknown-commit-branch"           // output from `git rev-parse --abbrev-ref HEAD`
-	projectURL   = "https://github.com/lpmatos/loli" // github project url
-	goVersion    = "unknown-go-version"              // output from `go version`
+	cliName      = constants.BinaryName    // default name for this CLI
+	cliVersion   = "0.0.0"                 // value from VERSION file
+	builtDate    = "1970-01-01T00:00:00Z"  // output from `date -u +'%Y-%m-%dT%H:%M:%SZ'`
+	builtBy      = "unknown-built-by"      // built agent (GoRelease, Makefile...)
+	commit       = "unknown-commit"        // output from `git rev-parse HEAD`
+	commitShort  = "unknown-short-commit"  // output from `git rev-parse --short HEAD`
+	commitBranch = "unknown-commit-branch" // output from `git rev-parse --abbrev-ref HEAD`
+	projectURL   = constants.ProjectUrl    // github project url
+	goVersion    = "unknown-go-version"    // output from `go version`
 )
 
 // GetVersionFormatted function
