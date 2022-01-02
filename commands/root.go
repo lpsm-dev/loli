@@ -1,8 +1,8 @@
 package commands
 
 import (
-	"github.com/lpmatos/loli/debug"
 	"github.com/lpmatos/loli/internal/constants"
+	"github.com/lpmatos/loli/internal/debug"
 	"github.com/lpmatos/loli/internal/helpers"
 	log "github.com/lpmatos/loli/internal/log"
 	"github.com/spf13/cobra"
