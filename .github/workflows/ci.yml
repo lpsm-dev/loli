@@ -4,10 +4,6 @@ on:
   push:
     branches: [main]
 
-defaults:
-  run:
-    shell: bash
-
 jobs:
   test:
     name: Test
