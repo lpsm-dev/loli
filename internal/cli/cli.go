@@ -192,7 +192,8 @@ func extractBinary(source *bytes.Reader, os string) (binary io.ReadCloser, err e
 			if err != nil {
 				return nil, err
 			}
-			tmpfile, err := ioutil.TempFile("", "temp-loli")
+
+			tmpfile, err := ioutil.TempFile("", fmt.Sprintf("temp-%s", constants.ProjectURL))
 			if err != nil {
 				return nil, err
 			}
