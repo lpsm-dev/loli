@@ -32,34 +32,3 @@ jobs:
         with:
           dockerfile: Dockerfile
           config: .hadolint.yml
-
-  bump:
-    name: GitHub Bump
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
-      - name: Git list tags
-        run: |
-          git tag --list
-
-      - name: Setup node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 'lts/*'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Bump version
-        run: npx semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Git list tags
-        run: |
-          git tag --list
