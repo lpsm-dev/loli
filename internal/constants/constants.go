@@ -10,6 +10,9 @@ const (
 	// TraceMoeSearchAnimeByLink default trace.moe URL
 	TraceMoeSearchAnimeByLink = "https://api.trace.moe/search?anilistInfo&url="
 
+	// TraceMoeUsage default trace.moe URL
+	TraceMoeUsage = "https://api.trace.moe/me"
+
 	// ReleaseURL default release URL.
 	ReleaseURL = "https://api.github.com/repos/lpmatos/loli/releases"
 

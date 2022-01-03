@@ -31,3 +31,12 @@ type Response struct {
 		Image      string  `json:"image"`
 	} `json:"result"`
 }
+
+// UsageTraceMoe struct - content of request usage to trace moe.
+type UsageTraceMoe struct {
+	ID          string `json:"id"`
+	Priority    int    `json:"priority"`
+	Concurrency int    `json:"concurrency"`
+	Quota       int    `json:"quota"`
+	QuotaUsed   int    `json:"quotaUsed"`
+}
