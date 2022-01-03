@@ -29,14 +29,13 @@
       "presetConfig": {
         "types": [
           { "type": "build",    "section": ":nut_and_bolt: Build",        "hidden": false },
-          { "type": "chore",    "section": ":package: Chore",             "hidden": false },
           { "type": "ci",       "section": ":repeat: CI",                 "hidden": false },
           { "type": "docs",     "section": ":memo: Docs",                 "hidden": false },
           { "type": "feat",     "section": ":sparkles: News",             "hidden": false },
-          { "type": "fix",      "section": ":bug: Fix",                   "hidden": false },
+          { "type": "fix",       "section": ":bug: Fix",                   "hidden": false },
           { "type": "perf",     "section": ":fast_forward: Performance",  "hidden": false },
           { "type": "refactor", "section": ":zap: Refact",                "hidden": false },
-          { "type": "revert",   "section": ":flashlight: Revert",         "hidden": false },
+          { "type": "revert",   "section": ":flashlight: Revert",          "hidden": false },
           { "type": "style",    "section": ":barber: Style",              "hidden": false },
           { "type": "test",     "section": ":white_check_mark: Test",     "hidden": false }
       ]}
