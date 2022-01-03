@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+### [1.8.6](https://github.com/lpmatos/loli/compare/v1.8.5...v1.8.6) (2022-01-03)
+
+
+### :bug: Fix
+
+* understand error gitlab ([1fcc0b2](https://github.com/lpmatos/loli/commit/1fcc0b2f6c86f9cac7a30f1211d0fa6f5891ce15))
+
 ### [1.8.5](https://github.com/lpmatos/loli/compare/v1.8.4...v1.8.5) (2022-01-03)
 
 
