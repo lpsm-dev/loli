@@ -4,7 +4,7 @@
 
 BINDIR      		:= $(CURDIR)/bin
 BINNAME     		?= loli
-CLIENT_VERSION 		:= $(shell cat $(CURDIR)/VERSION)
+CLIENT_VERSION 		:= $(shell git describe --tags --abbrev=0 )
 BUILD_DATE 			:= $(shell date -u +'%Y-%m-%dT%H:%M:%SZ')
 MAIN            	?= $(CURDIR)/cmd/loli/main.go
 
