@@ -78,7 +78,7 @@ jobs:
         uses: goreleaser/goreleaser-action@v2
         with:
           version: latest
-          args: release --rm-dist --debug
+          args: release --rm-dist
         env:
           CLIENT_VERSION: ${{ steps.get_details.outputs.SOURCE_TAG }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
