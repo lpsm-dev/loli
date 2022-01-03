@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+### [1.8.2](https://github.com/lpmatos/loli/compare/v1.8.1...v1.8.2) (2022-01-03)
+
+
+### :bug: Fix
+
+* on trigger ([07f7dd4](https://github.com/lpmatos/loli/commit/07f7dd4f8449f8ecb05d9c37156d7543e817ac09))
+
 ### [1.8.1](https://github.com/lpmatos/loli/compare/v1.8.0...v1.8.1) (2022-01-03)
 
 
