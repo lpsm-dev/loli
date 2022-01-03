@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+### [1.8.3](https://github.com/lpmatos/loli/compare/v1.8.2...v1.8.3) (2022-01-03)
+
+
+### :bug: Fix
+
+* merge conflicts ([4946c44](https://github.com/lpmatos/loli/commit/4946c445f6c26954b6eaf954aedd8e8f0712c090))
+* remove templates ([eb1aede](https://github.com/lpmatos/loli/commit/eb1aede4522959d7eae4cb78ae331bbd05596862))
+
 ### [1.8.2](https://github.com/lpmatos/loli/compare/v1.8.1...v1.8.2) (2022-01-03)
 
 
