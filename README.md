@@ -1,10 +1,10 @@
 <div align="center">
 
 <p align="center">
-  <img alt="gif-header" src="https://i.pinimg.com/280x280_RS/d0/13/35/d01335f147c586e56829415e611f0ae7.jpg" width="350px" float="center"/>
+  <img alt="gif-header" src="https://c.tenor.com/PX2XATCduFcAAAAC/loli.gif" width="350px" float="center"/>
 </p>
 
-<h2 align="center">✨ Loli Hunter CLI ✨</h2>
+<h2 align="center">✨ Loli CLI ✨</h2>
 
 <div align="center">
 
@@ -16,7 +16,7 @@
 ---
 
 <p align="center">
-  <img alt="pipelines" src="https://images.ctfassets.net/em6l9zw4tzag/7j79Xx5NqeJlvGj6w98JUX/ecd7317698578b9efa1482154d0188f4/configuringpipeline.gif" width="450px" float="center"/>
+  <img alt="pipelines" src="https://i.gifer.com/Ys7q.gif" width="450px" float="center"/>
 </p>
 
 <p align="center">
