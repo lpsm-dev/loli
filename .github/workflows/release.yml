@@ -49,10 +49,10 @@ jobs:
       - name: Get Details
         id: get_details
         run: |
-          echo "::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}"
-          echo "::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}"
-          echo "::set-output name=SOURCE_TAG::$(git tag --sort=committerdate | tail -1)"
-          echo "::set-output name=GOVERSION::$(cat .go-version)"
+          echo ::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}
+          echo ::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}
+          echo ::set-output name=SOURCE_TAG::$(git tag --sort=committerdate | tail -1)
+          echo ::set-output name=GOVERSION::$(cat .go-version)
 
       - name: List tags
         run: |
