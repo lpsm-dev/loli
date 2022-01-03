@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+### [1.8.5](https://github.com/lpmatos/loli/compare/v1.8.4...v1.8.5) (2022-01-03)
+
+
+### :bug: Fix
+
+* bump version ([c6a3790](https://github.com/lpmatos/loli/commit/c6a3790760085281a34ae0c16e21e8821bf0a6f1))
+* remove version file and makefile current version ([9b460ed](https://github.com/lpmatos/loli/commit/9b460ed1322e0a09d372a7249e19cefca6c84de1))
+
 ### [1.8.4](https://github.com/lpmatos/loli/compare/v1.8.3...v1.8.4) (2022-01-03)
 
 
