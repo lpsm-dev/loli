@@ -44,6 +44,7 @@ jobs:
 
   release-go:
     name: Release Go
+    if: github.event_name == 'push' && (contains(github.ref, '/heads/main') || contains(github.ref, '/tags/v'))
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
