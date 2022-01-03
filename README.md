@@ -62,6 +62,33 @@ In this process, I gained experiences in the following topics regarding the Go l
 - ✔️ Use conditional in compilation and build tags.
 - ✔️ How to build CLI using Go
 
+Example trace.moe response:
+
+```json
+{
+  "frameCount": 745506,
+  "error": "",
+  "result": [
+    {
+      "anilist": {
+        "id": 99939,
+        "idMal": 34658,
+        "title": { "native": "ネコぱらOVA", "romaji": "Nekopara OVA", "english": null },
+        "synonyms": ["Neko Para OVA"],
+        "isAdult": false
+      },
+      "filename": "Nekopara - OVA (BD 1280x720 x264 AAC).mp4",
+      "episode": null,
+      "from": 97.75,
+      "to": 98.92,
+      "similarity": 0.9440424588727485,
+      "video": "https://media.trace.moe/video/99939/Nekopara%20-%20OVA%20(BD%201280x720%20x264%20AAC).mp4?t=98.33500000000001&token=xxxxxxxxxxxxxx",
+      "image": "https://media.trace.moe/image/99939/Nekopara%20-%20OVA%20(BD%201280x720%20x264%20AAC).mp4?t=98.33500000000001&token=xxxxxxxxxxxxxx"
+    }
+  ]
+}
+```
+
 ## ➤ Installation <a name = "installation"></a>
 
 ```bash
