@@ -163,10 +163,6 @@ Depending on what you are making, it can be a good idea to include screenshots o
 > * Linktree: https://linktr.ee/lpmatos
 >
 
-## ➤ License <a name = "license"></a>
-
-This repository is released under the [Apache license](https://www.apache.org/licenses/LICENSE-2.0). In short, this means you are free to use this software in any personal, open-source or commercial projects. Attribution is optional but appreciated.
-
 ## ➤ Versioning <a name = "versioning"></a>
 
 To check the change history, please access the [**CHANGELOG.md**](CHANGELOG.md) file.
