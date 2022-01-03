@@ -1,6 +1,6 @@
 {
   "branches": [
-    "master", "main",
+    "main",
     { "name": "release", "prerelease": "rc" }
   ],
   "tagFormat": "v${version}",
@@ -42,9 +42,6 @@
           { "type": "style",    "section": ":barber: Style",              "hidden": false },
           { "type": "test",     "section": ":white_check_mark: Test",     "hidden": false }
       ]}
-    }],
-    ["@semantic-release/exec", {
-      "verifyReleaseCmd": "echo ${nextRelease.version} > VERSION"
     }],
     ["@semantic-release/github", {
       "addReleases": "top"
