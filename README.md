@@ -10,6 +10,7 @@
 
 [![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/lpmatos/loli)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://github.com/lpmatos/loli)
+[![GitHub repo size](https://img.shields.io/github/repo-size/lpmatos/loli)](https://github.com/lpmatos/loli)
 
 </div>
 
