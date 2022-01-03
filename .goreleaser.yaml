@@ -61,7 +61,5 @@ before:
     - make clean
     - go generate ./...
     - go mod download
-    - chmod a+x ./scripts/variables.sh
-    - ./scripts/variables.sh
 github_urls:
   download: https://github.com

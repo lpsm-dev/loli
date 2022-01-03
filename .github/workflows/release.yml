@@ -36,7 +36,7 @@ jobs:
         if: github.event.inputs.git-ref == 'main'
 
   goreleaser:
-    name: "Create Go Release"
+    name: "GoReleaser"
     needs: release
     runs-on: ubuntu-20.04
 
@@ -50,8 +50,8 @@ jobs:
           git tag --list
 
       - name: Read .go-version
-        run: echo ::set-output name=GOVERSION::$(cat .go-version)
         id: goversion
+        run: echo ::set-output name=GOVERSION::$(cat .go-version)
 
       - name: Set up Go
         uses: actions/setup-go@v2
@@ -61,18 +61,14 @@ jobs:
       - name: Get Details
         id: get_details
         run: |
-          echo ::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}
-          echo ::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}
-          echo "SOURCE_TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
+          echo "::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}"
+          echo "::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}"
+          echo "::set-output name=SOURCE_TAG::$(git describe --tags --abbrev=0)"
 
       - run: |
           echo $SOURCE_NAME
           echo $SOURCE_BRANCH
           echo $SOURCE_TAG
-        env:
-          SOURCE_NAME: ${{ steps.get_details.outputs.SOURCE_NAME }}
-          SOURCE_BRANCH: ${{ steps.get_details.outputs.SOURCE_BRANCH }}
-          SOURCE_TAG: ${{ steps.get_details.outputs.SOURCE_TAG }}
 
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
@@ -80,8 +76,8 @@ jobs:
           version: latest
           args: release --rm-dist --debug
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           CLIENT_VERSION: ${{ steps.get_details.outputs.SOURCE_TAG }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           GIT_BRANCH: ${{ steps.get_details.outputs.SOURCE_BRANCH }}
           GO_VERSION: ${{ steps.goversion.outputs.GOVERSION }}
           GORELEASER_CURRENT_TAG: ${{ steps.get_details.outputs.SOURCE_TAG }}
