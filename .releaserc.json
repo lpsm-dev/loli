@@ -3,7 +3,7 @@
     "main",
     { "name": "release", "prerelease": "rc" }
   ],
-  "tagFormat": "v${version}",
+  "tagFormat": "loli-v${version}",
   "plugins": [
     ["@semantic-release/commit-analyzer", {
       "preset": "conventionalcommits",
