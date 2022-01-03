@@ -61,7 +61,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   go-release:
-    name: go-release
+    name: Go Release
     runs-on: ubuntu-latest
     needs: release
     steps:
