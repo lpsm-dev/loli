@@ -10,7 +10,7 @@ on:
 
 jobs:
   release:
-    name: Release
+    name: GitHub Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
