@@ -1,5 +1,29 @@
 # Semantic Versioning Changelog
 
+## [1.10.0](https://github.com/lpmatos/loli/compare/v1.9.1...v1.10.0) (2022-01-03)
+
+
+### :memo: Docs
+
+* add example trace response ([82576df](https://github.com/lpmatos/loli/commit/82576df7c957c5f7c3536e6f78fa7d7b14c77025))
+
+
+### :sparkles: News
+
+* add anime title struct ([dd145f4](https://github.com/lpmatos/loli/commit/dd145f4a8fafdcee8bb78a000bf5919e552c16d6))
+* add is adult in output search file ([9ac8d89](https://github.com/lpmatos/loli/commit/9ac8d89591168ec5e1a6284e4f4a5cbf630904f0))
+* colored output is adult ([fd53a20](https://github.com/lpmatos/loli/commit/fd53a204619468c783f197a658e30a03931c6785))
+* search usage type, function and command ([864eabb](https://github.com/lpmatos/loli/commit/864eabb897ec1a53e6212d04ce600ddbfacbe3cf))
+* show is adult in search link ([4ab38d9](https://github.com/lpmatos/loli/commit/4ab38d922462e8a7583fd5a007a55e0281bd90a6))
+
+
+### :bug: Fix
+
+* concat tmp file with project url constants ([85636b9](https://github.com/lpmatos/loli/commit/85636b97d2ef86ed9531af80e2578b975dcfa861))
+* conditional anime is adult function ([919fcfe](https://github.com/lpmatos/loli/commit/919fcfe0182d22c5403f044d483f41a43c03c1f6))
+* remove quotes ci template ([28df865](https://github.com/lpmatos/loli/commit/28df865d1869733fa1725f3e09a466f9e9906c88))
+* tmp file name ([a4683a2](https://github.com/lpmatos/loli/commit/a4683a2d5eca0a53b75cf05ec6c9a11ebd3232b4))
+
 ### [1.9.1](https://github.com/lpmatos/loli/compare/v1.9.0...v1.9.1) (2022-01-03)
 
 
