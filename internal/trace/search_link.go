@@ -38,7 +38,7 @@ func SearchAnimeByLink(animeLink string, pretty bool) {
 	defer termenv.ShowCursor()
 
 	s := spinner.New(spinner.CharSets[39], 100*time.Millisecond)
-	s.Prefix = "🔎 Searching for the anime from a link: "
+	s.Prefix = "🌊 Searching for the anime from a link: "
 	s.FinalMSG = color.GreenString("✔️  Found!\n\n")
 
 	go catchInterrupt(s)
@@ -80,6 +80,7 @@ func SearchAnimeByLink(animeLink string, pretty bool) {
 			{"🗽 Title English", animeResp.Result[0].Anilist.Title.English},
 			{"🗻 Title Romaji", animeResp.Result[0].Anilist.Title.Romaji},
 			{"📺 Episode Number", color.MagentaString(strconv.Itoa(animeResp.Result[0].Episode))},
+			{"😈 Is Adult", animeResp.Result[0].Anilist.IsAdult},
 		})
 		versionTable.SetStyle(table.StyleColoredBlueWhiteOnBlack)
 		versionTable.Render()
@@ -89,5 +90,6 @@ func SearchAnimeByLink(animeLink string, pretty bool) {
 		fmt.Println("🗽 Title English: " + animeResp.Result[0].Anilist.Title.English)
 		fmt.Println("🗻 Title Romaji: " + animeResp.Result[0].Anilist.Title.Romaji)
 		fmt.Println("📺 Episode Number: " + color.MagentaString(strconv.Itoa(animeResp.Result[0].Episode)))
+		fmt.Println("😈 Is Adult: " + fmt.Sprintf("%v", animeResp.Result[0].Anilist.IsAdult))
 	}
 }

@@ -4,10 +4,10 @@ const (
 	// DefaultTimestampFormat default time format.
 	DefaultTimestampFormat = "2006-01-02_15:04:05"
 
-	// TraceMoeSearchAnimeByFile default trace.moe URL
+	// TraceMoeSearchAnimeByFile default trace.moe URL for file
 	TraceMoeSearchAnimeByFile = "https://api.trace.moe/search?anilistInfo"
 
-	// TraceMoeSearchAnimeByLink default trace.moe URL
+	// TraceMoeSearchAnimeByLink default trace.moe URL for link
 	TraceMoeSearchAnimeByLink = "https://api.trace.moe/search?anilistInfo&url="
 
 	// TraceMoeUsage default trace.moe URL

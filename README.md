@@ -180,7 +180,9 @@ Depending on what you are making, it can be a good idea to include screenshots o
 
 ## ➤ Links <a name = "links"></a>
 
-* https://soruly.github.io/trace.moe-api/#/
+- https://soruly.github.io/trace.moe-api/#/
+- https://img.olhardigital.com.br/wp-content/uploads/2021/07/Naruto-Classico-e-Naruto-Shippuden-fillers.jpg
+- https://images.plurk.com/32B15UXxymfSMwKGTObY5e.jpg
 
 ## ➤ Author <a name = "author"></a>
 
