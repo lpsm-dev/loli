@@ -47,8 +47,6 @@ jobs:
           fetch-depth: 0
 
       - run: |
-          git fetch --unshallow --tags
-          echo $?
           git tag --list
 
       - name: Read .go-version
