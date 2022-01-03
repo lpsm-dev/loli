@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+### [1.9.1](https://github.com/lpmatos/loli/compare/v1.9.0...v1.9.1) (2022-01-03)
+
+
+### :bug: Fix
+
+* debug release vars ([bcd58d3](https://github.com/lpmatos/loli/commit/bcd58d342e021ff54af05ad5a2f14fded14cb59b))
+* go releaser params and envs ([ce2ef08](https://github.com/lpmatos/loli/commit/ce2ef081cdf44ddeb471f6601d848f6ffb73e8a7))
+
 ## [1.9.0](https://github.com/lpmatos/loli/compare/v1.8.0...v1.9.0) (2022-01-03)
 
 
