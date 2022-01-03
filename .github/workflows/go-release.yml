@@ -1,9 +1,8 @@
 name: Go Release
 
 on:
-  push:
-    tags:
-      - '*'
+  release:
+    types: [published]
 
 jobs:
   release:
@@ -33,7 +32,7 @@ jobs:
           version: latest
           args: release --rm-dist
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CLIENT_VERSION: ${{ github.event.inputs.git-tag }}
+          CLIENT_VERSION: ${{ steps.get_details.outputs.SOURCE_TAG }}
           GIT_BRANCH: ${{ steps.get_details.outputs.SOURCE_BRANCH }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GO_VERSION: 1.15.6
