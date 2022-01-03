@@ -1,5 +1,14 @@
 # Semantic Versioning Changelog
 
+### [1.8.4](https://github.com/lpmatos/loli/compare/v1.8.3...v1.8.4) (2022-01-03)
+
+
+### :bug: Fix
+
+* merge conflicts ([d785fc6](https://github.com/lpmatos/loli/commit/d785fc63ffada0d0bfd77c630e917c0015ed015d))
+* running go releaser ([6b88dc3](https://github.com/lpmatos/loli/commit/6b88dc37e2aa29f62fb28d86591d91b2f745039c))
+* validate other conditional ([4e4bcdf](https://github.com/lpmatos/loli/commit/4e4bcdf3e07fd7331517d0e07042376eb9ba62c0))
+
 ### [1.8.3](https://github.com/lpmatos/loli/compare/v1.8.2...v1.8.3) (2022-01-03)
 
 
