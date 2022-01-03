@@ -1,5 +1,21 @@
 # Semantic Versioning Changelog
 
+## [1.9.0](https://github.com/lpmatos/loli/compare/v1.8.0...v1.9.0) (2022-01-03)
+
+
+### :bug: Fix
+
+* go releaser quotes ([36363c4](https://github.com/lpmatos/loli/commit/36363c4781abd425710b18734f5db473f7b7bbf3))
+* semantic release trigger and rules ([e4bcb8e](https://github.com/lpmatos/loli/commit/e4bcb8e388b673ce6685ed47f0bc1878c1d65b7a))
+* setup general configs ([6a1a751](https://github.com/lpmatos/loli/commit/6a1a75197e6d3622f710c16ca55de1a3e92de022))
+
+
+### :sparkles: News
+
+* manual trigger ([e0f1e47](https://github.com/lpmatos/loli/commit/e0f1e4721cf282424c224944bdbbe8079458d4f6))
+* rename template ([aa6220a](https://github.com/lpmatos/loli/commit/aa6220a848b6785dd5c04343115b1746ab211154))
+* setup go releaser ([ea05f4c](https://github.com/lpmatos/loli/commit/ea05f4c0b2164a5cccb576487e80ab42a7a6d45f))
+
 ## [1.8.0](https://github.com/lpmatos/loli/compare/v1.7.5...v1.8.0) (2022-01-03)
 
 
