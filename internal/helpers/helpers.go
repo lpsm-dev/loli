@@ -82,10 +82,10 @@ func AnimeSimilarity(similarity string) string {
 }
 
 // AnimeIsAdult is for colorful output
-func AnimeIsAdult(isAdult bool) {
+func AnimeIsAdult(isAdult bool) string {
 	if isAdult {
-		fmt.Println(color.GreenString("true"))
+		return fmt.Sprint(color.GreenString("true"))
 	} else {
-		fmt.Println(color.RedString("false"))
+		return fmt.Sprint(color.RedString("false"))
 	}
 }
