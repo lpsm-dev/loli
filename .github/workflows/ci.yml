@@ -47,7 +47,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - run: |
+      - name: Git list tags
+        run: |
           git tag --list
 
       - name: Setup node
@@ -63,7 +64,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: |
+      - name: Git list tags
+        run: |
           git tag --list
 
   go-release:
@@ -76,7 +78,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - run: |
+      - name: Git list tags
+        run: |
           git tag --list
 
       - name: Set up Go
