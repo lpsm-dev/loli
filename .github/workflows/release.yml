@@ -46,26 +46,20 @@ jobs:
         with:
           fetch-depth: 0
 
-      - run: |
-          git tag --list
-
-      - name: Read .go-version
-        id: goversion
-        run: echo ::set-output name=GOVERSION::$(cat .go-version)
-
-      - name: Set up Go
-        uses: actions/setup-go@v2
-        with:
-          go-version: ${{ steps.goversion.outputs.GOVERSION }}
-
       - name: Get Details
         id: get_details
         run: |
           echo "::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}"
           echo "::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}"
-          echo "::set-output name=SOURCE_TAG::$(git describe --tags --abbrev=0)"
+          echo "::set-output name=SOURCE_TAG::$(git tag --sort=committerdate | tail -1)"
+          echo "::set-output name=GOVERSION::$(cat .go-version)"
 
-      - run: |
+      - name: List tags
+        run: |
+          git tag --list
+
+      - name: Show variables
+        run: |
           echo $SOURCE_NAME
           echo $SOURCE_BRANCH
           echo $SOURCE_TAG
@@ -73,6 +67,11 @@ jobs:
           SOURCE_NAME: ${{ steps.get_details.outputs.SOURCE_NAME }}
           SOURCE_BRANCH: ${{ steps.get_details.outputs.SOURCE_BRANCH }}
           SOURCE_TAG: ${{ steps.get_details.outputs.SOURCE_TAG }}
+
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: ${{ steps.get_details.outputs.GOVERSION }}
 
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
