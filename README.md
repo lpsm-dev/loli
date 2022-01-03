@@ -16,7 +16,7 @@
 ---
 
 <p align="center">
-  <img alt="pipelines" src="https://i.gifer.com/Ys7q.gif" width="450px" float="center"/>
+  <img alt="pipelines" src="https://i.pinimg.com/originals/ce/26/14/ce2614ef4c70f04a2c578f972308f5b6.gif" width="450px" float="center"/>
 </p>
 
 <p align="center">
