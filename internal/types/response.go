@@ -1,16 +1,19 @@
 package types
 
+// AnimeTitle struct - information about the anime title.
+type AnimeTitle struct {
+	Native  string `json:"native"`
+	Romaji  string `json:"romaji"`
+	English string `json:"english"`
+}
+
 // Anime struct - information about the anime passed in the request to trace.moe API.
 type Anime struct {
-	ID    int `json:"id"`
-	IDMal int `json:"idMal"`
-	Title struct {
-		Native  string `json:"native"`
-		Romaji  string `json:"romaji"`
-		English string `json:"english"`
-	} `json:"title"`
-	Synonyms []string `json:"synonyms"`
-	IsAdult  bool     `json:"isAdult"`
+	ID       int        `json:"id"`
+	IDMal    int        `json:"idMal"`
+	Title    AnimeTitle `json:"title"`
+	Synonyms []string   `json:"synonyms"`
+	IsAdult  bool       `json:"isAdult"`
 }
 
 // Response struct - content of trace.moe API request result.
