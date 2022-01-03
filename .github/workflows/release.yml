@@ -69,6 +69,10 @@ jobs:
           echo $SOURCE_NAME
           echo $SOURCE_BRANCH
           echo $SOURCE_TAG
+        env:
+          SOURCE_NAME: ${{ steps.get_details.outputs.SOURCE_NAME }}
+          SOURCE_BRANCH: ${{ steps.get_details.outputs.SOURCE_BRANCH }}
+          SOURCE_TAG: ${{ steps.get_details.outputs.SOURCE_TAG }}
 
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
