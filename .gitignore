@@ -81,3 +81,5 @@ yarn-error.log*
 /Godeps/
 /bin/
 /dist/
+
+dist/
