@@ -1,7 +1,9 @@
 /docs
 /node_modules
+/aseets
 /scripts
 /test
+/.github
 
 .dockerignore
 .editorconfig
