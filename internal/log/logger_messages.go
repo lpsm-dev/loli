@@ -4,8 +4,36 @@ import (
 	"fmt"
 
 	"github.com/kyokomi/emoji/v2"
-	au "github.com/logrusorgru/aurora"
+	au "github.com/logrusorgru/aurora/v3"
 )
+
+// Debug function to print a pretty formatted log debug message.
+func Debug(args ...interface{}) {
+	logger.Debug(
+		au.BrightCyan(
+			emoji.Sprintf("🆗  " + fmt.Sprintf("%v", args...)),
+		).Bold().Underline(),
+	)
+}
+
+// Debugf function to print a pretty formatted log debug message.
+func Debugf(format string, args ...interface{}) {
+	logger.Debugf(
+		"🆗 "+au.BrightCyan(format).
+			Bold().
+			Underline().
+			String(), args...,
+	)
+}
+
+// Debugln function to print a pretty formatted log debug message.
+func Debugln(args ...interface{}) {
+	logger.Debugln(
+		au.BrightCyan(
+			emoji.Sprintf("🆗  " + fmt.Sprintf("%v\n", args...)),
+		).Bold().Underline(),
+	)
+}
 
 // Info function to print a pretty formatted log info message.
 func Info(args ...interface{}) {
@@ -19,10 +47,10 @@ func Info(args ...interface{}) {
 // Infof function to print a pretty formatted log info message.
 func Infof(format string, args ...interface{}) {
 	logger.Infof(
-		format,
-		au.Green(
-			emoji.Sprintf("✅  "+format, args...),
-		).Bold().Underline(),
+		"✅ "+au.Green(format).
+			Bold().
+			Underline().
+			String(), args...,
 	)
 }
 
@@ -35,38 +63,10 @@ func Infoln(args ...interface{}) {
 	)
 }
 
-// Debug function to print a pretty formatted log debug message.
-func Debug(args ...interface{}) {
-	logger.Debug(
-		au.Cyan(
-			emoji.Sprintf("🆗  " + fmt.Sprintf("%v", args...)),
-		).Bold().Underline(),
-	)
-}
-
-// Debugf function to print a pretty formatted log debug message.
-func Debugf(format string, args ...interface{}) {
-	logger.Debugf(
-		fmt.Sprintf("🆗 %s", format),
-		au.Cyan(
-			emoji.Sprintf(fmt.Sprintf("%v", args...)),
-		).Bold().Underline(),
-	)
-}
-
-// Debugln function to print a pretty formatted log debug message.
-func Debugln(args ...interface{}) {
-	logger.Debugln(
-		au.Cyan(
-			emoji.Sprintf("🆗  " + fmt.Sprintf("%v\n", args...)),
-		).Bold().Underline(),
-	)
-}
-
 // Warn function to print a pretty formatted log warn message.
 func Warn(args ...interface{}) {
 	logger.Warn(
-		au.Yellow(
+		au.BrightYellow(
 			emoji.Sprintf("😲  " + fmt.Sprintf("%v", args...)),
 		).Bold().Underline(),
 	)
@@ -75,17 +75,17 @@ func Warn(args ...interface{}) {
 // Warnf function to print a pretty formatted log warn message.
 func Warnf(format string, args ...interface{}) {
 	logger.Warnf(
-		fmt.Sprintf("😲 %s", format),
-		au.Yellow(
-			emoji.Sprintf(fmt.Sprintf("%v", args...)),
-		).Bold().Underline(),
+		"😲 "+au.BrightYellow(format).
+			Bold().
+			Underline().
+			String(), args...,
 	)
 }
 
 // Warnln function to print a pretty formatted log warn message.
 func Warnln(args ...interface{}) {
 	logger.Warnln(
-		au.Yellow(
+		au.BrightYellow(
 			emoji.Sprintf("😲  " + fmt.Sprintf("%v\n", args...)),
 		).Bold().Underline(),
 	)
@@ -102,10 +102,10 @@ func Error(args ...interface{}) {
 // Errorf function to print a pretty formatted log error message.
 func Errorf(format string, args ...interface{}) {
 	logger.Errorf(
-		fmt.Sprintf("😡 %s", format),
-		au.BrightRed(
-			emoji.Sprintf(fmt.Sprintf("%v", args...)),
-		).Bold().Underline(),
+		"😡 "+au.BrightRed(format).
+			Bold().
+			Underline().
+			String(), args...,
 	)
 }
 
@@ -129,10 +129,10 @@ func Fatal(args ...interface{}) {
 // Fatalf function to print a pretty formatted log fatal message.
 func Fatalf(format string, args ...interface{}) {
 	logger.Fatalf(
-		fmt.Sprintf("🤬 %s", format),
-		au.BrightRed(
-			emoji.Sprintf(fmt.Sprintf("%v", args...)),
-		).Bold().Underline(),
+		"🤬 "+au.BrightRed(format).
+			Bold().
+			Underline().
+			String(), args...,
 	)
 }
 
