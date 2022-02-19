@@ -1,7 +1,6 @@
 name: CI
 
 on:
-  workflow_dispatch:
   push:
     branches: [main]
 
@@ -16,20 +15,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Secret Dection
-        uses: zricethezav/gitleaks-action@master
+      - name: Secret Detection
+        uses: zricethezav/gitleaks-action@518e4898c0cd1cc5d9aab6627a2eabd46e81d8da
         with:
-          config-path: .gitleaks.toml
+          config-path: ${{ github.workspace }}/.github/config/.gitleaks.toml
         continue-on-error: false
-
-      - name: golangci-lint
-        uses: reviewdog/action-golangci-lint@v2
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          tool_name: golangci-lint
 
       - name: Hadolint
         uses: hadolint/hadolint-action@v1.6.0
         with:
           dockerfile: Dockerfile
-          config: .hadolint.yml
+          config: ${{ github.workspace }}/.github/config/.hadolint.yml
