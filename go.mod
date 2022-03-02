@@ -19,7 +19,7 @@ require (
 	github.com/inconshreveable/go-update v0.0.0-20160112193335-8152e7eb6ccf
 	github.com/jedib0t/go-pretty v4.3.0+incompatible
 	github.com/karrick/godirwalk v1.10.3 // indirect
-	github.com/kyokomi/emoji/v2 v2.2.8
+	github.com/kyokomi/emoji/v2 v2.2.9
 	github.com/logrusorgru/aurora v2.0.3+incompatible
 	github.com/logrusorgru/aurora/v3 v3.0.0
 	github.com/microcosm-cc/bluemonday v1.0.18 // indirect
