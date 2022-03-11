@@ -26,7 +26,7 @@ require (
 	github.com/muesli/termenv v0.11.0
 	github.com/pterm/pterm v0.12.37
 	github.com/sirupsen/logrus v1.8.1
-	github.com/spf13/cobra v1.3.0
+	github.com/spf13/cobra v1.4.0
 	github.com/yuin/goldmark v1.4.7 // indirect
 	go.mongodb.org/mongo-driver v1.8.3 // indirect
 	golang.org/x/net v0.0.0-20220127200216-cd36cc0744dd // indirect
