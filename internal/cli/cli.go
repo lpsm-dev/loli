@@ -14,7 +14,7 @@ import (
 
 	"github.com/blang/semver"
 	update "github.com/inconshreveable/go-update"
-	"github.com/lpmatos/loli/api"
+	"github.com/lpmatos/loli/internal/api"
 	"github.com/lpmatos/loli/internal/constants"
 	"github.com/lpmatos/loli/internal/log"
 )
