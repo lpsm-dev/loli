@@ -4,7 +4,7 @@ WORKDIR /build
 COPY [ ".", "." ]
 RUN make build
 
-FROM alpine:3.15.4 as release
+FROM alpine:3.16.0 as release
 RUN apk --no-cache add \
   ca-certificates=20191127-r7 \
   bash=5.1.8-r0 \
