@@ -1,8 +1,6 @@
 <div align="center">
 
-<p align="center">
-  <img alt="gif-header" src="https://c.tenor.com/PX2XATCduFcAAAAC/loli.gif" width="350px" float="center"/>
-</p>
+<img alt="gif-header" src="https://c.tenor.com/PX2XATCduFcAAAAC/loli.gif" width="250px" float="center"/>
 
 <h2 align="center">✨ Loli CLI ✨</h2>
 
@@ -16,9 +14,7 @@
 
 ---
 
-<p align="center">
-  <img alt="pipelines" src="https://i.pinimg.com/originals/ce/26/14/ce2614ef4c70f04a2c578f972308f5b6.gif" width="450px" float="center"/>
-</p>
+<img alt="pipelines" src="https://i.pinimg.com/originals/ce/26/14/ce2614ef4c70f04a2c578f972308f5b6.gif" width="325px" float="center"/>
 
 <p align="center">
   ✨ Loli is a pretty CLI that find animes passing images - inspiration in <a href="https://github.com/irevenko/what-anime-cli">what-anime-cli</a> ✨
