@@ -1,26 +1,22 @@
 <div align="center">
 
-<img alt="gif-header" src="https://c.tenor.com/PX2XATCduFcAAAAC/loli.gif" width="250px" float="center"/>
+<img alt="gif-header" src="https://c.tenor.com/PX2XATCduFcAAAAC/loli.gif" width="250px"/>
 
-<h2 align="center">✨ Loli CLI ✨</h2>
-
-<div align="center">
+<h2>✨ Loli CLI ✨</h2>
 
 [![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/lpmatos/loli)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://github.com/lpmatos/loli)
 [![GitHub repo size](https://img.shields.io/github/repo-size/lpmatos/loli)](https://github.com/lpmatos/loli)
 
-</div>
-
 ---
 
-<img alt="pipelines" src="https://i.pinimg.com/originals/ce/26/14/ce2614ef4c70f04a2c578f972308f5b6.gif" width="325px" float="center"/>
+<img alt="pipelines" src="https://i.pinimg.com/originals/ce/26/14/ce2614ef4c70f04a2c578f972308f5b6.gif" width="325px"/>
 
-<p align="center">
+<p>
   ✨ Loli is a pretty CLI that find animes passing images - inspiration in <a href="https://github.com/irevenko/what-anime-cli">what-anime-cli</a> ✨
 </p>
 
-<p align="center">
+<p>
   <a href="#getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#versioning">Versioning</a>
 </p>
@@ -203,9 +199,7 @@ This project is currently undergoing a reorganization 👾.
 
 Give me a ⭐️ if this project helped you!
 
-<p>
-  <img alt="gif-header" src="https://www.icegif.com/wp-content/uploads/baby-yoda-bye-bye-icegif.gif" width="350px" float="center"/>
-</p>
+<img alt="gif-header" src="https://www.icegif.com/wp-content/uploads/baby-yoda-bye-bye-icegif.gif" width="225px"/>
 
 Made with 💜 by [me](https://github.com/lpmatos) :wave: inspired on [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
 
