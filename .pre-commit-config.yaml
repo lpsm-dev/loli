@@ -1,21 +1,22 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.1.0
+    rev: v4.3.0
     hooks:
       - id: check-case-conflict
       - id: check-merge-conflict
-      - id: check-yaml
-      - id: check-json
       - id: trailing-whitespace
-      - id: double-quote-string-fixer
       - id: end-of-file-fixer
   - repo: https://github.com/zricethezav/gitleaks
-    rev: v8.2.7
+    rev: v8.8.7
     hooks:
       - id: gitleaks
         args: ["--config", ".github/config/.gitleaks.toml", "--verbose"]
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v2.21.0
+    rev: v2.27.1
     hooks:
       - id: commitizen
         stages: [commit-msg]
+  - repo: https://github.com/hadolint/hadolint.git
+    rev: v2.10.0
+    hooks:
+      - id: hadolint
