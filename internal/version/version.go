@@ -1,7 +1,6 @@
 package version
 
 import (
-	"fmt"
 	"os"
 
 	"github.com/jedib0t/go-pretty/table"
@@ -29,38 +28,53 @@ func GetVersionFormatted() string {
 
 // GetShortDetails function - create a pretty table and parse this table with current version details.
 func GetShortDetails() {
-	pterm.DefaultSection.Println("Version short details")
-	pterm.DefaultTable.WithHasHeader().WithData(pterm.TableData{
-		{"Info", "Content"},
-		{"CLI Name", cliName},
-		{"CLI Version", cliVersion},
-		{"Project URL", projectURL},
-		{"Build Date", builtDate},
-		{"Commit Short", commitShort},
-	}).Render()
-	fmt.Println()
-}
-
-// GetPrettyDetails function - create a pretty table and parse this table with current version details.
-func GetPrettyDetails() {
-	pterm.DefaultSection.Println("Version pretty details")
+	pterm.Println()
+	pterm.DefaultHeader.
+		WithMargin(5).
+		WithBackgroundStyle(pterm.NewStyle(pterm.BgBlack)).
+		Printf("✨ %s version details ✨", constants.BinaryName)
+	pterm.Println()
 	versionTable := table.NewWriter()
 	versionTable.SetOutputMirror(os.Stdout)
 	versionTable.AppendHeader(table.Row{"Info", "Content"})
 	versionTable.AppendRows([]table.Row{
-		{"CLI Name", cliName},
-		{"CLI Version", cliVersion},
-		{"Project URL", projectURL},
-		{"Build Date", builtDate},
-		{"Build by", builtBy},
-		{"Commit", commit},
-		{"Commit Short", commitShort},
-		{"Commit Branch", commitBranch},
-		{"Go Version", goVersion},
+		{"➤ CLI Name", cliName},
+		{"➤ CLI Version", cliVersion},
+		{"➤ Project URL", projectURL},
+		{"➤ Build Date", builtDate},
+		{"➤ Commit Short", commitShort},
+		{"➤ Go Version", goVersion},
 	})
 	versionTable.SetStyle(table.StyleColoredBright)
 	versionTable.Render()
-	fmt.Println()
+	pterm.Println()
+}
+
+// GetPrettyDetails function - create a pretty table and parse this table with current version details.
+func GetPrettyDetails() {
+	pterm.Println()
+	pterm.DefaultHeader.
+		WithMargin(5).
+		WithBackgroundStyle(pterm.NewStyle(pterm.BgBlack)).
+		Printf("✨ %s version details ✨", constants.BinaryName)
+	pterm.Println()
+	versionTable := table.NewWriter()
+	versionTable.SetOutputMirror(os.Stdout)
+	versionTable.AppendHeader(table.Row{"Info", "Content"})
+	versionTable.AppendRows([]table.Row{
+		{"➤ CLI Name", cliName},
+		{"➤ CLI Version", cliVersion},
+		{"➤ Project URL", projectURL},
+		{"➤ Build Date", builtDate},
+		{"➤ Build by", builtBy},
+		{"➤ Commit", commit},
+		{"➤ Commit Short", commitShort},
+		{"➤ Commit Branch", commitBranch},
+		{"➤ Go Version", goVersion},
+	})
+	versionTable.SetStyle(table.StyleColoredBright)
+	versionTable.Render()
+	pterm.Println()
 }
 
 // ShowVersion function - check detail flag and show the pretty details if enabled (`true`).
@@ -68,6 +82,11 @@ func ShowVersion(pretty bool) {
 	if pretty {
 		GetPrettyDetails()
 	} else {
-		fmt.Printf("loli version %s (%s)\n", cliVersion, builtDate)
+		pterm.Println()
+		pterm.DefaultHeader.
+			WithMargin(5).
+			WithBackgroundStyle(pterm.NewStyle(pterm.BgBlack)).
+			Printf("✨ %s version %s ✨\n\n  (%s)", cliName, cliVersion, builtDate)
+		pterm.Println()
 	}
 }

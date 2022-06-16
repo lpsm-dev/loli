@@ -8,6 +8,9 @@ import (
 	"github.com/spf13/cobra"
 )
 
+// excludeDesc description will not be added if true.
+var excludeDesc = false
+
 // completionCmd represents the completion command.
 var completionCmd = &cobra.Command{
 	Use:       "completion <shell>",
@@ -22,16 +25,22 @@ var completionCmd = &cobra.Command{
 	},
 	RunE: func(cmd *cobra.Command, args []string) error {
 		var shellType string = args[0]
-		rootCmd := cmd.Parent()
+		out, rootCmd := os.Stdout, cmd.Parent()
 		switch shellType {
 		case "bash":
-			return rootCmd.GenBashCompletion(os.Stdout)
+			return rootCmd.GenBashCompletionV2(out, !excludeDesc)
 		case "zsh":
-			return rootCmd.GenZshCompletion(os.Stdout)
+			if excludeDesc {
+				return rootCmd.GenZshCompletionNoDesc(out)
+			}
+			return rootCmd.GenZshCompletion(out)
 		case "powershell":
-			return rootCmd.GenPowerShellCompletion(os.Stdout)
+			if excludeDesc {
+				return rootCmd.GenPowerShellCompletion(out)
+			}
+			return rootCmd.GenPowerShellCompletionWithDesc(out)
 		case "fish":
-			return rootCmd.GenFishCompletion(os.Stdout, true)
+			return rootCmd.GenFishCompletion(out, !excludeDesc)
 		default:
 			return fmt.Errorf("unsupported shell type %q", shellType)
 		}
@@ -39,5 +48,6 @@ var completionCmd = &cobra.Command{
 }
 
 func init() {
-	RootCmd.AddCommand(completionCmd)
+	completionCmd.Flags().BoolVarP(&excludeDesc, "no-desc", "", false, "Do not include shell completion description")
+	rootCmd.AddCommand(completionCmd)
 }

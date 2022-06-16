@@ -48,5 +48,5 @@ func updateCLI(c cli.Updater) error {
 }
 
 func init() {
-	RootCmd.AddCommand(UpgradeCmd)
+	rootCmd.AddCommand(UpgradeCmd)
 }

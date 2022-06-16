@@ -4,6 +4,14 @@
 project_name: loli
 env:
   - GO111MODULE=on
+before:
+  hooks:
+    # Cleaning local assets
+    - make clean
+    # You may remove this if you don't use go modules.
+    - go mod tidy
+    # you may remove this if you don't need go generate
+    - go generate ./...
 release:
   github:
     owner: lpmatos
@@ -49,17 +57,9 @@ archives:
       - LICENSE
       - README.md
 snapshot:
-  name_template: "SNAPSHOT-{{ .Commit }}"
+  name_template: 'SNAPSHOT-{{ .Commit }}'
 checksum:
-  name_template: "{{ .ProjectName }}_v{{ .Version }}_SHA256SUMS"
+  name_template: '{{ .ProjectName }}_v{{ .Version }}_SHA256SUMS'
   algorithm: sha256
 changelog:
   skip: true
-dist: dist
-before:
-  hooks:
-    - make clean
-    - go generate ./...
-    - go mod download
-github_urls:
-  download: https://github.com

@@ -18,5 +18,5 @@ var SearchCmd = &cobra.Command{
 
 func init() {
 	SearchCmd.PersistentFlags().BoolVarP(&searchPretty, "pretty", "p", false, "Pretty output")
-	RootCmd.AddCommand(SearchCmd)
+	rootCmd.AddCommand(SearchCmd)
 }
