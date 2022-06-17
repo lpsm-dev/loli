@@ -8,8 +8,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// UpgradeCmd downloads and installs the most recent version of the CLI.
-var UpgradeCmd = &cobra.Command{
+var upgradeCmd = &cobra.Command{
 	Use:     "upgrade",
 	Aliases: []string{"u"},
 	Short:   "Upgrade to the latest version of the CLI.",
@@ -32,7 +31,6 @@ You can always delete this file.
 	},
 }
 
-// updateCLI updates CLI to the latest available version, if it is out of date.
 func updateCLI(c cli.Updater) error {
 	ok, err := c.IsUpToDate()
 	if err != nil {
@@ -48,5 +46,5 @@ func updateCLI(c cli.Updater) error {
 }
 
 func init() {
-	rootCmd.AddCommand(UpgradeCmd)
+	rootCmd.AddCommand(upgradeCmd)
 }

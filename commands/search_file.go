@@ -7,8 +7,7 @@ import (
 
 var animeFile string
 
-// SearchFileCmd represents the search command
-var SearchFileCmd = &cobra.Command{
+var searchFileCmd = &cobra.Command{
 	Use:   "file",
 	Short: "Search for the anime scene by existing image file",
 	Long:  ``,
@@ -18,7 +17,7 @@ var SearchFileCmd = &cobra.Command{
 }
 
 func init() {
-	SearchFileCmd.PersistentFlags().StringVarP(&animeFile, "file", "f", animeFile, "An anime image file")
-	SearchFileCmd.MarkFlagRequired("file")
-	SearchCmd.AddCommand(SearchFileCmd)
+	searchFileCmd.PersistentFlags().StringVarP(&animeFile, "file", "f", animeFile, "An anime image file")
+	searchFileCmd.MarkFlagRequired("file")
+	searchCmd.AddCommand(searchFileCmd)
 }

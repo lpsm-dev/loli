@@ -7,7 +7,7 @@ import (
 
 var short, full bool
 
-var VersionCmd = &cobra.Command{
+var versionCmd = &cobra.Command{
 	Use:     "version",
 	Aliases: []string{"v"},
 	Short:   "Version outputs the version of CLI",
@@ -22,7 +22,7 @@ var VersionCmd = &cobra.Command{
 }
 
 func init() {
-	VersionCmd.PersistentFlags().BoolVarP(&short, "short", "s", false, "Show short details about the current version of loli CLI")
-	VersionCmd.PersistentFlags().BoolVarP(&full, "full", "f", false, "Show full details about the current version of loli CLI")
-	rootCmd.AddCommand(VersionCmd)
+	versionCmd.PersistentFlags().BoolVarP(&short, "short", "s", false, "Show short details about the current version of loli CLI")
+	versionCmd.PersistentFlags().BoolVarP(&full, "full", "f", false, "Show full details about the current version of loli CLI")
+	rootCmd.AddCommand(versionCmd)
 }

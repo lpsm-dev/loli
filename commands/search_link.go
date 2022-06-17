@@ -7,8 +7,7 @@ import (
 
 var animeLink string
 
-// SearchLinkCmd represents the search command
-var SearchLinkCmd = &cobra.Command{
+var searchLinkCmd = &cobra.Command{
 	Use:   "link",
 	Short: "Search for the anime scene by existing image link",
 	Long:  ``,
@@ -18,7 +17,7 @@ var SearchLinkCmd = &cobra.Command{
 }
 
 func init() {
-	SearchLinkCmd.PersistentFlags().StringVarP(&animeLink, "url", "u", animeLink, "An anime image url")
-	SearchLinkCmd.MarkFlagRequired("link")
-	SearchCmd.AddCommand(SearchLinkCmd)
+	searchLinkCmd.PersistentFlags().StringVarP(&animeLink, "url", "u", animeLink, "An anime image url")
+	searchLinkCmd.MarkFlagRequired("link")
+	searchCmd.AddCommand(searchLinkCmd)
 }

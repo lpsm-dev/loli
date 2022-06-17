@@ -5,8 +5,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// SearchMeCmd represents the search command
-var SearchMeCmd = &cobra.Command{
+var searchMeCmd = &cobra.Command{
 	Use:   "usage",
 	Short: "Check the search quota and limit for your account (with API key) or IP address (without API key)",
 	Long:  ``,
@@ -16,5 +15,5 @@ var SearchMeCmd = &cobra.Command{
 }
 
 func init() {
-	SearchCmd.AddCommand(SearchMeCmd)
+	searchCmd.AddCommand(searchMeCmd)
 }

@@ -4,12 +4,9 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var (
-	searchPretty bool // Local flag - if true show more details about the search.
-)
+var searchPretty bool
 
-// SearchCmd represents the search command
-var SearchCmd = &cobra.Command{
+var searchCmd = &cobra.Command{
 	Use:     "search",
 	Aliases: []string{"find"},
 	Short:   "Perform the search for an anime",
@@ -17,6 +14,6 @@ var SearchCmd = &cobra.Command{
 }
 
 func init() {
-	SearchCmd.PersistentFlags().BoolVarP(&searchPretty, "pretty", "p", false, "Pretty output")
-	rootCmd.AddCommand(SearchCmd)
+	searchCmd.PersistentFlags().BoolVarP(&searchPretty, "pretty", "p", false, "Pretty output")
+	rootCmd.AddCommand(searchCmd)
 }

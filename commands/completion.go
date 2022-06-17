@@ -8,10 +8,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// excludeDesc description will not be added if true.
 var excludeDesc = false
 
-// completionCmd represents the completion command.
 var completionCmd = &cobra.Command{
 	Use:       "completion <shell>",
 	Short:     "Generate shell completion scripts",
