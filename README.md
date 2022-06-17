@@ -4,9 +4,9 @@
 
 <h2>✨ Loli CLI ✨</h2>
 
-[![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/lpmatos/loli)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://github.com/lpmatos/loli)
-[![GitHub repo size](https://img.shields.io/github/repo-size/lpmatos/loli)](https://github.com/lpmatos/loli)
+[![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/ci-monk/loli)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://github.com/ci-monk/loli)
+[![GitHub repo size](https://img.shields.io/github/repo-size/ci-monk/loli)](https://github.com/ci-monk/loli)
 
 ---
 
@@ -30,7 +30,7 @@
 If you want contribute on this project, first you need to make a **git clone**:
 
 >
-> 1. git clone --depth 1 <https://github.com/lpmatos/loli.git> -b main
+> 1. git clone --depth 1 <https://github.com/ci-monk/loli.git> -b main
 >
 
 This will give you access to the code on your **local machine**.
@@ -84,14 +84,14 @@ Example trace.moe response:
 ## ➤ Installation <a name = "installation"></a>
 
 ```bash
-go install github.com/lpmatos/loli/cmd/loli
+go install github.com/ci-monk/loli/cmd/loli
 
 # if you cannot install directly, try following command,
 # then input install command again
-go get -x -u github.com/lpmatos/loli/cmd/loli
+go get -x -u github.com/ci-monk/loli/cmd/loli
 ```
 
-Or use a binary from [releases](https://github.com/lpmatos/loli/releases/latest).
+Or use a binary from [releases](https://github.com/ci-monk/loli/releases/latest).
 
 ## ➤ Development with docker
 
@@ -176,15 +176,6 @@ Depending on what you are making, it can be a good idea to include screenshots o
 - https://img.olhardigital.com.br/wp-content/uploads/2021/07/Naruto-Classico-e-Naruto-Shippuden-fillers.jpg
 - https://images.plurk.com/32B15UXxymfSMwKGTObY5e.jpg
 
-## ➤ Author <a name = "author"></a>
-
-👤 Hey!! If you like this project or if you find some bugs feel free to contact me in my channels:
-
->
-> * Email: lpsm-dev@protonmail.com
-> * Linktree: https://linktr.ee/lpmatos
->
-
 ## ➤ Versioning <a name = "versioning"></a>
 
 To check the change history, please access the [**CHANGELOG.md**](CHANGELOG.md) file.
@@ -201,6 +192,6 @@ Give me a ⭐️ if this project helped you!
 
 <img alt="gif-header" src="https://www.icegif.com/wp-content/uploads/baby-yoda-bye-bye-icegif.gif" width="225px"/>
 
-Made with 💜 by [me](https://github.com/lpmatos) :wave: inspired on [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
+Made with 💜 by [me](https://github.com/ci-monk) :wave: inspired on [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
 
 </div>
