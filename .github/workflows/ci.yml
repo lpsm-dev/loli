@@ -24,7 +24,6 @@ jobs:
       continue-on-error: false
 
     - name: Hadolint
-      uses: hadolint/hadolint-action@v2.1.0
+      uses: reviewdog/action-hadolint@v1
       with:
-        dockerfile: Dockerfile
-        config: ${{ github.workspace }}/.github/config/.hadolint.yml
+        hadolint_flags: --config ${{ github.workspace }}/.github/config/.hadolint.yml
