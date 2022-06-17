@@ -1,5 +1,48 @@
 # Semantic Versioning Changelog
 
+## [1.11.0](https://github.com/ci-monk/loli/compare/v1.10.0...v1.11.0) (2022-06-17)
+
+
+### :sparkles: News
+
+* add gitpod ([748bb57](https://github.com/ci-monk/loli/commit/748bb579230e4a3f07bfd13080179392129d5a1f))
+
+
+### :memo: Docs
+
+* change readme image size ([532507e](https://github.com/ci-monk/loli/commit/532507ea12ee5780dccd126c3a1d6445bfbb975c))
+* fix gif size ([8c6ba68](https://github.com/ci-monk/loli/commit/8c6ba6877e5b308f98406595bf31ccdd8afdee8b))
+
+
+### :bug: Fix
+
+* api folder location ([8176f1b](https://github.com/ci-monk/loli/commit/8176f1bcf862c6b914e71f0e5493920a399ae3df))
+* ci, vars and config ([c1ad82e](https://github.com/ci-monk/loli/commit/c1ad82eedc1c6d008d7539fdfc5d2ef839a1ba8e))
+* conflicts pull ([cff5e54](https://github.com/ci-monk/loli/commit/cff5e54378bfabd534606d9acf951846c27ac82d))
+* **deps:** update module github.com/kyokomi/emoji/v2 to v2.2.9 ([b0f7717](https://github.com/ci-monk/loli/commit/b0f771735c33f1186bf8d2c14f014ebc1a3eef62))
+* **deps:** update module github.com/muesli/termenv to v0.12.0 ([b26966f](https://github.com/ci-monk/loli/commit/b26966fed6eac44a826da78efe5c6bf065f6c35c))
+* **deps:** update module github.com/pterm/pterm to v0.12.41 ([831dee2](https://github.com/ci-monk/loli/commit/831dee28b2df29ac5726839cc9d474544a7ab612))
+* **deps:** update module github.com/spf13/cobra to v1.4.0 ([ff9a0f9](https://github.com/ci-monk/loli/commit/ff9a0f9b6efd41d1a3fbcd39d8bda9474fec14c3))
+* docker ignore file ([826b755](https://github.com/ci-monk/loli/commit/826b755aaacb53ea73bd0d17e796878b4c205e99))
+* **dockerfile:** entrypoint and cmd ([daaf8fd](https://github.com/ci-monk/loli/commit/daaf8fdbdc593552a87f13fabc92d0a092315086))
+* general changes ([e8d443d](https://github.com/ci-monk/loli/commit/e8d443d9f2f144c2670dcf13b43d5601d54c8106))
+* go mod dependencies ([66629a0](https://github.com/ci-monk/loli/commit/66629a03057dde6a51c832f2de941f62416c1c6c))
+* pre commit setup ([d66e9b3](https://github.com/ci-monk/loli/commit/d66e9b334fccf75ec731a71bd856941b273baab7))
+* remove helpers internal and use only utils ([c766146](https://github.com/ci-monk/loli/commit/c766146361065f66db6d46cc23e07000da04e212))
+* remove travis and golang ci ([43209c7](https://github.com/ci-monk/loli/commit/43209c726b28e239b7bbd03fa9d786067f278b1a))
+* set config files ([47df44e](https://github.com/ci-monk/loli/commit/47df44e8999f72ce9398f8c63ccd96d786c4b74a))
+* setup config files ([8ec5adc](https://github.com/ci-monk/loli/commit/8ec5adcc5f0d35b8b2977f99941fa4e3546cfecc))
+* setup logrus formatter ([958943f](https://github.com/ci-monk/loli/commit/958943f0717b23ff1550cc87a54321b72a458d15))
+* version style, rootCmd variable and others ([76152c7](https://github.com/ci-monk/loli/commit/76152c768ab4c021538eaa574ef045a93b43dee6))
+
+
+### :repeat: CI
+
+* remove template grettings and rename stage ([2f1a7f8](https://github.com/ci-monk/loli/commit/2f1a7f8343d42db35e42d4bb22ae4ee30412cdd9))
+* rollback config hadolint ([a0c08b7](https://github.com/ci-monk/loli/commit/a0c08b76d1fef1731b7a49b525570dc8c0e03815))
+* setup gitleaks job ([3f1d025](https://github.com/ci-monk/loli/commit/3f1d025ed516a69bf4f0859b323130b9e34b4a7f))
+* setup hadolint ([b8d1c9b](https://github.com/ci-monk/loli/commit/b8d1c9b1919439a0881c7fa2383912c57a3363ca))
+
 ## [1.10.0](https://github.com/lpmatos/loli/compare/v1.9.1...v1.10.0) (2022-01-03)
 
 
