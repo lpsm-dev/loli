@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/lpmatos/loli/internal/constants"
+	"github.com/ci-monk/loli/internal/constants"
 	"github.com/spf13/cobra"
 )
 

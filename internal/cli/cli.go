@@ -13,10 +13,10 @@ import (
 	"strings"
 
 	"github.com/blang/semver"
+	"github.com/ci-monk/loli/internal/api"
+	"github.com/ci-monk/loli/internal/constants"
+	"github.com/ci-monk/loli/internal/log"
 	update "github.com/inconshreveable/go-update"
-	"github.com/lpmatos/loli/internal/api"
-	"github.com/lpmatos/loli/internal/constants"
-	"github.com/lpmatos/loli/internal/log"
 )
 
 var (

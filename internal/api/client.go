@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/lpmatos/loli/internal/constants"
-	"github.com/lpmatos/loli/internal/debug"
+	"github.com/ci-monk/loli/internal/constants"
+	"github.com/ci-monk/loli/internal/debug"
 )
 
 var (

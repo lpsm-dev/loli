@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/lpmatos/loli/internal/utils"
+	"github.com/ci-monk/loli/internal/utils"
 	"github.com/sirupsen/logrus"
 )
 

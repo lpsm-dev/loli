@@ -14,7 +14,7 @@ before:
     - go generate ./...
 release:
   github:
-    owner: lpmatos
+    owner: ci-monk
     name: loli
   name_template: "v{{.Version}}"
 builds:
@@ -41,7 +41,7 @@ builds:
     flags:
       - -trimpath
     ldflags:
-      - -s -w -X "github.com/lpmatos/loli/internal/version.cliVersion={{.Env.CLIENT_VERSION}}" -X "github.com/lpmatos/loli/internal/version.builtDate={{.CommitDate}}" -X "github.com/lpmatos/loli/internal/version.builtBy=goreleaser" -X "github.com/lpmatos/loli/internal/version.commit={{.Commit}}" -X "github.com/lpmatos/loli/internal/version.commitShort={{.ShortCommit}}" -X "github.com/lpmatos/loli/internal/version.commitBranch={{.Env.GIT_BRANCH}}" -X "github.com/lpmatos/loli/internal/version.goVersion={{.Env.GO_VERSION}}"
+      - -s -w -X "github.com/ci-monk/loli/internal/version.cliVersion={{.Env.CLIENT_VERSION}}" -X "github.com/ci-monk/loli/internal/version.builtDate={{.CommitDate}}" -X "github.com/ci-monk/loli/internal/version.builtBy=goreleaser" -X "github.com/ci-monk/loli/internal/version.commit={{.Commit}}" -X "github.com/ci-monk/loli/internal/version.commitShort={{.ShortCommit}}" -X "github.com/ci-monk/loli/internal/version.commitBranch={{.Env.GIT_BRANCH}}" -X "github.com/ci-monk/loli/internal/version.goVersion={{.Env.GO_VERSION}}"
 archives:
   - name_template: "{{.ProjectName}}_v{{.Version}}_{{.Os}}-{{.Arch}}"
     replacements:

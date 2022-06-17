@@ -1,10 +1,10 @@
 package commands
 
 import (
-	"github.com/lpmatos/loli/internal/constants"
-	"github.com/lpmatos/loli/internal/debug"
-	log "github.com/lpmatos/loli/internal/log"
-	"github.com/lpmatos/loli/internal/utils"
+	"github.com/ci-monk/loli/internal/constants"
+	"github.com/ci-monk/loli/internal/debug"
+	log "github.com/ci-monk/loli/internal/log"
+	"github.com/ci-monk/loli/internal/utils"
 	"github.com/spf13/cobra"
 )
 

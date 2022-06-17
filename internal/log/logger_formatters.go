@@ -1,7 +1,7 @@
 package log
 
 import (
-	"github.com/lpmatos/loli/internal/constants"
+	"github.com/ci-monk/loli/internal/constants"
 	"github.com/sirupsen/logrus"
 )
 

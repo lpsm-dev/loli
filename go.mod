@@ -1,4 +1,4 @@
-module github.com/lpmatos/loli
+module github.com/ci-monk/loli
 
 go 1.18
 

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/lpmatos/loli/internal/constants"
-	log "github.com/lpmatos/loli/internal/log"
-	"github.com/lpmatos/loli/internal/utils"
+	"github.com/ci-monk/loli/internal/constants"
+	log "github.com/ci-monk/loli/internal/log"
+	"github.com/ci-monk/loli/internal/utils"
 )
 
 var (

@@ -9,10 +9,10 @@ import (
 	"time"
 
 	"github.com/charmbracelet/glamour"
+	"github.com/ci-monk/loli/internal/constants"
 	"github.com/fatih/color"
 	"github.com/kyokomi/emoji/v2"
 	au "github.com/logrusorgru/aurora"
-	"github.com/lpmatos/loli/internal/constants"
 	"github.com/sirupsen/logrus"
 )
 

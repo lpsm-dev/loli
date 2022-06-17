@@ -9,7 +9,7 @@ import (
 	"net/http/httputil"
 	"os"
 
-	log "github.com/lpmatos/loli/internal/log"
+	log "github.com/ci-monk/loli/internal/log"
 )
 
 var (

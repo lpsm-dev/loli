@@ -3,8 +3,8 @@ package commands
 import (
 	"fmt"
 
-	"github.com/lpmatos/loli/internal/cli"
-	"github.com/lpmatos/loli/internal/version"
+	"github.com/ci-monk/loli/internal/cli"
+	"github.com/ci-monk/loli/internal/version"
 	"github.com/spf13/cobra"
 )
 

@@ -12,12 +12,12 @@ import (
 	"time"
 
 	"github.com/briandowns/spinner"
+	"github.com/ci-monk/loli/internal/constants"
+	log "github.com/ci-monk/loli/internal/log"
+	"github.com/ci-monk/loli/internal/types"
+	"github.com/ci-monk/loli/internal/utils"
 	"github.com/fatih/color"
 	"github.com/jedib0t/go-pretty/table"
-	"github.com/lpmatos/loli/internal/constants"
-	log "github.com/lpmatos/loli/internal/log"
-	"github.com/lpmatos/loli/internal/types"
-	"github.com/lpmatos/loli/internal/utils"
 	"github.com/muesli/termenv"
 )
 

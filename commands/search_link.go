@@ -1,7 +1,7 @@
 package commands
 
 import (
-	"github.com/lpmatos/loli/internal/trace"
+	"github.com/ci-monk/loli/internal/trace"
 	"github.com/spf13/cobra"
 )
 

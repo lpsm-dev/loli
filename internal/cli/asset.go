@@ -6,8 +6,8 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/lpmatos/loli/internal/constants"
-	"github.com/lpmatos/loli/internal/log"
+	"github.com/ci-monk/loli/internal/constants"
+	"github.com/ci-monk/loli/internal/log"
 )
 
 func (a *Asset) download() (*bytes.Reader, error) {
