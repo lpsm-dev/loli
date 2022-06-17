@@ -1,6 +1,6 @@
 <div align="center">
 
-<img alt="gif-header" src="https://c.tenor.com/PX2XATCduFcAAAAC/loli.gif" width="250px"/>
+<img alt="gif-header" src="https://c.tenor.com/PX2XATCduFcAAAAC/loli.gif" width="225"/>
 
 <h2>✨ Loli CLI ✨</h2>
 
@@ -10,7 +10,7 @@
 
 ---
 
-<img alt="pipelines" src="https://i.pinimg.com/originals/ce/26/14/ce2614ef4c70f04a2c578f972308f5b6.gif" width="325px"/>
+<img alt="pipelines" src="https://i.pinimg.com/originals/ce/26/14/ce2614ef4c70f04a2c578f972308f5b6.gif" width="300"/>
 
 <p>✨ Loli is a pretty CLI that search animes passing images or links using trace.moe API ✨</p>
 
@@ -188,7 +188,7 @@ To check the change history, please access the [**CHANGELOG.md**](CHANGELOG.md) 
 
 Give me a ⭐️ if this project helped you!
 
-<img alt="gif-header" src="https://www.icegif.com/wp-content/uploads/baby-yoda-bye-bye-icegif.gif" width="225px"/>
+<img alt="gif-header" src="https://www.icegif.com/wp-content/uploads/baby-yoda-bye-bye-icegif.gif" width="225"/>
 
 Made with 💜 by [me](https://github.com/ci-monk) :wave: inspired on [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
 
