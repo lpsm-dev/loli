@@ -97,24 +97,6 @@ install:
 	$(GO) install -x $(MAIN)
 	@echo ""
 
-.PHONY: lint
-lint:
-	@echo "==> Running lint..."
-	golint -set_exit_status ./...
-
-.PHONY: test
-test:
-	@echo "==> Running test..."
-	go test -v ./...
-
-.PHONY: misspell
-misspell:
-	@# misspell - Correct commonly misspelled English words in source files
-	@#    go get -u github.com/client9/misspell/cmd/misspell
-	@echo "==> Runnig misspell ..."
-	find . -name '*.go' -not -path './vendor/*' -not -path './_repos/*' | xargs misspell -error
-	@echo ""
-
 .PHONY: clean
 clean:
 	@echo "==> Cleaning..."
