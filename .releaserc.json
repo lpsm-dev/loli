@@ -1,7 +1,6 @@
 {
   "branches": [
-    "main",
-    { "name": "release", "prerelease": "rc" }
+    "main"
   ],
   "tagFormat": "v${version}",
   "plugins": [
