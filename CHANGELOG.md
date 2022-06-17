@@ -1,5 +1,26 @@
 # Semantic Versioning Changelog
 
+## [1.11.1](https://github.com/ci-monk/loli/compare/v1.11.0...v1.11.1) (2022-06-17)
+
+
+### :memo: Docs
+
+* add new topcis ([3b8582c](https://github.com/ci-monk/loli/commit/3b8582cbabfca890bb525f13b9cefef659825557))
+* readme setup ([9fe80ba](https://github.com/ci-monk/loli/commit/9fe80ba9b6a4ef58150286f6b2b9bdac8e4887a5))
+* remove badged ([e41cc6f](https://github.com/ci-monk/loli/commit/e41cc6f6c3db99c59a837e64f6ebfe3140e7b964))
+* size images ([2c8cbca](https://github.com/ci-monk/loli/commit/2c8cbcac79ec112a16b557d23dcb82e7c27ddad3))
+
+
+### :bug: Fix
+
+* call dependencies internal git repo name ([802fc0d](https://github.com/ci-monk/loli/commit/802fc0d5e9e5d934169b5fd676c2279c329376e2))
+* capture signals ([f48cad4](https://github.com/ci-monk/loli/commit/f48cad48e06e587a027f0bf73e8f2fd45354032a))
+* rename variable names ([3f816db](https://github.com/ci-monk/loli/commit/3f816db356a4a37c9929b323be5ec617e1fdda31))
+* rules goreleaser ([f72d9b4](https://github.com/ci-monk/loli/commit/f72d9b47fa5e1abefeb10082a9cf3e87a844097c))
+* semantic release rc rule ([d6175a0](https://github.com/ci-monk/loli/commit/d6175a01187d4ba4e674884a3d13c2836e5a04ac))
+* style docker-compose ([68244ec](https://github.com/ci-monk/loli/commit/68244ecd0ef445c9c4e91f3587a4341ad5492d0c))
+* type structure ([4fd1206](https://github.com/ci-monk/loli/commit/4fd1206c7ff16e65f782508081fdc76af406f592))
+
 ## [1.11.0](https://github.com/ci-monk/loli/compare/v1.10.0...v1.11.0) (2022-06-17)
 
 
