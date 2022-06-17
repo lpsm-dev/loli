@@ -10,7 +10,6 @@ import (
 	"github.com/muesli/termenv"
 )
 
-// catchInterrupt exits gracefully upon receiving a SIGINT (^C)
 func catchInterrupt(s *spinner.Spinner) {
 	sigs := make(chan os.Signal, 1)
 	signal.Notify(sigs, syscall.SIGINT)
@@ -20,6 +19,7 @@ func catchInterrupt(s *spinner.Spinner) {
 		s.FinalMSG = color.GreenString("👋 Bye!\n")
 		s.Stop()
 	}
+
 	termenv.ShowCursor()
 	os.Exit(0)
 }
