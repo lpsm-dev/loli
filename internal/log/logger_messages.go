@@ -7,7 +7,7 @@ import (
 	au "github.com/logrusorgru/aurora/v3"
 )
 
-// Debug function to print a pretty formatted log debug message.
+// Debug function to print a pretty formatted log debug message
 func Debug(args ...interface{}) {
 	logger.Debug(
 		au.BrightCyan(
@@ -16,7 +16,7 @@ func Debug(args ...interface{}) {
 	)
 }
 
-// Debugf function to print a pretty formatted log debug message.
+// Debugf function to print a pretty formatted log debug message
 func Debugf(format string, args ...interface{}) {
 	logger.Debugf(
 		"🆗 "+au.BrightCyan(format).
@@ -26,7 +26,7 @@ func Debugf(format string, args ...interface{}) {
 	)
 }
 
-// Debugln function to print a pretty formatted log debug message.
+// Debugln function to print a pretty formatted log debug message
 func Debugln(args ...interface{}) {
 	logger.Debugln(
 		au.BrightCyan(
@@ -35,7 +35,7 @@ func Debugln(args ...interface{}) {
 	)
 }
 
-// Info function to print a pretty formatted log info message.
+// Info function to print a pretty formatted log info message
 func Info(args ...interface{}) {
 	logger.Info(
 		au.Green(
@@ -44,7 +44,7 @@ func Info(args ...interface{}) {
 	)
 }
 
-// Infof function to print a pretty formatted log info message.
+// Infof function to print a pretty formatted log info message
 func Infof(format string, args ...interface{}) {
 	logger.Infof(
 		"✅ "+au.Green(format).
@@ -54,7 +54,7 @@ func Infof(format string, args ...interface{}) {
 	)
 }
 
-// Infoln function to print a pretty formatted log info message.
+// Infoln function to print a pretty formatted log info message
 func Infoln(args ...interface{}) {
 	logger.Infoln(
 		au.Green(
@@ -63,7 +63,7 @@ func Infoln(args ...interface{}) {
 	)
 }
 
-// Warn function to print a pretty formatted log warn message.
+// Warn function to print a pretty formatted log warn message
 func Warn(args ...interface{}) {
 	logger.Warn(
 		au.BrightYellow(
@@ -72,7 +72,7 @@ func Warn(args ...interface{}) {
 	)
 }
 
-// Warnf function to print a pretty formatted log warn message.
+// Warnf function to print a pretty formatted log warn message
 func Warnf(format string, args ...interface{}) {
 	logger.Warnf(
 		"😲 "+au.BrightYellow(format).
@@ -82,7 +82,7 @@ func Warnf(format string, args ...interface{}) {
 	)
 }
 
-// Warnln function to print a pretty formatted log warn message.
+// Warnln function to print a pretty formatted log warn message
 func Warnln(args ...interface{}) {
 	logger.Warnln(
 		au.BrightYellow(
@@ -91,7 +91,7 @@ func Warnln(args ...interface{}) {
 	)
 }
 
-// Error function to print a pretty formatted log error message.
+// Error function to print a pretty formatted log error message
 func Error(args ...interface{}) {
 	logger.Error(
 		au.BrightRed(
@@ -99,7 +99,7 @@ func Error(args ...interface{}) {
 		))
 }
 
-// Errorf function to print a pretty formatted log error message.
+// Errorf function to print a pretty formatted log error message
 func Errorf(format string, args ...interface{}) {
 	logger.Errorf(
 		"😡 "+au.BrightRed(format).
@@ -109,7 +109,7 @@ func Errorf(format string, args ...interface{}) {
 	)
 }
 
-// Errorln function to print a pretty formatted log error message.
+// Errorln function to print a pretty formatted log error message
 func Errorln(args ...interface{}) {
 	logger.Errorln(
 		au.BrightRed(
@@ -118,7 +118,7 @@ func Errorln(args ...interface{}) {
 	)
 }
 
-// Fatal function to print a pretty formatted log fatal message.
+// Fatal function to print a pretty formatted log fatal message
 func Fatal(args ...interface{}) {
 	logger.Fatal(
 		au.BrightRed(
@@ -126,7 +126,7 @@ func Fatal(args ...interface{}) {
 		))
 }
 
-// Fatalf function to print a pretty formatted log fatal message.
+// Fatalf function to print a pretty formatted log fatal message
 func Fatalf(format string, args ...interface{}) {
 	logger.Fatalf(
 		"🤬 "+au.BrightRed(format).
@@ -136,7 +136,7 @@ func Fatalf(format string, args ...interface{}) {
 	)
 }
 
-// Fatalln function to print a pretty formatted log fatal message.
+// Fatalln function to print a pretty formatted log fatal message
 func Fatalln(args ...interface{}) {
 	logger.Fatalln(
 		au.BrightRed(

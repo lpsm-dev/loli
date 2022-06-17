@@ -1,8 +1,6 @@
 package api
 
-import (
-	"net/http"
-)
+import "net/http"
 
 // Client struct - is an http client that is configured for API.
 type Client struct {

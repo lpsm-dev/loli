@@ -15,10 +15,10 @@ type options struct {
 	logger *logrus.Logger
 }
 
-// Option will configure a new logrus Logger.
+// Option will configure a new logrus Logger
 type Option func(*options) error
 
-// WithConfig takes the logger configuration and applies it.
+// WithConfig takes the logger configuration and applies it
 func WithConfig(cfg Config) Option {
 	var opts []Option
 
@@ -64,7 +64,7 @@ func WithFormatter(format string) Option {
 }
 
 // WithLogLevel is used to set the log level when defaulting to `info` is not
-// wanted. Other options are: `debug`, `info`, `warn` and `error`.
+// wanted. Other options are: `debug`, `info`, `warn` and `error`
 func WithLogLevel(level string, verbose bool) Option {
 	return func(opt *options) error {
 		logrusLevel, err := logrus.ParseLevel(level)
@@ -81,7 +81,7 @@ func WithLogLevel(level string, verbose bool) Option {
 }
 
 // WithOutputStr allows customization of the sink of the logger. Output is either:
-// `stdout`, `stderr`, or `file`.
+// `stdout`, `stderr`, or `file`
 func WithOutputStr(output, file string) Option {
 	opt := func(*options) error { return nil }
 
@@ -129,7 +129,7 @@ func WithOutputStr(output, file string) Option {
 	return opt
 }
 
-// WithOutput configures the writer used to write logs to.
+// WithOutput configures the writer used to write logs to
 func WithOutput(writer io.Writer) Option {
 	return func(opt *options) error {
 		opt.logger.Out = writer
@@ -137,7 +137,7 @@ func WithOutput(writer io.Writer) Option {
 	}
 }
 
-// WithSetReportCaller configures the logrus logger SetReportCaller.
+// WithSetReportCaller configures the logrus logger SetReportCaller
 func WithSetReportCaller(enable bool) Option {
 	return func(opt *options) error {
 		opt.logger.SetReportCaller(enable)

@@ -8,7 +8,7 @@ import (
 	"github.com/pterm/pterm"
 )
 
-// Default build-time variable. These variables are populated via the Go ldflags. This will be filled in by the compiler.
+// Default build-time variable. These variables are populated via the Go ldflags. This will be filled in by the compiler
 var (
 	cliName      = constants.BinaryName    // default name for this CLI
 	cliVersion   = "0.0.0"                 // value from VERSION file
@@ -26,7 +26,7 @@ func GetVersionFormatted() string {
 	return cliVersion
 }
 
-// GetShortDetails function - create a pretty table and parse this table with current version details.
+// GetShortDetails function - create a pretty table and parse this table with current version details
 func GetShortDetails() {
 	pterm.Println()
 	pterm.DefaultHeader.
@@ -50,7 +50,7 @@ func GetShortDetails() {
 	pterm.Println()
 }
 
-// GetPrettyDetails function - create a pretty table and parse this table with current version details.
+// GetPrettyDetails function - create a pretty table and parse this table with current version details
 func GetPrettyDetails() {
 	pterm.Println()
 	pterm.DefaultHeader.
@@ -77,7 +77,7 @@ func GetPrettyDetails() {
 	pterm.Println()
 }
 
-// ShowVersion function - check detail flag and show the pretty details if enabled (`true`).
+// ShowVersion function - check detail flag and show the pretty details if enabled (`true`)
 func ShowVersion(pretty bool) {
 	if pretty {
 		GetPrettyDetails()

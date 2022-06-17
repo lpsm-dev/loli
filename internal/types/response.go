@@ -1,13 +1,13 @@
 package types
 
-// AnimeTitle struct - information about the anime title.
+// AnimeTitle struct - information about the anime title
 type AnimeTitle struct {
 	Native  string `json:"native"`
 	Romaji  string `json:"romaji"`
 	English string `json:"english"`
 }
 
-// Anime struct - information about the anime passed in the request to trace.moe API.
+// Anime struct - information about the anime passed in the request to trace.moe API
 type Anime struct {
 	ID       int        `json:"id"`
 	IDMal    int        `json:"idMal"`
@@ -16,7 +16,7 @@ type Anime struct {
 	IsAdult  bool       `json:"isAdult"`
 }
 
-// Response struct - content of trace.moe API request result.
+// Response struct - content of trace.moe API request result
 type Response struct {
 	FrameCount int    `json:"frameCount"`
 	Error      string `json:"error"`
@@ -32,7 +32,7 @@ type Response struct {
 	} `json:"result"`
 }
 
-// UsageTraceMoe struct - content of request usage to trace moe.
+// UsageTraceMoe struct - content of request usage to trace moe
 type UsageTraceMoe struct {
 	ID          string `json:"id"`
 	Priority    int    `json:"priority"`

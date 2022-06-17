@@ -9,7 +9,7 @@ func applyOptions(opts []Option) *options {
 	return &o
 }
 
-// Setup returns a new logrus instance.
+// Setup returns a new logrus instance
 func Setup(opts ...Option) error {
 	conf := applyOptions(opts)
 	conf.logger.SetFormatter(conf.logger.Formatter)

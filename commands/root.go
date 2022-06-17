@@ -3,8 +3,8 @@ package commands
 import (
 	"github.com/lpmatos/loli/internal/constants"
 	"github.com/lpmatos/loli/internal/debug"
-	"github.com/lpmatos/loli/internal/helpers"
 	log "github.com/lpmatos/loli/internal/log"
+	"github.com/lpmatos/loli/internal/utils"
 	"github.com/spf13/cobra"
 )
 
@@ -42,7 +42,7 @@ func init() {
 	rootCmd.PersistentFlags().StringVar(&config.Level, "log-level", "debug", "set the logging level. One of: debug|info|warn|error")
 	rootCmd.PersistentFlags().StringVar(&config.Format, "log-format", "color", "the formating of the logs. Available values: text|color|json|json-pretty")
 	rootCmd.PersistentFlags().StringVar(&config.Output, "log-output", "stdout", "default log output. Available values: stdout|stderr|file")
-	rootCmd.PersistentFlags().StringVar(&config.File, "log-file", helpers.CreateLogFile("/var/log/loli", "file"), "defaulting Loli CLI log file")
+	rootCmd.PersistentFlags().StringVar(&config.File, "log-file", utils.CreateLogFile("/var/log/loli", "file"), "defaulting Loli CLI log file")
 	rootCmd.PersistentFlags().BoolVarP(&config.Verbose, "verbose", "v", false, "verbose output")
 	rootCmd.PersistentFlags().IntP("timeout", "t", 0, "override the default HTTP timeout (seconds)")
 }

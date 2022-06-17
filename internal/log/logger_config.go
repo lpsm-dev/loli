@@ -1,6 +1,6 @@
 package log
 
-// Config defines all the configurable options for the logrus logger.
+// Config defines all the configurable options for the logrus logger
 type Config struct {
 	Level   string
 	Format  string
@@ -9,7 +9,7 @@ type Config struct {
 	Verbose bool
 }
 
-// SetDefault set default values for logrus logger configurable options.
+// SetDefault set default values for logrus logger configurable options
 func (config *Config) SetDefault(level, formater, output, file string, verbose bool) {
 	config.Level = level
 	config.Format = formater

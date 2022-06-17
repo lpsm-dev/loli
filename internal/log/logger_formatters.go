@@ -5,7 +5,7 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-// Configure the logrus format to use "text" formatter.
+// Configure the logrus format to use "text" formatter
 func textFormatter() *logrus.TextFormatter {
 	return &logrus.TextFormatter{
 		DisableColors:             true,
@@ -17,7 +17,7 @@ func textFormatter() *logrus.TextFormatter {
 	}
 }
 
-// Configure the logrus format to use "color" formatter.
+// Configure the logrus format to use "color" formatter
 func colorFormatter() *logrus.TextFormatter {
 	return &logrus.TextFormatter{
 		DisableColors:             false,
@@ -29,7 +29,7 @@ func colorFormatter() *logrus.TextFormatter {
 	}
 }
 
-// Configure the logrus format to use "json" formatter.
+// Configure the logrus format to use "json" formatter
 func jsonFormatter(pretty bool) *logrus.JSONFormatter {
 	return &logrus.JSONFormatter{
 		TimestampFormat:  constants.DefaultTimestampFormat,

@@ -15,9 +15,9 @@ import (
 	"github.com/fatih/color"
 	"github.com/jedib0t/go-pretty/table"
 	"github.com/lpmatos/loli/internal/constants"
-	"github.com/lpmatos/loli/internal/helpers"
 	log "github.com/lpmatos/loli/internal/log"
 	"github.com/lpmatos/loli/internal/types"
+	"github.com/lpmatos/loli/internal/utils"
 	"github.com/muesli/termenv"
 )
 
@@ -75,21 +75,21 @@ func SearchAnimeByLink(animeLink string, pretty bool) {
 		versionTable.SetOutputMirror(os.Stdout)
 		versionTable.AppendHeader(table.Row{"Info", "Content"})
 		versionTable.AppendRows([]table.Row{
-			{"📊 Similarity", helpers.AnimeSimilarity(fmt.Sprintf("%f", animeResp.Result[0].Similarity))},
+			{"📊 Similarity", utils.AnimeSimilarity(fmt.Sprintf("%f", animeResp.Result[0].Similarity))},
 			{"🌸 Title Native", animeResp.Result[0].Anilist.Title.Native},
 			{"🗽 Title English", animeResp.Result[0].Anilist.Title.English},
 			{"🗻 Title Romaji", animeResp.Result[0].Anilist.Title.Romaji},
 			{"📺 Episode Number", color.MagentaString(strconv.Itoa(animeResp.Result[0].Episode))},
-			{"😈 Is Adult", helpers.AnimeIsAdult(animeResp.Result[0].Anilist.IsAdult)},
+			{"😈 Is Adult", utils.AnimeIsAdult(animeResp.Result[0].Anilist.IsAdult)},
 		})
 		versionTable.SetStyle(table.StyleColoredBlueWhiteOnBlack)
 		versionTable.Render()
 	} else {
-		fmt.Println("📊 Similarity: " + helpers.AnimeSimilarity(fmt.Sprintf("%f", animeResp.Result[0].Similarity)))
+		fmt.Println("📊 Similarity: " + utils.AnimeSimilarity(fmt.Sprintf("%f", animeResp.Result[0].Similarity)))
 		fmt.Println("🌸 Title Native: " + animeResp.Result[0].Anilist.Title.Native)
 		fmt.Println("🗽 Title English: " + animeResp.Result[0].Anilist.Title.English)
 		fmt.Println("🗻 Title Romaji: " + animeResp.Result[0].Anilist.Title.Romaji)
 		fmt.Println("📺 Episode Number: " + color.MagentaString(strconv.Itoa(animeResp.Result[0].Episode)))
-		fmt.Println("😈 Is Adult: " + helpers.AnimeIsAdult(animeResp.Result[0].Anilist.IsAdult))
+		fmt.Println("😈 Is Adult: " + utils.AnimeIsAdult(animeResp.Result[0].Anilist.IsAdult))
 	}
 }
