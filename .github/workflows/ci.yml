@@ -16,9 +16,11 @@ jobs:
         fetch-depth: 0
 
     - name: Secret Detection
-      uses: zricethezav/gitleaks-action@fd822c19c822326224ff07fadec08a3446f051f3
-      with:
-        config-path: ${{ github.workspace }}/.github/config/.gitleaks.toml
+      uses: gitleaks/gitleaks-action@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITLEAKS_CONFIG: ${{ github.workspace }}/.github/config/.gitleaks.toml
+        GITLEAKS_ENABLE_COMMENTS: true
       continue-on-error: false
 
     - name: Hadolint
