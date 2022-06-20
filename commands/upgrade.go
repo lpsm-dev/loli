@@ -38,7 +38,7 @@ func updateCLI(c cli.Updater) error {
 	}
 
 	if ok {
-		fmt.Println("\nYour CLI is update.")
+		fmt.Println("\n🎊 Your CLI is update 🎊")
 		return nil
 	}
 
