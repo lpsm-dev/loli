@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/blang/semver v3.5.1+incompatible
-	github.com/briandowns/spinner v1.18.1
+	github.com/briandowns/spinner v1.19.0
 	github.com/charmbracelet/glamour v0.5.0
 	github.com/fatih/color v1.13.0
 	github.com/inconshreveable/go-update v0.0.0-20160112193335-8152e7eb6ccf
