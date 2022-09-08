@@ -10,7 +10,7 @@ require (
 	github.com/inconshreveable/go-update v0.0.0-20160112193335-8152e7eb6ccf
 	github.com/jedib0t/go-pretty v4.3.0+incompatible
 	github.com/kyokomi/emoji/v2 v2.2.9
-	github.com/logrusorgru/aurora v2.0.3+incompatible
+	github.com/logrusorgru/aurora/v3 v3.0.0
 	github.com/logrusorgru/aurora/v3 v3.0.0
 	github.com/muesli/termenv v0.12.0
 	github.com/pterm/pterm v0.12.42
