@@ -27,4 +27,4 @@ jobs:
       uses: hadolint/hadolint-action@v2.1.0
       with:
         dockerfile: Dockerfile
-        config: ${{ github.workspace }}/.github/config/.hadolint.yml
+        config: ${{ github.workspace }}/.github/config/.hadolint.yaml
