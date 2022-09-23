@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.11.3](https://github.com/ci-monk/loli/compare/v1.11.2...v1.11.3) (2022-09-23)
+
+
+### :bug: Fix
+
+* golang call version ([52736c0](https://github.com/ci-monk/loli/commit/52736c01bc39c83d2b9743278ace4285952c2f38))
+
 ## [1.11.2](https://github.com/ci-monk/loli/compare/v1.11.1...v1.11.2) (2022-09-23)
 
 
