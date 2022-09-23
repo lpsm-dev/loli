@@ -117,3 +117,13 @@ func AnimeIsAdult(isAdult bool) string {
 	}
 	return fmt.Sprint(color.RedString("false"))
 }
+
+// ShowHeader pretty print header information
+func ShowHeader() {
+	outputRender, err := RenderMarkdown(consts.Welcome)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error render glamour markdow: %v\n", err)
+		os.Exit(1)
+	}
+	fmt.Print(outputRender)
+}

@@ -41,9 +41,7 @@ var (
 const Welcome = `
 Hello there, fellow coders 🤖!
 
-If you want access this repository, copy this [link](https://github.com/lpmatos/loli).
-
-Bye! 👋👋👋
+If you want access this repository, copy this [link](https://github.com/lpmatos/loli). 👋
 `
 
 // CompletionHelpMessage - return the long description of completion command.

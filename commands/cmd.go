@@ -2,31 +2,18 @@ package commands
 
 import (
 	"fmt"
-	"io"
+	"os"
 
-	"github.com/ci-monk/loli/internal/consts"
-	log "github.com/ci-monk/loli/internal/log"
 	"github.com/ci-monk/loli/internal/utils"
-)
-
-var (
-	// Out is used to write to information.
-	Out io.Writer
-	// Err is used to write errors.
-	Err io.Writer
 )
 
 // Execute adds all child commands to the root command and sets flags appropriately.
 // This is called by loli main(). It only needs to happen once to the rootCmd.
 func Execute() {
-	outputRender, err := utils.RenderMarkdown(consts.Welcome)
-	if err != nil {
-		log.Fatal("Render glamour markdown")
-	}
-
-	fmt.Print(outputRender)
+	utils.ShowHeader()
 
 	if err := rootCmd.Execute(); err != nil {
-		log.Fatal("Error while executing RootCmd")
+		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
+		os.Exit(1)
 	}
 }
