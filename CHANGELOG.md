@@ -1,5 +1,27 @@
 # Semantic Versioning Changelog
 
+## [1.11.2](https://github.com/ci-monk/loli/compare/v1.11.1...v1.11.2) (2022-09-23)
+
+
+### :repeat: CI
+
+* change config file hadolint call ([da8154e](https://github.com/ci-monk/loli/commit/da8154ebfcfda99820c1fac285de7867f1e048d1))
+
+
+### :bug: Fix
+
+* change cli is update message ([0d12dc6](https://github.com/ci-monk/loli/commit/0d12dc6974780975b906c50e7ab1082238e377db))
+* constant, cmd and utils ([15258f8](https://github.com/ci-monk/loli/commit/15258f88c2d4d945e9f9aad470c0805e5c092dec))
+* **deps:** update module github.com/briandowns/spinner to v1.19.0 ([224c6e0](https://github.com/ci-monk/loli/commit/224c6e002610381a0103ee6263c5ee84bf6e0995))
+* **deps:** update module github.com/kyokomi/emoji/v2 to v2.2.10 ([17bf155](https://github.com/ci-monk/loli/commit/17bf15554b63ed070243d97bd1fb646af1dbbdec))
+* **deps:** update module github.com/muesli/termenv to v0.13.0 ([2d96c7b](https://github.com/ci-monk/loli/commit/2d96c7b4fb9be12914e9ec8a2370a22c711539bc))
+* **deps:** update module github.com/pterm/pterm to v0.12.42 ([05a4473](https://github.com/ci-monk/loli/commit/05a4473b6ee00fa9afabc176ad297f4a9a5b1628))
+* **deps:** update module github.com/pterm/pterm to v0.12.46 ([9b4bea9](https://github.com/ci-monk/loli/commit/9b4bea98900a750cf2173984d783c4870781b287))
+* **deps:** update module github.com/sirupsen/logrus to v1.9.0 ([f3ea3ec](https://github.com/ci-monk/loli/commit/f3ea3ec824a7f69d857de8ce5ccb078ee9e4d5ff))
+* **deps:** update module github.com/spf13/cobra to v1.5.0 ([13dac17](https://github.com/ci-monk/loli/commit/13dac179d7783c5f3ed31efe8a08f08b20ab06ee))
+* general configs ([ea19f4d](https://github.com/ci-monk/loli/commit/ea19f4df5434ed819ddae028f55b500c9ddec37b))
+* rename const folder, change search args and others ([63d4b42](https://github.com/ci-monk/loli/commit/63d4b42aa1b47da7590cf5d0484054218f1eb18e))
+
 ## [1.11.1](https://github.com/ci-monk/loli/compare/v1.11.0...v1.11.1) (2022-06-17)
 
 
