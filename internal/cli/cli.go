@@ -14,7 +14,7 @@ import (
 
 	"github.com/blang/semver"
 	"github.com/ci-monk/loli/internal/api"
-	"github.com/ci-monk/loli/internal/constants"
+	"github.com/ci-monk/loli/internal/consts"
 	"github.com/ci-monk/loli/internal/log"
 	update "github.com/inconshreveable/go-update"
 )
@@ -133,7 +133,7 @@ func (c *CLI) Upgrade() error {
 func (c *CLI) fetchLatestRelease() error {
 	log.Debug("Fetch latest release")
 
-	latestReleaseURL := fmt.Sprintf("%s/%s", constants.ReleaseURL, "latest")
+	latestReleaseURL := fmt.Sprintf("%s/%s", consts.ReleaseURL, "latest")
 	resp, err := api.HTTPClient.Get(latestReleaseURL)
 	if err != nil {
 		return err
@@ -193,7 +193,7 @@ func extractBinary(source *bytes.Reader, os string) (binary io.ReadCloser, err e
 				return nil, err
 			}
 
-			tmpfile, err := ioutil.TempFile("", fmt.Sprintf("temp-%s", constants.ProjectURL))
+			tmpfile, err := ioutil.TempFile("", fmt.Sprintf("temp-%s", consts.ProjectURL))
 			if err != nil {
 				return nil, err
 			}

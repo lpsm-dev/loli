@@ -1,7 +1,7 @@
 package commands
 
 import (
-	"github.com/ci-monk/loli/internal/constants"
+	"github.com/ci-monk/loli/internal/consts"
 	"github.com/ci-monk/loli/internal/debug"
 	log "github.com/ci-monk/loli/internal/log"
 	"github.com/ci-monk/loli/internal/utils"
@@ -11,7 +11,7 @@ import (
 var config = log.Config{}
 
 var rootCmd = &cobra.Command{
-	Use:   constants.BinaryName,
+	Use:   consts.BinaryName,
 	Short: "Find the anime scene by image using your terminal",
 	Long: `Description:
 
@@ -33,7 +33,7 @@ var rootCmd = &cobra.Command{
 		}
 
 		if timeout, _ := cmd.Flags().GetInt("timeout"); timeout > 0 {
-			constants.TimeoutInSeconds = timeout
+			consts.TimeoutInSeconds = timeout
 		}
 	},
 }

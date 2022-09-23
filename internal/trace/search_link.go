@@ -12,7 +12,7 @@ import (
 	"time"
 
 	"github.com/briandowns/spinner"
-	"github.com/ci-monk/loli/internal/constants"
+	"github.com/ci-monk/loli/internal/consts"
 	log "github.com/ci-monk/loli/internal/log"
 	"github.com/ci-monk/loli/internal/types"
 	"github.com/ci-monk/loli/internal/utils"
@@ -23,7 +23,7 @@ import (
 
 // SearchAnimeByLink function
 func SearchAnimeByLink(animeLink string, pretty bool) {
-	searchURL := constants.TraceMoeSearchAnimeByLink
+	searchURL := consts.TraceMoeSearchAnimeByLink
 	log.Info(searchURL)
 
 	fullURL := searchURL + animeLink

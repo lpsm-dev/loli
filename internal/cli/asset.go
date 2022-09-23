@@ -6,12 +6,12 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/ci-monk/loli/internal/constants"
+	"github.com/ci-monk/loli/internal/consts"
 	"github.com/ci-monk/loli/internal/log"
 )
 
 func (a *Asset) download() (*bytes.Reader, error) {
-	downloadReleaseURL := fmt.Sprintf("%s/assets/%d", constants.ReleaseURL, a.ID)
+	downloadReleaseURL := fmt.Sprintf("%s/assets/%d", consts.ReleaseURL, a.ID)
 	log.Debug(downloadReleaseURL)
 
 	request, err := http.NewRequest("GET", downloadReleaseURL, nil)

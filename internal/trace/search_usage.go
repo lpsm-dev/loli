@@ -8,7 +8,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/ci-monk/loli/internal/constants"
+	"github.com/ci-monk/loli/internal/consts"
 	log "github.com/ci-monk/loli/internal/log"
 	"github.com/ci-monk/loli/internal/types"
 	"github.com/fatih/color"
@@ -17,7 +17,7 @@ import (
 
 // SearchUsage function
 func SearchUsage(pretty bool) {
-	searchURL := constants.TraceMoeUsage
+	searchURL := consts.TraceMoeUsage
 	log.Infoln(searchURL)
 
 	resp, error := http.Get(searchURL)

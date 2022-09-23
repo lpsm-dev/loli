@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/ci-monk/loli/internal/constants"
+	"github.com/ci-monk/loli/internal/consts"
 	"github.com/ci-monk/loli/internal/debug"
 )
 
@@ -15,7 +15,7 @@ var (
 	// HTTPClient variable - is the client used to make HTTP calls in loli cli.
 	// For more information: https://medium.com/@nate510/don-t-use-go-s-default-http-client-4804cb19f779
 	HTTPClient = &http.Client{
-		Timeout: time.Duration(constants.TimeoutInSeconds) * time.Second,
+		Timeout: time.Duration(consts.TimeoutInSeconds) * time.Second,
 		Transport: &http.Transport{
 			Proxy: http.ProxyFromEnvironment,
 			DialContext: (&net.Dialer{
@@ -29,7 +29,7 @@ var (
 			TLSHandshakeTimeout:   10 * time.Second,
 			ExpectContinueTimeout: 1 * time.Second,
 			TLSClientConfig: &tls.Config{
-				InsecureSkipVerify: constants.InsecureSkipVerify,
+				InsecureSkipVerify: consts.InsecureSkipVerify,
 			},
 		},
 	}
@@ -54,7 +54,7 @@ func (c *Client) NewRequest(method, url string, body io.Reader) (*http.Request, 
 		return nil, error
 	}
 
-	req.Header.Set("User-Agent", constants.UserAgent)
+	req.Header.Set("User-Agent", consts.UserAgent)
 
 	if c.ContentType == "" {
 		req.Header.Set("Content-Type", "application/json")

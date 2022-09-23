@@ -1,7 +1,7 @@
 package log
 
 import (
-	"github.com/ci-monk/loli/internal/constants"
+	"github.com/ci-monk/loli/internal/consts"
 	"github.com/sirupsen/logrus"
 )
 
@@ -12,7 +12,7 @@ func textFormatter() *logrus.TextFormatter {
 		ForceColors:               true,
 		EnvironmentOverrideColors: true,
 		FullTimestamp:             true,
-		TimestampFormat:           constants.DefaultTimestampFormat,
+		TimestampFormat:           consts.DefaultTimestampFormat,
 		DisableLevelTruncation:    true,
 	}
 }
@@ -24,7 +24,7 @@ func colorFormatter() *logrus.TextFormatter {
 		ForceColors:               true,
 		EnvironmentOverrideColors: true,
 		FullTimestamp:             true,
-		TimestampFormat:           constants.DefaultTimestampFormat,
+		TimestampFormat:           consts.DefaultTimestampFormat,
 		DisableLevelTruncation:    true,
 	}
 }
@@ -32,7 +32,7 @@ func colorFormatter() *logrus.TextFormatter {
 // Configure the logrus format to use "json" formatter
 func jsonFormatter(pretty bool) *logrus.JSONFormatter {
 	return &logrus.JSONFormatter{
-		TimestampFormat:  constants.DefaultTimestampFormat,
+		TimestampFormat:  consts.DefaultTimestampFormat,
 		DisableTimestamp: false,
 		PrettyPrint:      pretty,
 	}

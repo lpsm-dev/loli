@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ci-monk/loli/internal/constants"
+	"github.com/ci-monk/loli/internal/consts"
 	"github.com/spf13/cobra"
 )
 
@@ -13,7 +13,7 @@ var excludeDesc = false
 var completionCmd = &cobra.Command{
 	Use:       "completion <shell>",
 	Short:     "Generate shell completion scripts",
-	Long:      constants.CompletionHelpMessage,
+	Long:      consts.CompletionHelpMessage,
 	ValidArgs: []string{"bash", "zsh", "fish", "powershell"},
 	Args: func(cmd *cobra.Command, args []string) error {
 		if cobra.ExactArgs(1)(cmd, args) != nil || cobra.OnlyValidArgs(cmd, args) != nil {

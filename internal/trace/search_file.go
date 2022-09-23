@@ -14,7 +14,7 @@ import (
 	"time"
 
 	"github.com/briandowns/spinner"
-	"github.com/ci-monk/loli/internal/constants"
+	"github.com/ci-monk/loli/internal/consts"
 	log "github.com/ci-monk/loli/internal/log"
 	"github.com/ci-monk/loli/internal/types"
 	"github.com/ci-monk/loli/internal/utils"
@@ -25,7 +25,7 @@ import (
 
 // SearchAnimeByFile function
 func SearchAnimeByFile(animeFile string, pretty bool) {
-	searchURL := constants.TraceMoeSearchAnimeByFile
+	searchURL := consts.TraceMoeSearchAnimeByFile
 	log.Infoln(searchURL)
 
 	termenv.HideCursor()

@@ -5,19 +5,16 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var animeLink string
-
 var searchLinkCmd = &cobra.Command{
 	Use:   "link",
+	Args:  cobra.MinimumNArgs(1),
 	Short: "Search for the anime scene by existing image link",
 	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
-		trace.SearchAnimeByLink(animeLink, searchPretty)
+		trace.SearchAnimeByLink(args[0], searchPretty)
 	},
 }
 
 func init() {
-	searchLinkCmd.PersistentFlags().StringVarP(&animeLink, "url", "u", animeLink, "An anime image url")
-	searchLinkCmd.MarkFlagRequired("link")
 	searchCmd.AddCommand(searchLinkCmd)
 }

@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/charmbracelet/glamour"
-	"github.com/ci-monk/loli/internal/constants"
+	"github.com/ci-monk/loli/internal/consts"
 	"github.com/fatih/color"
 	"github.com/kyokomi/emoji/v2"
 	au "github.com/logrusorgru/aurora"
@@ -88,7 +88,7 @@ func CreateLogFile(logdir, logfile string) string {
 			".pid"+
 			pid+
 			"."+
-			time.Now().Format(constants.DefaultTimestampFormat)+
+			time.Now().Format(consts.DefaultTimestampFormat)+
 			".log",
 	)
 }

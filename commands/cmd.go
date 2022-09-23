@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ci-monk/loli/internal/constants"
+	"github.com/ci-monk/loli/internal/consts"
 	log "github.com/ci-monk/loli/internal/log"
 	"github.com/ci-monk/loli/internal/utils"
 )
@@ -19,7 +19,7 @@ var (
 // Execute adds all child commands to the root command and sets flags appropriately.
 // This is called by loli main(). It only needs to happen once to the rootCmd.
 func Execute() {
-	outputRender, err := utils.RenderMarkdown(constants.Welcome)
+	outputRender, err := utils.RenderMarkdown(consts.Welcome)
 	if err != nil {
 		log.Fatal("Render glamour markdown")
 	}
