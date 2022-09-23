@@ -1,6 +1,6 @@
 module github.com/ci-monk/loli
 
-go 1.19
+go 1.18
 
 require (
 	github.com/blang/semver v3.5.1+incompatible
@@ -14,7 +14,7 @@ require (
 	github.com/logrusorgru/aurora/v3 v3.0.0
 	github.com/muesli/termenv v0.13.0
 	github.com/pterm/pterm v0.12.46
-	github.com/sirupsen/logrus v1.9.0
+	github.com/sirupsen/logrus v1.8.1
 	github.com/spf13/cobra v1.5.0
 )
 
@@ -23,7 +23,6 @@ require (
 	atomicgo.dev/keyboard v0.2.8 // indirect
 	github.com/alecthomas/chroma v0.10.0 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d // indirect
-	github.com/atomicgo/cursor v0.0.1 // indirect
 	github.com/aymanbagabas/go-osc52 v1.0.3 // indirect
 	github.com/aymerick/douceur v0.2.0 // indirect
 	github.com/containerd/console v1.0.3 // indirect
