@@ -7,16 +7,21 @@ repos:
       - id: trailing-whitespace
       - id: end-of-file-fixer
   - repo: https://github.com/zricethezav/gitleaks
-    rev: v8.8.7
+    rev: v8.13.0
     hooks:
       - id: gitleaks
         args: ["--config", ".github/config/.gitleaks.toml", "--verbose"]
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v2.27.1
+    rev: v2.35.0
     hooks:
       - id: commitizen
         stages: [commit-msg]
-  - repo: https://github.com/hadolint/hadolint.git
+  - repo: https://github.com/hadolint/hadolint
     rev: v2.10.0
     hooks:
       - id: hadolint
+        args: ["--config", ".github/config/.hadolint.yaml"]
+  - repo: https://github.com/lirantal/anti-trojan-source
+    rev: v1.4.0
+    hooks:
+      - id: anti-trojan-source
