@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+## [1.13.1](https://github.com/ci-monk/loli/compare/v1.13.0...v1.13.1) (2022-09-24)
+
+
+### :repeat: CI
+
+* add args ([d40e192](https://github.com/ci-monk/loli/commit/d40e1927e7cbb33080ad656f0d10473352fe52d7))
+* gh tokens in semantic release ([a3047bd](https://github.com/ci-monk/loli/commit/a3047bd210eacc3677e4362f56c02a6f03e8120c))
+
 ## [1.13.0](https://github.com/ci-monk/loli/compare/v1.12.7...v1.13.0) (2022-09-24)
 
 
