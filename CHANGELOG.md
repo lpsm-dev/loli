@@ -1,5 +1,14 @@
 # Semantic Versioning Changelog
 
+## [1.12.6](https://github.com/ci-monk/loli/compare/v1.12.5...v1.12.6) (2022-09-24)
+
+
+### :bug: Fix
+
+* gitignore file ([6672fcc](https://github.com/ci-monk/loli/commit/6672fcc8be108b94c1799ddccb47c4ae506bac29))
+* home brew setup ([59c982e](https://github.com/ci-monk/loli/commit/59c982edf1600be746b54427463ca598f931a684))
+* remove formula folder ([31303af](https://github.com/ci-monk/loli/commit/31303af5d8245a740f807f3bc5074c96f49c3ada))
+
 ## [1.12.5](https://github.com/ci-monk/loli/compare/v1.12.4...v1.12.5) (2022-09-24)
 
 
