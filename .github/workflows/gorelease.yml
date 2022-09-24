@@ -1,0 +1,60 @@
+name: GoRelease
+
+on:
+  create:
+    tags:
+      - v*.*.*
+
+jobs:
+  release:
+    name: GoReleaser
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3.0.2
+      with:
+        fetch-depth: 0
+
+    - name: Get Details
+      id: get_details
+      run: |
+        echo ::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}
+        echo ::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}
+        echo ::set-output name=SOURCE_TAG::$(git tag --sort=committerdate | tail -1)
+        echo ::set-output name=GOVERSION::$(cat .go-version)
+
+    - name: List tags
+      run: |
+        git tag --list
+
+    - name: Show variables
+      run: |
+        echo $SOURCE_NAME
+        echo $SOURCE_BRANCH
+        echo $SOURCE_TAG
+      env:
+        SOURCE_NAME: ${{ steps.get_details.outputs.SOURCE_NAME }}
+        SOURCE_BRANCH: ${{ steps.get_details.outputs.SOURCE_BRANCH }}
+        SOURCE_TAG: ${{ steps.get_details.outputs.SOURCE_TAG }}
+
+    - name: Set up Go
+      uses: actions/setup-go@v3
+      with:
+        go-version: ${{ steps.get_details.outputs.GOVERSION }}
+
+    - name: Run GoReleaser
+      uses: goreleaser/goreleaser-action@v3
+      with:
+        args: release --rm-dist
+      env:
+        CLIENT_VERSION: ${{ steps.get_details.outputs.SOURCE_TAG }}
+        GO_VERSION: ${{ steps.get_details.outputs.GOVERSION }}
+        GORELEASER_CURRENT_TAG: ${{ steps.get_details.outputs.SOURCE_TAG }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        GIT_BRANCH: ${{ steps.get_details.outputs.SOURCE_BRANCH }}
+
+    - name: Upload assets
+      uses: actions/upload-artifact@v3
+      with:
+        name: loli
+        path: dist/*
