@@ -63,6 +63,8 @@ changelog:
 brews:
   - name: loli
     homepage: "https://github.com/ci-monk/loli"
+    description: "Install Loli CLI with brew and find animes passing images"
+    license: "MIT"
     tap:
       owner: ci-monk
       name: homebrew-tools
