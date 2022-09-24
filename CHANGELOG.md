@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.12.5](https://github.com/ci-monk/loli/compare/v1.12.4...v1.12.5) (2022-09-24)
+
+
+### :bug: Fix
+
+* goreleaser config ([c6921c4](https://github.com/ci-monk/loli/commit/c6921c4f86643b42abde5fbf6af6cdf182829109))
+
 ## [1.12.4](https://github.com/ci-monk/loli/compare/v1.12.3...v1.12.4) (2022-09-24)
 
 
