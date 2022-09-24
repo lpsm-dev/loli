@@ -54,5 +54,6 @@ jobs:
         CLIENT_VERSION: ${{ steps.get_details.outputs.SOURCE_TAG }}
         GO_VERSION: ${{ steps.get_details.outputs.GOVERSION }}
         GORELEASER_CURRENT_TAG: ${{ steps.get_details.outputs.SOURCE_TAG }}
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         GIT_BRANCH: ${{ steps.get_details.outputs.SOURCE_BRANCH }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

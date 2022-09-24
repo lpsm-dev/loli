@@ -33,5 +33,7 @@ jobs:
     - name: Release
       run: npx semantic-release
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        CI: true
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       if: github.event.inputs.git-ref == 'main'
