@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.12.1](https://github.com/ci-monk/loli/compare/v1.12.0...v1.12.1) (2022-09-24)
+
+
+### :repeat: CI
+
+* **issue-#132:** add upload assets ([c1018dd](https://github.com/ci-monk/loli/commit/c1018dd2ac791502f7d2e99beab4c084d7f01f8e)), closes [issue-#132](https://github.com/ci-monk/issue-/issues/132)
+
 ## [1.12.0](https://github.com/ci-monk/loli/compare/v1.11.3...v1.12.0) (2022-09-24)
 
 
