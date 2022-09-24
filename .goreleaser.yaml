@@ -65,4 +65,4 @@ brews:
       owner: ci-monk
       name: loli
     homepage: "https://github.com/ci-monk/loli"
-    url_template: "https://github.com/ci-monk/loli/releases/download/{{.ProjectName}}_v{{.Version}}_{{.Os}}-{{.Arch}}"
+    folder: Formula
