@@ -1,5 +1,14 @@
 # Semantic Versioning Changelog
 
+## [1.12.3](https://github.com/ci-monk/loli/compare/v1.12.2...v1.12.3) (2022-09-24)
+
+
+### :repeat: CI
+
+* **issue-#132:** add new workflow to gorelease ([4ced8c5](https://github.com/ci-monk/loli/commit/4ced8c58927eaf124af5eb4c46f161d93ee3de36)), closes [issue-#132](https://github.com/ci-monk/issue-/issues/132)
+* **issue-#132:** setup call job ([7b79559](https://github.com/ci-monk/loli/commit/7b795590dc53e79fabafb51dde2d8d541224b1dc)), closes [issue-#132](https://github.com/ci-monk/issue-/issues/132)
+* **issue-#132:** style call jobs ([83b316b](https://github.com/ci-monk/loli/commit/83b316bb46e1d246d03aae3588e13bf9e77f8d62)), closes [issue-#132](https://github.com/ci-monk/issue-/issues/132)
+
 ## [1.12.2](https://github.com/ci-monk/loli/compare/v1.12.1...v1.12.2) (2022-09-24)
 
 
