@@ -76,9 +76,7 @@ yarn-error.log*
 # vendor/
 
 ### Go Patch ###
-/vendor/
-/Godeps/
-/bin/
-/dist/
-
+vendor/
+Godeps/
+bin/
 dist/
