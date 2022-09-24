@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.12.0](https://github.com/ci-monk/loli/compare/v1.11.3...v1.12.0) (2022-09-24)
+
+
+### :sparkles: News
+
+* add brew setup in goreleaser ([e719594](https://github.com/ci-monk/loli/commit/e7195947ec19a78d1496643bbf06a0cad1345793))
+
 ## [1.11.3](https://github.com/ci-monk/loli/compare/v1.11.2...v1.11.3) (2022-09-23)
 
 
