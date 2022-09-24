@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.12.7](https://github.com/ci-monk/loli/compare/v1.12.6...v1.12.7) (2022-09-24)
+
+
+### :bug: Fix
+
+* package.json rules ([2cc76a1](https://github.com/ci-monk/loli/commit/2cc76a16dcdb06a7dabf116a00741996b002baae))
+
 ## [1.12.6](https://github.com/ci-monk/loli/compare/v1.12.5...v1.12.6) (2022-09-24)
 
 
