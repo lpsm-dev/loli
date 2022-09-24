@@ -60,3 +60,13 @@ release:
   name_template: "v{{.Version}}"
 changelog:
   skip: true
+brews:
+  - name: loli
+    tap:
+      owner: loli
+      name: homebrew-tap
+    folder: Formula
+    url_template: "https://github.com/ci-monk/loli/releases/download/{{.ProjectName}}_v{{.Version}}_{{.Os}}-{{.Arch}}"
+    homepage: "https://github.com/ci-monk/loli"
+    install: |
+      bin.install "loli"
