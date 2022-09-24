@@ -1,5 +1,18 @@
 # Semantic Versioning Changelog
 
+## [1.12.4](https://github.com/ci-monk/loli/compare/v1.12.3...v1.12.4) (2022-09-24)
+
+
+### :bug: Fix
+
+* brew goreleaser ([9176aa7](https://github.com/ci-monk/loli/commit/9176aa7c36424bab8b8cd4ec4401b1e8205b85ef))
+* brew tap name ([5a7213f](https://github.com/ci-monk/loli/commit/5a7213fd79cf6868dc1ef581c3a64d56605c187e))
+
+
+### :repeat: CI
+
+* remove template ([7c62069](https://github.com/ci-monk/loli/commit/7c62069ff1dd37f781280b8f4887ebd9d5414cba))
+
 ## [1.12.3](https://github.com/ci-monk/loli/compare/v1.12.2...v1.12.3) (2022-09-24)
 
 
