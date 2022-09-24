@@ -61,8 +61,12 @@ release:
 changelog:
   skip: true
 brews:
-  - tap:
-      owner: ci-monk
-      name: loli
+  - name: loli
     homepage: "https://github.com/ci-monk/loli"
-    folder: Formula
+    tap:
+      owner: ci-monk
+      name: homebrew-tools
+    folder: formula
+    commit_author:
+      name: ci-monk
+      email: ci-monk@protonmail.com
