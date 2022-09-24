@@ -32,6 +32,8 @@ If you want contribute on this project, first you need to make a **git clone**:
 
 This will give you access to the code on your **local machine**.
 
+with `go`
+
 ## ➤ Installation <a name = "installation"></a>
 
 ```bash
@@ -40,6 +42,13 @@ go install github.com/ci-monk/loli/cmd/loli
 # if you cannot install directly, try following command,
 # then input install command again
 go get -x -u github.com/ci-monk/loli/cmd/loli
+```
+
+with `brew`
+
+```
+brew tap ci-monk/tools
+brew install loli
 ```
 
 Or use a binary from [releases](https://github.com/ci-monk/loli/releases/latest).
