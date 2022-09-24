@@ -1,5 +1,24 @@
 # Semantic Versioning Changelog
 
+## [1.13.0](https://github.com/ci-monk/loli/compare/v1.12.7...v1.13.0) (2022-09-24)
+
+
+### :memo: Docs
+
+* install with brew ([2d01ebe](https://github.com/ci-monk/loli/commit/2d01ebeaf53df9d81d58981765b167ac2d52a680))
+
+
+### :bug: Fix
+
+* dockerfile setup ([d178d78](https://github.com/ci-monk/loli/commit/d178d78c2ebaae76e280fae8e7e49d9e1679527c))
+* gitignore file ([347eae0](https://github.com/ci-monk/loli/commit/347eae099a0b389c53a8faeead1b4467c733584a))
+
+
+### :sparkles: News
+
+* add desc and license in goreleaser brew ([a8d1bf8](https://github.com/ci-monk/loli/commit/a8d1bf856f70fdddd1fbd8b95f4ad4bae312dc5d))
+* add goreleaser ([278ac11](https://github.com/ci-monk/loli/commit/278ac11b6be8c6b41f46487f75bcff354e90651f))
+
 ## [1.12.7](https://github.com/ci-monk/loli/compare/v1.12.6...v1.12.7) (2022-09-24)
 
 
