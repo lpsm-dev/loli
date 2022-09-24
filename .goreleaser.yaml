@@ -3,11 +3,8 @@ env:
   - GO111MODULE=on
 before:
   hooks:
-    # Cleaning local assets
     - make clean
-    # You may remove this if you don't use go modules.
     - go mod tidy
-    # you may remove this if you don't need go generate
     - go generate ./...
 builds:
   - id: loli
