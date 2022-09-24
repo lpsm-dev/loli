@@ -62,7 +62,7 @@ changelog:
   skip: true
 brews:
   - tap:
-      owner: loli
-      name: tap
+      owner: ci-monk
+      name: loli
     homepage: "https://github.com/ci-monk/loli"
     url_template: "https://github.com/ci-monk/loli/releases/download/{{.ProjectName}}_v{{.Version}}_{{.Os}}-{{.Arch}}"
