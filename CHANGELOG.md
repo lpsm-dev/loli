@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.12.2](https://github.com/ci-monk/loli/compare/v1.12.1...v1.12.2) (2022-09-24)
+
+
+### :repeat: CI
+
+* **issue-#132:** change script args go release ([fb64cd5](https://github.com/ci-monk/loli/commit/fb64cd5016c2f6fc37c8df3479c373d05fb893db)), closes [issue-#132](https://github.com/ci-monk/issue-/issues/132)
+
 ## [1.12.1](https://github.com/ci-monk/loli/compare/v1.12.0...v1.12.1) (2022-09-24)
 
 
