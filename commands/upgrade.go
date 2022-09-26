@@ -2,9 +2,14 @@ package commands
 
 import (
 	"fmt"
+	"os/exec"
+	"path/filepath"
+	"strings"
 
 	"github.com/ci-monk/loli/internal/cli"
 	"github.com/ci-monk/loli/internal/version"
+	"github.com/cli/safeexec"
+	"github.com/kardianos/osext"
 	"github.com/spf13/cobra"
 )
 
@@ -22,10 +27,18 @@ The next time you upgrade, the hidden file will be overwritten.
 You can always delete this file.
 	`,
 	RunE: func(cmd *cobra.Command, args []string) error {
-		c := cli.New(version.GetVersionFormatted())
-		err := updateCLI(c)
-		if err != nil {
-			return fmt.Errorf("we were not able to upgrade the cli because we encountered an error: %s", err)
+		loliBinary, _ := osext.Executable()
+		isHomebrew := isUnderHomebrew(loliBinary)
+
+		if isHomebrew {
+			fmt.Printf("To upgrade, run: %s\n", "brew upgrade gh")
+			return nil
+		} else {
+			c := cli.New(version.GetVersionFormatted())
+			err := updateCLI(c)
+			if err != nil {
+				return fmt.Errorf("we were not able to upgrade the cli because we encountered an error: %s", err)
+			}
 		}
 		return nil
 	},
@@ -43,6 +56,21 @@ func updateCLI(c cli.Updater) error {
 	}
 
 	return c.Upgrade()
+}
+
+func isUnderHomebrew(binary string) bool {
+	brewExe, err := safeexec.LookPath("brew")
+	if err != nil {
+		return false
+	}
+
+	brewPrefixBytes, err := exec.Command(brewExe, "--prefix").Output()
+	if err != nil {
+		return false
+	}
+
+	brewBinPrefix := filepath.Join(strings.TrimSpace(string(brewPrefixBytes)), "bin") + string(filepath.Separator)
+	return strings.HasPrefix(binary, brewBinPrefix)
 }
 
 func init() {
