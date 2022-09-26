@@ -15,7 +15,7 @@ require (
 	github.com/logrusorgru/aurora v2.0.3+incompatible
 	github.com/logrusorgru/aurora/v3 v3.0.0
 	github.com/muesli/termenv v0.13.0
-	github.com/pterm/pterm v0.12.46
+	github.com/pterm/pterm v0.12.47
 	github.com/sirupsen/logrus v1.8.1
 	github.com/spf13/cobra v1.5.0
 )
@@ -32,7 +32,7 @@ require (
 	github.com/go-openapi/errors v0.20.2 // indirect
 	github.com/go-openapi/strfmt v0.21.2 // indirect
 	github.com/go-stack/stack v1.8.1 // indirect
-	github.com/gookit/color v1.5.0 // indirect
+	github.com/gookit/color v1.5.2 // indirect
 	github.com/gorilla/css v1.0.0 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/lithammer/fuzzysearch v1.1.5 // indirect
