@@ -1,5 +1,17 @@
 # Semantic Versioning Changelog
 
+## [1.14.0](https://github.com/ci-monk/loli/compare/v1.13.1...v1.14.0) (2022-09-26)
+
+
+### :sparkles: News
+
+* add check brewn upgrade ([13eac32](https://github.com/ci-monk/loli/commit/13eac3296a8903d32aba46df5ea55a0d562c2621))
+
+
+### :bug: Fix
+
+* **deps:** update module github.com/pterm/pterm to v0.12.47 ([e2e54c1](https://github.com/ci-monk/loli/commit/e2e54c11c56b1cf165c2f5c2c09f56724e9aa34d))
+
 ## [1.13.1](https://github.com/ci-monk/loli/compare/v1.13.0...v1.13.1) (2022-09-24)
 
 
