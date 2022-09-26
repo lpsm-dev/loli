@@ -31,7 +31,7 @@ You can always delete this file.
 		isHomebrew := isUnderHomebrew(loliBinary)
 
 		if isHomebrew {
-			fmt.Printf("To upgrade, run: %s\n", "brew upgrade gh")
+			fmt.Printf("To upgrade, run: %s\n", "brew upgrade loli")
 			return nil
 		} else {
 			c := cli.New(version.GetVersionFormatted())
