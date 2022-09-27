@@ -34,7 +34,7 @@ This will give you access to the code on your **local machine**.
 
 ## ➤ Installation <a name = "installation"></a>
 
-with `go`
+with `go`:
 
 ```bash
 go install github.com/ci-monk/loli/cmd/loli
@@ -44,9 +44,9 @@ go install github.com/ci-monk/loli/cmd/loli
 go get -x -u github.com/ci-monk/loli/cmd/loli
 ```
 
-with `brew`
+with `brew`:
 
-```
+```bash
 brew tap ci-monk/tools
 brew install loli
 ```
