@@ -100,10 +100,6 @@ Example trace.moe response:
 }
 ```
 
-## ➤ Demo <a name = "demo"></a>
-
-https://user-images.githubusercontent.com/58797390/192595643-a27003a5-d0ba-4abf-b8bb-19f449398190.mov
-
 ## ➤ Learning <a name = "learning"></a>
 
 In this process, I gained experiences in the following topics regarding the Go language:
@@ -120,6 +116,10 @@ In this process, I gained experiences in the following topics regarding the Go l
 - ✔️ Use variable injection at build time.
 - ✔️ Use conditional in compilation and build tags.
 - ✔️ How to build CLI using Go
+
+## ➤ Demo <a name = "demo"></a>
+
+https://user-images.githubusercontent.com/58797390/192595643-a27003a5-d0ba-4abf-b8bb-19f449398190.mov
 
 ## ➤ Links <a name = "links"></a>
 
