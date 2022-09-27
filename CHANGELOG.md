@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+## [1.14.1](https://github.com/ci-monk/loli/compare/v1.14.0...v1.14.1) (2022-09-27)
+
+
+### :bug: Fix
+
+* brew cli name ([f7be5f0](https://github.com/ci-monk/loli/commit/f7be5f0833f53983973867d40fa0d1f6ae65f344))
+* goreleaser setup ([01104c6](https://github.com/ci-monk/loli/commit/01104c6581e6df3471107a11f8d94650c3dc85d6))
+
 ## [1.14.0](https://github.com/ci-monk/loli/compare/v1.13.1...v1.14.0) (2022-09-26)
 
 
