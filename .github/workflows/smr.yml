@@ -27,6 +27,10 @@ jobs:
         node-version: 'lts/*'
       if: github.event.inputs.git-ref == 'main'
 
+    - name: Copy rules
+      run: |
+        cp .github/config/.releaserc.json .
+
     - name: Install dependencies
       run: npm install
       if: github.event.inputs.git-ref == 'main'
@@ -36,5 +40,4 @@ jobs:
       env:
         CI: true
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       if: github.event.inputs.git-ref == 'main'
