@@ -32,6 +32,10 @@ git clone --depth 1 https://github.com/ci-monk/loli.git -b main
 
 This will give you access to the code on your **local machine**.
 
+## ➤ Description <a name = "description"></a>
+
+This **CLI** is intended to be a code lab and best practices for creating a project ready to receive community builds, while introducing the basics for creating a **CLI** tool in **Go** and the standardization of conventions for the development workflow.
+
 ## ➤ Installation <a name = "installation"></a>
 
 with `go`:
@@ -52,10 +56,6 @@ brew install loli
 ```
 
 or use a binary from [releases](https://github.com/ci-monk/loli/releases/latest).
-
-## ➤ Description <a name = "description"></a>
-
-This **CLI** is intended to be a code lab and best practices for creating a project ready to receive community builds, while introducing the basics for creating a **CLI** tool in **Go** and the standardization of conventions for the development workflow.
 
 ## ➤ Learning <a name = "learning"></a>
 
