@@ -50,22 +50,44 @@ snapshot:
 checksum:
   name_template: "{{ .ProjectName }}_v{{ .Version }}_SHA256SUMS"
   algorithm: sha256
+changelog:
+  skip: true
+brews:
+  - name: loli
+
+    tap:
+      owner: ci-monk
+      branch: main
+      name: homebrew-tools
+
+    folder: formula
+
+    commit_author:
+      name: ci-monk
+      email: ci-monk@protonmail.com
+
+    commit_msg_template: "feat: brew formula update for {{ .ProjectName }} version {{ .Tag }}"
+    homepage: "https://github.com/ci-monk/loli"
+    description: "Install Loli CLI with brew and find animes passing images"
+    license: "MIT"
 release:
   github:
     owner: ci-monk
     name: loli
   name_template: "v{{.Version}}"
-changelog:
-  skip: true
-brews:
-  - name: loli
-    homepage: "https://github.com/ci-monk/loli"
-    description: "Install Loli CLI with brew and find animes passing images"
-    license: "MIT"
-    tap:
-      owner: ci-monk
-      name: homebrew-tools
-    folder: formula
-    commit_author:
-      name: ci-monk
-      email: ci-monk@protonmail.com
+  header: |
+    To update:
+
+    ```
+    loli update
+    ```
+
+    ## What's new?
+
+  footer: |
+
+    **Full Changelog**: https://github.com/ci-monk/loli/compare/{{ .PreviousTag }}...{{ .Tag }}
+
+    ---
+
+    Bugs? Suggestions? [Open an issue](https://github.com/ci-monk/loli/issues/new/choose)
