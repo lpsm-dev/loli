@@ -101,6 +101,11 @@ loli file anime.jpg
 ```bash
 loli link https://anime.com/image.png
 ```
+
+## ➤ Demo <a name = "demo"></a>
+
+https://user-images.githubusercontent.com/58797390/148670421-fce972b2-8c13-4358-95ae-cd5ee6ac4d69.mov
+
 ## ➤ Learning <a name = "learning"></a>
 
 In this process, I gained experiences in the following topics regarding the Go language:

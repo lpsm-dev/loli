@@ -21,7 +21,3 @@ repos:
     hooks:
       - id: hadolint
         args: ["--config", ".github/config/.hadolint.yaml"]
-  - repo: https://github.com/lirantal/anti-trojan-source
-    rev: v1.4.0
-    hooks:
-      - id: anti-trojan-source
