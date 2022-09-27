@@ -15,6 +15,8 @@
 
 <p>
   <a href="#getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#install">Install</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#usage">Usage</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#versioning">Versioning</a>
 </p>
 
@@ -36,7 +38,7 @@ This will give you access to the code on your **local machine**.
 
 This **CLI** is intended to be a code lab and best practices for creating a project ready to receive community builds, while introducing the basics for creating a **CLI** tool in **Go** and the standardization of conventions for the development workflow.
 
-## ➤ Installation <a name = "installation"></a>
+## ➤ Install <a name = "install"></a>
 
 with `go`:
 
