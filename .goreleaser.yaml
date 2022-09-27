@@ -52,6 +52,7 @@ checksum:
   algorithm: sha256
 changelog:
   skip: true
+
 brews:
   - name: loli
 
@@ -70,6 +71,7 @@ brews:
     homepage: "https://github.com/ci-monk/loli"
     description: "Install Loli CLI with brew and find animes passing images"
     license: "MIT"
+
 release:
   github:
     owner: ci-monk
