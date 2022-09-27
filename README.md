@@ -104,7 +104,7 @@ loli link https://anime.com/image.png
 
 ## ➤ Demo <a name = "demo"></a>
 
-https://github.com/ci-monk/loli/blob/0cf35c477993d8bddaf41ee5e42ec0d4a6c71a07/.github/assets/demo.mov
+https://user-images.githubusercontent.com/58797390/192595643-a27003a5-d0ba-4abf-b8bb-19f449398190.mov
 
 ## ➤ Learning <a name = "learning"></a>
 
