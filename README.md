@@ -27,7 +27,7 @@
 If you want contribute on this project, first you need to make a **git clone**:
 
 ```bash
-git clone --depth 1 <https://github.com/ci-monk/loli.git> -b main
+git clone --depth 1 https://github.com/ci-monk/loli.git -b main
 ```
 
 This will give you access to the code on your **local machine**.
@@ -51,7 +51,7 @@ brew tap ci-monk/tools
 brew install loli
 ```
 
-Or use a binary from [releases](https://github.com/ci-monk/loli/releases/latest).
+or use a binary from [releases](https://github.com/ci-monk/loli/releases/latest).
 
 ## ➤ Description <a name = "description"></a>
 
