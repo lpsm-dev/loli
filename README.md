@@ -36,29 +36,6 @@ This will give you access to the code on your **local machine**.
 
 This **CLI** is intended to be a code lab and best practices for creating a project ready to receive community builds, while introducing the basics for creating a **CLI** tool in **Go** and the standardization of conventions for the development workflow.
 
-## ➤ Installation <a name = "installation"></a>
-
-with `go`:
-
-```bash
-go install github.com/ci-monk/loli/cmd/loli
-
-# if you cannot install directly, try following command,
-# then input install command again
-go get -x -u github.com/ci-monk/loli/cmd/loli
-```
-
-with `brew`:
-
-```bash
-brew tap ci-monk/tools
-brew install loli
-```
-
-or use a binary from [releases](https://github.com/ci-monk/loli/releases/latest).
-
-## ➤ Trace.moe <a name = "trace.moe"></a>
-
 Example trace.moe response:
 
 ```json
@@ -85,6 +62,27 @@ Example trace.moe response:
   ]
 }
 ```
+
+## ➤ Installation <a name = "installation"></a>
+
+with `go`:
+
+```bash
+go install github.com/ci-monk/loli/cmd/loli
+
+# if you cannot install directly, try following command,
+# then input install command again
+go get -x -u github.com/ci-monk/loli/cmd/loli
+```
+
+with `brew`:
+
+```bash
+brew tap ci-monk/tools
+brew install loli
+```
+
+or use a binary from [releases](https://github.com/ci-monk/loli/releases/latest).
 
 ## ➤ Usage <a name = "usage"></a>
 
