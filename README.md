@@ -90,16 +90,16 @@ Example trace.moe response:
 
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
-### Get Anime By Image File
+### Get anime with a file
 
 ```bash
-loli file anime.jpg
+loli search file anime.jpg
 ```
 
-### Get Anime By Image Link
+### Get anime with a link
 
 ```bash
-loli link https://anime.com/image.png
+loli search link https://anime.com/image.png
 ```
 
 ## ➤ Demo <a name = "demo"></a>
