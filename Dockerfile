@@ -1,5 +1,11 @@
 FROM golang:1.19.1-alpine3.15 as builder
-RUN apk add --no-cache alpine-sdk=1.0-r1
-WORKDIR /build
-COPY [ ".", "." ]
-RUN make build
+WORKDIR /app
+COPY go.mod go.sum ./
+RUN go mod download
+COPY . .
+RUN CGO_ENABLED=0 go build -o loli ./cmd/loli/main.go
+
+FROM alpine:3.15
+WORKDIR /app
+COPY --from=builder /app/loli ./
+ENTRYPOINT [ "/app/loli" ]
