@@ -1,5 +1,25 @@
 # Semantic Versioning Changelog
 
+## [1.14.2](https://github.com/ci-monk/loli/compare/v1.14.1...v1.14.2) (2022-09-27)
+
+
+### :memo: Docs
+
+* change readme ([6cdf142](https://github.com/ci-monk/loli/commit/6cdf142fb5c8521f40425cd47e77eb958231cc19))
+* rename chars ([93f7465](https://github.com/ci-monk/loli/commit/93f7465dfffe0afca875b72c0ea577393fcc177b))
+* resize value ([43687e8](https://github.com/ci-monk/loli/commit/43687e83eaa859e39557b571678c3539a25f60cd))
+
+
+### :bug: Fix
+
+* remove root files ([6a6e93b](https://github.com/ci-monk/loli/commit/6a6e93b0907d29c912dcfc34daf6c9c088b056bc))
+* upgrade golang to 1.19 ([b7f459f](https://github.com/ci-monk/loli/commit/b7f459f2700cbd7b028ca73c14cf234459bdc523))
+
+
+### :repeat: CI
+
+* change semantic release rules path ([c2691b8](https://github.com/ci-monk/loli/commit/c2691b8dc62ceac515c3ffef4ea9dc86e583fabd))
+
 ## [1.14.1](https://github.com/ci-monk/loli/compare/v1.14.0...v1.14.1) (2022-09-27)
 
 
