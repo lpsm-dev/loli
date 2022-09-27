@@ -103,43 +103,6 @@ Example trace.moe response:
 }
 ```
 
-## ➤ Development with docker
-
-
-Estágios para buidar a imagem Docker:
-
-<details><summary>🐋 Build</summary>
-<p>
-
-Docker commands to build your image:
-
-```bash
-docker image build -t <IMAGE_NAME> -f <PATH_DOCKERFILE> <PATH_CONTEXT_DOCKERFILE>
-docker image build -t <IMAGE_NAME> . (This context)
-```
-</p>
-</details>
-
-<details><summary>🐋 Run</summary>
-<p>
-
-Docker commands to run a container with your image:
-
-* **Linux** running:
-
-```bash
-docker container run -d -p <LOCAL_PORT:CONTAINER_PORT> <IMAGE_NAME> <COMMAND>
-docker container run -it --rm --name <CONTAINER_NAME> -p <LOCAL_PORT:CONTAINER_PORT> <IMAGE_NAME> <COMMAND>
-```
-
-* **Windows** running:
-
-```bash
-winpty docker.exe container run -it --rm <IMAGE_NAME> <COMMAND>
-```
-</p>
-</details>
-
 ## ➤ Usage <a name = "usage"></a>
 
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
