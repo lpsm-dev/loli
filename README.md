@@ -9,7 +9,7 @@
 
 ---
 
-<img alt="pipelines" src="https://i.pinimg.com/originals/ce/26/14/ce2614ef4c70f04a2c578f972308f5b6.gif" width="300"/>
+<img alt="pipelines" src="https://i.pinimg.com/originals/ce/26/14/ce2614ef4c70f04a2c578f972308f5b6.gif" width="250"/>
 
 <p>✨ Loli is a pretty CLI that search animes passing images or links using trace.moe API ✨</p>
 
