@@ -57,23 +57,6 @@ brew install loli
 
 or use a binary from [releases](https://github.com/ci-monk/loli/releases/latest).
 
-## ➤ Learning <a name = "learning"></a>
-
-In this process, I gained experiences in the following topics regarding the Go language:
-
-- ✔️ Discover internal Go packages like: `os`, `string` and `fmt`.
-- ✔️ Discover the `github.com/spf13/cobra` CLI library.
-- ✔️ Create commands and subcommands for your CLI.
-- ✔️ Read flags and arguments from your commands and subcommands.
-- ✔️ Discover the `github.com/spf13/viper` configuration library.
-- ✔️ Read and write a configuration file.
-- ✔️ Put the `snake` and the `viper` to work together.
-- ✔️ Read environment variables.
-- ✔️ Discover the `github.com/sirupsen/logrus` log library.
-- ✔️ Use variable injection at build time.
-- ✔️ Use conditional in compilation and build tags.
-- ✔️ How to build CLI using Go
-
 ## ➤ Trace.moe <a name = "trace.moe"></a>
 
 Example trace.moe response:
@@ -142,6 +125,23 @@ Depending on what you are making, it can be a good idea to include screenshots o
 <p align="center">
   <img alt="logo" src=".github/docs/assets/find_by_link_pretty.PNG"/>
 </p>
+
+## ➤ Learning <a name = "learning"></a>
+
+In this process, I gained experiences in the following topics regarding the Go language:
+
+- ✔️ Discover internal Go packages like: `os`, `string` and `fmt`.
+- ✔️ Discover the `github.com/spf13/cobra` CLI library.
+- ✔️ Create commands and subcommands for your CLI.
+- ✔️ Read flags and arguments from your commands and subcommands.
+- ✔️ Discover the `github.com/spf13/viper` configuration library.
+- ✔️ Read and write a configuration file.
+- ✔️ Put the `snake` and the `viper` to work together.
+- ✔️ Read environment variables.
+- ✔️ Discover the `github.com/sirupsen/logrus` log library.
+- ✔️ Use variable injection at build time.
+- ✔️ Use conditional in compilation and build tags.
+- ✔️ How to build CLI using Go
 
 ## ➤ Links <a name = "links"></a>
 
