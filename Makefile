@@ -39,6 +39,13 @@ endif
 GO 		:= go
 GOOS   	:= $(shell go env GOOS)
 GOARCH 	:= $(shell go env GOARCH)
+ifeq (,$(shell go env GOBIN))
+GOBIN=$(shell go env GOPATH)/bin
+else
+GOBIN=$(shell go env GOBIN)
+endif
+
+GOLANGCILINT_VERSION ?= v1.46.2
 
 # NOTE: '-race' requires cgo; enable cgo by setting CGO_ENABLED=1
 BUILD_FLAG	:= -race
@@ -68,11 +75,14 @@ help:
 	@echo "make setup"
 	@echo "make build"
 	@echo "make install"
-	@echo "make lint"
-	@echo "make test"
-	@echo "make misspell"
 	@echo "make clean"
+	@echo "make lint"
+	@echo "make verify-goreleaser"
+	@echo "make snapshot"
+	@echo "make release"
 	@echo ""
+
+
 
 ##################################################
 # GOLANG SHORTCUTS
@@ -104,6 +114,23 @@ clean:
 	$(GO) clean -x -i $(MAIN)
 	rm -rf ./bin/* ./vendor ./dist *.tar.gz
 	@echo ""
+
+golangci:
+ifeq (, $(shell which golangci-lint))
+	@{ \
+	set -e ;\
+	echo 'installing golangci-lint-$(GOLANGCILINT_VERSION)' ;\
+	curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(GOBIN) $(GOLANGCILINT_VERSION) ;\
+	echo 'Install succeed' ;\
+	}
+GOLANGCILINT=$(GOBIN)/golangci-lint
+else
+GOLANGCILINT=$(shell which golangci-lint)
+endif
+
+.PHONY: lint
+lint: golangci
+	$(GOLANGCILINT) run ./...
 
 .PHONY: verify-goreleaser
 verify-goreleaser:

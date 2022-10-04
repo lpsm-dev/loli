@@ -66,6 +66,8 @@ brews:
     homepage: "https://github.com/ci-monk/loli"
     description: "Install Loli CLI with brew and find animes passing images"
     license: "MIT"
+    install: |
+      bin.install "loli"
 release:
   github:
     owner: ci-monk

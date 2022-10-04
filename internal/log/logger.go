@@ -1,3 +1,4 @@
+//nolint:errcheck
 package log
 
 func applyOptions(opts []Option) *options {

@@ -9,6 +9,7 @@ run:
 linters:
   enable-all: false
   enable:
+    - bodyclose
     - errcheck
     - gosimple
     - govet
@@ -18,6 +19,7 @@ linters:
     - typecheck
     - stylecheck
     - unused
+    - nilerr
     - misspell
     - whitespace
   disable:
