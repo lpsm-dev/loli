@@ -11,16 +11,19 @@ linters:
   enable:
     - bodyclose
     - errcheck
-    - gosimple
-    - govet
     - gofmt
     - goimports
+    - govet
+    - gosimple
     - ineffassign
-    - typecheck
-    - stylecheck
-    - unused
-    - nilerr
     - misspell
+    - nilerr
+    - staticcheck
+    - stylecheck
+    - typecheck
+    - unconvert
+    - unparam
+    - unused
     - whitespace
   disable:
     - deadcode
