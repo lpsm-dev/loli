@@ -1,5 +1,43 @@
 # Semantic Versioning Changelog
 
+## [1.15.0](https://github.com/ci-monk/loli/compare/v1.14.2...v1.15.0) (2022-10-04)
+
+
+### :memo: Docs
+
+* change .mov ([38b2c39](https://github.com/ci-monk/loli/commit/38b2c390d5ce689ae224844edb2d07af7e161dee))
+* change title ([9a3615e](https://github.com/ci-monk/loli/commit/9a3615e9158b8f43a93e6289cccfb0a7708f5336))
+* demo location ([f495bed](https://github.com/ci-monk/loli/commit/f495bed55d55e879f26fcdee683193b835579bc1))
+* desc first ([5ae3dca](https://github.com/ci-monk/loli/commit/5ae3dcadb8c850204a32ff9dc458a9d8309b6c63))
+* examples usage ([5721c39](https://github.com/ci-monk/loli/commit/5721c3968b9dfb07582d064714420e298c65b53e))
+* pretty readme changes install ([b0a92fc](https://github.com/ci-monk/loli/commit/b0a92fc217b3c03daa94a1a140d86fd5c86ff46d))
+* remove content ([5e4f7f3](https://github.com/ci-monk/loli/commit/5e4f7f3e95ba635a510fefd23e00f64ffada3f79))
+* remove development with docker ([2a02df8](https://github.com/ci-monk/loli/commit/2a02df86ca7aec3a5da9ea9b4f464f362aaa87e4))
+* remove topic ([0450b6a](https://github.com/ci-monk/loli/commit/0450b6a240108b27ad477413e6a648e4f88da68c))
+* remove visuals topic ([647c6fa](https://github.com/ci-monk/loli/commit/647c6fa85495fd38c0eb4a7f5142f6349ae5326a))
+* rollback topic ([d1b35a8](https://github.com/ci-monk/loli/commit/d1b35a81ccb0f1234bc9c3000ff822b21a6fa83c))
+* sections option ([befebda](https://github.com/ci-monk/loli/commit/befebdad4c387770173f64d5f603a0b7265273f1))
+* sort topics ([fb653a3](https://github.com/ci-monk/loli/commit/fb653a355ac1414168d43a515673a2ed140cbc87))
+* upload .mov ([0b6dd07](https://github.com/ci-monk/loli/commit/0b6dd0795254735f45414ba47f77dfe67ae126ae))
+
+
+### :sparkles: News
+
+* add demo.mov ([0cf35c4](https://github.com/ci-monk/loli/commit/0cf35c477993d8bddaf41ee5e42ec0d4a6c71a07))
+* add golangci setup and others ([f7af46f](https://github.com/ci-monk/loli/commit/f7af46f9d092eb517fb78088066841a9e3fef733))
+* add scripts folder ([87fa760](https://github.com/ci-monk/loli/commit/87fa760316b8b33d526486e7679f437e171f9738))
+
+
+### :bug: Fix
+
+* brew setup, golangci and make commands ([7dd5f11](https://github.com/ci-monk/loli/commit/7dd5f1168b23978b93bff534f10eab43ce600123))
+* **deps:** update module github.com/pterm/pterm to v0.12.49 ([02a721b](https://github.com/ci-monk/loli/commit/02a721b23c726e48503e0525ec42cc04b4e950f6))
+* folder examples name ([bda3cbd](https://github.com/ci-monk/loli/commit/bda3cbdd56f7b5f95f01954b43db0333b54eb271))
+* go release remove rules ([de2f7f2](https://github.com/ci-monk/loli/commit/de2f7f2b9036aac68bf9350d4a218d67d25fc54a))
+* golang ci linters ([959fa00](https://github.com/ci-monk/loli/commit/959fa006d284a1947eb0d1df2a4aa1b5d26f9083))
+* remove images ([6d0ca59](https://github.com/ci-monk/loli/commit/6d0ca5964e1188046b69d02847b091b69d0e42e2))
+* setup dockerfile to dev ([e60bb5c](https://github.com/ci-monk/loli/commit/e60bb5c0b6ac2706c541538f0bda3722454a2523))
+
 ## [1.14.2](https://github.com/ci-monk/loli/compare/v1.14.1...v1.14.2) (2022-09-27)
 
 
