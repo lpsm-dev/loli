@@ -3,7 +3,7 @@ package cli
 import (
 	"bytes"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 
 	"github.com/ci-monk/loli/internal/consts"
@@ -34,7 +34,7 @@ func (a *Asset) download() (*bytes.Reader, error) {
 		log.Fatalf("Bad status code - %d", resp.StatusCode)
 	}
 
-	content, err := ioutil.ReadAll(resp.Body)
+	content, err := io.ReadAll(resp.Body)
 	if err != nil {
 		log.Errorf("%s", err)
 		return nil, err

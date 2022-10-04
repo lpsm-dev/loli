@@ -3,7 +3,7 @@ package trace
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"os"
 	"strconv"
@@ -30,13 +30,16 @@ func SearchUsage(pretty bool) {
 		log.Fatalf("Bad status code - %d", resp.StatusCode)
 	}
 
-	content, err := ioutil.ReadAll(resp.Body)
+	content, err := io.ReadAll(resp.Body)
 	if err != nil {
 		log.Fatalln(err)
 	}
 
 	var usageResp types.UsageTraceMoe
-	json.Unmarshal(content, &usageResp)
+	err = json.Unmarshal(content, &usageResp)
+	if err != nil {
+		log.Fatalln(err)
+	}
 
 	if pretty {
 		versionTable := table.NewWriter()

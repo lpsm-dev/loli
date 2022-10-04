@@ -22,7 +22,7 @@ var completionCmd = &cobra.Command{
 		return nil
 	},
 	RunE: func(cmd *cobra.Command, args []string) error {
-		var shellType string = args[0]
+		shellType := args[0]
 		out, rootCmd := os.Stdout, cmd.Parent()
 		switch shellType {
 		case "bash":

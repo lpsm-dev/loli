@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"net/http"
 	"net/http/httputil"
 	"os"
@@ -33,7 +32,7 @@ func DumpRequest(req *http.Request) {
 
 	var bodyCopy bytes.Buffer
 	body := io.TeeReader(req.Body, &bodyCopy)
-	req.Body = ioutil.NopCloser(body)
+	req.Body = io.NopCloser(body)
 
 	dump, err := httputil.DumpRequest(req, req.ContentLength > 0)
 	if err != nil {
@@ -45,7 +44,7 @@ func DumpRequest(req *http.Request) {
 	Println("========================= END DumpRequest =========================")
 	Println("")
 
-	req.Body = ioutil.NopCloser(&bodyCopy)
+	req.Body = io.NopCloser(&bodyCopy)
 }
 
 // DumpResponse dumps out the provided http.Response
@@ -56,7 +55,7 @@ func DumpResponse(res *http.Response) {
 
 	var bodyCopy bytes.Buffer
 	body := io.TeeReader(res.Body, &bodyCopy)
-	res.Body = ioutil.NopCloser(body)
+	res.Body = io.NopCloser(body)
 
 	dump, err := httputil.DumpResponse(res, res.ContentLength > 0)
 	if err != nil {
@@ -68,5 +67,5 @@ func DumpResponse(res *http.Response) {
 	Println("========================= END DumpResponse =========================")
 	Println("")
 
-	res.Body = ioutil.NopCloser(body)
+	res.Body = io.NopCloser(body)
 }

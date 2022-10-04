@@ -1,3 +1,4 @@
+//nolint:staticcheck // SA1019 ignore this!
 package cli
 
 import (

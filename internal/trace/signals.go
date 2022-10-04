@@ -20,6 +20,6 @@ func catchInterrupt(s *spinner.Spinner) {
 		s.Stop()
 	}
 
-	termenv.ShowCursor()
+	termenv.DefaultOutput().ShowCursor()
 	os.Exit(0)
 }

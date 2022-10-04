@@ -82,6 +82,7 @@ help:
 setup:
 	@echo "==> Setup..."
 	$(GO) mod download
+	$(GO) mod tidy
 	$(GO) generate -v ./...
 	@echo ""
 

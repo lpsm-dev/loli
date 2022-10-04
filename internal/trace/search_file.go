@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"mime/multipart"
 	"net/http"
 	"os"
@@ -28,8 +27,8 @@ func SearchAnimeByFile(animeFile string, pretty bool) {
 	searchURL := consts.TraceMoeSearchAnimeByFile
 	log.Infoln(searchURL)
 
-	termenv.HideCursor()
-	defer termenv.ShowCursor()
+	termenv.DefaultOutput().HideCursor()
+	defer termenv.DefaultOutput().ShowCursor()
 
 	s := spinner.New(spinner.CharSets[39], 100*time.Millisecond)
 	s.Prefix = "🌊 Searching for the anime from an image: "
@@ -72,13 +71,16 @@ func SearchAnimeByFile(animeFile string, pretty bool) {
 		log.Fatalf("Bad status code - %d", resp.StatusCode)
 	}
 
-	content, err := ioutil.ReadAll(resp.Body)
+	content, err := io.ReadAll(resp.Body)
 	if err != nil {
 		log.Fatalln(err)
 	}
 
 	var animeResp types.Response
-	json.Unmarshal(content, &animeResp)
+	err = json.Unmarshal(content, &animeResp)
+	if err != nil {
+		log.Fatalln(err)
+	}
 
 	s.Stop()
 

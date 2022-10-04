@@ -21,3 +21,12 @@ repos:
     hooks:
       - id: hadolint
         args: ["--config", ".github/config/.hadolint.yaml"]
+  - repo: local
+    hooks:
+      - id: go-setup
+        name: Go Setup
+        language: system
+        entry: make
+        args: ["setup"]
+        types: ["go"]
+        pass_filenames: false
