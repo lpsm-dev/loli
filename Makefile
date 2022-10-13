@@ -33,7 +33,7 @@ GOPATH		?= $(shell go env GOPATH)
 
 # Ensure GOPATH is set before running build process.
 ifeq "$(GOPATH)" ""
-  $(error Please set the environment variable GOPATH before running `make`)
+	$(error Please set the environment variable GOPATH before running `make`)
 endif
 
 GO 		:= go
