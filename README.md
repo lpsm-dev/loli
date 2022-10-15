@@ -120,7 +120,7 @@ To check the change history, please access the [**CHANGELOG.md**](CHANGELOG.md) 
 
 <div align="center">
 
-Give me a ⭐️ if this project helped you!
+Give me a ⭐️ if you like this project!
 
 <img alt="gif-header" src="https://www.icegif.com/wp-content/uploads/baby-yoda-bye-bye-icegif.gif" width="225"/>
 
