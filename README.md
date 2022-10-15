@@ -102,23 +102,6 @@ Example trace.moe response:
 }
 ```
 
-## ➤ Learning <a name = "learning"></a>
-
-In this process, I gained experiences in the following topics regarding the Go language:
-
-- ✔️ Discover internal Go packages like: `os`, `string` and `fmt`.
-- ✔️ Discover the `github.com/spf13/cobra` CLI library.
-- ✔️ Create commands and subcommands for your CLI.
-- ✔️ Read flags and arguments from your commands and subcommands.
-- ✔️ Discover the `github.com/spf13/viper` configuration library.
-- ✔️ Read and write a configuration file.
-- ✔️ Put the `snake` and the `viper` to work together.
-- ✔️ Read environment variables.
-- ✔️ Discover the `github.com/sirupsen/logrus` log library.
-- ✔️ Use variable injection at build time.
-- ✔️ Use conditional in compilation and build tags.
-- ✔️ How to build CLI using Go
-
 ## ➤ Demo <a name = "demo"></a>
 
 https://user-images.githubusercontent.com/58797390/192595643-a27003a5-d0ba-4abf-b8bb-19f449398190.mov
