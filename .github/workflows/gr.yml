@@ -3,14 +3,14 @@ name: GoReleaser
 on:
   push:
     tags:
-      - "*"
+      - '*'
 
 permissions:
   contents: write
 
 jobs:
   goreleaser:
-    name: "GoReleaser"
+    name: GoReleaser
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout
