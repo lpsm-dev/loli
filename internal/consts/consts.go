@@ -25,12 +25,6 @@ const (
 
 	// ProjectURL is the project url of the app.
 	ProjectURL = "loli"
-)
-
-var (
-	// TimeoutInSeconds variable - is the timeout the default HTTP client will use.
-	// For more information: https://stackoverflow.com/questions/16895294/how-to-set-timeout-for-http-get-requests-in-golang
-	TimeoutInSeconds = 60
 
 	// InsecureSkipVerify controls whether a client verifies the server's certificate chain and host name.
 	// For more information: https://golang.org/pkg/crypto/tls/
@@ -66,3 +60,9 @@ $ loli completion fish | source
 # To load completions for each session, execute once:
 $ loli completion fish > ~/.config/fish/completions/loli.fish
 `
+
+var (
+	// TimeoutInSeconds variable - is the timeout the default HTTP client will use.
+	// For more information: https://stackoverflow.com/questions/16895294/how-to-set-timeout-for-http-get-requests-in-golang
+	TimeoutInSeconds = 60
+)
