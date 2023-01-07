@@ -29,6 +29,6 @@
     "@semantic-release/gitlab": "9.5.1",
     "@semantic-release/release-notes-generator": "10.0.3",
     "commitizen": "4.2.6",
-    "semantic-release": "20.0.0"
+    "semantic-release": "20.0.1"
   }
 }
