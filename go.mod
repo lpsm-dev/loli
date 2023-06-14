@@ -14,6 +14,7 @@ require (
 	github.com/kyokomi/emoji/v2 v2.2.12
 	github.com/logrusorgru/aurora v2.0.3+incompatible
 	github.com/logrusorgru/aurora/v3 v3.0.0
+	github.com/logrusorgru/aurora/v4 v4.0.0
 	github.com/muesli/termenv v0.15.1
 	github.com/pterm/pterm v0.12.62
 	github.com/sirupsen/logrus v1.9.3
