@@ -2,7 +2,7 @@
 
 <img alt="gif-header" src="https://c.tenor.com/PX2XATCduFcAAAAC/loli.gif" width="225"/>
 
-<h2>✨ Loli CLI ✨</h2>
+<h2>Loli CLI</h2>
 
 [![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/ci-monk/loli)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://github.com/ci-monk/loli)
@@ -11,7 +11,7 @@
 
 <img alt="pipelines" src="https://i.pinimg.com/originals/ce/26/14/ce2614ef4c70f04a2c578f972308f5b6.gif" width="250"/>
 
-<p>✨ Loli is a pretty CLI that search animes passing images or links ✨</p>
+<p>Loli is a pretty CLI that search animes passing images or links</p>
 
 <p>
   <a href="#getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
