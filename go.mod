@@ -13,16 +13,16 @@ require (
 	github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0
 	github.com/kyokomi/emoji/v2 v2.2.12
 	github.com/logrusorgru/aurora v2.0.3+incompatible
-	github.com/logrusorgru/aurora/v4 v4.0.0
+	github.com/logrusorgru/aurora/v3 v3.0.0
 	github.com/logrusorgru/aurora/v4 v4.0.0
 	github.com/muesli/termenv v0.15.2
-	github.com/pterm/pterm v0.12.62
+	github.com/pterm/pterm v0.12.63
 	github.com/sirupsen/logrus v1.9.3
 	github.com/spf13/cobra v1.7.0
 )
 
 require (
-	atomicgo.dev/cursor v0.1.1 // indirect
+	atomicgo.dev/cursor v0.1.3 // indirect
 	atomicgo.dev/keyboard v0.2.9 // indirect
 	atomicgo.dev/schedule v0.0.2 // indirect
 	github.com/alecthomas/chroma v0.10.0 // indirect
@@ -54,7 +54,7 @@ require (
 	github.com/yuin/goldmark-emoji v1.0.1 // indirect
 	go.mongodb.org/mongo-driver v1.8.3 // indirect
 	golang.org/x/net v0.7.0 // indirect
-	golang.org/x/sys v0.8.0 // indirect
-	golang.org/x/term v0.8.0 // indirect
-	golang.org/x/text v0.9.0 // indirect
+	golang.org/x/sys v0.10.0 // indirect
+	golang.org/x/term v0.10.0 // indirect
+	golang.org/x/text v0.11.0 // indirect
 )
