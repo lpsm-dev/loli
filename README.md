@@ -122,7 +122,7 @@ To check the change history, please access the [**CHANGELOG.md**](CHANGELOG.md) 
 
 Give me a ⭐️ if you like this project!
 
-<img alt="gif-header" src="https://www.icegif.com/wp-content/uploads/baby-yoda-bye-bye-icegif.gif" width="225"/>
+<img alt="gif-footer" src="https://github.com/lpsm-dev/lpsm-dev/blob/main/.github/assets/yoda.gif" width="225"/>
 
 Made with 💜 by [me](https://github.com/ci-monk) :wave: inspired on [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
 
