@@ -1,45 +1,45 @@
 ---
 repos:
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.4.0
-  hooks:
-  - id: check-json
-  - id: check-case-conflict
-  - id: check-merge-conflict
-  - id: check-docstring-first
-  - id: check-executables-have-shebangs
-  - id: debug-statements
-  - id: fix-byte-order-marker
-  - id: fix-encoding-pragma
-  - id: mixed-line-ending
-  - id: trailing-whitespace
-    args: [--markdown-linebreak-ext=md]
-- repo: https://github.com/zricethezav/gitleaks
-  rev: v8.17.0
-  hooks:
-  - id: gitleaks
-    args: ["--verbose"]
-- repo: https://github.com/commitizen-tools/commitizen
-  rev: 3.5.3
-  hooks:
-  - id: commitizen
-  - id: commitizen-branch
-    stages: [push]
-- repo: https://github.com/Lucas-C/pre-commit-hooks
-  rev: v1.5.1
-  hooks:
-  - id: remove-crlf
-  - id: remove-tabs
-- repo: https://github.com/sirosen/fix-smartquotes
-  rev: 0.2.0
-  hooks:
-  - id: fix-smartquotes
-- repo: local
-  hooks:
-  - id: go-setup
-    name: Go Setup
-    language: system
-    entry: make
-    args: ["setup"]
-    types: ["go"]
-    pass_filenames: false
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-json
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-docstring-first
+      - id: check-executables-have-shebangs
+      - id: debug-statements
+      - id: fix-byte-order-marker
+      - id: fix-encoding-pragma
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+  - repo: https://github.com/zricethezav/gitleaks
+    rev: v8.17.0
+    hooks:
+      - id: gitleaks
+        args: ["--verbose"]
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: 3.5.3
+    hooks:
+      - id: commitizen
+      - id: commitizen-branch
+        stages: [push]
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.5.1
+    hooks:
+      - id: remove-crlf
+      - id: remove-tabs
+  - repo: https://github.com/sirosen/fix-smartquotes
+    rev: 0.2.0
+    hooks:
+      - id: fix-smartquotes
+  - repo: local
+    hooks:
+      - id: go-setup
+        name: Go Setup
+        language: system
+        entry: make
+        args: ["setup"]
+        types: ["go"]
+        pass_filenames: false

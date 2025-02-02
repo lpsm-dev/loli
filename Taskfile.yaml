@@ -1,0 +1,41 @@
+---
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+# Taskfile to be used with `task` binary.
+# Usage:
+# - Install with `asdf`: `asdf plugin add task`
+# - List available tasks with: `task --list`
+version: "3"
+
+vars:
+  CLEAR: tput reset
+  PATH_ERROR: is not installed or correctly configured in PATH.
+
+includes:
+  precommit: .github/taskfiles/pre-commit.yaml
+
+tasks:
+  default:
+    silent: true
+    aliases: [commands]
+    cmds:
+      - task --list
+
+  clear:
+    cmds:
+      - sleep 0.1 && {{.CLEAR}}
+
+  gitleaks:
+    desc: Use the gitleaks tool to find secrets in the Git repository
+    preconditions:
+      - sh: which gitleaks
+        msg: gitleaks {{.PATH_ERROR}}
+    cmds:
+      - gitleaks detect --source={{.ROOT_DIR}} --verbose
+
+  yamllint:
+    desc: Run the yamllint linter on all YAML files
+    preconditions:
+      - sh: which yamllint
+        msg: yamllint {{.PATH_ERROR}}
+    cmds:
+      - yamllint --config-file={{.ROOT_DIR}}/.github/config/.yamllint.yaml .
