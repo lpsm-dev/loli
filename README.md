@@ -19,7 +19,7 @@ Este projeto é um **CLI** que busca animes a partir de imagens ou links. Ele ut
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-# Install
+# Como Instalar
 
 with `go`:
 
