@@ -1,26 +1,19 @@
 <!-- BEGIN_DOCS -->
 <div align="center">
 
-<img alt="gif-header" src="https://c.tenor.com/PX2XATCduFcAAAAC/loli.gif" width="225"/>
+<a name="readme-top"></a>
 
-<h2>Loli CLI</h2>
-
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://www.conventionalcommits.org/en/v1.0.0/) [![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://semantic-release.gitbook.io/semantic-release/usage/configuration) [![Built with Devbox](https://jetpack.io/img/devbox/shield_galaxy.svg)](https://jetpack.io/devbox/docs/contributor-quickstart/)
+**Loli CLI**
 
 <img alt="pipelines" src="https://i.pinimg.com/originals/ce/26/14/ce2614ef4c70f04a2c578f972308f5b6.gif" width="250"/>
 
-<p>Loli is a pretty CLI that search animes passing images or links</p>
+Hello Humans 👽! Loli is a pretty CLI that search animes passing images or links
 
-<p>
-  <a href="#getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#install">Install</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#usage">Usage</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#versioning">Versioning</a>
-</p>
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://www.conventionalcommits.org/en/v1.0.0/) [![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://semantic-release.gitbook.io/semantic-release/usage/configuration) [![Built with Devbox](https://jetpack.io/img/devbox/shield_galaxy.svg)](https://jetpack.io/devbox/docs/contributor-quickstart/)
 
 </div>
 
-## ➤ Getting Started <a name = "getting-started"></a>
+# Getting Started
 
 If you want contribute on this project, first you need to make a **git clone**:
 
@@ -30,11 +23,13 @@ git clone --depth 1 https://github.com/ci-monk/loli.git -b main
 
 This will give you access to the code on your **local machine**.
 
-## ➤ Description <a name = "description"></a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# Description
 
 This **CLI** is intended to be a code lab and best practices for creating a project ready to receive community builds, while introducing the basics for creating a **CLI** tool in **Go** and the standardization of conventions for the development workflow.
 
-## ➤ Install <a name = "install"></a>
+# Install
 
 with `go`:
 
@@ -55,21 +50,25 @@ brew install loli
 
 or use a binary from [releases](https://github.com/ci-monk/loli/releases/latest).
 
-## ➤ Usage <a name = "usage"></a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Get anime with a file
+# Usage
+
+## Get anime with a file
 
 ```bash
 loli search file anime.jpg
 ```
 
-### Get anime with a link
+## Get anime with a link
 
 ```bash
 loli search link https://anime.com/image.png
 ```
 
-## ➤ Trace.moe <a name = "trace.moe"></a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# Trace.moe
 
 Example trace.moe response:
 
@@ -102,29 +101,50 @@ Example trace.moe response:
 }
 ```
 
-## ➤ Demo <a name = "demo"></a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# Demo
 
 https://user-images.githubusercontent.com/58797390/192595643-a27003a5-d0ba-4abf-b8bb-19f449398190.mov
 
-## ➤ Links <a name = "links"></a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# Referências
+
+Links relevantes para essa documentação:
 
 - https://soruly.github.io/trace.moe-api/#/
 - https://img.olhardigital.com.br/wp-content/uploads/2021/07/Naruto-Classico-e-Naruto-Shippuden-fillers.jpg
 - https://images.plurk.com/32B15UXxymfSMwKGTObY5e.jpg
 
-## ➤ Versioning <a name = "versioning"></a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-To check the change history, please access the [**CHANGELOG.md**](CHANGELOG.md) file.
+# Versionamento
 
-## ➤ Show your support <a name = "show-your-support"></a>
+Para verificar o histórico de mudanças, acesse o arquivo [**CHANGELOG.md**](CHANGELOG.md).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# Troubleshooting
+
+Se você tiver algum problema ou queria contribuir, abra uma [issue](https://github.com/lpsm-dev/loli/issues/new/choose) nesse projeto.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# Show your support
 
 <div align="center">
 
-Give me a ⭐️ if you like this project!
+Dê uma ⭐️ para este projeto se ele te ajudou!
 
-<img alt="gif-footer" src="https://github.com/lpsm-dev/lpsm-dev/blob/main/.github/assets/yoda.gif" width="225"/>
+<img alt="gif-footer" src="https://github.com/lpsm-dev/lpsm-dev/blob/0062b174ec9877e6dfc78817f314b4a0690f63ff/.github/assets/yoda.gif" width="225"/>
 
-Made with 💜 by [me](https://github.com/ci-monk) :wave: inspired on [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
+<br>
+<br>
+
+Feito com 💜 pelo **Time de DevOps** :wave: inspirado no [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
 
 </div>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- END_DOCS -->
