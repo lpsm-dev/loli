@@ -13,15 +13,9 @@ Hello Humans 👽! Loli is a pretty CLI that search animes passing images or lin
 
 </div>
 
-# Getting Started
+# Visão Geral
 
-If you want contribute on this project, first you need to make a **git clone**:
-
-```bash
-git clone --depth 1 https://github.com/ci-monk/loli.git -b main
-```
-
-This will give you access to the code on your **local machine**.
+Este projeto é um **CLI** que busca animes a partir de imagens ou links. Ele utiliza a API do [trace.moe](https://soruly.github.io/trace.moe-api/#/) para realizar a busca.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
