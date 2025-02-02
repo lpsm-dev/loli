@@ -19,10 +19,6 @@ Este projeto é um **CLI** que busca animes a partir de imagens ou links. Ele ut
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-# Description
-
-This **CLI** is intended to be a code lab and best practices for creating a project ready to receive community builds, while introducing the basics for creating a **CLI** tool in **Go** and the standardization of conventions for the development workflow.
-
 # Install
 
 with `go`:
