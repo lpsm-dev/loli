@@ -1,3 +1,4 @@
+<!-- BEGIN_DOCS -->
 <div align="center">
 
 <img alt="gif-header" src="https://c.tenor.com/PX2XATCduFcAAAAC/loli.gif" width="225"/>
@@ -6,8 +7,6 @@
 
 [![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/ci-monk/loli)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://github.com/ci-monk/loli)
-
----
 
 <img alt="pipelines" src="https://i.pinimg.com/originals/ce/26/14/ce2614ef4c70f04a2c578f972308f5b6.gif" width="250"/>
 
@@ -21,8 +20,6 @@
 </p>
 
 </div>
-
----
 
 ## ➤ Getting Started <a name = "getting-started"></a>
 
@@ -86,7 +83,11 @@ Example trace.moe response:
       "anilist": {
         "id": 99939,
         "idMal": 34658,
-        "title": { "native": "ネコぱらOVA", "romaji": "Nekopara OVA", "english": null },
+        "title": {
+          "native": "ネコぱらOVA",
+          "romaji": "Nekopara OVA",
+          "english": null
+        },
         "synonyms": ["Neko Para OVA"],
         "isAdult": false
       },
@@ -127,3 +128,4 @@ Give me a ⭐️ if you like this project!
 Made with 💜 by [me](https://github.com/ci-monk) :wave: inspired on [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
 
 </div>
+<!-- END_DOCS -->
