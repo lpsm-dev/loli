@@ -6,7 +6,7 @@ toolchain go1.23.5
 
 require (
 	github.com/blang/semver v3.5.1+incompatible
-	github.com/briandowns/spinner v1.23.0
+	github.com/briandowns/spinner v1.23.2
 	github.com/charmbracelet/glamour v0.6.0
 	github.com/cli/safeexec v1.0.1
 	github.com/fatih/color v1.15.0
