@@ -9,7 +9,7 @@ require (
 	github.com/briandowns/spinner v1.23.2
 	github.com/charmbracelet/glamour v0.8.0
 	github.com/cli/safeexec v1.0.1
-	github.com/fatih/color v1.15.0
+	github.com/fatih/color v1.18.0
 	github.com/inconshreveable/go-update v0.0.0-20160112193335-8152e7eb6ccf
 	github.com/jedib0t/go-pretty v4.3.0+incompatible
 	github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0
