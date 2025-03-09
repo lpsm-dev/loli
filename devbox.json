@@ -4,7 +4,7 @@
     "direnv@2.35.0",
     "gitleaks@7.6.1",
     "pre-commit@2.20.0",
-    "yamllint@latest"
+    "yamllint@1.35.1"
   ],
   "shell": {
     "init_hook": ["echo 'Welcome to devbox!' > /dev/null"],
