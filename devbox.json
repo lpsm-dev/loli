@@ -1,10 +1,11 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.7/.schema/devbox.schema.json",
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.14.0/.schema/devbox.schema.json",
   "packages": [
     "direnv@2.35.0",
-    "gitleaks@7.6.1",
-    "pre-commit@2.20.0",
-    "yamllint@latest"
+    "gitleaks@8.24.0",
+    "golangci-lint@1.64.5",
+    "pre-commit@4.0.1",
+    "yamllint@1.35.1"
   ],
   "shell": {
     "init_hook": ["echo 'Welcome to devbox!' > /dev/null"],
