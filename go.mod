@@ -2,7 +2,7 @@ module github.com/ci-monk/loli
 
 go 1.21
 
-toolchain go1.24.1
+toolchain go1.27.1
 
 require (
 	github.com/blang/semver v3.5.1+incompatible
