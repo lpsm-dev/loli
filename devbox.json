@@ -5,7 +5,7 @@
     "gitleaks@8.24.0",
     "golangci-lint@1.64.5",
     "pre-commit@4.0.1",
-    "yamllint@1.35.1"
+    "yamllint@1.37.1"
   ],
   "shell": {
     "init_hook": ["echo 'Welcome to devbox!' > /dev/null"],
