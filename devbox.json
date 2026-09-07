@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.14.0/.schema/devbox.schema.json",
   "packages": [
-    "direnv@2.35.0",
+    "direnv@2.37.1",
     "gitleaks@8.24.0",
     "golangci-lint@1.64.5",
     "pre-commit@4.0.1",
